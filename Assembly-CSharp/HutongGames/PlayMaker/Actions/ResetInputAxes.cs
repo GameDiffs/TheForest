@@ -1,0 +1,19 @@
+using System;
+using UnityEngine;
+
+namespace HutongGames.PlayMaker.Actions
+{
+	[ActionCategory(ActionCategory.Input), HutongGames.PlayMaker.Tooltip("Resets all Input. After ResetInputAxes all axes return to 0 and all buttons return to 0 for one frame")]
+	public class ResetInputAxes : FsmStateAction
+	{
+		public override void Reset()
+		{
+		}
+
+		public override void OnEnter()
+		{
+			Input.ResetInputAxes();
+			base.Finish();
+		}
+	}
+}
