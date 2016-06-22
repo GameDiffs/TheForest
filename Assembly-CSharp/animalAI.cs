@@ -549,7 +549,7 @@ public class animalAI : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doMovement()
 	{
-		animalAI.<doMovement>c__Iterator36 <doMovement>c__Iterator = new animalAI.<doMovement>c__Iterator36();
+		animalAI.<doMovement>c__Iterator37 <doMovement>c__Iterator = new animalAI.<doMovement>c__Iterator37();
 		<doMovement>c__Iterator.<>f__this = this;
 		return <doMovement>c__Iterator;
 	}
@@ -606,7 +606,7 @@ public class animalAI : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator enableForceTarget(GameObject target)
 	{
-		animalAI.<enableForceTarget>c__Iterator37 <enableForceTarget>c__Iterator = new animalAI.<enableForceTarget>c__Iterator37();
+		animalAI.<enableForceTarget>c__Iterator38 <enableForceTarget>c__Iterator = new animalAI.<enableForceTarget>c__Iterator38();
 		<enableForceTarget>c__Iterator.target = target;
 		<enableForceTarget>c__Iterator.<$>target = target;
 		<enableForceTarget>c__Iterator.<>f__this = this;
@@ -622,7 +622,7 @@ public class animalAI : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator restartDoMovement()
 	{
-		animalAI.<restartDoMovement>c__Iterator38 <restartDoMovement>c__Iterator = new animalAI.<restartDoMovement>c__Iterator38();
+		animalAI.<restartDoMovement>c__Iterator39 <restartDoMovement>c__Iterator = new animalAI.<restartDoMovement>c__Iterator39();
 		<restartDoMovement>c__Iterator.<>f__this = this;
 		return <restartDoMovement>c__Iterator;
 	}
@@ -630,49 +630,49 @@ public class animalAI : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator toMove()
 	{
-		animalAI.<toMove>c__Iterator39 <toMove>c__Iterator = new animalAI.<toMove>c__Iterator39();
-		<toMove>c__Iterator.<>f__this = this;
-		return <toMove>c__Iterator;
+		animalAI.<toMove>c__Iterator3A <toMove>c__Iterator3A = new animalAI.<toMove>c__Iterator3A();
+		<toMove>c__Iterator3A.<>f__this = this;
+		return <toMove>c__Iterator3A;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator toWalk()
 	{
-		animalAI.<toWalk>c__Iterator3A <toWalk>c__Iterator3A = new animalAI.<toWalk>c__Iterator3A();
-		<toWalk>c__Iterator3A.<>f__this = this;
-		return <toWalk>c__Iterator3A;
+		animalAI.<toWalk>c__Iterator3B <toWalk>c__Iterator3B = new animalAI.<toWalk>c__Iterator3B();
+		<toWalk>c__Iterator3B.<>f__this = this;
+		return <toWalk>c__Iterator3B;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator toTrot()
 	{
-		animalAI.<toTrot>c__Iterator3B <toTrot>c__Iterator3B = new animalAI.<toTrot>c__Iterator3B();
-		<toTrot>c__Iterator3B.<>f__this = this;
-		return <toTrot>c__Iterator3B;
+		animalAI.<toTrot>c__Iterator3C <toTrot>c__Iterator3C = new animalAI.<toTrot>c__Iterator3C();
+		<toTrot>c__Iterator3C.<>f__this = this;
+		return <toTrot>c__Iterator3C;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator toRun()
 	{
-		animalAI.<toRun>c__Iterator3C <toRun>c__Iterator3C = new animalAI.<toRun>c__Iterator3C();
-		<toRun>c__Iterator3C.<>f__this = this;
-		return <toRun>c__Iterator3C;
+		animalAI.<toRun>c__Iterator3D <toRun>c__Iterator3D = new animalAI.<toRun>c__Iterator3D();
+		<toRun>c__Iterator3D.<>f__this = this;
+		return <toRun>c__Iterator3D;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator toFollow()
 	{
-		animalAI.<toFollow>c__Iterator3D <toFollow>c__Iterator3D = new animalAI.<toFollow>c__Iterator3D();
-		<toFollow>c__Iterator3D.<>f__this = this;
-		return <toFollow>c__Iterator3D;
+		animalAI.<toFollow>c__Iterator3E <toFollow>c__Iterator3E = new animalAI.<toFollow>c__Iterator3E();
+		<toFollow>c__Iterator3E.<>f__this = this;
+		return <toFollow>c__Iterator3E;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator toStop()
 	{
-		animalAI.<toStop>c__Iterator3E <toStop>c__Iterator3E = new animalAI.<toStop>c__Iterator3E();
-		<toStop>c__Iterator3E.<>f__this = this;
-		return <toStop>c__Iterator3E;
+		animalAI.<toStop>c__Iterator3F <toStop>c__Iterator3F = new animalAI.<toStop>c__Iterator3F();
+		<toStop>c__Iterator3F.<>f__this = this;
+		return <toStop>c__Iterator3F;
 	}
 
 	public void startRandomSwimSpeed()
@@ -694,9 +694,9 @@ public class animalAI : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator enableRandomSwimSpeed()
 	{
-		animalAI.<enableRandomSwimSpeed>c__Iterator3F <enableRandomSwimSpeed>c__Iterator3F = new animalAI.<enableRandomSwimSpeed>c__Iterator3F();
-		<enableRandomSwimSpeed>c__Iterator3F.<>f__this = this;
-		return <enableRandomSwimSpeed>c__Iterator3F;
+		animalAI.<enableRandomSwimSpeed>c__Iterator40 <enableRandomSwimSpeed>c__Iterator = new animalAI.<enableRandomSwimSpeed>c__Iterator40();
+		<enableRandomSwimSpeed>c__Iterator.<>f__this = this;
+		return <enableRandomSwimSpeed>c__Iterator;
 	}
 
 	public void disableRandomSwimSpeed()

@@ -22,7 +22,7 @@ namespace ScionEngine
 		{
 			if (SystemInfo.graphicsShaderLevel >= 40 && this.m_DoFMatDX11 == null)
 			{
-				this.m_DoFMatDX11 = new Material(Shader.Find("Hidden/ScionDepthOfFieldDX11"));
+				this.m_DoFMatDX11 = new Material(Shader.Find("Hidden/ScionDepthOfField"));
 				this.m_DoFMatDX11.hideFlags = HideFlags.HideAndDontSave;
 			}
 		}

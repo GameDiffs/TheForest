@@ -22,9 +22,9 @@ public class CoopRack : EntityBehaviour<IWeaponRackState>
 	[DebuggerHidden]
 	private IEnumerator UpdateSlots()
 	{
-		CoopRack.<UpdateSlots>c__Iterator1F <UpdateSlots>c__Iterator1F = new CoopRack.<UpdateSlots>c__Iterator1F();
-		<UpdateSlots>c__Iterator1F.<>f__this = this;
-		return <UpdateSlots>c__Iterator1F;
+		CoopRack.<UpdateSlots>c__Iterator20 <UpdateSlots>c__Iterator = new CoopRack.<UpdateSlots>c__Iterator20();
+		<UpdateSlots>c__Iterator.<>f__this = this;
+		return <UpdateSlots>c__Iterator;
 	}
 
 	public int GetSlotIndex(WeaponRackSlot weaponRackSlot)

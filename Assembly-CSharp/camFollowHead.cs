@@ -145,7 +145,7 @@ public class camFollowHead : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator preCrashCameraShake()
 	{
-		camFollowHead.<preCrashCameraShake>c__Iterator52 <preCrashCameraShake>c__Iterator = new camFollowHead.<preCrashCameraShake>c__Iterator52();
+		camFollowHead.<preCrashCameraShake>c__Iterator53 <preCrashCameraShake>c__Iterator = new camFollowHead.<preCrashCameraShake>c__Iterator53();
 		<preCrashCameraShake>c__Iterator.<>f__this = this;
 		return <preCrashCameraShake>c__Iterator;
 	}
@@ -153,7 +153,7 @@ public class camFollowHead : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator planeCameraShake()
 	{
-		camFollowHead.<planeCameraShake>c__Iterator53 <planeCameraShake>c__Iterator = new camFollowHead.<planeCameraShake>c__Iterator53();
+		camFollowHead.<planeCameraShake>c__Iterator54 <planeCameraShake>c__Iterator = new camFollowHead.<planeCameraShake>c__Iterator54();
 		<planeCameraShake>c__Iterator.<>f__this = this;
 		return <planeCameraShake>c__Iterator;
 	}
@@ -171,7 +171,7 @@ public class camFollowHead : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator startFallingShake()
 	{
-		camFollowHead.<startFallingShake>c__Iterator54 <startFallingShake>c__Iterator = new camFollowHead.<startFallingShake>c__Iterator54();
+		camFollowHead.<startFallingShake>c__Iterator55 <startFallingShake>c__Iterator = new camFollowHead.<startFallingShake>c__Iterator55();
 		<startFallingShake>c__Iterator.<>f__this = this;
 		return <startFallingShake>c__Iterator;
 	}

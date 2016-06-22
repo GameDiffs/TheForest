@@ -2,7 +2,7 @@ using Serialization;
 using System;
 using UnityEngine;
 
-[AttributeListProvider(typeof(Renderer)), AttributeListProvider(typeof(AudioListener)), AttributeListProvider(typeof(ParticleEmitter)), AttributeListProvider(typeof(Cloth)), AttributeListProvider(typeof(Light)), AttributeListProvider(typeof(Joint)), AttributeListProvider(typeof(TextMesh)), AttributeListProvider(typeof(MeshFilter))]
+[AttributeListProvider(typeof(Light)), AttributeListProvider(typeof(MeshFilter)), AttributeListProvider(typeof(Renderer)), AttributeListProvider(typeof(Joint)), AttributeListProvider(typeof(TextMesh)), AttributeListProvider(typeof(AudioListener)), AttributeListProvider(typeof(Cloth)), AttributeListProvider(typeof(ParticleEmitter))]
 public class ProviderRendererAttributes : ProvideAttributes
 {
 	public ProviderRendererAttributes() : base(new string[]

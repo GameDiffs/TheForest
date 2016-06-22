@@ -2420,11 +2420,11 @@ namespace Rewired.UI.ControlMapper
 			[DebuggerHidden]
 			public IEnumerable<ControlMapper.InputActionSet> GetActionSets(int mapCategoryId)
 			{
-				ControlMapper.InputGridEntryList.<GetActionSets>c__Iterator110 <GetActionSets>c__Iterator = new ControlMapper.InputGridEntryList.<GetActionSets>c__Iterator110();
+				ControlMapper.InputGridEntryList.<GetActionSets>c__Iterator113 <GetActionSets>c__Iterator = new ControlMapper.InputGridEntryList.<GetActionSets>c__Iterator113();
 				<GetActionSets>c__Iterator.mapCategoryId = mapCategoryId;
 				<GetActionSets>c__Iterator.<$>mapCategoryId = mapCategoryId;
 				<GetActionSets>c__Iterator.<>f__this = this;
-				ControlMapper.InputGridEntryList.<GetActionSets>c__Iterator110 expr_1C = <GetActionSets>c__Iterator;
+				ControlMapper.InputGridEntryList.<GetActionSets>c__Iterator113 expr_1C = <GetActionSets>c__Iterator;
 				expr_1C.$PC = -2;
 				return expr_1C;
 			}
@@ -6162,17 +6162,17 @@ namespace Rewired.UI.ControlMapper
 		[DebuggerHidden]
 		private IEnumerable<ElementAssignmentConflictInfo> ElementAssignmentConflicts(Player player, ControlMapper.InputMapping mapping, ElementAssignment assignment, bool skipOtherPlayers)
 		{
-			ControlMapper.<ElementAssignmentConflicts>c__Iterator10F <ElementAssignmentConflicts>c__Iterator10F = new ControlMapper.<ElementAssignmentConflicts>c__Iterator10F();
-			<ElementAssignmentConflicts>c__Iterator10F.player = player;
-			<ElementAssignmentConflicts>c__Iterator10F.mapping = mapping;
-			<ElementAssignmentConflicts>c__Iterator10F.assignment = assignment;
-			<ElementAssignmentConflicts>c__Iterator10F.skipOtherPlayers = skipOtherPlayers;
-			<ElementAssignmentConflicts>c__Iterator10F.<$>player = player;
-			<ElementAssignmentConflicts>c__Iterator10F.<$>mapping = mapping;
-			<ElementAssignmentConflicts>c__Iterator10F.<$>assignment = assignment;
-			<ElementAssignmentConflicts>c__Iterator10F.<$>skipOtherPlayers = skipOtherPlayers;
-			<ElementAssignmentConflicts>c__Iterator10F.<>f__this = this;
-			ControlMapper.<ElementAssignmentConflicts>c__Iterator10F expr_48 = <ElementAssignmentConflicts>c__Iterator10F;
+			ControlMapper.<ElementAssignmentConflicts>c__Iterator112 <ElementAssignmentConflicts>c__Iterator = new ControlMapper.<ElementAssignmentConflicts>c__Iterator112();
+			<ElementAssignmentConflicts>c__Iterator.player = player;
+			<ElementAssignmentConflicts>c__Iterator.mapping = mapping;
+			<ElementAssignmentConflicts>c__Iterator.assignment = assignment;
+			<ElementAssignmentConflicts>c__Iterator.skipOtherPlayers = skipOtherPlayers;
+			<ElementAssignmentConflicts>c__Iterator.<$>player = player;
+			<ElementAssignmentConflicts>c__Iterator.<$>mapping = mapping;
+			<ElementAssignmentConflicts>c__Iterator.<$>assignment = assignment;
+			<ElementAssignmentConflicts>c__Iterator.<$>skipOtherPlayers = skipOtherPlayers;
+			<ElementAssignmentConflicts>c__Iterator.<>f__this = this;
+			ControlMapper.<ElementAssignmentConflicts>c__Iterator112 expr_48 = <ElementAssignmentConflicts>c__Iterator;
 			expr_48.$PC = -2;
 			return expr_48;
 		}

@@ -910,18 +910,18 @@ namespace OrbCreationExtensions
 		[DebuggerHidden]
 		public static IEnumerator SetUpLODLevelsWithLODSwitcherInBackground(this GameObject go, float[] lodScreenSizes, float[] maxWeights, bool recalcNormals, float removeSmallParts = 1f, float protectNormals = 1f, float protectUvs = 1f, float protectSubMeshesAndSharpEdges = 1f, float smallTrianglesFirst = 1f)
 		{
-			GameObjectExtensions.<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D2 <SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D = new GameObjectExtensions.<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D2();
-			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D.go = go;
-			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D.maxWeights = maxWeights;
-			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D.removeSmallParts = removeSmallParts;
-			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D.recalcNormals = recalcNormals;
-			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D.lodScreenSizes = lodScreenSizes;
-			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D.<$>go = go;
-			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D.<$>maxWeights = maxWeights;
-			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D.<$>removeSmallParts = removeSmallParts;
-			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D.<$>recalcNormals = recalcNormals;
-			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D.<$>lodScreenSizes = lodScreenSizes;
-			return <SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1D;
+			GameObjectExtensions.<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA <SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA = new GameObjectExtensions.<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA();
+			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA.go = go;
+			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA.maxWeights = maxWeights;
+			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA.removeSmallParts = removeSmallParts;
+			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA.recalcNormals = recalcNormals;
+			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA.lodScreenSizes = lodScreenSizes;
+			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA.<$>go = go;
+			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA.<$>maxWeights = maxWeights;
+			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA.<$>removeSmallParts = removeSmallParts;
+			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA.<$>recalcNormals = recalcNormals;
+			<SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA.<$>lodScreenSizes = lodScreenSizes;
+			return <SetUpLODLevelsWithLODSwitcherInBackground>c__Iterator1DA;
 		}
 
 		public static Mesh[] SetUpLODLevelsAndChildrenWithLODSwitcher(this GameObject go, float[] lodScreenSizes, float[] maxWeights, bool recalcNormals, float removeSmallParts, float protectNormals = 1f, float protectUvs = 1f, float protectSubMeshesAndSharpEdges = 1f, float smallTrianglesFirst = 1f, int nrOfSteps = 1)
@@ -1170,18 +1170,18 @@ namespace OrbCreationExtensions
 		[DebuggerHidden]
 		public static IEnumerator GetSimplifiedMeshInBackground(this GameObject go, float maxWeight, bool recalcNormals, float removeSmallParts, Action<Mesh> result)
 		{
-			GameObjectExtensions.<GetSimplifiedMeshInBackground>c__Iterator1D3 <GetSimplifiedMeshInBackground>c__Iterator1D = new GameObjectExtensions.<GetSimplifiedMeshInBackground>c__Iterator1D3();
-			<GetSimplifiedMeshInBackground>c__Iterator1D.go = go;
-			<GetSimplifiedMeshInBackground>c__Iterator1D.maxWeight = maxWeight;
-			<GetSimplifiedMeshInBackground>c__Iterator1D.removeSmallParts = removeSmallParts;
-			<GetSimplifiedMeshInBackground>c__Iterator1D.result = result;
-			<GetSimplifiedMeshInBackground>c__Iterator1D.recalcNormals = recalcNormals;
-			<GetSimplifiedMeshInBackground>c__Iterator1D.<$>go = go;
-			<GetSimplifiedMeshInBackground>c__Iterator1D.<$>maxWeight = maxWeight;
-			<GetSimplifiedMeshInBackground>c__Iterator1D.<$>removeSmallParts = removeSmallParts;
-			<GetSimplifiedMeshInBackground>c__Iterator1D.<$>result = result;
-			<GetSimplifiedMeshInBackground>c__Iterator1D.<$>recalcNormals = recalcNormals;
-			return <GetSimplifiedMeshInBackground>c__Iterator1D;
+			GameObjectExtensions.<GetSimplifiedMeshInBackground>c__Iterator1DB <GetSimplifiedMeshInBackground>c__Iterator1DB = new GameObjectExtensions.<GetSimplifiedMeshInBackground>c__Iterator1DB();
+			<GetSimplifiedMeshInBackground>c__Iterator1DB.go = go;
+			<GetSimplifiedMeshInBackground>c__Iterator1DB.maxWeight = maxWeight;
+			<GetSimplifiedMeshInBackground>c__Iterator1DB.removeSmallParts = removeSmallParts;
+			<GetSimplifiedMeshInBackground>c__Iterator1DB.result = result;
+			<GetSimplifiedMeshInBackground>c__Iterator1DB.recalcNormals = recalcNormals;
+			<GetSimplifiedMeshInBackground>c__Iterator1DB.<$>go = go;
+			<GetSimplifiedMeshInBackground>c__Iterator1DB.<$>maxWeight = maxWeight;
+			<GetSimplifiedMeshInBackground>c__Iterator1DB.<$>removeSmallParts = removeSmallParts;
+			<GetSimplifiedMeshInBackground>c__Iterator1DB.<$>result = result;
+			<GetSimplifiedMeshInBackground>c__Iterator1DB.<$>recalcNormals = recalcNormals;
+			return <GetSimplifiedMeshInBackground>c__Iterator1DB;
 		}
 
 		private static bool MergeMeshInto(Mesh fromMesh, Transform[] fromBones, Material[] fromMaterials, List<Vector3> vertices, List<Vector3> normals, List<Vector2> uv1s, List<Vector2> uv2s, List<Vector2> uv3s, List<Vector2> uv4s, List<Color32> colors32, List<BoneWeight> boneWeights, List<Transform> bones, List<Matrix4x4> bindposes, Dictionary<Material, List<int>> subMeshes, bool usesNegativeScale, Vector4 lightmapScaleOffset, Transform fromTransform, Transform topTransform, string submeshName, string[] skipSubmeshNames)

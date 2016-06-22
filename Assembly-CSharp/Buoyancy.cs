@@ -17,6 +17,8 @@ public class Buoyancy : MonoBehaviour
 
 	public bool CheckPlayerDiving;
 
+	public bool ForceValidateTriggers;
+
 	public int inWaterCounter;
 
 	private Collider lastWaterCollider;
@@ -24,6 +26,8 @@ public class Buoyancy : MonoBehaviour
 	public bool IsOcean;
 
 	public bool ResetVelocityOnExitWater;
+
+	public bool SkipAwakeVoxelise;
 
 	public float density = 500f;
 
@@ -86,20 +90,20 @@ public class Buoyancy : MonoBehaviour
 
 	private void Awake()
 	{
-		if (this.Voxels == null || this.Voxels.Length <= 0)
+		if (!this.SkipAwakeVoxelise && (this.Voxels == null || this.Voxels.Length <= 0))
 		{
 			UnityEngine.Debug.LogWarning("Buoyant object not voxelized... Doing this at runtime can be slow!");
-			this.Voxelize();
+			this.Voxelize(base.transform);
 		}
 	}
 
-	public void Voxelize()
+	public void Voxelize(Transform collidersRoot)
 	{
 		if (!base.gameObject.activeInHierarchy)
 		{
 			GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(base.gameObject);
 			Buoyancy component = gameObject.GetComponent<Buoyancy>();
-			component.Voxelize();
+			component.Voxelize(component.transform);
 			if (component.Voxels != null && component.Voxels.Length > 0)
 			{
 				this.Voxels = new Vector3[component.Voxels.Length];
@@ -110,7 +114,7 @@ public class Buoyancy : MonoBehaviour
 			UnityEngine.Object.DestroyImmediate(gameObject);
 			return;
 		}
-		Collider[] componentsInChildren = base.GetComponentsInChildren<Collider>();
+		Collider[] componentsInChildren = collidersRoot.GetComponentsInChildren<Collider>();
 		bool flag = false;
 		Bounds bounds = default(Bounds);
 		Collider[] array = componentsInChildren;
@@ -134,10 +138,10 @@ public class Buoyancy : MonoBehaviour
 		}
 		else
 		{
-			Quaternion rotation = base.transform.rotation;
-			Vector3 position = base.transform.position;
-			base.transform.rotation = Quaternion.identity;
-			base.transform.position = Vector3.zero;
+			Quaternion rotation = collidersRoot.rotation;
+			Vector3 position = collidersRoot.position;
+			collidersRoot.rotation = Quaternion.identity;
+			collidersRoot.position = Vector3.zero;
 			if (componentsInChildren.Length > 1)
 			{
 				Vector3 min = new Vector3(3.40282347E+38f, 3.40282347E+38f, 3.40282347E+38f);
@@ -145,7 +149,7 @@ public class Buoyancy : MonoBehaviour
 				for (int j = componentsInChildren.Length - 1; j >= 0; j--)
 				{
 					Collider collider2 = componentsInChildren[j];
-					if (collider2.enabled && !collider2.isTrigger)
+					if (collider2.enabled && !collider2.isTrigger && collider2.gameObject.activeInHierarchy)
 					{
 						Vector3 min2 = collider2.bounds.min;
 						Vector3 max2 = collider2.bounds.max;
@@ -191,10 +195,10 @@ public class Buoyancy : MonoBehaviour
 				this.voxelHalfHeight = bounds.size.z;
 			}
 			this.voxelHalfHeight /= (float)(2 * this.slicesPerAxis);
-			base.GetComponent<Rigidbody>().centerOfMass = new Vector3(0f, -bounds.extents.y * 0.2f, 0f) + base.transform.InverseTransformPoint(bounds.center);
-			List<Vector3> list = this.SliceIntoVoxels(componentsInChildren, bounds);
-			base.transform.position = position;
-			base.transform.rotation = rotation;
+			base.GetComponent<Rigidbody>().centerOfMass = new Vector3(0f, -bounds.extents.y * 0.2f, 0f) + bounds.center;
+			List<Vector3> list = this.SliceIntoVoxels(collidersRoot, componentsInChildren, bounds);
+			collidersRoot.position = position;
+			collidersRoot.rotation = rotation;
 			float num = base.GetComponent<Rigidbody>().mass / this.density;
 			Buoyancy.WeldPoints(list, this.voxelsLimit);
 			float y = 1000f * Mathf.Abs(Physics.gravity.y) * num;
@@ -203,7 +207,7 @@ public class Buoyancy : MonoBehaviour
 		}
 	}
 
-	private List<Vector3> SliceIntoVoxels(Collider[] colliders, Bounds bounds)
+	private List<Vector3> SliceIntoVoxels(Transform collidersRoot, Collider[] colliders, Bounds bounds)
 	{
 		List<Vector3> list = new List<Vector3>(this.slicesPerAxis * this.slicesPerAxis * this.slicesPerAxis);
 		Vector3 min = bounds.min;
@@ -242,7 +246,7 @@ public class Buoyancy : MonoBehaviour
 							}
 							if (flag)
 							{
-								list.Add((!(base.transform == collider.transform)) ? base.transform.InverseTransformPoint(vector2) : vector3);
+								list.Add((!(collidersRoot == collider.transform)) ? collidersRoot.InverseTransformPoint(vector2) : vector3);
 								break;
 							}
 						}
@@ -315,7 +319,7 @@ public class Buoyancy : MonoBehaviour
 	{
 		if (other.CompareTag("Water"))
 		{
-			if (LocalPlayer.AnimControl.playerHeadCollider && LocalPlayer.AnimControl.playerHeadCollider.enabled && other.enabled)
+			if (this.isPlayer && LocalPlayer.AnimControl.playerHeadCollider && LocalPlayer.AnimControl.playerHeadCollider.enabled && other.enabled)
 			{
 				Physics.IgnoreCollision(LocalPlayer.AnimControl.playerHeadCollider, other, true);
 			}
@@ -366,43 +370,46 @@ public class Buoyancy : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator ResetRigidbody()
 	{
-		Buoyancy.<ResetRigidbody>c__Iterator152 <ResetRigidbody>c__Iterator = new Buoyancy.<ResetRigidbody>c__Iterator152();
-		<ResetRigidbody>c__Iterator.<>f__this = this;
-		return <ResetRigidbody>c__Iterator;
+		Buoyancy.<ResetRigidbody>c__Iterator15A <ResetRigidbody>c__Iterator15A = new Buoyancy.<ResetRigidbody>c__Iterator15A();
+		<ResetRigidbody>c__Iterator15A.<>f__this = this;
+		return <ResetRigidbody>c__Iterator15A;
 	}
 
 	private void ValidateTriggers()
 	{
-		Bounds bounds = base.transform.GetComponent<CapsuleCollider>().bounds;
-		for (int i = this.WaterTriggers.Count - 1; i >= 0; i--)
+		if (this.WaterTriggers.Count > 0)
 		{
-			if (!this.WaterTriggers[i])
+			Bounds bounds = base.transform.GetComponent<Collider>().bounds;
+			for (int i = this.WaterTriggers.Count - 1; i >= 0; i--)
 			{
-				this.inWaterCounter--;
-				this.WaterTriggers.RemoveAt(i);
-				if (!this.lastWaterCollider)
+				if (!this.WaterTriggers[i])
 				{
-					this.lastWaterCollider = this.WaterTriggers.FirstOrDefault<Collider>();
-					if (this.lastWaterCollider != null)
+					this.inWaterCounter--;
+					this.WaterTriggers.RemoveAt(i);
+					if (!this.lastWaterCollider)
 					{
-						this.lastWaterHeight = this.lastWaterCollider.bounds.max.y;
+						this.lastWaterCollider = this.WaterTriggers.FirstOrDefault<Collider>();
+						if (this.lastWaterCollider != null)
+						{
+							this.lastWaterHeight = this.lastWaterCollider.bounds.max.y;
+						}
 					}
 				}
+				else if (!this.WaterTriggers[i].bounds.Intersects(bounds))
+				{
+					this.OnTriggerExit(this.WaterTriggers[i]);
+				}
 			}
-			else if (!this.WaterTriggers[i].bounds.Intersects(bounds))
+			if (!this.lastWaterCollider && this.WaterTriggers.Count > 0)
 			{
-				this.OnTriggerExit(this.WaterTriggers[i]);
+				this.lastWaterCollider = this.WaterTriggers[0];
 			}
-		}
-		if (!this.lastWaterCollider && this.WaterTriggers.Count > 0)
-		{
-			this.lastWaterCollider = this.WaterTriggers[0];
 		}
 	}
 
 	private void FixedUpdate()
 	{
-		if (this.InWater && this.CheckPlayerDiving)
+		if (this.InWater && (this.CheckPlayerDiving || this.ForceValidateTriggers))
 		{
 			this.ValidateTriggers();
 		}

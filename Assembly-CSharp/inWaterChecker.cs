@@ -24,14 +24,6 @@ public class inWaterChecker : MonoBehaviour
 
 	public float diff;
 
-	private void Start()
-	{
-	}
-
-	private void Update()
-	{
-	}
-
 	private void FixedUpdate()
 	{
 		if (this.inWater)

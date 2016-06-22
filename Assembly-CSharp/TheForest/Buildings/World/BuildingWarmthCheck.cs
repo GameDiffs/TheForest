@@ -56,13 +56,13 @@ namespace TheForest.Buildings.World
 		[DebuggerHidden]
 		private IEnumerator BuildingWarmthCheckRoutine(FloorArchitect floor, IStructureSupport ceiling)
 		{
-			BuildingWarmthCheck.<BuildingWarmthCheckRoutine>c__Iterator145 <BuildingWarmthCheckRoutine>c__Iterator = new BuildingWarmthCheck.<BuildingWarmthCheckRoutine>c__Iterator145();
-			<BuildingWarmthCheckRoutine>c__Iterator.floor = floor;
-			<BuildingWarmthCheckRoutine>c__Iterator.ceiling = ceiling;
-			<BuildingWarmthCheckRoutine>c__Iterator.<$>floor = floor;
-			<BuildingWarmthCheckRoutine>c__Iterator.<$>ceiling = ceiling;
-			<BuildingWarmthCheckRoutine>c__Iterator.<>f__this = this;
-			return <BuildingWarmthCheckRoutine>c__Iterator;
+			BuildingWarmthCheck.<BuildingWarmthCheckRoutine>c__Iterator14C <BuildingWarmthCheckRoutine>c__Iterator14C = new BuildingWarmthCheck.<BuildingWarmthCheckRoutine>c__Iterator14C();
+			<BuildingWarmthCheckRoutine>c__Iterator14C.floor = floor;
+			<BuildingWarmthCheckRoutine>c__Iterator14C.ceiling = ceiling;
+			<BuildingWarmthCheckRoutine>c__Iterator14C.<$>floor = floor;
+			<BuildingWarmthCheckRoutine>c__Iterator14C.<$>ceiling = ceiling;
+			<BuildingWarmthCheckRoutine>c__Iterator14C.<>f__this = this;
+			return <BuildingWarmthCheckRoutine>c__Iterator14C;
 		}
 
 		private bool IsPlayerPositionValid(Vector3 testPos, IStructureSupport floor, IStructureSupport ceiling)

@@ -325,9 +325,11 @@ namespace TheForest.Buildings.World
 					{
 						Transform transform = array[i].transform;
 						GameObject gameObject = transform.gameObject;
-						if (Vector3.Distance(array[i].bounds.center, data._position) < 12f)
+						float num2 = Vector3.Distance(array[i].bounds.center, data._position);
+						if (num2 < 12f)
 						{
-							transform.localRotation *= Quaternion.Euler((float)UnityEngine.Random.Range(-1, 1) * num, (float)UnityEngine.Random.Range(-1, 1) * num, (float)UnityEngine.Random.Range(-1, 1) * num);
+							float num3 = (1f - num2 / 12f) * num;
+							transform.localRotation *= Quaternion.Euler((float)UnityEngine.Random.Range(-1, 1) * num3, (float)UnityEngine.Random.Range(-1, 1) * num3, (float)UnityEngine.Random.Range(-1, 1) * num3);
 						}
 					}
 				}
@@ -349,11 +351,11 @@ namespace TheForest.Buildings.World
 		[DebuggerHidden]
 		private IEnumerator CollapseRoutine(Vector3 origin)
 		{
-			BuildingHealth.<CollapseRoutine>c__Iterator144 <CollapseRoutine>c__Iterator = new BuildingHealth.<CollapseRoutine>c__Iterator144();
-			<CollapseRoutine>c__Iterator.origin = origin;
-			<CollapseRoutine>c__Iterator.<$>origin = origin;
-			<CollapseRoutine>c__Iterator.<>f__this = this;
-			return <CollapseRoutine>c__Iterator;
+			BuildingHealth.<CollapseRoutine>c__Iterator14B <CollapseRoutine>c__Iterator14B = new BuildingHealth.<CollapseRoutine>c__Iterator14B();
+			<CollapseRoutine>c__Iterator14B.origin = origin;
+			<CollapseRoutine>c__Iterator14B.<$>origin = origin;
+			<CollapseRoutine>c__Iterator14B.<>f__this = this;
+			return <CollapseRoutine>c__Iterator14B;
 		}
 
 		public void Collapse(Vector3 origin)
@@ -602,11 +604,12 @@ namespace TheForest.Buildings.World
 					}
 					if (vector != Vector3.zero)
 					{
-						this.DistortReal(new LocalizedHitData
-						{
-							_damage = (1f - this.Hp / this._maxHP) / (float)base.state.BuildingHits * this._maxHP,
-							_position = vector
-						});
+						LocalizedHitData data = default(LocalizedHitData);
+						float num = (1f - this.Hp / this._maxHP) / (float)base.state.BuildingHits;
+						data._damage = num * this._maxHP;
+						data._position = vector;
+						data._distortRatio = num * 10f;
+						this.DistortReal(data);
 					}
 				}
 			}

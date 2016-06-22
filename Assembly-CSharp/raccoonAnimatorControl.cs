@@ -150,11 +150,11 @@ public class raccoonAnimatorControl : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator moveToTreeTarget(Vector3 pos)
 	{
-		raccoonAnimatorControl.<moveToTreeTarget>c__IteratorE8 <moveToTreeTarget>c__IteratorE = new raccoonAnimatorControl.<moveToTreeTarget>c__IteratorE8();
-		<moveToTreeTarget>c__IteratorE.pos = pos;
-		<moveToTreeTarget>c__IteratorE.<$>pos = pos;
-		<moveToTreeTarget>c__IteratorE.<>f__this = this;
-		return <moveToTreeTarget>c__IteratorE;
+		raccoonAnimatorControl.<moveToTreeTarget>c__IteratorEB <moveToTreeTarget>c__IteratorEB = new raccoonAnimatorControl.<moveToTreeTarget>c__IteratorEB();
+		<moveToTreeTarget>c__IteratorEB.pos = pos;
+		<moveToTreeTarget>c__IteratorEB.<$>pos = pos;
+		<moveToTreeTarget>c__IteratorEB.<>f__this = this;
+		return <moveToTreeTarget>c__IteratorEB;
 	}
 
 	private void enableBlocked()

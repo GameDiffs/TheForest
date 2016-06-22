@@ -111,9 +111,9 @@ public class CaveTriggers : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator CaveDoorRoutine()
 	{
-		CaveTriggers.<CaveDoorRoutine>c__Iterator154 <CaveDoorRoutine>c__Iterator = new CaveTriggers.<CaveDoorRoutine>c__Iterator154();
-		<CaveDoorRoutine>c__Iterator.<>f__this = this;
-		return <CaveDoorRoutine>c__Iterator;
+		CaveTriggers.<CaveDoorRoutine>c__Iterator15C <CaveDoorRoutine>c__Iterator15C = new CaveTriggers.<CaveDoorRoutine>c__Iterator15C();
+		<CaveDoorRoutine>c__Iterator15C.<>f__this = this;
+		return <CaveDoorRoutine>c__Iterator15C;
 	}
 
 	public static void CheckPlayersInCave()

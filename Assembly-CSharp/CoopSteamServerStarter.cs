@@ -13,9 +13,9 @@ internal class CoopSteamServerStarter : CoopPeerStarter
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		CoopSteamServerStarter.<Start>c__Iterator29 <Start>c__Iterator = new CoopSteamServerStarter.<Start>c__Iterator29();
-		<Start>c__Iterator.<>f__this = this;
-		return <Start>c__Iterator;
+		CoopSteamServerStarter.<Start>c__Iterator2A <Start>c__Iterator2A = new CoopSteamServerStarter.<Start>c__Iterator2A();
+		<Start>c__Iterator2A.<>f__this = this;
+		return <Start>c__Iterator2A;
 	}
 
 	public override void Connected(BoltConnection connection)

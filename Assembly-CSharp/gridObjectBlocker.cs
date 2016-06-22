@@ -108,7 +108,7 @@ public class gridObjectBlocker : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doDelayedNavCut(int delay)
 	{
-		gridObjectBlocker.<doDelayedNavCut>c__Iterator60 <doDelayedNavCut>c__Iterator = new gridObjectBlocker.<doDelayedNavCut>c__Iterator60();
+		gridObjectBlocker.<doDelayedNavCut>c__Iterator61 <doDelayedNavCut>c__Iterator = new gridObjectBlocker.<doDelayedNavCut>c__Iterator61();
 		<doDelayedNavCut>c__Iterator.delay = delay;
 		<doDelayedNavCut>c__Iterator.<$>delay = delay;
 		<doDelayedNavCut>c__Iterator.<>f__this = this;

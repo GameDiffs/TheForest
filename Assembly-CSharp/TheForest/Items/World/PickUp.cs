@@ -246,37 +246,37 @@ namespace TheForest.Items.World
 		{
 			if (BoltNetwork.isRunning)
 			{
-				BoltEntity componentInParent = base.GetComponentInParent<BoltEntity>();
-				if (componentInParent && componentInParent.isAttached && !componentInParent.StateIs<IPlayerState>() && !componentInParent.StateIs<IMutantState>())
+				BoltEntity component = this._destroyTarget.GetComponent<BoltEntity>();
+				if (component && component.isAttached && !component.StateIs<IPlayerState>() && !component.StateIs<IMutantState>())
 				{
 					if (this._disableInsteadOfDestroy)
 					{
 						DisablePickup disablePickup;
-						if (componentInParent.source == null)
+						if (component.source == null)
 						{
 							disablePickup = DisablePickup.Create(GlobalTargets.OnlySelf);
 						}
 						else
 						{
-							disablePickup = DisablePickup.Create(componentInParent.source);
+							disablePickup = DisablePickup.Create(component.source);
 						}
-						disablePickup.Entity = componentInParent;
+						disablePickup.Entity = component;
 						disablePickup.Num = this._destroyTarget.transform.GetSiblingIndex();
 						disablePickup.Send();
 						this._pendingdestroythroughbolt = true;
 						return false;
 					}
 					DestroyPickUp destroyPickUp;
-					if (componentInParent.source == null)
+					if (component.source == null)
 					{
 						destroyPickUp = DestroyPickUp.Create(GlobalTargets.OnlySelf);
 					}
 					else
 					{
-						destroyPickUp = DestroyPickUp.Create(componentInParent.source);
+						destroyPickUp = DestroyPickUp.Create(component.source);
 					}
 					destroyPickUp.PickUpPlayer = LocalPlayer.Entity;
-					destroyPickUp.PickUpEntity = componentInParent;
+					destroyPickUp.PickUpEntity = component;
 					destroyPickUp.ItemId = this._itemId;
 					destroyPickUp.SibblingId = ((!this._mpIsFlareFromCrate) ? -1 : this._destroyTarget.transform.GetSiblingIndex());
 					destroyPickUp.FakeDrop = fakeDrop;
@@ -400,7 +400,7 @@ namespace TheForest.Items.World
 
 		public bool TryPool()
 		{
-			if (this._poolManagerDespawnCreature && !BoltNetwork.isClient && this._destroyTarget && PoolManager.Pools[this._poolManagerPool].IsSpawned(this._destroyTarget.transform))
+			if (this._poolManagerDespawnCreature && this._destroyTarget && (!BoltNetwork.isClient || !this._destroyTarget.GetComponent<BoltEntity>()) && PoolManager.Pools[this._poolManagerPool].IsSpawned(this._destroyTarget.transform))
 			{
 				base.enabled = false;
 				this._destroyTarget.transform.parent = null;

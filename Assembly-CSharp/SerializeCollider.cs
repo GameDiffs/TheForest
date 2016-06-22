@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[ComponentSerializerFor(typeof(MeshCollider)), ComponentSerializerFor(typeof(TerrainCollider)), ComponentSerializerFor(typeof(WheelCollider))]
+[ComponentSerializerFor(typeof(WheelCollider)), ComponentSerializerFor(typeof(TerrainCollider)), ComponentSerializerFor(typeof(MeshCollider))]
 public class SerializeCollider : ComponentSerializerExtensionBase<Collider>
 {
 	public override IEnumerable<object> Save(Collider target)

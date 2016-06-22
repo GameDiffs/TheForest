@@ -101,23 +101,23 @@ namespace TheForest.Items.Special
 		[DebuggerHidden]
 		private IEnumerator PlayMusicTrack()
 		{
-			WalkmanControler.<PlayMusicTrack>c__Iterator16A <PlayMusicTrack>c__Iterator16A = new WalkmanControler.<PlayMusicTrack>c__Iterator16A();
-			<PlayMusicTrack>c__Iterator16A.<>f__this = this;
-			return <PlayMusicTrack>c__Iterator16A;
+			WalkmanControler.<PlayMusicTrack>c__Iterator172 <PlayMusicTrack>c__Iterator = new WalkmanControler.<PlayMusicTrack>c__Iterator172();
+			<PlayMusicTrack>c__Iterator.<>f__this = this;
+			return <PlayMusicTrack>c__Iterator;
 		}
 
 		[DebuggerHidden]
 		private IEnumerator RegenerationRoutine()
 		{
-			WalkmanControler.<RegenerationRoutine>c__Iterator16B <RegenerationRoutine>c__Iterator16B = new WalkmanControler.<RegenerationRoutine>c__Iterator16B();
-			<RegenerationRoutine>c__Iterator16B.<>f__this = this;
-			return <RegenerationRoutine>c__Iterator16B;
+			WalkmanControler.<RegenerationRoutine>c__Iterator173 <RegenerationRoutine>c__Iterator = new WalkmanControler.<RegenerationRoutine>c__Iterator173();
+			<RegenerationRoutine>c__Iterator.<>f__this = this;
+			return <RegenerationRoutine>c__Iterator;
 		}
 
 		[DebuggerHidden]
 		private IEnumerator enableSoundDetect()
 		{
-			return new WalkmanControler.<enableSoundDetect>c__Iterator16C();
+			return new WalkmanControler.<enableSoundDetect>c__Iterator174();
 		}
 
 		protected override void OnActivating()
@@ -139,11 +139,11 @@ namespace TheForest.Items.Special
 		[DebuggerHidden]
 		private IEnumerator DelayedStop(bool equipPrevious)
 		{
-			WalkmanControler.<DelayedStop>c__Iterator16D <DelayedStop>c__Iterator16D = new WalkmanControler.<DelayedStop>c__Iterator16D();
-			<DelayedStop>c__Iterator16D.equipPrevious = equipPrevious;
-			<DelayedStop>c__Iterator16D.<$>equipPrevious = equipPrevious;
-			<DelayedStop>c__Iterator16D.<>f__this = this;
-			return <DelayedStop>c__Iterator16D;
+			WalkmanControler.<DelayedStop>c__Iterator175 <DelayedStop>c__Iterator = new WalkmanControler.<DelayedStop>c__Iterator175();
+			<DelayedStop>c__Iterator.equipPrevious = equipPrevious;
+			<DelayedStop>c__Iterator.<$>equipPrevious = equipPrevious;
+			<DelayedStop>c__Iterator.<>f__this = this;
+			return <DelayedStop>c__Iterator;
 		}
 
 		private void LoadCassetteInternal(int cassetteId)

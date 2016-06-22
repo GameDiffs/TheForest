@@ -22,7 +22,7 @@ namespace TheForest.Buildings.Creation
 
 		public bool _autoSupported;
 
-		public Transform _logPrefab;
+		public Transform[] _logPrefabs;
 
 		public Renderer _logRenderer;
 
@@ -103,7 +103,7 @@ namespace TheForest.Buildings.Creation
 			}
 			set
 			{
-				if ((value as CoopFloorToken).Holes != null)
+				if (this._wasBuilt && (value as CoopFloorToken).Holes != null)
 				{
 					this._holes = (value as CoopFloorToken).Holes.ToList<Hole>();
 					this.CreateStructure(false);
@@ -194,7 +194,7 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake(bool isDeserializing)
 		{
-			FloorArchitect.<DelayedAwake>c__Iterator133 <DelayedAwake>c__Iterator = new FloorArchitect.<DelayedAwake>c__Iterator133();
+			FloorArchitect.<DelayedAwake>c__Iterator136 <DelayedAwake>c__Iterator = new FloorArchitect.<DelayedAwake>c__Iterator136();
 			<DelayedAwake>c__Iterator.isDeserializing = isDeserializing;
 			<DelayedAwake>c__Iterator.<$>isDeserializing = isDeserializing;
 			<DelayedAwake>c__Iterator.<>f__this = this;
@@ -208,6 +208,14 @@ namespace TheForest.Buildings.Creation
 			{
 				Scene.HudGui.PlaceWallIcon.SetActive(flag);
 				LocalPlayer.Create.BuildingPlacer.Clear = flag;
+				if (base.GetComponent<Renderer>().enabled)
+				{
+					base.GetComponent<Renderer>().sharedMaterial = this._logMat;
+				}
+			}
+			if (!this._autoSupported)
+			{
+				this._logMat.SetColor("_TintColor", (!flag) ? LocalPlayer.Create.BuildingPlacer.RedMat.GetColor("_TintColor") : LocalPlayer.Create.BuildingPlacer.ClearMat.GetColor("_TintColor"));
 			}
 			bool flag2 = false;
 			if (!this._autoSupported && TheForest.Utils.Input.GetButtonAfterDelay("Craft", 0.5f))
@@ -220,83 +228,99 @@ namespace TheForest.Buildings.Creation
 			bool flag3;
 			if (!this._autofillmode)
 			{
-				if (TheForest.Utils.Input.GetButtonDown("AltFire") && this._multiPointsPositions.Count > 0)
+				if (this._autoSupported)
 				{
-					if (this._multiPointsPositions.Count == 0)
+					flag3 = false;
+					List<Vector3> multiPointsPositions = base.GetComponent<FoundationArchitect>().MultiPointsPositions;
+					if (multiPointsPositions.Count > this._multiPointsPositions.Count)
 					{
-						if (this._floorRoot)
-						{
-							UnityEngine.Object.Destroy(this._floorRoot.gameObject);
-							this._floorRoot = null;
-						}
-						this._newPool.Clear();
-						this._logPool.Clear();
-						base.GetComponent<Renderer>().enabled = true;
+						this._multiPointsPositions.Add(multiPointsPositions[multiPointsPositions.Count - 1] + new Vector3(0f, 0.4f, 0f));
 					}
-					this._multiPointsPositions.RemoveAt(this._multiPointsPositions.Count - 1);
-				}
-				flag3 = ((this._autoSupported || (this.CurrentSupport != null && this.CurrentSupport.GetMultiPointsPositions() != null && Mathf.Abs(base.transform.position.y - this.SupportHeight) < this._closureSnappingDistance && (this._multiPointsPositions.Count == 0 || Mathf.Abs(this._multiPointsPositions[0].y - this.SupportHeight) < this._closureSnappingDistance))) && this._multiPointsPositions.Count < this._maxPoints);
-				if (flag3 && this._multiPointsPositions.Count > 0)
-				{
-					Vector3 vector = base.transform.position - this._multiPointsPositions[this._multiPointsPositions.Count - 1];
-					flag3 = (vector.sqrMagnitude > this._minChunkLength * this._minChunkLength);
-					if (this._multiPointsPositions.Count > 1)
+					else if (multiPointsPositions.Count < this._multiPointsPositions.Count)
 					{
-						Vector3 forward = this._multiPointsPositions[this._multiPointsPositions.Count - 2] - this._multiPointsPositions[this._multiPointsPositions.Count - 1];
-						flag3 = (flag3 && Vector3.Angle(forward.normalized, vector.normalized) >= this._minAngleBetweenEdges);
-						Scene.HudGui.AngleAndDistanceGizmo.gameObject.SetActive(true);
-						Scene.HudGui.AngleAndDistanceGizmo.position = this._multiPointsPositions.Last<Vector3>();
-						Scene.HudGui.AngleAndDistanceGizmo.rotation = Quaternion.LookRotation(forward);
+						this._multiPointsPositions.RemoveAt(this._multiPointsPositions.Count - 1);
+					}
+				}
+				else
+				{
+					if (TheForest.Utils.Input.GetButtonDown("AltFire") && this._multiPointsPositions.Count > 0)
+					{
+						if (this._multiPointsPositions.Count == 0)
+						{
+							if (this._floorRoot)
+							{
+								UnityEngine.Object.Destroy(this._floorRoot.gameObject);
+								this._floorRoot = null;
+							}
+							this._newPool.Clear();
+							this._logPool.Clear();
+							base.GetComponent<Renderer>().enabled = true;
+						}
+						this._multiPointsPositions.RemoveAt(this._multiPointsPositions.Count - 1);
+					}
+					flag3 = ((this._autoSupported || (this.CurrentSupport != null && this.CurrentSupport.GetMultiPointsPositions() != null && Mathf.Abs(base.transform.position.y - this.SupportHeight) < this._closureSnappingDistance && (this._multiPointsPositions.Count == 0 || Mathf.Abs(this._multiPointsPositions[0].y - this.SupportHeight) < this._closureSnappingDistance))) && this._multiPointsPositions.Count < this._maxPoints);
+					if (flag3 && this._multiPointsPositions.Count > 0)
+					{
+						Vector3 vector = base.transform.position - this._multiPointsPositions[this._multiPointsPositions.Count - 1];
+						flag3 = (vector.sqrMagnitude > this._minChunkLength * this._minChunkLength);
+						if (this._multiPointsPositions.Count > 1)
+						{
+							Vector3 forward = this._multiPointsPositions[this._multiPointsPositions.Count - 2] - this._multiPointsPositions[this._multiPointsPositions.Count - 1];
+							flag3 = (flag3 && Vector3.Angle(forward.normalized, vector.normalized) >= this._minAngleBetweenEdges);
+							Scene.HudGui.AngleAndDistanceGizmo.gameObject.SetActive(true);
+							Scene.HudGui.AngleAndDistanceGizmo.position = this._multiPointsPositions.Last<Vector3>();
+							Scene.HudGui.AngleAndDistanceGizmo.rotation = Quaternion.LookRotation(forward);
+						}
+						else
+						{
+							Scene.HudGui.AngleAndDistanceGizmo.gameObject.SetActive(false);
+						}
 					}
 					else
 					{
 						Scene.HudGui.AngleAndDistanceGizmo.gameObject.SetActive(false);
 					}
-				}
-				else
-				{
-					Scene.HudGui.AngleAndDistanceGizmo.gameObject.SetActive(false);
-				}
-				if (flag3)
-				{
-					Vector3 vector2 = this.GetCurrentEdgePoint();
-					bool flag4 = this._multiPointsPositions.Count > 2 && Vector3.Distance(vector2, this._multiPointsPositions[0]) < this._closureSnappingDistance;
-					bool flag5 = !flag4;
-					if (flag4)
+					if (flag3)
 					{
-						vector2 = this._multiPointsPositions[0];
-					}
-					Scene.HudGui.SnappingGridGizmo.gameObject.SetActive(flag5);
-					if (flag5 && !this._autoSupported)
-					{
-						float y = vector2.y;
-						vector2.y = this.CurrentSupport.GetMultiPointsPositions()[0].y;
-						Vector3 a = this.CurrentSupport.GetMultiPointsPositions().ClosestPointToMultipoint(vector2);
-						a.y = y;
-						vector2.y = y;
-						Scene.HudGui.SnappingGridGizmo.position = vector2;
-						Scene.HudGui.SnappingGridGizmo.rotation = Quaternion.LookRotation(a - vector2);
-					}
-					if (TheForest.Utils.Input.GetButtonDown("Fire1"))
-					{
-						this._multiPointsPositions.Add(vector2);
-						if (this._multiPointsPositions.Count > 1)
+						Vector3 vector2 = this.GetCurrentEdgePoint();
+						bool flag4 = this._multiPointsPositions.Count > 2 && Vector3.Distance(vector2, this._multiPointsPositions[0]) < this._closureSnappingDistance;
+						bool flag5 = !flag4;
+						if (flag4)
 						{
-							base.GetComponent<Renderer>().enabled = false;
+							vector2 = this._multiPointsPositions[0];
 						}
-						flag2 = flag4;
+						Scene.HudGui.SnappingGridGizmo.gameObject.SetActive(flag5);
+						if (flag5 && !this._autoSupported)
+						{
+							float y = vector2.y;
+							vector2.y = this.CurrentSupport.GetMultiPointsPositions()[0].y;
+							Vector3 a = this.CurrentSupport.GetMultiPointsPositions().ClosestPointToMultipoint(vector2);
+							a.y = y;
+							vector2.y = y;
+							Scene.HudGui.SnappingGridGizmo.position = vector2;
+							Scene.HudGui.SnappingGridGizmo.rotation = Quaternion.LookRotation(a - vector2);
+						}
+						if (TheForest.Utils.Input.GetButtonDown("Fire1"))
+						{
+							this._multiPointsPositions.Add(vector2);
+							if (this._multiPointsPositions.Count > 1)
+							{
+								base.GetComponent<Renderer>().enabled = false;
+							}
+							flag2 = flag4;
+						}
 					}
-				}
-				else
-				{
-					Scene.HudGui.SnappingGridGizmo.gameObject.SetActive(false);
-				}
-				bool flag6 = this._multiPointsPositions.Count > 2 && Vector3.Distance(this._multiPointsPositions.First<Vector3>(), this._multiPointsPositions.Last<Vector3>()) > this._minChunkLength;
-				if (flag6 && (TheForest.Utils.Input.GetButtonDown("Rotate") || TheForest.Utils.Input.GetButtonDown("Take")))
-				{
-					this._multiPointsPositions.Add(this._multiPointsPositions.First<Vector3>());
-					this.RefreshCurrentFloor();
-					flag2 = true;
+					else
+					{
+						Scene.HudGui.SnappingGridGizmo.gameObject.SetActive(false);
+					}
+					bool flag6 = this._multiPointsPositions.Count > 2 && Vector3.Distance(this._multiPointsPositions.First<Vector3>(), this._multiPointsPositions.Last<Vector3>()) > this._minChunkLength;
+					if (flag6 && (TheForest.Utils.Input.GetButtonDown("Rotate") || TheForest.Utils.Input.GetButtonDown("Take")))
+					{
+						this._multiPointsPositions.Add(this._multiPointsPositions.First<Vector3>());
+						this.RefreshCurrentFloor();
+						flag2 = true;
+					}
 				}
 			}
 			else
@@ -342,10 +366,13 @@ namespace TheForest.Buildings.Creation
 				base.GetComponent<Renderer>().enabled = false;
 				LocalPlayer.Create.PlaceGhost(false);
 			}
-			Scene.HudGui.LockPositionIcon.SetActive(flag3 && !this._autofillmode);
-			Scene.HudGui.UnlockPositionIcon.SetActive(this._multiPointsPositions.Count > 0 && !this._autofillmode);
-			Scene.HudGui.ToggleAutoFillIcon.SetActive(!this._autoSupported && !this._autofillmode);
-			Scene.HudGui.ToggleManualPlacementIcon.SetActive(!this._autoSupported && this._autofillmode);
+			if (!this._autoSupported)
+			{
+				Scene.HudGui.LockPositionIcon.SetActive(flag3 && !this._autofillmode);
+				Scene.HudGui.UnlockPositionIcon.SetActive(this._multiPointsPositions.Count > 0 && !this._autofillmode);
+				Scene.HudGui.ToggleAutoFillIcon.SetActive(!this._autoSupported && !this._autofillmode);
+				Scene.HudGui.ToggleManualPlacementIcon.SetActive(!this._autoSupported && this._autofillmode);
+			}
 		}
 
 		private void OnTriggerEnter(Collider other)
@@ -436,7 +463,7 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator OnPlaced()
 		{
-			FloorArchitect.<OnPlaced>c__Iterator134 <OnPlaced>c__Iterator = new FloorArchitect.<OnPlaced>c__Iterator134();
+			FloorArchitect.<OnPlaced>c__Iterator137 <OnPlaced>c__Iterator = new FloorArchitect.<OnPlaced>c__Iterator137();
 			<OnPlaced>c__Iterator.<>f__this = this;
 			return <OnPlaced>c__Iterator;
 		}
@@ -486,10 +513,11 @@ namespace TheForest.Buildings.Creation
 			}
 		}
 
-		private void OnBuilt(GameObject built)
+		public void OnBuilt(GameObject built)
 		{
 			FloorArchitect component = built.GetComponent<FloorArchitect>();
 			component._multiPointsPositions = this._multiPointsPositions;
+			component._holes = this._holes;
 			component._wasBuilt = true;
 			component.OnSerializing();
 			if (this.CurrentSupport != null)
@@ -836,10 +864,9 @@ namespace TheForest.Buildings.Creation
 				transform.rotation = rotation;
 				return transform;
 			}
-			Transform transform2 = (Transform)UnityEngine.Object.Instantiate(this._logPrefab, position, rotation);
+			Transform transform2 = (Transform)UnityEngine.Object.Instantiate(this._logPrefabs[UnityEngine.Random.Range(0, this._logPrefabs.Length)], position, rotation);
 			if (!this._wasBuilt)
 			{
-				UnityEngine.Object.Destroy(transform2.GetComponent<Collider>());
 				if (!this._wasPlaced)
 				{
 					transform2.GetComponentInChildren<Renderer>().sharedMaterial = this._logMat;
@@ -854,7 +881,7 @@ namespace TheForest.Buildings.Creation
 
 		private Quaternion RandomLogRotation()
 		{
-			return Quaternion.Euler(UnityEngine.Random.Range(-0.5f, 0.5f), UnityEngine.Random.Range(-0.5f, 0.5f), UnityEngine.Random.Range(-1.5f, 1.5f));
+			return Quaternion.Euler(UnityEngine.Random.Range(-0.35f, 0.35f), UnityEngine.Random.Range(-0.35f, 0.35f), UnityEngine.Random.Range(-1f, 1f));
 		}
 
 		public float GetLevel()
@@ -864,7 +891,7 @@ namespace TheForest.Buildings.Creation
 
 		public float GetHeight()
 		{
-			return this._logWidth * 0.4f;
+			return this._logWidth * 0.45f;
 		}
 
 		public List<Vector3> GetMultiPointsPositions()

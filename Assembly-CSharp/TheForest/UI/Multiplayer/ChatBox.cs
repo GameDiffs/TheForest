@@ -95,7 +95,7 @@ namespace TheForest.UI.Multiplayer
 		{
 			if (BoltNetwork.isRunning)
 			{
-				ChatEvent chatEvent = ChatEvent.Raise(GlobalTargets.OnlyServer);
+				ChatEvent chatEvent = ChatEvent.Create(GlobalTargets.OnlyServer);
 				chatEvent.Message = line;
 				chatEvent.Sender = LocalPlayer.Entity.networkId;
 				chatEvent.Send();
@@ -150,12 +150,12 @@ namespace TheForest.UI.Multiplayer
 			}
 		}
 
-		[DebuggerHidden]
-		public IEnumerator Close()
+		private void OnApplicationPause(bool pause)
 		{
-			ChatBox.<Close>c__Iterator1B3 <Close>c__Iterator1B = new ChatBox.<Close>c__Iterator1B3();
-			<Close>c__Iterator1B.<>f__this = this;
-			return <Close>c__Iterator1B;
+			if (this._input.gameObject.activeSelf)
+			{
+				this._input.isSelected = true;
+			}
 		}
 
 		public void RegisterPlayer(string name, NetworkId id)
@@ -209,6 +209,14 @@ namespace TheForest.UI.Multiplayer
 			}
 			this._mustClose = true;
 			this._lastInteractionTime = Time.time;
+		}
+
+		[DebuggerHidden]
+		public IEnumerator Close()
+		{
+			ChatBox.<Close>c__Iterator1BB <Close>c__Iterator1BB = new ChatBox.<Close>c__Iterator1BB();
+			<Close>c__Iterator1BB.<>f__this = this;
+			return <Close>c__Iterator1BB;
 		}
 	}
 }

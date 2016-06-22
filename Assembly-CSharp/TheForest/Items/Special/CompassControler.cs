@@ -44,7 +44,7 @@ namespace TheForest.Items.Special
 		[DebuggerHidden]
 		private IEnumerator DelayedStop()
 		{
-			CompassControler.<DelayedStop>c__Iterator161 <DelayedStop>c__Iterator = new CompassControler.<DelayedStop>c__Iterator161();
+			CompassControler.<DelayedStop>c__Iterator169 <DelayedStop>c__Iterator = new CompassControler.<DelayedStop>c__Iterator169();
 			<DelayedStop>c__Iterator.<>f__this = this;
 			return <DelayedStop>c__Iterator;
 		}

@@ -390,9 +390,9 @@ namespace TheForest.Items.Inventory
 		[DebuggerHidden]
 		public IEnumerator OnDeserialized()
 		{
-			PlayerInventory.<OnDeserialized>c__Iterator15E <OnDeserialized>c__Iterator15E = new PlayerInventory.<OnDeserialized>c__Iterator15E();
-			<OnDeserialized>c__Iterator15E.<>f__this = this;
-			return <OnDeserialized>c__Iterator15E;
+			PlayerInventory.<OnDeserialized>c__Iterator166 <OnDeserialized>c__Iterator = new PlayerInventory.<OnDeserialized>c__Iterator166();
+			<OnDeserialized>c__Iterator.<>f__this = this;
+			return <OnDeserialized>c__Iterator;
 		}
 
 		private void Update()
@@ -625,13 +625,13 @@ namespace TheForest.Items.Inventory
 		[DebuggerHidden]
 		private IEnumerator EquipSequence(Item.EquipmentSlot slot, InventoryItemView itemView)
 		{
-			PlayerInventory.<EquipSequence>c__Iterator15F <EquipSequence>c__Iterator15F = new PlayerInventory.<EquipSequence>c__Iterator15F();
-			<EquipSequence>c__Iterator15F.slot = slot;
-			<EquipSequence>c__Iterator15F.itemView = itemView;
-			<EquipSequence>c__Iterator15F.<$>slot = slot;
-			<EquipSequence>c__Iterator15F.<$>itemView = itemView;
-			<EquipSequence>c__Iterator15F.<>f__this = this;
-			return <EquipSequence>c__Iterator15F;
+			PlayerInventory.<EquipSequence>c__Iterator167 <EquipSequence>c__Iterator = new PlayerInventory.<EquipSequence>c__Iterator167();
+			<EquipSequence>c__Iterator.slot = slot;
+			<EquipSequence>c__Iterator.itemView = itemView;
+			<EquipSequence>c__Iterator.<$>slot = slot;
+			<EquipSequence>c__Iterator.<$>itemView = itemView;
+			<EquipSequence>c__Iterator.<>f__this = this;
+			return <EquipSequence>c__Iterator;
 		}
 
 		public void MemorizeItem(Item.EquipmentSlot slot)
@@ -1484,7 +1484,7 @@ namespace TheForest.Items.Inventory
 		[DebuggerHidden]
 		private IEnumerator OnSerializing()
 		{
-			PlayerInventory.<OnSerializing>c__Iterator160 <OnSerializing>c__Iterator = new PlayerInventory.<OnSerializing>c__Iterator160();
+			PlayerInventory.<OnSerializing>c__Iterator168 <OnSerializing>c__Iterator = new PlayerInventory.<OnSerializing>c__Iterator168();
 			<OnSerializing>c__Iterator.<>f__this = this;
 			return <OnSerializing>c__Iterator;
 		}

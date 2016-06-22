@@ -39,6 +39,7 @@ public class TheForestQualitySettings : ScriptableObject
 	{
 		Ultra,
 		High,
+		Low,
 		Off
 	}
 

@@ -503,7 +503,7 @@ namespace DigitalOpus.MB.Core
 
 		private bool _addToCombined(GameObject[] goToAdd, int[] goToDelete, bool disableRendererInSource)
 		{
-			MB3_MeshCombinerSingle.<_addToCombined>c__AnonStorey25F <_addToCombined>c__AnonStorey25F = new MB3_MeshCombinerSingle.<_addToCombined>c__AnonStorey25F();
+			MB3_MeshCombinerSingle.<_addToCombined>c__AnonStorey267 <_addToCombined>c__AnonStorey = new MB3_MeshCombinerSingle.<_addToCombined>c__AnonStorey267();
 			if (!this._validateTextureBakeResults())
 			{
 				return false;
@@ -531,11 +531,11 @@ namespace DigitalOpus.MB.Core
 			}
 			if (goToAdd == null)
 			{
-				<_addToCombined>c__AnonStorey25F._goToAdd = this.empty;
+				<_addToCombined>c__AnonStorey._goToAdd = this.empty;
 			}
 			else
 			{
-				<_addToCombined>c__AnonStorey25F._goToAdd = (GameObject[])goToAdd.Clone();
+				<_addToCombined>c__AnonStorey._goToAdd = (GameObject[])goToAdd.Clone();
 			}
 			int[] array;
 			if (goToDelete == null)
@@ -566,7 +566,7 @@ namespace DigitalOpus.MB.Core
 				MB2_Log.LogDebug(string.Concat(new object[]
 				{
 					"==== Calling _addToCombined objs adding:",
-					<_addToCombined>c__AnonStorey25F._goToAdd.Length,
+					<_addToCombined>c__AnonStorey._goToAdd.Length,
 					" objs deleting:",
 					array.Length,
 					" fixOutOfBounds:",
@@ -653,30 +653,30 @@ namespace DigitalOpus.MB.Core
 			int num3 = 0;
 			int[] array4 = new int[num];
 			int i;
-			for (i = 0; i < <_addToCombined>c__AnonStorey25F._goToAdd.Length; i++)
+			for (i = 0; i < <_addToCombined>c__AnonStorey._goToAdd.Length; i++)
 			{
-				if (!this.instance2Combined_MapContainsKey(<_addToCombined>c__AnonStorey25F._goToAdd[i].GetInstanceID()) || Array.FindIndex<int>(array, (int o) => o == <_addToCombined>c__AnonStorey25F._goToAdd[i].GetInstanceID()) != -1)
+				if (!this.instance2Combined_MapContainsKey(<_addToCombined>c__AnonStorey._goToAdd[i].GetInstanceID()) || Array.FindIndex<int>(array, (int o) => o == <_addToCombined>c__AnonStorey._goToAdd[i].GetInstanceID()) != -1)
 				{
 					MB3_MeshCombinerSingle.MB_DynamicGameObject mB_DynamicGameObject2 = new MB3_MeshCombinerSingle.MB_DynamicGameObject();
-					GameObject gameObject = <_addToCombined>c__AnonStorey25F._goToAdd[i];
+					GameObject gameObject = <_addToCombined>c__AnonStorey._goToAdd[i];
 					Material[] gOMaterials = MB_Utility.GetGOMaterials(gameObject);
 					if (gOMaterials == null)
 					{
 						Debug.LogError("Object " + gameObject.name + " does not have a Renderer");
-						<_addToCombined>c__AnonStorey25F._goToAdd[i] = null;
+						<_addToCombined>c__AnonStorey._goToAdd[i] = null;
 						return false;
 					}
 					Mesh mesh = MB_Utility.GetMesh(gameObject);
 					if (mesh == null)
 					{
 						Debug.LogError("Object " + gameObject.name + " MeshFilter or SkinedMeshRenderer had no mesh");
-						<_addToCombined>c__AnonStorey25F._goToAdd[i] = null;
+						<_addToCombined>c__AnonStorey._goToAdd[i] = null;
 						return false;
 					}
 					if (MBVersion.IsRunningAndMeshNotReadWriteable(mesh))
 					{
 						Debug.LogError("Object " + gameObject.name + " Mesh Importer has read/write flag set to 'false'. This needs to be set to 'true' in order to read data from this mesh.");
-						<_addToCombined>c__AnonStorey25F._goToAdd[i] = null;
+						<_addToCombined>c__AnonStorey._goToAdd[i] = null;
 						return false;
 					}
 					Rect[] array5 = new Rect[gOMaterials.Length];
@@ -692,14 +692,14 @@ namespace DigitalOpus.MB.Core
 								gOMaterials[num4],
 								". Try baking textures"
 							}));
-							<_addToCombined>c__AnonStorey25F._goToAdd[i] = null;
+							<_addToCombined>c__AnonStorey._goToAdd[i] = null;
 						}
 					}
-					if (<_addToCombined>c__AnonStorey25F._goToAdd[i] != null)
+					if (<_addToCombined>c__AnonStorey._goToAdd[i] != null)
 					{
 						list2.Add(mB_DynamicGameObject2);
-						mB_DynamicGameObject2.name = string.Format("{0} {1}", <_addToCombined>c__AnonStorey25F._goToAdd[i].ToString(), <_addToCombined>c__AnonStorey25F._goToAdd[i].GetInstanceID());
-						mB_DynamicGameObject2.instanceID = <_addToCombined>c__AnonStorey25F._goToAdd[i].GetInstanceID();
+						mB_DynamicGameObject2.name = string.Format("{0} {1}", <_addToCombined>c__AnonStorey._goToAdd[i].ToString(), <_addToCombined>c__AnonStorey._goToAdd[i].GetInstanceID());
+						mB_DynamicGameObject2.instanceID = <_addToCombined>c__AnonStorey._goToAdd[i].GetInstanceID();
 						mB_DynamicGameObject2.uvRects = array5;
 						mB_DynamicGameObject2.numVerts = mesh.vertexCount;
 						Renderer renderer = MB_Utility.GetRenderer(gameObject);
@@ -750,24 +750,24 @@ namespace DigitalOpus.MB.Core
 				{
 					if (this.LOG_LEVEL >= MB2_LogLevel.warn)
 					{
-						Debug.LogWarning("Object " + <_addToCombined>c__AnonStorey25F._goToAdd[i].name + " has already been added");
+						Debug.LogWarning("Object " + <_addToCombined>c__AnonStorey._goToAdd[i].name + " has already been added");
 					}
-					<_addToCombined>c__AnonStorey25F._goToAdd[i] = null;
+					<_addToCombined>c__AnonStorey._goToAdd[i] = null;
 				}
 			}
-			for (int num6 = 0; num6 < <_addToCombined>c__AnonStorey25F._goToAdd.Length; num6++)
+			for (int num6 = 0; num6 < <_addToCombined>c__AnonStorey._goToAdd.Length; num6++)
 			{
-				if (<_addToCombined>c__AnonStorey25F._goToAdd[num6] != null && disableRendererInSource)
+				if (<_addToCombined>c__AnonStorey._goToAdd[num6] != null && disableRendererInSource)
 				{
-					MB_Utility.DisableRendererInSource(<_addToCombined>c__AnonStorey25F._goToAdd[num6]);
+					MB_Utility.DisableRendererInSource(<_addToCombined>c__AnonStorey._goToAdd[num6]);
 					if (this.LOG_LEVEL == MB2_LogLevel.trace)
 					{
 						Debug.Log(string.Concat(new object[]
 						{
 							"Disabling renderer on ",
-							<_addToCombined>c__AnonStorey25F._goToAdd[num6].name,
+							<_addToCombined>c__AnonStorey._goToAdd[num6].name,
 							" id=",
-							<_addToCombined>c__AnonStorey25F._goToAdd[num6].GetInstanceID()
+							<_addToCombined>c__AnonStorey._goToAdd[num6].GetInstanceID()
 						}));
 					}
 				}
@@ -1022,7 +1022,7 @@ namespace DigitalOpus.MB.Core
 			for (int num23 = 0; num23 < list2.Count; num23++)
 			{
 				MB3_MeshCombinerSingle.MB_DynamicGameObject mB_DynamicGameObject5 = list2[num23];
-				GameObject gameObject2 = <_addToCombined>c__AnonStorey25F._goToAdd[num23];
+				GameObject gameObject2 = <_addToCombined>c__AnonStorey._goToAdd[num23];
 				int num24 = num12;
 				Mesh mesh2 = MB_Utility.GetMesh(gameObject2);
 				Matrix4x4 localToWorldMatrix = gameObject2.transform.localToWorldMatrix;

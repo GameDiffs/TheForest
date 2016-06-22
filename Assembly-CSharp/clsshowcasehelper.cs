@@ -92,9 +92,9 @@ public class clsshowcasehelper : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator metAsmRoutine()
 	{
-		clsshowcasehelper.<metAsmRoutine>c__Iterator1DB <metAsmRoutine>c__Iterator1DB = new clsshowcasehelper.<metAsmRoutine>c__Iterator1DB();
-		<metAsmRoutine>c__Iterator1DB.<>f__this = this;
-		return <metAsmRoutine>c__Iterator1DB;
+		clsshowcasehelper.<metAsmRoutine>c__Iterator1E3 <metAsmRoutine>c__Iterator1E = new clsshowcasehelper.<metAsmRoutine>c__Iterator1E3();
+		<metAsmRoutine>c__Iterator1E.<>f__this = this;
+		return <metAsmRoutine>c__Iterator1E;
 	}
 
 	private void metAsm()
@@ -105,9 +105,9 @@ public class clsshowcasehelper : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator metDriveRagdoll()
 	{
-		clsshowcasehelper.<metDriveRagdoll>c__Iterator1DC <metDriveRagdoll>c__Iterator1DC = new clsshowcasehelper.<metDriveRagdoll>c__Iterator1DC();
-		<metDriveRagdoll>c__Iterator1DC.<>f__this = this;
-		return <metDriveRagdoll>c__Iterator1DC;
+		clsshowcasehelper.<metDriveRagdoll>c__Iterator1E4 <metDriveRagdoll>c__Iterator1E = new clsshowcasehelper.<metDriveRagdoll>c__Iterator1E4();
+		<metDriveRagdoll>c__Iterator1E.<>f__this = this;
+		return <metDriveRagdoll>c__Iterator1E;
 	}
 
 	private void metspawnexplosion()

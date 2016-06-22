@@ -54,9 +54,9 @@ public class livingBirdsDemoScript : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator SpawnSomeBirds()
 	{
-		livingBirdsDemoScript.<SpawnSomeBirds>c__Iterator20F <SpawnSomeBirds>c__Iterator20F = new livingBirdsDemoScript.<SpawnSomeBirds>c__Iterator20F();
-		<SpawnSomeBirds>c__Iterator20F.<>f__this = this;
-		return <SpawnSomeBirds>c__Iterator20F;
+		livingBirdsDemoScript.<SpawnSomeBirds>c__Iterator217 <SpawnSomeBirds>c__Iterator = new livingBirdsDemoScript.<SpawnSomeBirds>c__Iterator217();
+		<SpawnSomeBirds>c__Iterator.<>f__this = this;
+		return <SpawnSomeBirds>c__Iterator;
 	}
 
 	private void ChangeCamera()

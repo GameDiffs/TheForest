@@ -213,11 +213,11 @@ public class mutantController : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator despawnGo(GameObject go)
 	{
-		mutantController.<despawnGo>c__Iterator6F <despawnGo>c__Iterator6F = new mutantController.<despawnGo>c__Iterator6F();
-		<despawnGo>c__Iterator6F.go = go;
-		<despawnGo>c__Iterator6F.<$>go = go;
-		<despawnGo>c__Iterator6F.<>f__this = this;
-		return <despawnGo>c__Iterator6F;
+		mutantController.<despawnGo>c__Iterator70 <despawnGo>c__Iterator = new mutantController.<despawnGo>c__Iterator70();
+		<despawnGo>c__Iterator.go = go;
+		<despawnGo>c__Iterator.<$>go = go;
+		<despawnGo>c__Iterator.<>f__this = this;
+		return <despawnGo>c__Iterator;
 	}
 
 	public void startSetupFamilies()
@@ -232,7 +232,7 @@ public class mutantController : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator setupFamilies()
 	{
-		mutantController.<setupFamilies>c__Iterator70 <setupFamilies>c__Iterator = new mutantController.<setupFamilies>c__Iterator70();
+		mutantController.<setupFamilies>c__Iterator71 <setupFamilies>c__Iterator = new mutantController.<setupFamilies>c__Iterator71();
 		<setupFamilies>c__Iterator.<>f__this = this;
 		return <setupFamilies>c__Iterator;
 	}
@@ -240,7 +240,7 @@ public class mutantController : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator updateSpawns()
 	{
-		mutantController.<updateSpawns>c__Iterator71 <updateSpawns>c__Iterator = new mutantController.<updateSpawns>c__Iterator71();
+		mutantController.<updateSpawns>c__Iterator72 <updateSpawns>c__Iterator = new mutantController.<updateSpawns>c__Iterator72();
 		<updateSpawns>c__Iterator.<>f__this = this;
 		return <updateSpawns>c__Iterator;
 	}
@@ -248,7 +248,7 @@ public class mutantController : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator updateCaveSpawns()
 	{
-		mutantController.<updateCaveSpawns>c__Iterator72 <updateCaveSpawns>c__Iterator = new mutantController.<updateCaveSpawns>c__Iterator72();
+		mutantController.<updateCaveSpawns>c__Iterator73 <updateCaveSpawns>c__Iterator = new mutantController.<updateCaveSpawns>c__Iterator73();
 		<updateCaveSpawns>c__Iterator.<>f__this = this;
 		return <updateCaveSpawns>c__Iterator;
 	}
@@ -596,7 +596,7 @@ public class mutantController : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator doDawnSetupFamilies()
 	{
-		mutantController.<doDawnSetupFamilies>c__Iterator73 <doDawnSetupFamilies>c__Iterator = new mutantController.<doDawnSetupFamilies>c__Iterator73();
+		mutantController.<doDawnSetupFamilies>c__Iterator74 <doDawnSetupFamilies>c__Iterator = new mutantController.<doDawnSetupFamilies>c__Iterator74();
 		<doDawnSetupFamilies>c__Iterator.<>f__this = this;
 		return <doDawnSetupFamilies>c__Iterator;
 	}
@@ -604,7 +604,7 @@ public class mutantController : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator removeAllEnemies()
 	{
-		mutantController.<removeAllEnemies>c__Iterator74 <removeAllEnemies>c__Iterator = new mutantController.<removeAllEnemies>c__Iterator74();
+		mutantController.<removeAllEnemies>c__Iterator75 <removeAllEnemies>c__Iterator = new mutantController.<removeAllEnemies>c__Iterator75();
 		<removeAllEnemies>c__Iterator.<>f__this = this;
 		return <removeAllEnemies>c__Iterator;
 	}
@@ -612,7 +612,7 @@ public class mutantController : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator removeWorldMutants()
 	{
-		mutantController.<removeWorldMutants>c__Iterator75 <removeWorldMutants>c__Iterator = new mutantController.<removeWorldMutants>c__Iterator75();
+		mutantController.<removeWorldMutants>c__Iterator76 <removeWorldMutants>c__Iterator = new mutantController.<removeWorldMutants>c__Iterator76();
 		<removeWorldMutants>c__Iterator.<>f__this = this;
 		return <removeWorldMutants>c__Iterator;
 	}
@@ -620,7 +620,7 @@ public class mutantController : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator removeCaveMutants()
 	{
-		mutantController.<removeCaveMutants>c__Iterator76 <removeCaveMutants>c__Iterator = new mutantController.<removeCaveMutants>c__Iterator76();
+		mutantController.<removeCaveMutants>c__Iterator77 <removeCaveMutants>c__Iterator = new mutantController.<removeCaveMutants>c__Iterator77();
 		<removeCaveMutants>c__Iterator.<>f__this = this;
 		return <removeCaveMutants>c__Iterator;
 	}
@@ -659,7 +659,7 @@ public class mutantController : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator updateHordeSpawns(int delay)
 	{
-		mutantController.<updateHordeSpawns>c__Iterator77 <updateHordeSpawns>c__Iterator = new mutantController.<updateHordeSpawns>c__Iterator77();
+		mutantController.<updateHordeSpawns>c__Iterator78 <updateHordeSpawns>c__Iterator = new mutantController.<updateHordeSpawns>c__Iterator78();
 		<updateHordeSpawns>c__Iterator.delay = delay;
 		<updateHordeSpawns>c__Iterator.<$>delay = delay;
 		<updateHordeSpawns>c__Iterator.<>f__this = this;
@@ -669,7 +669,7 @@ public class mutantController : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator addToHordeSpawn()
 	{
-		mutantController.<addToHordeSpawn>c__Iterator78 <addToHordeSpawn>c__Iterator = new mutantController.<addToHordeSpawn>c__Iterator78();
+		mutantController.<addToHordeSpawn>c__Iterator79 <addToHordeSpawn>c__Iterator = new mutantController.<addToHordeSpawn>c__Iterator79();
 		<addToHordeSpawn>c__Iterator.<>f__this = this;
 		return <addToHordeSpawn>c__Iterator;
 	}

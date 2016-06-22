@@ -67,7 +67,7 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake(bool isDeserializing)
 		{
-			WallDefensiveChunkReinforcement.<DelayedAwake>c__Iterator140 <DelayedAwake>c__Iterator = new WallDefensiveChunkReinforcement.<DelayedAwake>c__Iterator140();
+			WallDefensiveChunkReinforcement.<DelayedAwake>c__Iterator147 <DelayedAwake>c__Iterator = new WallDefensiveChunkReinforcement.<DelayedAwake>c__Iterator147();
 			<DelayedAwake>c__Iterator.isDeserializing = isDeserializing;
 			<DelayedAwake>c__Iterator.<$>isDeserializing = isDeserializing;
 			<DelayedAwake>c__Iterator.<>f__this = this;
@@ -194,7 +194,7 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator OnPlaced()
 		{
-			WallDefensiveChunkReinforcement.<OnPlaced>c__Iterator141 <OnPlaced>c__Iterator = new WallDefensiveChunkReinforcement.<OnPlaced>c__Iterator141();
+			WallDefensiveChunkReinforcement.<OnPlaced>c__Iterator148 <OnPlaced>c__Iterator = new WallDefensiveChunkReinforcement.<OnPlaced>c__Iterator148();
 			<OnPlaced>c__Iterator.<>f__this = this;
 			return <OnPlaced>c__Iterator;
 		}

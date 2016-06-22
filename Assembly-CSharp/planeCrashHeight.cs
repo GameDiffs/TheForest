@@ -131,7 +131,7 @@ public class planeCrashHeight : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator setSeatCam()
 	{
-		planeCrashHeight.<setSeatCam>c__IteratorD1 <setSeatCam>c__IteratorD = new planeCrashHeight.<setSeatCam>c__IteratorD1();
+		planeCrashHeight.<setSeatCam>c__IteratorD4 <setSeatCam>c__IteratorD = new planeCrashHeight.<setSeatCam>c__IteratorD4();
 		<setSeatCam>c__IteratorD.<>f__this = this;
 		return <setSeatCam>c__IteratorD;
 	}
@@ -139,7 +139,7 @@ public class planeCrashHeight : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator setAisleCam2()
 	{
-		return new planeCrashHeight.<setAisleCam2>c__IteratorD2();
+		return new planeCrashHeight.<setAisleCam2>c__IteratorD5();
 	}
 
 	private void hideExtraBits()

@@ -60,6 +60,8 @@ public class mutantTypeSetup : MonoBehaviour
 
 	private float storeMutantType;
 
+	public int storedRagDollName;
+
 	private bool removeSpawnBlock;
 
 	private void OnSpawned()
@@ -244,25 +246,25 @@ public class mutantTypeSetup : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setLeader()
 	{
-		mutantTypeSetup.<setLeader>c__IteratorAB <setLeader>c__IteratorAB = new mutantTypeSetup.<setLeader>c__IteratorAB();
-		<setLeader>c__IteratorAB.<>f__this = this;
-		return <setLeader>c__IteratorAB;
+		mutantTypeSetup.<setLeader>c__IteratorAE <setLeader>c__IteratorAE = new mutantTypeSetup.<setLeader>c__IteratorAE();
+		<setLeader>c__IteratorAE.<>f__this = this;
+		return <setLeader>c__IteratorAE;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator setPaleLeader()
 	{
-		mutantTypeSetup.<setPaleLeader>c__IteratorAC <setPaleLeader>c__IteratorAC = new mutantTypeSetup.<setPaleLeader>c__IteratorAC();
-		<setPaleLeader>c__IteratorAC.<>f__this = this;
-		return <setPaleLeader>c__IteratorAC;
+		mutantTypeSetup.<setPaleLeader>c__IteratorAF <setPaleLeader>c__IteratorAF = new mutantTypeSetup.<setPaleLeader>c__IteratorAF();
+		<setPaleLeader>c__IteratorAF.<>f__this = this;
+		return <setPaleLeader>c__IteratorAF;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator setFireman()
 	{
-		mutantTypeSetup.<setFireman>c__IteratorAD <setFireman>c__IteratorAD = new mutantTypeSetup.<setFireman>c__IteratorAD();
-		<setFireman>c__IteratorAD.<>f__this = this;
-		return <setFireman>c__IteratorAD;
+		mutantTypeSetup.<setFireman>c__IteratorB0 <setFireman>c__IteratorB = new mutantTypeSetup.<setFireman>c__IteratorB0();
+		<setFireman>c__IteratorB.<>f__this = this;
+		return <setFireman>c__IteratorB;
 	}
 
 	public void forceDynamiteMan(bool onoff)
@@ -284,25 +286,25 @@ public class mutantTypeSetup : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setPale()
 	{
-		mutantTypeSetup.<setPale>c__IteratorAE <setPale>c__IteratorAE = new mutantTypeSetup.<setPale>c__IteratorAE();
-		<setPale>c__IteratorAE.<>f__this = this;
-		return <setPale>c__IteratorAE;
+		mutantTypeSetup.<setPale>c__IteratorB1 <setPale>c__IteratorB = new mutantTypeSetup.<setPale>c__IteratorB1();
+		<setPale>c__IteratorB.<>f__this = this;
+		return <setPale>c__IteratorB;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator setCreepyPale(bool set)
 	{
-		mutantTypeSetup.<setCreepyPale>c__IteratorAF <setCreepyPale>c__IteratorAF = new mutantTypeSetup.<setCreepyPale>c__IteratorAF();
-		<setCreepyPale>c__IteratorAF.set = set;
-		<setCreepyPale>c__IteratorAF.<$>set = set;
-		<setCreepyPale>c__IteratorAF.<>f__this = this;
-		return <setCreepyPale>c__IteratorAF;
+		mutantTypeSetup.<setCreepyPale>c__IteratorB2 <setCreepyPale>c__IteratorB = new mutantTypeSetup.<setCreepyPale>c__IteratorB2();
+		<setCreepyPale>c__IteratorB.set = set;
+		<setCreepyPale>c__IteratorB.<$>set = set;
+		<setCreepyPale>c__IteratorB.<>f__this = this;
+		return <setCreepyPale>c__IteratorB;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator setDefault()
 	{
-		mutantTypeSetup.<setDefault>c__IteratorB0 <setDefault>c__IteratorB = new mutantTypeSetup.<setDefault>c__IteratorB0();
+		mutantTypeSetup.<setDefault>c__IteratorB3 <setDefault>c__IteratorB = new mutantTypeSetup.<setDefault>c__IteratorB3();
 		<setDefault>c__IteratorB.<>f__this = this;
 		return <setDefault>c__IteratorB;
 	}
@@ -310,7 +312,7 @@ public class mutantTypeSetup : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setFemale()
 	{
-		mutantTypeSetup.<setFemale>c__IteratorB1 <setFemale>c__IteratorB = new mutantTypeSetup.<setFemale>c__IteratorB1();
+		mutantTypeSetup.<setFemale>c__IteratorB4 <setFemale>c__IteratorB = new mutantTypeSetup.<setFemale>c__IteratorB4();
 		<setFemale>c__IteratorB.<>f__this = this;
 		return <setFemale>c__IteratorB;
 	}
@@ -318,7 +320,7 @@ public class mutantTypeSetup : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setArmsy(GameObject go)
 	{
-		mutantTypeSetup.<setArmsy>c__IteratorB2 <setArmsy>c__IteratorB = new mutantTypeSetup.<setArmsy>c__IteratorB2();
+		mutantTypeSetup.<setArmsy>c__IteratorB5 <setArmsy>c__IteratorB = new mutantTypeSetup.<setArmsy>c__IteratorB5();
 		<setArmsy>c__IteratorB.go = go;
 		<setArmsy>c__IteratorB.<$>go = go;
 		<setArmsy>c__IteratorB.<>f__this = this;
@@ -328,7 +330,7 @@ public class mutantTypeSetup : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setVags(GameObject go)
 	{
-		mutantTypeSetup.<setVags>c__IteratorB3 <setVags>c__IteratorB = new mutantTypeSetup.<setVags>c__IteratorB3();
+		mutantTypeSetup.<setVags>c__IteratorB6 <setVags>c__IteratorB = new mutantTypeSetup.<setVags>c__IteratorB6();
 		<setVags>c__IteratorB.go = go;
 		<setVags>c__IteratorB.<$>go = go;
 		<setVags>c__IteratorB.<>f__this = this;
@@ -338,7 +340,7 @@ public class mutantTypeSetup : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setBaby(GameObject go)
 	{
-		mutantTypeSetup.<setBaby>c__IteratorB4 <setBaby>c__IteratorB = new mutantTypeSetup.<setBaby>c__IteratorB4();
+		mutantTypeSetup.<setBaby>c__IteratorB7 <setBaby>c__IteratorB = new mutantTypeSetup.<setBaby>c__IteratorB7();
 		<setBaby>c__IteratorB.go = go;
 		<setBaby>c__IteratorB.<$>go = go;
 		<setBaby>c__IteratorB.<>f__this = this;
@@ -348,7 +350,7 @@ public class mutantTypeSetup : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setFatCreepy(GameObject go)
 	{
-		mutantTypeSetup.<setFatCreepy>c__IteratorB5 <setFatCreepy>c__IteratorB = new mutantTypeSetup.<setFatCreepy>c__IteratorB5();
+		mutantTypeSetup.<setFatCreepy>c__IteratorB8 <setFatCreepy>c__IteratorB = new mutantTypeSetup.<setFatCreepy>c__IteratorB8();
 		<setFatCreepy>c__IteratorB.go = go;
 		<setFatCreepy>c__IteratorB.<$>go = go;
 		<setFatCreepy>c__IteratorB.<>f__this = this;
@@ -363,7 +365,7 @@ public class mutantTypeSetup : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setMaleSkinny()
 	{
-		mutantTypeSetup.<setMaleSkinny>c__IteratorB6 <setMaleSkinny>c__IteratorB = new mutantTypeSetup.<setMaleSkinny>c__IteratorB6();
+		mutantTypeSetup.<setMaleSkinny>c__IteratorB9 <setMaleSkinny>c__IteratorB = new mutantTypeSetup.<setMaleSkinny>c__IteratorB9();
 		<setMaleSkinny>c__IteratorB.<>f__this = this;
 		return <setMaleSkinny>c__IteratorB;
 	}
@@ -371,19 +373,19 @@ public class mutantTypeSetup : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setFemaleSkinny()
 	{
-		mutantTypeSetup.<setFemaleSkinny>c__IteratorB7 <setFemaleSkinny>c__IteratorB = new mutantTypeSetup.<setFemaleSkinny>c__IteratorB7();
-		<setFemaleSkinny>c__IteratorB.<>f__this = this;
-		return <setFemaleSkinny>c__IteratorB;
+		mutantTypeSetup.<setFemaleSkinny>c__IteratorBA <setFemaleSkinny>c__IteratorBA = new mutantTypeSetup.<setFemaleSkinny>c__IteratorBA();
+		<setFemaleSkinny>c__IteratorBA.<>f__this = this;
+		return <setFemaleSkinny>c__IteratorBA;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator setFollower(GameObject leader)
 	{
-		mutantTypeSetup.<setFollower>c__IteratorB8 <setFollower>c__IteratorB = new mutantTypeSetup.<setFollower>c__IteratorB8();
-		<setFollower>c__IteratorB.leader = leader;
-		<setFollower>c__IteratorB.<$>leader = leader;
-		<setFollower>c__IteratorB.<>f__this = this;
-		return <setFollower>c__IteratorB;
+		mutantTypeSetup.<setFollower>c__IteratorBB <setFollower>c__IteratorBB = new mutantTypeSetup.<setFollower>c__IteratorBB();
+		<setFollower>c__IteratorBB.leader = leader;
+		<setFollower>c__IteratorBB.<$>leader = leader;
+		<setFollower>c__IteratorBB.<>f__this = this;
+		return <setFollower>c__IteratorBB;
 	}
 
 	private void setInCave(bool set)
@@ -422,11 +424,11 @@ public class mutantTypeSetup : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator addFollower(GameObject follower)
 	{
-		mutantTypeSetup.<addFollower>c__IteratorB9 <addFollower>c__IteratorB = new mutantTypeSetup.<addFollower>c__IteratorB9();
-		<addFollower>c__IteratorB.follower = follower;
-		<addFollower>c__IteratorB.<$>follower = follower;
-		<addFollower>c__IteratorB.<>f__this = this;
-		return <addFollower>c__IteratorB;
+		mutantTypeSetup.<addFollower>c__IteratorBC <addFollower>c__IteratorBC = new mutantTypeSetup.<addFollower>c__IteratorBC();
+		<addFollower>c__IteratorBC.follower = follower;
+		<addFollower>c__IteratorBC.<$>follower = follower;
+		<addFollower>c__IteratorBC.<>f__this = this;
+		return <addFollower>c__IteratorBC;
 	}
 
 	private void setPaleOnCeiling(bool set)
@@ -448,11 +450,11 @@ public class mutantTypeSetup : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator addToSpawn(GameObject go)
 	{
-		mutantTypeSetup.<addToSpawn>c__IteratorBA <addToSpawn>c__IteratorBA = new mutantTypeSetup.<addToSpawn>c__IteratorBA();
-		<addToSpawn>c__IteratorBA.go = go;
-		<addToSpawn>c__IteratorBA.<$>go = go;
-		<addToSpawn>c__IteratorBA.<>f__this = this;
-		return <addToSpawn>c__IteratorBA;
+		mutantTypeSetup.<addToSpawn>c__IteratorBD <addToSpawn>c__IteratorBD = new mutantTypeSetup.<addToSpawn>c__IteratorBD();
+		<addToSpawn>c__IteratorBD.go = go;
+		<addToSpawn>c__IteratorBD.<$>go = go;
+		<addToSpawn>c__IteratorBD.<>f__this = this;
+		return <addToSpawn>c__IteratorBD;
 	}
 
 	public void removeFromSpawn()
@@ -660,9 +662,9 @@ public class mutantTypeSetup : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doSpawnDummy()
 	{
-		mutantTypeSetup.<doSpawnDummy>c__IteratorBB <doSpawnDummy>c__IteratorBB = new mutantTypeSetup.<doSpawnDummy>c__IteratorBB();
-		<doSpawnDummy>c__IteratorBB.<>f__this = this;
-		return <doSpawnDummy>c__IteratorBB;
+		mutantTypeSetup.<doSpawnDummy>c__IteratorBE <doSpawnDummy>c__IteratorBE = new mutantTypeSetup.<doSpawnDummy>c__IteratorBE();
+		<doSpawnDummy>c__IteratorBE.<>f__this = this;
+		return <doSpawnDummy>c__IteratorBE;
 	}
 
 	public void armsyInCave()
@@ -782,5 +784,10 @@ public class mutantTypeSetup : MonoBehaviour
 			Scene.MutantControler.activeInstantSpawnedCannibals.Add(base.gameObject);
 		}
 		this.instantSpawn = set;
+	}
+
+	public void getRagDollName(int name)
+	{
+		this.storedRagDollName = name;
 	}
 }

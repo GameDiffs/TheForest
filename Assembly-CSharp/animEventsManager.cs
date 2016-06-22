@@ -981,7 +981,7 @@ public class animEventsManager : EntityEventListener
 	[DebuggerHidden]
 	public IEnumerator smoothDisableSpine()
 	{
-		animEventsManager.<smoothDisableSpine>c__Iterator30 <smoothDisableSpine>c__Iterator = new animEventsManager.<smoothDisableSpine>c__Iterator30();
+		animEventsManager.<smoothDisableSpine>c__Iterator31 <smoothDisableSpine>c__Iterator = new animEventsManager.<smoothDisableSpine>c__Iterator31();
 		<smoothDisableSpine>c__Iterator.<>f__this = this;
 		return <smoothDisableSpine>c__Iterator;
 	}
@@ -989,7 +989,7 @@ public class animEventsManager : EntityEventListener
 	[DebuggerHidden]
 	public IEnumerator smoothEnableSpine()
 	{
-		animEventsManager.<smoothEnableSpine>c__Iterator31 <smoothEnableSpine>c__Iterator = new animEventsManager.<smoothEnableSpine>c__Iterator31();
+		animEventsManager.<smoothEnableSpine>c__Iterator32 <smoothEnableSpine>c__Iterator = new animEventsManager.<smoothEnableSpine>c__Iterator32();
 		<smoothEnableSpine>c__Iterator.<>f__this = this;
 		return <smoothEnableSpine>c__Iterator;
 	}
@@ -997,7 +997,7 @@ public class animEventsManager : EntityEventListener
 	[DebuggerHidden]
 	private IEnumerator drawBowBlend()
 	{
-		animEventsManager.<drawBowBlend>c__Iterator32 <drawBowBlend>c__Iterator = new animEventsManager.<drawBowBlend>c__Iterator32();
+		animEventsManager.<drawBowBlend>c__Iterator33 <drawBowBlend>c__Iterator = new animEventsManager.<drawBowBlend>c__Iterator33();
 		<drawBowBlend>c__Iterator.<>f__this = this;
 		return <drawBowBlend>c__Iterator;
 	}
@@ -1022,7 +1022,7 @@ public class animEventsManager : EntityEventListener
 	[DebuggerHidden]
 	private IEnumerator axeStuckInGround()
 	{
-		animEventsManager.<axeStuckInGround>c__Iterator33 <axeStuckInGround>c__Iterator = new animEventsManager.<axeStuckInGround>c__Iterator33();
+		animEventsManager.<axeStuckInGround>c__Iterator34 <axeStuckInGround>c__Iterator = new animEventsManager.<axeStuckInGround>c__Iterator34();
 		<axeStuckInGround>c__Iterator.<>f__this = this;
 		return <axeStuckInGround>c__Iterator;
 	}
@@ -1030,7 +1030,7 @@ public class animEventsManager : EntityEventListener
 	[DebuggerHidden]
 	public IEnumerator axeHitTree()
 	{
-		animEventsManager.<axeHitTree>c__Iterator34 <axeHitTree>c__Iterator = new animEventsManager.<axeHitTree>c__Iterator34();
+		animEventsManager.<axeHitTree>c__Iterator35 <axeHitTree>c__Iterator = new animEventsManager.<axeHitTree>c__Iterator35();
 		<axeHitTree>c__Iterator.<>f__this = this;
 		return <axeHitTree>c__Iterator;
 	}
@@ -1043,7 +1043,7 @@ public class animEventsManager : EntityEventListener
 	[DebuggerHidden]
 	private IEnumerator fixRotation()
 	{
-		animEventsManager.<fixRotation>c__Iterator35 <fixRotation>c__Iterator = new animEventsManager.<fixRotation>c__Iterator35();
+		animEventsManager.<fixRotation>c__Iterator36 <fixRotation>c__Iterator = new animEventsManager.<fixRotation>c__Iterator36();
 		<fixRotation>c__Iterator.<>f__this = this;
 		return <fixRotation>c__Iterator;
 	}

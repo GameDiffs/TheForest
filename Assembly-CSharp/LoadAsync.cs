@@ -60,10 +60,10 @@ public class LoadAsync : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator LoadLevelWithProgress(string levelToLoad)
 	{
-		LoadAsync.<LoadLevelWithProgress>c__Iterator1A5 <LoadLevelWithProgress>c__Iterator1A = new LoadAsync.<LoadLevelWithProgress>c__Iterator1A5();
-		<LoadLevelWithProgress>c__Iterator1A.levelToLoad = levelToLoad;
-		<LoadLevelWithProgress>c__Iterator1A.<$>levelToLoad = levelToLoad;
-		<LoadLevelWithProgress>c__Iterator1A.<>f__this = this;
-		return <LoadLevelWithProgress>c__Iterator1A;
+		LoadAsync.<LoadLevelWithProgress>c__Iterator1AD <LoadLevelWithProgress>c__Iterator1AD = new LoadAsync.<LoadLevelWithProgress>c__Iterator1AD();
+		<LoadLevelWithProgress>c__Iterator1AD.levelToLoad = levelToLoad;
+		<LoadLevelWithProgress>c__Iterator1AD.<$>levelToLoad = levelToLoad;
+		<LoadLevelWithProgress>c__Iterator1AD.<>f__this = this;
+		return <LoadLevelWithProgress>c__Iterator1AD;
 	}
 }

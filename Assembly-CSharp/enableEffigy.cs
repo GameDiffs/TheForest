@@ -77,7 +77,7 @@ public class enableEffigy : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator OnDeserialized()
 	{
-		enableEffigy.<OnDeserialized>c__Iterator56 <OnDeserialized>c__Iterator = new enableEffigy.<OnDeserialized>c__Iterator56();
+		enableEffigy.<OnDeserialized>c__Iterator57 <OnDeserialized>c__Iterator = new enableEffigy.<OnDeserialized>c__Iterator57();
 		<OnDeserialized>c__Iterator.<>f__this = this;
 		return <OnDeserialized>c__Iterator;
 	}

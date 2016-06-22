@@ -134,10 +134,10 @@ public class mutantCutsceneManager : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator otherTurnAround(GameObject member)
 	{
-		mutantCutsceneManager.<otherTurnAround>c__Iterator79 <otherTurnAround>c__Iterator = new mutantCutsceneManager.<otherTurnAround>c__Iterator79();
-		<otherTurnAround>c__Iterator.member = member;
-		<otherTurnAround>c__Iterator.<$>member = member;
-		return <otherTurnAround>c__Iterator;
+		mutantCutsceneManager.<otherTurnAround>c__Iterator7A <otherTurnAround>c__Iterator7A = new mutantCutsceneManager.<otherTurnAround>c__Iterator7A();
+		<otherTurnAround>c__Iterator7A.member = member;
+		<otherTurnAround>c__Iterator7A.<$>member = member;
+		return <otherTurnAround>c__Iterator7A;
 	}
 
 	private void runHitPlayer()

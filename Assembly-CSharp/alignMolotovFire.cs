@@ -10,8 +10,6 @@ public class alignMolotovFire : MonoBehaviour
 
 	public Transform dummyTarget;
 
-	public Transform parentTarget;
-
 	public float xOffset;
 
 	private Transform origParent;
@@ -30,12 +28,6 @@ public class alignMolotovFire : MonoBehaviour
 
 	public float followDistance = 0.25f;
 
-	public float xOff;
-
-	public float yOff;
-
-	public float zOff;
-
 	public bool net;
 
 	private void Awake()
@@ -51,12 +43,12 @@ public class alignMolotovFire : MonoBehaviour
 
 	private void LateUpdate()
 	{
+		if (LocalPlayer.MainCamTr && !this.target)
+		{
+			this.target = LocalPlayer.MainCam.transform.FindChild("followMe").transform;
+		}
 		if (this.net)
 		{
-			if (LocalPlayer.MainCamTr && !this.target)
-			{
-				this.target = LocalPlayer.MainCam.transform.FindChild("followMe").transform;
-			}
 			if (this.target)
 			{
 				this.origParent.rotation = this.target.rotation;

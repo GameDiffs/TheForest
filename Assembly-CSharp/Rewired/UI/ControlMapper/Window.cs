@@ -452,9 +452,9 @@ namespace Rewired.UI.ControlMapper
 		[DebuggerHidden]
 		private IEnumerator OnEnableAsync()
 		{
-			Window.<OnEnableAsync>c__Iterator10E <OnEnableAsync>c__Iterator10E = new Window.<OnEnableAsync>c__Iterator10E();
-			<OnEnableAsync>c__Iterator10E.<>f__this = this;
-			return <OnEnableAsync>c__Iterator10E;
+			Window.<OnEnableAsync>c__Iterator111 <OnEnableAsync>c__Iterator = new Window.<OnEnableAsync>c__Iterator111();
+			<OnEnableAsync>c__Iterator.<>f__this = this;
+			return <OnEnableAsync>c__Iterator;
 		}
 	}
 }

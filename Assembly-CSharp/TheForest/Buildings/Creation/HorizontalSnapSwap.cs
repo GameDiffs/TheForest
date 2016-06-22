@@ -46,9 +46,9 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator Start()
 		{
-			HorizontalSnapSwap.<Start>c__Iterator137 <Start>c__Iterator = new HorizontalSnapSwap.<Start>c__Iterator137();
-			<Start>c__Iterator.<>f__this = this;
-			return <Start>c__Iterator;
+			HorizontalSnapSwap.<Start>c__Iterator13A <Start>c__Iterator13A = new HorizontalSnapSwap.<Start>c__Iterator13A();
+			<Start>c__Iterator13A.<>f__this = this;
+			return <Start>c__Iterator13A;
 		}
 
 		private void Update()

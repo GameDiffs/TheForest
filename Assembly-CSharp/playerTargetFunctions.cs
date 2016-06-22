@@ -253,7 +253,7 @@ public class playerTargetFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator enableAimAtTarget()
 	{
-		playerTargetFunctions.<enableAimAtTarget>c__IteratorE2 <enableAimAtTarget>c__IteratorE = new playerTargetFunctions.<enableAimAtTarget>c__IteratorE2();
+		playerTargetFunctions.<enableAimAtTarget>c__IteratorE5 <enableAimAtTarget>c__IteratorE = new playerTargetFunctions.<enableAimAtTarget>c__IteratorE5();
 		<enableAimAtTarget>c__IteratorE.<>f__this = this;
 		return <enableAimAtTarget>c__IteratorE;
 	}
@@ -261,7 +261,7 @@ public class playerTargetFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator disableAimAtTarget()
 	{
-		playerTargetFunctions.<disableAimAtTarget>c__IteratorE3 <disableAimAtTarget>c__IteratorE = new playerTargetFunctions.<disableAimAtTarget>c__IteratorE3();
+		playerTargetFunctions.<disableAimAtTarget>c__IteratorE6 <disableAimAtTarget>c__IteratorE = new playerTargetFunctions.<disableAimAtTarget>c__IteratorE6();
 		<disableAimAtTarget>c__IteratorE.<>f__this = this;
 		return <disableAimAtTarget>c__IteratorE;
 	}
@@ -269,7 +269,7 @@ public class playerTargetFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setSmashPosition(Vector3 pos)
 	{
-		playerTargetFunctions.<setSmashPosition>c__IteratorE4 <setSmashPosition>c__IteratorE = new playerTargetFunctions.<setSmashPosition>c__IteratorE4();
+		playerTargetFunctions.<setSmashPosition>c__IteratorE7 <setSmashPosition>c__IteratorE = new playerTargetFunctions.<setSmashPosition>c__IteratorE7();
 		<setSmashPosition>c__IteratorE.pos = pos;
 		<setSmashPosition>c__IteratorE.<$>pos = pos;
 		<setSmashPosition>c__IteratorE.<>f__this = this;
@@ -279,7 +279,7 @@ public class playerTargetFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setTreePosition(Vector3 pos)
 	{
-		playerTargetFunctions.<setTreePosition>c__IteratorE5 <setTreePosition>c__IteratorE = new playerTargetFunctions.<setTreePosition>c__IteratorE5();
+		playerTargetFunctions.<setTreePosition>c__IteratorE8 <setTreePosition>c__IteratorE = new playerTargetFunctions.<setTreePosition>c__IteratorE8();
 		<setTreePosition>c__IteratorE.pos = pos;
 		<setTreePosition>c__IteratorE.<$>pos = pos;
 		<setTreePosition>c__IteratorE.<>f__this = this;
@@ -289,7 +289,7 @@ public class playerTargetFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator moveToTreeTarget(Vector3 pos)
 	{
-		playerTargetFunctions.<moveToTreeTarget>c__IteratorE6 <moveToTreeTarget>c__IteratorE = new playerTargetFunctions.<moveToTreeTarget>c__IteratorE6();
+		playerTargetFunctions.<moveToTreeTarget>c__IteratorE9 <moveToTreeTarget>c__IteratorE = new playerTargetFunctions.<moveToTreeTarget>c__IteratorE9();
 		<moveToTreeTarget>c__IteratorE.pos = pos;
 		<moveToTreeTarget>c__IteratorE.<$>pos = pos;
 		<moveToTreeTarget>c__IteratorE.<>f__this = this;

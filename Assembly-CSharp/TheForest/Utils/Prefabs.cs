@@ -161,9 +161,9 @@ namespace TheForest.Utils
 		[DebuggerHidden]
 		private IEnumerator Start()
 		{
-			Prefabs.<Start>c__Iterator1B8 <Start>c__Iterator1B = new Prefabs.<Start>c__Iterator1B8();
-			<Start>c__Iterator1B.<>f__this = this;
-			return <Start>c__Iterator1B;
+			Prefabs.<Start>c__Iterator1C0 <Start>c__Iterator1C = new Prefabs.<Start>c__Iterator1C0();
+			<Start>c__Iterator1C.<>f__this = this;
+			return <Start>c__Iterator1C;
 		}
 
 		private void OnDestroy()
@@ -241,61 +241,61 @@ namespace TheForest.Utils
 		[DebuggerHidden]
 		private IEnumerator DelayedSpawn(Transform prefab, Vector3 pos, Quaternion rot, Transform parent)
 		{
-			Prefabs.<DelayedSpawn>c__Iterator1B9 <DelayedSpawn>c__Iterator1B = new Prefabs.<DelayedSpawn>c__Iterator1B9();
-			<DelayedSpawn>c__Iterator1B.prefab = prefab;
-			<DelayedSpawn>c__Iterator1B.pos = pos;
-			<DelayedSpawn>c__Iterator1B.rot = rot;
-			<DelayedSpawn>c__Iterator1B.parent = parent;
-			<DelayedSpawn>c__Iterator1B.<$>prefab = prefab;
-			<DelayedSpawn>c__Iterator1B.<$>pos = pos;
-			<DelayedSpawn>c__Iterator1B.<$>rot = rot;
-			<DelayedSpawn>c__Iterator1B.<$>parent = parent;
-			return <DelayedSpawn>c__Iterator1B;
+			Prefabs.<DelayedSpawn>c__Iterator1C1 <DelayedSpawn>c__Iterator1C = new Prefabs.<DelayedSpawn>c__Iterator1C1();
+			<DelayedSpawn>c__Iterator1C.prefab = prefab;
+			<DelayedSpawn>c__Iterator1C.pos = pos;
+			<DelayedSpawn>c__Iterator1C.rot = rot;
+			<DelayedSpawn>c__Iterator1C.parent = parent;
+			<DelayedSpawn>c__Iterator1C.<$>prefab = prefab;
+			<DelayedSpawn>c__Iterator1C.<$>pos = pos;
+			<DelayedSpawn>c__Iterator1C.<$>rot = rot;
+			<DelayedSpawn>c__Iterator1C.<$>parent = parent;
+			return <DelayedSpawn>c__Iterator1C;
 		}
 
 		[DebuggerHidden]
 		private IEnumerator DelayedSpawnMP(Transform prefab, Vector3 pos, Quaternion rot, Transform parent)
 		{
-			Prefabs.<DelayedSpawnMP>c__Iterator1BA <DelayedSpawnMP>c__Iterator1BA = new Prefabs.<DelayedSpawnMP>c__Iterator1BA();
-			<DelayedSpawnMP>c__Iterator1BA.prefab = prefab;
-			<DelayedSpawnMP>c__Iterator1BA.pos = pos;
-			<DelayedSpawnMP>c__Iterator1BA.rot = rot;
-			<DelayedSpawnMP>c__Iterator1BA.parent = parent;
-			<DelayedSpawnMP>c__Iterator1BA.<$>prefab = prefab;
-			<DelayedSpawnMP>c__Iterator1BA.<$>pos = pos;
-			<DelayedSpawnMP>c__Iterator1BA.<$>rot = rot;
-			<DelayedSpawnMP>c__Iterator1BA.<$>parent = parent;
-			return <DelayedSpawnMP>c__Iterator1BA;
+			Prefabs.<DelayedSpawnMP>c__Iterator1C2 <DelayedSpawnMP>c__Iterator1C = new Prefabs.<DelayedSpawnMP>c__Iterator1C2();
+			<DelayedSpawnMP>c__Iterator1C.prefab = prefab;
+			<DelayedSpawnMP>c__Iterator1C.pos = pos;
+			<DelayedSpawnMP>c__Iterator1C.rot = rot;
+			<DelayedSpawnMP>c__Iterator1C.parent = parent;
+			<DelayedSpawnMP>c__Iterator1C.<$>prefab = prefab;
+			<DelayedSpawnMP>c__Iterator1C.<$>pos = pos;
+			<DelayedSpawnMP>c__Iterator1C.<$>rot = rot;
+			<DelayedSpawnMP>c__Iterator1C.<$>parent = parent;
+			return <DelayedSpawnMP>c__Iterator1C;
 		}
 
 		[DebuggerHidden]
 		private IEnumerator DelayedPoolSpawn(string pool, Transform prefab, Vector3 pos, Quaternion rot)
 		{
-			Prefabs.<DelayedPoolSpawn>c__Iterator1BB <DelayedPoolSpawn>c__Iterator1BB = new Prefabs.<DelayedPoolSpawn>c__Iterator1BB();
-			<DelayedPoolSpawn>c__Iterator1BB.pool = pool;
-			<DelayedPoolSpawn>c__Iterator1BB.prefab = prefab;
-			<DelayedPoolSpawn>c__Iterator1BB.pos = pos;
-			<DelayedPoolSpawn>c__Iterator1BB.rot = rot;
-			<DelayedPoolSpawn>c__Iterator1BB.<$>pool = pool;
-			<DelayedPoolSpawn>c__Iterator1BB.<$>prefab = prefab;
-			<DelayedPoolSpawn>c__Iterator1BB.<$>pos = pos;
-			<DelayedPoolSpawn>c__Iterator1BB.<$>rot = rot;
-			return <DelayedPoolSpawn>c__Iterator1BB;
+			Prefabs.<DelayedPoolSpawn>c__Iterator1C3 <DelayedPoolSpawn>c__Iterator1C = new Prefabs.<DelayedPoolSpawn>c__Iterator1C3();
+			<DelayedPoolSpawn>c__Iterator1C.pool = pool;
+			<DelayedPoolSpawn>c__Iterator1C.prefab = prefab;
+			<DelayedPoolSpawn>c__Iterator1C.pos = pos;
+			<DelayedPoolSpawn>c__Iterator1C.rot = rot;
+			<DelayedPoolSpawn>c__Iterator1C.<$>pool = pool;
+			<DelayedPoolSpawn>c__Iterator1C.<$>prefab = prefab;
+			<DelayedPoolSpawn>c__Iterator1C.<$>pos = pos;
+			<DelayedPoolSpawn>c__Iterator1C.<$>rot = rot;
+			return <DelayedPoolSpawn>c__Iterator1C;
 		}
 
 		[DebuggerHidden]
 		private IEnumerator DelayedPoolSpawnMP(string pool, Transform prefab, Vector3 pos, Quaternion rot)
 		{
-			Prefabs.<DelayedPoolSpawnMP>c__Iterator1BC <DelayedPoolSpawnMP>c__Iterator1BC = new Prefabs.<DelayedPoolSpawnMP>c__Iterator1BC();
-			<DelayedPoolSpawnMP>c__Iterator1BC.pool = pool;
-			<DelayedPoolSpawnMP>c__Iterator1BC.prefab = prefab;
-			<DelayedPoolSpawnMP>c__Iterator1BC.pos = pos;
-			<DelayedPoolSpawnMP>c__Iterator1BC.rot = rot;
-			<DelayedPoolSpawnMP>c__Iterator1BC.<$>pool = pool;
-			<DelayedPoolSpawnMP>c__Iterator1BC.<$>prefab = prefab;
-			<DelayedPoolSpawnMP>c__Iterator1BC.<$>pos = pos;
-			<DelayedPoolSpawnMP>c__Iterator1BC.<$>rot = rot;
-			return <DelayedPoolSpawnMP>c__Iterator1BC;
+			Prefabs.<DelayedPoolSpawnMP>c__Iterator1C4 <DelayedPoolSpawnMP>c__Iterator1C = new Prefabs.<DelayedPoolSpawnMP>c__Iterator1C4();
+			<DelayedPoolSpawnMP>c__Iterator1C.pool = pool;
+			<DelayedPoolSpawnMP>c__Iterator1C.prefab = prefab;
+			<DelayedPoolSpawnMP>c__Iterator1C.pos = pos;
+			<DelayedPoolSpawnMP>c__Iterator1C.rot = rot;
+			<DelayedPoolSpawnMP>c__Iterator1C.<$>pool = pool;
+			<DelayedPoolSpawnMP>c__Iterator1C.<$>prefab = prefab;
+			<DelayedPoolSpawnMP>c__Iterator1C.<$>pos = pos;
+			<DelayedPoolSpawnMP>c__Iterator1C.<$>rot = rot;
+			return <DelayedPoolSpawnMP>c__Iterator1C;
 		}
 	}
 }

@@ -28,8 +28,8 @@ public class fixWeaponPosition : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator FixPosition()
 	{
-		fixWeaponPosition.<FixPosition>c__Iterator5C <FixPosition>c__Iterator5C = new fixWeaponPosition.<FixPosition>c__Iterator5C();
-		<FixPosition>c__Iterator5C.<>f__this = this;
-		return <FixPosition>c__Iterator5C;
+		fixWeaponPosition.<FixPosition>c__Iterator5D <FixPosition>c__Iterator5D = new fixWeaponPosition.<FixPosition>c__Iterator5D();
+		<FixPosition>c__Iterator5D.<>f__this = this;
+		return <FixPosition>c__Iterator5D;
 	}
 }

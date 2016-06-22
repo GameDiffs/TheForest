@@ -40,7 +40,7 @@ public class CustomActiveValueGreebleCrate : CustomActiveValueGreeble
 	[DebuggerHidden]
 	private IEnumerator OnEnableRoutine()
 	{
-		CustomActiveValueGreebleCrate.<OnEnableRoutine>c__Iterator105 <OnEnableRoutine>c__Iterator = new CustomActiveValueGreebleCrate.<OnEnableRoutine>c__Iterator105();
+		CustomActiveValueGreebleCrate.<OnEnableRoutine>c__Iterator108 <OnEnableRoutine>c__Iterator = new CustomActiveValueGreebleCrate.<OnEnableRoutine>c__Iterator108();
 		<OnEnableRoutine>c__Iterator.<>f__this = this;
 		return <OnEnableRoutine>c__Iterator;
 	}

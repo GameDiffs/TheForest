@@ -87,9 +87,9 @@ namespace TheForest.Items.World
 		[DebuggerHidden]
 		private IEnumerator DelayedLightOn()
 		{
-			BatteryBasedLight.<DelayedLightOn>c__Iterator16E <DelayedLightOn>c__Iterator16E = new BatteryBasedLight.<DelayedLightOn>c__Iterator16E();
-			<DelayedLightOn>c__Iterator16E.<>f__this = this;
-			return <DelayedLightOn>c__Iterator16E;
+			BatteryBasedLight.<DelayedLightOn>c__Iterator176 <DelayedLightOn>c__Iterator = new BatteryBasedLight.<DelayedLightOn>c__Iterator176();
+			<DelayedLightOn>c__Iterator.<>f__this = this;
+			return <DelayedLightOn>c__Iterator;
 		}
 
 		private void GotBloody()

@@ -23,7 +23,7 @@ internal class CoopSteamClientStarter : CoopPeerStarter
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		CoopSteamClientStarter.<Start>c__Iterator26 <Start>c__Iterator = new CoopSteamClientStarter.<Start>c__Iterator26();
+		CoopSteamClientStarter.<Start>c__Iterator27 <Start>c__Iterator = new CoopSteamClientStarter.<Start>c__Iterator27();
 		<Start>c__Iterator.<>f__this = this;
 		return <Start>c__Iterator;
 	}
@@ -67,7 +67,7 @@ internal class CoopSteamClientStarter : CoopPeerStarter
 	[DebuggerHidden]
 	private IEnumerator RetryConnectingRoutine()
 	{
-		CoopSteamClientStarter.<RetryConnectingRoutine>c__Iterator27 <RetryConnectingRoutine>c__Iterator = new CoopSteamClientStarter.<RetryConnectingRoutine>c__Iterator27();
+		CoopSteamClientStarter.<RetryConnectingRoutine>c__Iterator28 <RetryConnectingRoutine>c__Iterator = new CoopSteamClientStarter.<RetryConnectingRoutine>c__Iterator28();
 		<RetryConnectingRoutine>c__Iterator.<>f__this = this;
 		return <RetryConnectingRoutine>c__Iterator;
 	}

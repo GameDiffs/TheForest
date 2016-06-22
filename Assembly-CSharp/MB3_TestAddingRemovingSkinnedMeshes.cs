@@ -17,8 +17,8 @@ public class MB3_TestAddingRemovingSkinnedMeshes : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator TestScript()
 	{
-		MB3_TestAddingRemovingSkinnedMeshes.<TestScript>c__Iterator107 <TestScript>c__Iterator = new MB3_TestAddingRemovingSkinnedMeshes.<TestScript>c__Iterator107();
-		<TestScript>c__Iterator.<>f__this = this;
-		return <TestScript>c__Iterator;
+		MB3_TestAddingRemovingSkinnedMeshes.<TestScript>c__Iterator10A <TestScript>c__Iterator10A = new MB3_TestAddingRemovingSkinnedMeshes.<TestScript>c__Iterator10A();
+		<TestScript>c__Iterator10A.<>f__this = this;
+		return <TestScript>c__Iterator10A;
 	}
 }

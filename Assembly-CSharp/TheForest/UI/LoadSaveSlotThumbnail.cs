@@ -23,9 +23,9 @@ namespace TheForest.UI
 		[DebuggerHidden]
 		private IEnumerator LoadImageRoutine()
 		{
-			LoadSaveSlotThumbnail.<LoadImageRoutine>c__Iterator1B4 <LoadImageRoutine>c__Iterator1B = new LoadSaveSlotThumbnail.<LoadImageRoutine>c__Iterator1B4();
-			<LoadImageRoutine>c__Iterator1B.<>f__this = this;
-			return <LoadImageRoutine>c__Iterator1B;
+			LoadSaveSlotThumbnail.<LoadImageRoutine>c__Iterator1BC <LoadImageRoutine>c__Iterator1BC = new LoadSaveSlotThumbnail.<LoadImageRoutine>c__Iterator1BC();
+			<LoadImageRoutine>c__Iterator1BC.<>f__this = this;
+			return <LoadImageRoutine>c__Iterator1BC;
 		}
 	}
 }

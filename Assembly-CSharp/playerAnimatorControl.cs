@@ -45,6 +45,8 @@ public class playerAnimatorControl : MonoBehaviour
 
 	public ForceLocalPosZero forcePos;
 
+	public wallTriggerSetup wallSetup;
+
 	public GameObject cliffCollide;
 
 	public GameObject currRaft;
@@ -298,6 +300,7 @@ public class playerAnimatorControl : MonoBehaviour
 
 	private void Awake()
 	{
+		this.wallSetup = base.transform.GetComponentInChildren<wallTriggerSetup>();
 		this.setup = base.GetComponent<playerScriptSetup>();
 		this.buoyancy = base.transform.GetComponentInParent<Buoyancy>();
 		this.animEvents = base.transform.GetComponent<animEventsManager>();
@@ -389,6 +392,14 @@ public class playerAnimatorControl : MonoBehaviour
 
 	private void Update()
 	{
+		if (this.wallSetup.atWallCheck)
+		{
+			Scene.HudGui.DropButton.SetActive(false);
+		}
+		else if (this.carry && !this.wallSetup.atWallCheck)
+		{
+			Scene.HudGui.DropButton.SetActive(true);
+		}
 		if (this.blockCamX)
 		{
 			this.startPlaneBlend = 0f;
@@ -759,7 +770,7 @@ public class playerAnimatorControl : MonoBehaviour
 			}
 			this.waterBlock = false;
 		}
-		if (this.carry && TheForest.Utils.Input.GetButtonDown("Drop"))
+		if (this.carry && TheForest.Utils.Input.GetButtonDown("Drop") && !this.wallSetup.atWallCheck)
 		{
 			this.DropBody();
 		}
@@ -1231,11 +1242,15 @@ public class playerAnimatorControl : MonoBehaviour
 			this.placedBodyGo = go;
 			if (BoltNetwork.isRunning && go.GetComponentInChildren<BoltEntity>())
 			{
-				SetCorpsePosition setCorpsePosition = SetCorpsePosition.Create(GlobalTargets.OnlyServer);
+				SetCorpsePosition setCorpsePosition = SetCorpsePosition.Create(GlobalTargets.Everyone);
 				setCorpsePosition.Corpse = go.GetComponentInChildren<BoltEntity>();
 				setCorpsePosition.Corpse.Freeze(false);
 				setCorpsePosition.Pickup = true;
 				setCorpsePosition.Send();
+				if (BoltNetwork.isClient)
+				{
+					this.placedBodyGo.SendMessage("sendResetRagDoll", SendMessageOptions.DontRequireReceiver);
+				}
 			}
 			else
 			{
@@ -1272,9 +1287,11 @@ public class playerAnimatorControl : MonoBehaviour
 		this.placedBodyGo.transform.rotation = this.rootTr.rotation;
 		this.placedBodyGo.transform.localEulerAngles = new Vector3(this.placedBodyGo.transform.localEulerAngles.x, this.placedBodyGo.transform.localEulerAngles.y + 35f, this.placedBodyGo.transform.localEulerAngles.z);
 		Vector3 vector2 = new Vector3(this.placedBodyGo.transform.position.x, this.placedBodyGo.transform.position.y + 8f, this.placedBodyGo.transform.position.z);
-		int num = 100802560;
+		int num = 103948289;
+		Vector3 origin = vector;
+		origin.y += 4.5f;
 		RaycastHit raycastHit;
-		if (Physics.Raycast(vector, Vector3.down, out raycastHit, 30f, num) && !BoltNetwork.isRunning)
+		if (Physics.Raycast(origin, Vector3.down, out raycastHit, 15f, num) && !BoltNetwork.isRunning)
 		{
 			this.placedBodyGo.transform.position = raycastHit.point;
 			this.placedBodyGo.transform.rotation = Quaternion.LookRotation(Vector3.Cross(this.placedBodyGo.transform.right, raycastHit.normal), raycastHit.normal);
@@ -1285,7 +1302,7 @@ public class playerAnimatorControl : MonoBehaviour
 			droppedBody.Target = this.placedBodyGo.GetComponent<BoltEntity>();
 			droppedBody.rot = this.placedBodyGo.transform.rotation;
 			droppedBody.Send();
-			SetCorpsePosition setCorpsePosition = SetCorpsePosition.Create(GlobalTargets.OnlyServer);
+			SetCorpsePosition setCorpsePosition = SetCorpsePosition.Create(GlobalTargets.Everyone);
 			setCorpsePosition.Corpse = this.placedBodyGo.GetComponent<BoltEntity>();
 			setCorpsePosition.Corpse.Freeze(false);
 			setCorpsePosition.Position = vector;
@@ -1299,6 +1316,7 @@ public class playerAnimatorControl : MonoBehaviour
 		{
 			this.placedBodyGo.SetActive(true);
 			this.placedBodyGo.SendMessage("dropFromCarry", SendMessageOptions.DontRequireReceiver);
+			this.placedBodyGo.SendMessage("setRagDollDrop", SendMessageOptions.DontRequireReceiver);
 		}
 		return this.placedBodyGo;
 	}
@@ -1311,7 +1329,7 @@ public class playerAnimatorControl : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator checkChargeConditions()
 	{
-		playerAnimatorControl.<checkChargeConditions>c__IteratorD3 <checkChargeConditions>c__IteratorD = new playerAnimatorControl.<checkChargeConditions>c__IteratorD3();
+		playerAnimatorControl.<checkChargeConditions>c__IteratorD6 <checkChargeConditions>c__IteratorD = new playerAnimatorControl.<checkChargeConditions>c__IteratorD6();
 		<checkChargeConditions>c__IteratorD.<>f__this = this;
 		return <checkChargeConditions>c__IteratorD;
 	}
@@ -1371,7 +1389,7 @@ public class playerAnimatorControl : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator smoothEnableLayer(int l, float s)
 	{
-		playerAnimatorControl.<smoothEnableLayer>c__IteratorD4 <smoothEnableLayer>c__IteratorD = new playerAnimatorControl.<smoothEnableLayer>c__IteratorD4();
+		playerAnimatorControl.<smoothEnableLayer>c__IteratorD7 <smoothEnableLayer>c__IteratorD = new playerAnimatorControl.<smoothEnableLayer>c__IteratorD7();
 		<smoothEnableLayer>c__IteratorD.l = l;
 		<smoothEnableLayer>c__IteratorD.s = s;
 		<smoothEnableLayer>c__IteratorD.<$>l = l;
@@ -1383,7 +1401,7 @@ public class playerAnimatorControl : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator smoothDisableLayer(int l, float s)
 	{
-		playerAnimatorControl.<smoothDisableLayer>c__IteratorD5 <smoothDisableLayer>c__IteratorD = new playerAnimatorControl.<smoothDisableLayer>c__IteratorD5();
+		playerAnimatorControl.<smoothDisableLayer>c__IteratorD8 <smoothDisableLayer>c__IteratorD = new playerAnimatorControl.<smoothDisableLayer>c__IteratorD8();
 		<smoothDisableLayer>c__IteratorD.l = l;
 		<smoothDisableLayer>c__IteratorD.s = s;
 		<smoothDisableLayer>c__IteratorD.<$>l = l;
@@ -1395,7 +1413,7 @@ public class playerAnimatorControl : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator smoothEnableLayerNew(int l)
 	{
-		playerAnimatorControl.<smoothEnableLayerNew>c__IteratorD6 <smoothEnableLayerNew>c__IteratorD = new playerAnimatorControl.<smoothEnableLayerNew>c__IteratorD6();
+		playerAnimatorControl.<smoothEnableLayerNew>c__IteratorD9 <smoothEnableLayerNew>c__IteratorD = new playerAnimatorControl.<smoothEnableLayerNew>c__IteratorD9();
 		<smoothEnableLayerNew>c__IteratorD.l = l;
 		<smoothEnableLayerNew>c__IteratorD.<$>l = l;
 		<smoothEnableLayerNew>c__IteratorD.<>f__this = this;
@@ -1405,11 +1423,11 @@ public class playerAnimatorControl : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator smoothDisableLayerNew(int l)
 	{
-		playerAnimatorControl.<smoothDisableLayerNew>c__IteratorD7 <smoothDisableLayerNew>c__IteratorD = new playerAnimatorControl.<smoothDisableLayerNew>c__IteratorD7();
-		<smoothDisableLayerNew>c__IteratorD.l = l;
-		<smoothDisableLayerNew>c__IteratorD.<$>l = l;
-		<smoothDisableLayerNew>c__IteratorD.<>f__this = this;
-		return <smoothDisableLayerNew>c__IteratorD;
+		playerAnimatorControl.<smoothDisableLayerNew>c__IteratorDA <smoothDisableLayerNew>c__IteratorDA = new playerAnimatorControl.<smoothDisableLayerNew>c__IteratorDA();
+		<smoothDisableLayerNew>c__IteratorDA.l = l;
+		<smoothDisableLayerNew>c__IteratorDA.<$>l = l;
+		<smoothDisableLayerNew>c__IteratorDA.<>f__this = this;
+		return <smoothDisableLayerNew>c__IteratorDA;
 	}
 
 	public void disconnectFromObject()

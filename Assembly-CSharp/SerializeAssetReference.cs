@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializer(typeof(TextAsset)), Serializer(typeof(AnimationClip)), Serializer(typeof(Font)), Serializer(typeof(AudioClip)), SubTypeSerializer(typeof(Mesh)), SubTypeSerializer(typeof(Texture))]
+[Serializer(typeof(Font)), Serializer(typeof(TextAsset)), Serializer(typeof(AnimationClip)), Serializer(typeof(AudioClip)), SubTypeSerializer(typeof(Texture)), SubTypeSerializer(typeof(Mesh))]
 public class SerializeAssetReference : SerializerExtensionBase<object>
 {
 	public static SerializeAssetReference instance = new SerializeAssetReference();

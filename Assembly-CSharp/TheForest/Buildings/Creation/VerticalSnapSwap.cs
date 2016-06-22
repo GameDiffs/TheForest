@@ -37,9 +37,9 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator Start()
 		{
-			VerticalSnapSwap.<Start>c__Iterator13E <Start>c__Iterator13E = new VerticalSnapSwap.<Start>c__Iterator13E();
-			<Start>c__Iterator13E.<>f__this = this;
-			return <Start>c__Iterator13E;
+			VerticalSnapSwap.<Start>c__Iterator145 <Start>c__Iterator = new VerticalSnapSwap.<Start>c__Iterator145();
+			<Start>c__Iterator.<>f__this = this;
+			return <Start>c__Iterator;
 		}
 
 		private void Update()
@@ -87,9 +87,9 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator OnPlaced()
 		{
-			VerticalSnapSwap.<OnPlaced>c__Iterator13F <OnPlaced>c__Iterator13F = new VerticalSnapSwap.<OnPlaced>c__Iterator13F();
-			<OnPlaced>c__Iterator13F.<>f__this = this;
-			return <OnPlaced>c__Iterator13F;
+			VerticalSnapSwap.<OnPlaced>c__Iterator146 <OnPlaced>c__Iterator = new VerticalSnapSwap.<OnPlaced>c__Iterator146();
+			<OnPlaced>c__Iterator.<>f__this = this;
+			return <OnPlaced>c__Iterator;
 		}
 	}
 }

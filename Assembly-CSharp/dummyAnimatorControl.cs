@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class dummyAnimatorControl : MonoBehaviour
 {
+	private CoopMutantDummy cmd;
+
+	private mutantRagdollSetup mrs;
+
 	private Animator animator;
 
 	private dummyAnimatorControl control;
@@ -20,6 +24,8 @@ public class dummyAnimatorControl : MonoBehaviour
 
 	private int layerMask;
 
+	private int neckLayerMask;
+
 	public LayerMask groundMask;
 
 	public bool setupFeedingEncounter;
@@ -27,6 +33,8 @@ public class dummyAnimatorControl : MonoBehaviour
 	public bool setupMourningEncounter;
 
 	public Transform hips;
+
+	public Transform neck;
 
 	private float rVal;
 
@@ -46,9 +54,35 @@ public class dummyAnimatorControl : MonoBehaviour
 
 	private Vector3 lastPos;
 
+	private bool testNeck;
+
+	private bool doUpperBodyAlign;
+
+	private float neckPos;
+
+	private Vector3 setNormal;
+
+	private float neckRayCastDelay;
+
+	private float refreshRagDollDelay;
+
+	private bool playerMovedFarAway;
+
+	private float ignoreFarAwayCheck;
+
+	public GameObject[] ragDollParts;
+
+	private BoxCollider dropCollider;
+
+	private Rigidbody dropRb;
+
 	private RaycastHit hit;
 
 	private RaycastHit[] allHit;
+
+	private RaycastHit[] allHit2;
+
+	private RaycastHit hit2;
 
 	private float timerAnimatorOffset;
 
@@ -58,6 +92,10 @@ public class dummyAnimatorControl : MonoBehaviour
 
 	private void Awake()
 	{
+		this.cmd = base.transform.GetComponent<CoopMutantDummy>();
+		this.mrs = base.transform.GetComponent<mutantRagdollSetup>();
+		this.dropCollider = base.transform.GetComponent<BoxCollider>();
+		this.dropRb = base.transform.GetComponent<Rigidbody>();
 		this.animator = base.GetComponent<Animator>();
 		this.control = base.GetComponent<dummyAnimatorControl>();
 		this.Tr = base.transform;
@@ -67,6 +105,8 @@ public class dummyAnimatorControl : MonoBehaviour
 
 	private void Start()
 	{
+		this.refreshRagDollDelay = Time.time + 3f;
+		this.neckLayerMask = 36839424;
 		base.Invoke("disableControl", 5f);
 		if (this.setupFeedingEncounter)
 		{
@@ -76,6 +116,9 @@ public class dummyAnimatorControl : MonoBehaviour
 
 	private void OnEnable()
 	{
+		this.refreshRagDollDelay = Time.time + 3f;
+		this.neckRayCastDelay = Time.time + 0.25f;
+		this.testNeck = false;
 		this.animator.enabled = true;
 		this.control.enabled = true;
 		base.Invoke("disableControl", 5f);
@@ -87,11 +130,14 @@ public class dummyAnimatorControl : MonoBehaviour
 
 	private void OnDisable()
 	{
+		base.CancelInvoke("disableControl");
+		this.testNeck = false;
 		this.doPickupDummy();
 	}
 
 	private void doPickupDummy()
 	{
+		this.testNeck = false;
 		if ((this.setupFeedingEncounter || this.setupMourningEncounter) && this.Tr)
 		{
 			this.Tr.localPosition = Vector3.zero;
@@ -117,10 +163,8 @@ public class dummyAnimatorControl : MonoBehaviour
 		}
 		base.CancelInvoke("disableControl");
 		this.calledFromDeath = false;
-		if (!BoltNetwork.isClient && this.hips)
+		if (!BoltNetwork.isClient)
 		{
-			this.hips.position = base.transform.position;
-			this.hips.rotation = base.transform.rotation;
 		}
 		if (BoltNetwork.isClient)
 		{
@@ -154,8 +198,8 @@ public class dummyAnimatorControl : MonoBehaviour
 		}
 		if (base.enabled && this.animator.enabled && !this.setupMourningEncounter && !this.animator.GetBool("trapBool"))
 		{
-			this.pos = new Vector3(this.Tr.position.x, this.Tr.position.y + 2f, this.Tr.position.z);
-			this.allHit = Physics.RaycastAll(this.pos, Vector3.down, 8f, this.groundMask);
+			this.pos = new Vector3(this.Tr.position.x, this.Tr.position.y + 3f, this.Tr.position.z);
+			this.allHit = Physics.RaycastAll(this.pos, Vector3.down, 7f, this.groundMask);
 			float num = float.PositiveInfinity;
 			Collider exists = null;
 			for (int i = 0; i < this.allHit.Length; i++)
@@ -171,27 +215,88 @@ public class dummyAnimatorControl : MonoBehaviour
 					}
 				}
 			}
+			Vector3 deltaPosition = this.animator.deltaPosition;
+			if (!BoltNetwork.isClient && exists)
+			{
+				this.Tr.Translate(deltaPosition, Space.World);
+				this.Tr.position = new Vector3(this.Tr.position.x, Mathf.Lerp(this.Tr.position.y, this.hit.point.y, Time.deltaTime * 5f), this.Tr.position.z);
+			}
+			else if (!BoltNetwork.isClient)
+			{
+				deltaPosition = this.animator.deltaPosition;
+				deltaPosition.y -= 0.25f;
+				this.Tr.Translate(deltaPosition, Space.World);
+			}
 			if (exists)
 			{
-				if (!BoltNetwork.isClient)
+				if (!this.testNeck)
 				{
-					Vector3 deltaPosition = this.animator.deltaPosition;
-					this.Tr.Translate(deltaPosition, Space.World);
-					this.Tr.position = new Vector3(this.Tr.position.x, this.hit.point.y, this.Tr.position.z);
+					this.setNormal = this.hit.normal;
 				}
 				this.Tr.rotation = this.animator.rootRotation;
-				this.Tr.rotation = Quaternion.Lerp(this.Tr.rotation, Quaternion.LookRotation(Vector3.Cross(this.Tr.right, this.hit.normal), this.hit.normal), Time.deltaTime * 8f);
+				this.Tr.rotation = Quaternion.Lerp(this.Tr.rotation, Quaternion.LookRotation(Vector3.Cross(this.Tr.right, this.setNormal), this.setNormal), Time.deltaTime * 8f);
+			}
+			if (!this.testNeck && Time.time > this.neckRayCastDelay)
+			{
+				Vector3 position = this.neck.position;
+				position.y += 3f;
+				this.allHit2 = Physics.RaycastAll(position, Vector3.down, 4f, this.groundMask);
+				float num2 = float.PositiveInfinity;
+				Collider exists2 = null;
+				for (int j = 0; j < this.allHit2.Length; j++)
+				{
+					if (!this.allHit2[j].collider.isTrigger)
+					{
+						float distance2 = this.allHit2[j].distance;
+						if (distance2 < num2)
+						{
+							num2 = distance2;
+							exists2 = this.allHit2[j].collider;
+							this.hit2 = this.allHit2[j];
+						}
+					}
+				}
+				if (exists2 && this.neck.position.y - this.hit2.point.y < 0.1f)
+				{
+					Vector3 point = this.hit2.point;
+					point.y += 0.1f;
+					Vector3 normalized = (point - this.Tr.position).normalized;
+					Vector3 rhs = Vector3.Cross(normalized, this.setNormal * -1f);
+					this.setNormal = Vector3.Cross(normalized, rhs);
+					this.testNeck = true;
+				}
 			}
 		}
 	}
 
 	private void disableControl()
 	{
-		if (!BoltNetwork.isRunning)
-		{
-			this.animator.enabled = false;
-		}
+		this.animator.enabled = false;
 		this.calledFromDeath = false;
+		for (int i = 0; i < this.ragDollParts.Length; i++)
+		{
+			this.ragDollParts[i].SetActive(false);
+		}
+	}
+
+	private void disableControlAndSync()
+	{
+		this.animator.enabled = false;
+		this.calledFromDeath = false;
+		this.cmd.doSync = false;
+		for (int i = 0; i < this.ragDollParts.Length; i++)
+		{
+			this.ragDollParts[i].SetActive(false);
+		}
+	}
+
+	private void refreshRagDollParts()
+	{
+		for (int i = 0; i < this.ragDollParts.Length; i++)
+		{
+			this.ragDollParts[i].SetActive(true);
+			this.ragDollParts[i].SendMessage("setDropped", SendMessageOptions.DontRequireReceiver);
+		}
 	}
 
 	private void setTrapGo(GameObject trap)
@@ -207,6 +312,10 @@ public class dummyAnimatorControl : MonoBehaviour
 		this.animator.SetBoolReflected("trapBool", false);
 		this.animator.SetBoolReflected("dropFromTrap", true);
 		this.setParentNull();
+		for (int i = 0; i < this.ragDollParts.Length; i++)
+		{
+			this.ragDollParts[i].SetActive(true);
+		}
 	}
 
 	private void releaseFromSpikeTrap()
@@ -215,10 +324,15 @@ public class dummyAnimatorControl : MonoBehaviour
 		base.CancelInvoke("disableControl");
 		base.Invoke("disableControl", 5f);
 		this.animator.CrossFade("Base Layer.deathStealth1", 0f, 0, 0.4f);
+		for (int i = 0; i < this.ragDollParts.Length; i++)
+		{
+			this.ragDollParts[i].SetActive(true);
+		}
 	}
 
 	public void dropFromCarry()
 	{
+		this.ignoreFarAwayCheck = Time.time + 4f;
 		if (this.setupMourningEncounter || this.setupFeedingEncounter)
 		{
 			this.Tr.position = this.parentGo.transform.position;
@@ -226,6 +340,16 @@ public class dummyAnimatorControl : MonoBehaviour
 		if (this.setupMourningEncounter)
 		{
 			this.parentGo.SendMessage("doAlignForEncounter", SendMessageOptions.DontRequireReceiver);
+		}
+		if (BoltNetwork.isRunning)
+		{
+			this.animator.enabled = true;
+			this.control.enabled = true;
+			base.Invoke("disableControl", 5f);
+		}
+		for (int i = 0; i < this.ragDollParts.Length; i++)
+		{
+			this.ragDollParts[i].SetActive(true);
 		}
 		this.hips.localPosition = new Vector3(0f, 0f, 0f);
 		this.animator.CrossFade("Base Layer.deathStealth1", 0f, 0, 0.4f);
@@ -237,12 +361,38 @@ public class dummyAnimatorControl : MonoBehaviour
 
 	private void clientDrop(Quaternion r)
 	{
+		this.ignoreFarAwayCheck = Time.time + 4f;
+		base.CancelInvoke("disableControl");
+		base.CancelInvoke("disableControlAndSync");
+		this.neckRayCastDelay = Time.time + 0.25f;
+		this.testNeck = false;
 		this.Tr.rotation = r;
 		this.animator.CrossFade("Base Layer.deathStealth1", 0f, 0, 0.28f);
 	}
 
 	private void Update()
 	{
+		if (Time.time < this.ignoreFarAwayCheck)
+		{
+			this.playerMovedFarAway = false;
+		}
+		if (Time.time > this.refreshRagDollDelay && Time.time > this.ignoreFarAwayCheck)
+		{
+			float num = Vector3.Distance(LocalPlayer.Transform.position, this.Tr.position);
+			if (num > 40f)
+			{
+				this.playerMovedFarAway = true;
+			}
+			if (this.playerMovedFarAway && num < 40f)
+			{
+				base.CancelInvoke("disableControlAndSync");
+				this.refreshRagDollParts();
+				this.cmd.doSync = false;
+				base.Invoke("disableControlAndSync", 6.5f);
+				this.playerMovedFarAway = false;
+			}
+			this.refreshRagDollDelay = Time.time + 3f;
+		}
 		if (BoltNetwork.isClient)
 		{
 			if (this.timerOffsetPosition > Time.time)
@@ -268,6 +418,10 @@ public class dummyAnimatorControl : MonoBehaviour
 				this.animator.CrossFade("Base Layer.deathStealth1", 0f, 0, 0.3f);
 				Vector3 vector = LocalPlayer.Transform.position + LocalPlayer.Transform.forward * 2f;
 				this.doneDropCheck = true;
+				for (int i = 0; i < this.ragDollParts.Length; i++)
+				{
+					this.ragDollParts[i].SetActive(true);
+				}
 			}
 		}
 		else

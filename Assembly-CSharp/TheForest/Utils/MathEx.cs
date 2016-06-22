@@ -1424,6 +1424,23 @@ namespace TheForest.Utils
 			return result;
 		}
 
+		public static Vector3 ClosestPointOnPolygon(Vector3 point, List<Vector3> polygon)
+		{
+			Vector3 result = Vector3.zero;
+			float num = 3.40282347E+38f;
+			for (int i = 1; i < polygon.Count; i++)
+			{
+				Vector3 vector = MathEx.ProjectPointOnLineSegment(polygon[i], polygon[i - 1], point);
+				float num2 = Vector3.Distance(vector, point);
+				if (num2 < num)
+				{
+					num = num2;
+					result = vector;
+				}
+			}
+			return result;
+		}
+
 		public static List<Vector3> CalculateMeshPerimeter(Mesh mesh)
 		{
 			int[] triangles = mesh.triangles;

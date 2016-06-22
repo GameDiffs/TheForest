@@ -273,7 +273,7 @@ public class enemyAnimEvents : EntityEventListener
 	[DebuggerHidden]
 	private IEnumerator doParryCheck()
 	{
-		enemyAnimEvents.<doParryCheck>c__Iterator58 <doParryCheck>c__Iterator = new enemyAnimEvents.<doParryCheck>c__Iterator58();
+		enemyAnimEvents.<doParryCheck>c__Iterator59 <doParryCheck>c__Iterator = new enemyAnimEvents.<doParryCheck>c__Iterator59();
 		<doParryCheck>c__Iterator.<>f__this = this;
 		return <doParryCheck>c__Iterator;
 	}
@@ -971,8 +971,8 @@ public class enemyAnimEvents : EntityEventListener
 	[DebuggerHidden]
 	public IEnumerator disableAllWeapons()
 	{
-		enemyAnimEvents.<disableAllWeapons>c__Iterator59 <disableAllWeapons>c__Iterator = new enemyAnimEvents.<disableAllWeapons>c__Iterator59();
-		<disableAllWeapons>c__Iterator.<>f__this = this;
-		return <disableAllWeapons>c__Iterator;
+		enemyAnimEvents.<disableAllWeapons>c__Iterator5A <disableAllWeapons>c__Iterator5A = new enemyAnimEvents.<disableAllWeapons>c__Iterator5A();
+		<disableAllWeapons>c__Iterator5A.<>f__this = this;
+		return <disableAllWeapons>c__Iterator5A;
 	}
 }

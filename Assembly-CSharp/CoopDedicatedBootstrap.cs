@@ -20,8 +20,8 @@ public class CoopDedicatedBootstrap : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		CoopDedicatedBootstrap.<Start>c__Iterator2A <Start>c__Iterator2A = new CoopDedicatedBootstrap.<Start>c__Iterator2A();
-		<Start>c__Iterator2A.<>f__this = this;
-		return <Start>c__Iterator2A;
+		CoopDedicatedBootstrap.<Start>c__Iterator2B <Start>c__Iterator2B = new CoopDedicatedBootstrap.<Start>c__Iterator2B();
+		<Start>c__Iterator2B.<>f__this = this;
+		return <Start>c__Iterator2B;
 	}
 }

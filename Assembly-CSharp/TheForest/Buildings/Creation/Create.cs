@@ -44,6 +44,10 @@ namespace TheForest.Buildings.Creation
 			public bool _isDynamic;
 
 			public bool _allowParentingToDynamic;
+
+			public bool _waterborne;
+
+			public bool _waterborneExclusive;
 		}
 
 		public enum BuildingTypes
@@ -62,10 +66,11 @@ namespace TheForest.Buildings.Creation
 			FireStand = 80,
 			Roof,
 			Floor,
-			FloorHole = 87,
-			Stairs = 83,
+			Stairs,
 			Dock,
 			Foundation,
+			FloorHole = 87,
+			RaftEx,
 			Garden = 90,
 			HouseBoat = 100,
 			LeafShelter = 110,
@@ -108,6 +113,7 @@ namespace TheForest.Buildings.Creation
 			TreeHouseChatel = 340,
 			WalkWay = 350,
 			RabbitTrap = 360,
+			FishTrap = 365,
 			Gazeebo = 370,
 			DefensiveSpikes = 380,
 			MedicineCabinet = 390,
@@ -272,11 +278,11 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator PlaceGhostRoutine(bool chain)
 		{
-			Create.<PlaceGhostRoutine>c__Iterator12F <PlaceGhostRoutine>c__Iterator12F = new Create.<PlaceGhostRoutine>c__Iterator12F();
-			<PlaceGhostRoutine>c__Iterator12F.chain = chain;
-			<PlaceGhostRoutine>c__Iterator12F.<$>chain = chain;
-			<PlaceGhostRoutine>c__Iterator12F.<>f__this = this;
-			return <PlaceGhostRoutine>c__Iterator12F;
+			Create.<PlaceGhostRoutine>c__Iterator132 <PlaceGhostRoutine>c__Iterator = new Create.<PlaceGhostRoutine>c__Iterator132();
+			<PlaceGhostRoutine>c__Iterator.chain = chain;
+			<PlaceGhostRoutine>c__Iterator.<$>chain = chain;
+			<PlaceGhostRoutine>c__Iterator.<>f__this = this;
+			return <PlaceGhostRoutine>c__Iterator;
 		}
 
 		public BoltEntity GetParentEntity(GameObject ghost)
@@ -346,7 +352,7 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator RefreshGrabberRoutine()
 		{
-			Create.<RefreshGrabberRoutine>c__Iterator130 <RefreshGrabberRoutine>c__Iterator = new Create.<RefreshGrabberRoutine>c__Iterator130();
+			Create.<RefreshGrabberRoutine>c__Iterator133 <RefreshGrabberRoutine>c__Iterator = new Create.<RefreshGrabberRoutine>c__Iterator133();
 			<RefreshGrabberRoutine>c__Iterator.<>f__this = this;
 			return <RefreshGrabberRoutine>c__Iterator;
 		}
@@ -484,6 +490,7 @@ namespace TheForest.Buildings.Creation
 					this.SurvivalBook.SetActive(false);
 					this.Inventory.CurrentView = PlayerInventory.PlayerViews.World;
 				}
+				this.ShouldOpenBook = false;
 			}
 		}
 
@@ -554,8 +561,13 @@ namespace TheForest.Buildings.Creation
 				this._buildingPlacer.AllowFoundation = this._currentBlueprint._allowFoundation;
 				this._buildingPlacer.Airborne = this._currentBlueprint._airBorne;
 				this._buildingPlacer.ShowAnchorArea.SetActive(this._currentBlueprint._showAnchors);
+				if (this._currentBlueprint._waterborne)
+				{
+					this._buildingPlacer.SetWaterborne(this._currentBlueprint._waterborneExclusive);
+				}
 				this.enterCreateModeCoolDown = Time.time + 0.7f;
 				this.CreateMode = true;
+				this.ShouldOpenBook = false;
 				this.Inventory.EquipPreviousUtility();
 			}
 		}

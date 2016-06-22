@@ -124,9 +124,9 @@ namespace TheForest.Buildings.World
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake()
 		{
-			FoundationHealth.<DelayedAwake>c__Iterator147 <DelayedAwake>c__Iterator = new FoundationHealth.<DelayedAwake>c__Iterator147();
-			<DelayedAwake>c__Iterator.<>f__this = this;
-			return <DelayedAwake>c__Iterator;
+			FoundationHealth.<DelayedAwake>c__Iterator14F <DelayedAwake>c__Iterator14F = new FoundationHealth.<DelayedAwake>c__Iterator14F();
+			<DelayedAwake>c__Iterator14F.<>f__this = this;
+			return <DelayedAwake>c__Iterator14F;
 		}
 
 		private void OnDestroy()
@@ -521,7 +521,7 @@ namespace TheForest.Buildings.World
 		[DebuggerHidden]
 		private IEnumerator CollapseRoutine(Vector3 collapsePoint)
 		{
-			FoundationHealth.<CollapseRoutine>c__Iterator148 <CollapseRoutine>c__Iterator = new FoundationHealth.<CollapseRoutine>c__Iterator148();
+			FoundationHealth.<CollapseRoutine>c__Iterator150 <CollapseRoutine>c__Iterator = new FoundationHealth.<CollapseRoutine>c__Iterator150();
 			<CollapseRoutine>c__Iterator.collapsePoint = collapsePoint;
 			<CollapseRoutine>c__Iterator.<$>collapsePoint = collapsePoint;
 			<CollapseRoutine>c__Iterator.<>f__this = this;

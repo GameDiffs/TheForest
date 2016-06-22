@@ -79,8 +79,8 @@ public class CoopDedicatedServerStarter : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		CoopDedicatedServerStarter.<Start>c__Iterator2C <Start>c__Iterator2C = new CoopDedicatedServerStarter.<Start>c__Iterator2C();
-		<Start>c__Iterator2C.<>f__this = this;
-		return <Start>c__Iterator2C;
+		CoopDedicatedServerStarter.<Start>c__Iterator2D <Start>c__Iterator2D = new CoopDedicatedServerStarter.<Start>c__Iterator2D();
+		<Start>c__Iterator2D.<>f__this = this;
+		return <Start>c__Iterator2D;
 	}
 }

@@ -10,6 +10,8 @@ public class CoopDynamicPickUp : CoopBase<IDynamicPickup>
 
 	public float destroyAfter = 600f;
 
+	public bool disablePhysics = true;
+
 	public override void Attached()
 	{
 		this.MultiplayerPriority = 1f;
@@ -23,27 +25,33 @@ public class CoopDynamicPickUp : CoopBase<IDynamicPickup>
 		}
 		else
 		{
-			Collider[] componentsInChildren = base.GetComponentsInChildren<Collider>();
-			for (int i = 0; i < componentsInChildren.Length; i++)
+			if (this.disablePhysics)
 			{
-				Collider collider = componentsInChildren[i];
-				if (!collider.isTrigger)
+				Collider[] componentsInChildren = base.GetComponentsInChildren<Collider>();
+				for (int i = 0; i < componentsInChildren.Length; i++)
 				{
-					UnityEngine.Object.Destroy(collider);
+					Collider collider = componentsInChildren[i];
+					if (!collider.isTrigger)
+					{
+						UnityEngine.Object.Destroy(collider);
+					}
 				}
-			}
-			Rigidbody[] componentsInChildren2 = base.GetComponentsInChildren<Rigidbody>();
-			for (int j = 0; j < componentsInChildren2.Length; j++)
-			{
-				Rigidbody rigidbody = componentsInChildren2[j];
-				if (!rigidbody.isKinematic)
+				Rigidbody[] componentsInChildren2 = base.GetComponentsInChildren<Rigidbody>();
+				for (int j = 0; j < componentsInChildren2.Length; j++)
 				{
-					UnityEngine.Object.Destroy(rigidbody);
+					Rigidbody rigidbody = componentsInChildren2[j];
+					if (!rigidbody.isKinematic)
+					{
+						UnityEngine.Object.Destroy(rigidbody);
+					}
 				}
 			}
 			for (int k = 0; k < this.disableOnProxies.Length; k++)
 			{
-				this.disableOnProxies[k].enabled = false;
+				if (this.disableOnProxies[k])
+				{
+					this.disableOnProxies[k].enabled = false;
+				}
 			}
 		}
 	}

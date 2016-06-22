@@ -733,7 +733,7 @@ namespace TheForest.Buildings.World
 			}
 		}
 
-		public void AddItemMP(MultiHolder.ContentTypes type)
+		public void AddItemMP(MultiHolder.ContentTypes type, BoltConnection source)
 		{
 			if ((this._contentTypeActual == MultiHolder.ContentTypes.Log || this._contentTypeActual == MultiHolder.ContentTypes.None) && type == MultiHolder.ContentTypes.Log)
 			{
@@ -744,7 +744,16 @@ namespace TheForest.Buildings.World
 				if (this.entity.isOwner)
 				{
 					this._contentTypeActual = MultiHolder.ContentTypes.Log;
-					this._contentActual = Mathf.Min(this._contentActual + 1, this.LogRender.Length);
+					if (this._contentActual < this.LogRender.Length)
+					{
+						this._contentActual = Mathf.Min(this._contentActual + 1, this.LogRender.Length);
+					}
+					else
+					{
+						PlayerAddItem playerAddItem = PlayerAddItem.Create(source);
+						playerAddItem.ItemId = LocalPlayer.Inventory.Logs._logItemId;
+						playerAddItem.Send();
+					}
 					this.RefreshMassAndDrag();
 				}
 				else
@@ -764,7 +773,16 @@ namespace TheForest.Buildings.World
 				if (this.entity.isOwner)
 				{
 					this._contentTypeActual = MultiHolder.ContentTypes.Rock;
-					this._contentActual = Mathf.Min(this._contentActual + 1, this.RockRender.Length);
+					if (this._contentActual < this.LogRender.Length)
+					{
+						this._contentActual = Mathf.Min(this._contentActual + 1, this.RockRender.Length);
+					}
+					else
+					{
+						PlayerAddItem playerAddItem2 = PlayerAddItem.Create(source);
+						playerAddItem2.ItemId = this.RockItemId;
+						playerAddItem2.Send();
+					}
 					this.RefreshMassAndDrag();
 				}
 				else

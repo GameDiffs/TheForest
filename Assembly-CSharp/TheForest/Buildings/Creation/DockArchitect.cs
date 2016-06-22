@@ -19,7 +19,7 @@ namespace TheForest.Buildings.Creation
 		[SerializeThis]
 		public bool _wasBuilt;
 
-		public Transform _logPrefab;
+		public Transform[] _logPrefabs;
 
 		public Transform _stiltPrefab;
 
@@ -140,7 +140,7 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake(bool isDeserializing)
 		{
-			DockArchitect.<DelayedAwake>c__Iterator131 <DelayedAwake>c__Iterator = new DockArchitect.<DelayedAwake>c__Iterator131();
+			DockArchitect.<DelayedAwake>c__Iterator134 <DelayedAwake>c__Iterator = new DockArchitect.<DelayedAwake>c__Iterator134();
 			<DelayedAwake>c__Iterator.isDeserializing = isDeserializing;
 			<DelayedAwake>c__Iterator.<$>isDeserializing = isDeserializing;
 			<DelayedAwake>c__Iterator.<>f__this = this;
@@ -258,7 +258,7 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator OnPlaced()
 		{
-			DockArchitect.<OnPlaced>c__Iterator132 <OnPlaced>c__Iterator = new DockArchitect.<OnPlaced>c__Iterator132();
+			DockArchitect.<OnPlaced>c__Iterator135 <OnPlaced>c__Iterator = new DockArchitect.<OnPlaced>c__Iterator135();
 			<OnPlaced>c__Iterator.<>f__this = this;
 			return <OnPlaced>c__Iterator;
 		}
@@ -469,7 +469,7 @@ namespace TheForest.Buildings.Creation
 				transform.rotation = rotation;
 				return transform;
 			}
-			Transform transform2 = (Transform)UnityEngine.Object.Instantiate(this._logPrefab, position, rotation);
+			Transform transform2 = (Transform)UnityEngine.Object.Instantiate(this._logPrefabs[UnityEngine.Random.Range(0, this._logPrefabs.Length)], position, rotation);
 			if (!this._wasBuilt && !this._wasPlaced)
 			{
 				transform2.GetComponentInChildren<Renderer>().sharedMaterial = this._logMat;

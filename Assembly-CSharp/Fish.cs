@@ -526,7 +526,7 @@ public class Fish : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator resetSpeed()
 	{
-		return new Fish.<resetSpeed>c__Iterator158();
+		return new Fish.<resetSpeed>c__Iterator160();
 	}
 
 	private void reverseDirection()
@@ -557,6 +557,12 @@ public class Fish : MonoBehaviour
 	{
 		this.spawner = go;
 		this.controlScript = go.GetComponent<animalController>();
+	}
+
+	private void setTrapped(GameObject go)
+	{
+		base.transform.parent = go.transform;
+		this.DieSpear();
 	}
 
 	private void DieSpear()
@@ -839,7 +845,7 @@ public class Fish : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setDeathSpeed()
 	{
-		Fish.<setDeathSpeed>c__Iterator159 <setDeathSpeed>c__Iterator = new Fish.<setDeathSpeed>c__Iterator159();
+		Fish.<setDeathSpeed>c__Iterator161 <setDeathSpeed>c__Iterator = new Fish.<setDeathSpeed>c__Iterator161();
 		<setDeathSpeed>c__Iterator.<>f__this = this;
 		return <setDeathSpeed>c__Iterator;
 	}
@@ -847,16 +853,16 @@ public class Fish : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setDeathSpeedShark()
 	{
-		Fish.<setDeathSpeedShark>c__Iterator15A <setDeathSpeedShark>c__Iterator15A = new Fish.<setDeathSpeedShark>c__Iterator15A();
-		<setDeathSpeedShark>c__Iterator15A.<>f__this = this;
-		return <setDeathSpeedShark>c__Iterator15A;
+		Fish.<setDeathSpeedShark>c__Iterator162 <setDeathSpeedShark>c__Iterator = new Fish.<setDeathSpeedShark>c__Iterator162();
+		<setDeathSpeedShark>c__Iterator.<>f__this = this;
+		return <setDeathSpeedShark>c__Iterator;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator setFleeSpeed()
 	{
-		Fish.<setFleeSpeed>c__Iterator15B <setFleeSpeed>c__Iterator15B = new Fish.<setFleeSpeed>c__Iterator15B();
-		<setFleeSpeed>c__Iterator15B.<>f__this = this;
-		return <setFleeSpeed>c__Iterator15B;
+		Fish.<setFleeSpeed>c__Iterator163 <setFleeSpeed>c__Iterator = new Fish.<setFleeSpeed>c__Iterator163();
+		<setFleeSpeed>c__Iterator.<>f__this = this;
+		return <setFleeSpeed>c__Iterator;
 	}
 }

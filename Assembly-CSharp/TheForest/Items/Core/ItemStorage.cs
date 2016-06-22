@@ -144,9 +144,9 @@ namespace TheForest.Items.Core
 		[DebuggerHidden]
 		private IEnumerator DelayedOpen()
 		{
-			ItemStorage.<DelayedOpen>c__Iterator14B <DelayedOpen>c__Iterator14B = new ItemStorage.<DelayedOpen>c__Iterator14B();
-			<DelayedOpen>c__Iterator14B.<>f__this = this;
-			return <DelayedOpen>c__Iterator14B;
+			ItemStorage.<DelayedOpen>c__Iterator153 <DelayedOpen>c__Iterator = new ItemStorage.<DelayedOpen>c__Iterator153();
+			<DelayedOpen>c__Iterator.<>f__this = this;
+			return <DelayedOpen>c__Iterator;
 		}
 
 		public virtual void Close()

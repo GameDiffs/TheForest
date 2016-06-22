@@ -63,10 +63,6 @@ public class animalController : MonoBehaviour
 
 	public List<GameObject> allFish = new List<GameObject>();
 
-	private GameObject currentCamGo;
-
-	private Camera currentCamera;
-
 	private Transform currLizard;
 
 	private Transform currTurtle;
@@ -124,6 +120,22 @@ public class animalController : MonoBehaviour
 
 	private Transform closestPlayer;
 
+	private GameObject currentCamGo
+	{
+		get
+		{
+			return (!LocalPlayer.GameObject) ? Scene.ActiveMB.gameObject : LocalPlayer.GameObject;
+		}
+	}
+
+	private Camera currentCamera
+	{
+		get
+		{
+			return (!LocalPlayer.MainCam) ? Camera.main : LocalPlayer.MainCam;
+		}
+	}
+
 	private void Awake()
 	{
 		this.sceneInfo = Scene.SceneTracker;
@@ -141,30 +153,6 @@ public class animalController : MonoBehaviour
 	{
 		base.CancelInvoke("callSpawnCreatures");
 		base.StopAllCoroutines();
-	}
-
-	private void Update()
-	{
-		if (this.currentCamGo)
-		{
-			return;
-		}
-		if (this.currentCamGo == null)
-		{
-			if (CoopPeerStarter.DedicatedHost)
-			{
-				if (Camera.main)
-				{
-					this.currentCamGo = GameObject.FindWithTag("MainCamera");
-					this.currentCamera = this.currentCamGo.GetComponent<Camera>();
-				}
-			}
-			else
-			{
-				this.currentCamGo = LocalPlayer.GameObject;
-				this.currentCamera = LocalPlayer.MainCam;
-			}
-		}
 	}
 
 	private void callSpawnCreatures()
@@ -208,7 +196,7 @@ public class animalController : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator spawnLizard()
 	{
-		animalController.<spawnLizard>c__Iterator40 <spawnLizard>c__Iterator = new animalController.<spawnLizard>c__Iterator40();
+		animalController.<spawnLizard>c__Iterator41 <spawnLizard>c__Iterator = new animalController.<spawnLizard>c__Iterator41();
 		<spawnLizard>c__Iterator.<>f__this = this;
 		return <spawnLizard>c__Iterator;
 	}
@@ -216,7 +204,7 @@ public class animalController : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator spawnRabbit()
 	{
-		animalController.<spawnRabbit>c__Iterator41 <spawnRabbit>c__Iterator = new animalController.<spawnRabbit>c__Iterator41();
+		animalController.<spawnRabbit>c__Iterator42 <spawnRabbit>c__Iterator = new animalController.<spawnRabbit>c__Iterator42();
 		<spawnRabbit>c__Iterator.<>f__this = this;
 		return <spawnRabbit>c__Iterator;
 	}
@@ -224,7 +212,7 @@ public class animalController : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator spawnTortoise()
 	{
-		animalController.<spawnTortoise>c__Iterator42 <spawnTortoise>c__Iterator = new animalController.<spawnTortoise>c__Iterator42();
+		animalController.<spawnTortoise>c__Iterator43 <spawnTortoise>c__Iterator = new animalController.<spawnTortoise>c__Iterator43();
 		<spawnTortoise>c__Iterator.<>f__this = this;
 		return <spawnTortoise>c__Iterator;
 	}
@@ -232,7 +220,7 @@ public class animalController : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator spawnRaccoon()
 	{
-		animalController.<spawnRaccoon>c__Iterator43 <spawnRaccoon>c__Iterator = new animalController.<spawnRaccoon>c__Iterator43();
+		animalController.<spawnRaccoon>c__Iterator44 <spawnRaccoon>c__Iterator = new animalController.<spawnRaccoon>c__Iterator44();
 		<spawnRaccoon>c__Iterator.<>f__this = this;
 		return <spawnRaccoon>c__Iterator;
 	}
@@ -240,7 +228,7 @@ public class animalController : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator spawnDeer()
 	{
-		animalController.<spawnDeer>c__Iterator44 <spawnDeer>c__Iterator = new animalController.<spawnDeer>c__Iterator44();
+		animalController.<spawnDeer>c__Iterator45 <spawnDeer>c__Iterator = new animalController.<spawnDeer>c__Iterator45();
 		<spawnDeer>c__Iterator.<>f__this = this;
 		return <spawnDeer>c__Iterator;
 	}
@@ -248,7 +236,7 @@ public class animalController : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator spawnTurtles()
 	{
-		animalController.<spawnTurtles>c__Iterator45 <spawnTurtles>c__Iterator = new animalController.<spawnTurtles>c__Iterator45();
+		animalController.<spawnTurtles>c__Iterator46 <spawnTurtles>c__Iterator = new animalController.<spawnTurtles>c__Iterator46();
 		<spawnTurtles>c__Iterator.<>f__this = this;
 		return <spawnTurtles>c__Iterator;
 	}
@@ -278,7 +266,7 @@ public class animalController : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator spawnFish()
 	{
-		animalController.<spawnFish>c__Iterator46 <spawnFish>c__Iterator = new animalController.<spawnFish>c__Iterator46();
+		animalController.<spawnFish>c__Iterator47 <spawnFish>c__Iterator = new animalController.<spawnFish>c__Iterator47();
 		<spawnFish>c__Iterator.<>f__this = this;
 		return <spawnFish>c__Iterator;
 	}
@@ -304,14 +292,14 @@ public class animalController : MonoBehaviour
 	private Transform getClosestPlayer(bool cave)
 	{
 		this.closestDist = float.PositiveInfinity;
-		List<GameObject> list = new List<GameObject>();
+		List<GameObject> list;
 		if (cave)
 		{
-			list = new List<GameObject>(this.sceneInfo.allPlayersInCave);
+			list = this.sceneInfo.allPlayersInCave;
 		}
 		else
 		{
-			list = new List<GameObject>(this.sceneInfo.allPlayers);
+			list = this.sceneInfo.allPlayers;
 		}
 		if (list.Count > 0)
 		{

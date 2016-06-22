@@ -29,9 +29,9 @@ namespace TheForest.Save
 		[DebuggerHidden]
 		private IEnumerator Start()
 		{
-			BrokenSaveChecker.<Start>c__Iterator1A4 <Start>c__Iterator1A = new BrokenSaveChecker.<Start>c__Iterator1A4();
-			<Start>c__Iterator1A.<>f__this = this;
-			return <Start>c__Iterator1A;
+			BrokenSaveChecker.<Start>c__Iterator1AC <Start>c__Iterator1AC = new BrokenSaveChecker.<Start>c__Iterator1AC();
+			<Start>c__Iterator1AC.<>f__this = this;
+			return <Start>c__Iterator1AC;
 		}
 
 		private void OnGUI()

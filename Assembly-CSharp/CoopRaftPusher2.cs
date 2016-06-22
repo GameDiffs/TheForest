@@ -27,6 +27,9 @@ public class CoopRaftPusher2 : EntityBehaviour<IRaftState>
 	[SerializeField]
 	private ForceMode pushForceMode = ForceMode.VelocityChange;
 
+	[SerializeField]
+	private float iconPositionAlpha = 0.5f;
+
 	private void Awake()
 	{
 		base.enabled = !BoltNetwork.isRunning;
@@ -73,27 +76,33 @@ public class CoopRaftPusher2 : EntityBehaviour<IRaftState>
 
 	private void OnTriggerEnter(Collider collider)
 	{
-		if (collider.gameObject.CompareTag("Player"))
+		if (base.enabled)
 		{
-			this.enteredTransform = collider.transform;
-			this.billboardIcon.transform.position = Vector3.Lerp(base.transform.position, collider.transform.position, 0.5f);
-		}
-		if ((collider.gameObject.CompareTag("Player") || collider.gameObject.CompareTag("PlayerNet")) && !BoltNetwork.isClient && ++this.playersClose > 0)
-		{
-			this.raftMainBody.constraints = RigidbodyConstraints.FreezeAll;
+			if (collider.gameObject.CompareTag("Player"))
+			{
+				this.enteredTransform = collider.transform;
+				this.billboardIcon.transform.position = Vector3.Lerp(base.transform.position, collider.transform.position, this.iconPositionAlpha);
+			}
+			if ((collider.gameObject.CompareTag("Player") || collider.gameObject.CompareTag("PlayerNet")) && !BoltNetwork.isClient && ++this.playersClose > 0)
+			{
+				this.raftMainBody.constraints = RigidbodyConstraints.FreezeAll;
+			}
 		}
 	}
 
 	private void OnTriggerExit(Collider collider)
 	{
-		if (collider.gameObject.CompareTag("Player"))
+		if (base.enabled)
 		{
-			this.enteredTransform = null;
-			this.billboardIcon.SetActive(false);
-		}
-		if ((collider.gameObject.CompareTag("Player") || collider.gameObject.CompareTag("PlayerNet")) && !BoltNetwork.isClient && --this.playersClose < 1)
-		{
-			this.raftMainBody.constraints = RigidbodyConstraints.None;
+			if (collider.gameObject.CompareTag("Player"))
+			{
+				this.enteredTransform = null;
+				this.billboardIcon.SetActive(false);
+			}
+			if ((collider.gameObject.CompareTag("Player") || collider.gameObject.CompareTag("PlayerNet")) && !BoltNetwork.isClient && --this.playersClose < 1)
+			{
+				this.raftMainBody.constraints = RigidbodyConstraints.None;
+			}
 		}
 	}
 

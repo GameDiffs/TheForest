@@ -510,15 +510,15 @@ public static class LevelSerializer
 
 	public static void SaveObjectTreeToServer(string uri, GameObject rootOfTree, string userName = "", string password = "", Action<Exception> onComplete = null)
 	{
-		LevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2BA <SaveObjectTreeToServer>c__AnonStorey2BA = new LevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2BA();
-		<SaveObjectTreeToServer>c__AnonStorey2BA.rootOfTree = rootOfTree;
-		<SaveObjectTreeToServer>c__AnonStorey2BA.userName = userName;
-		<SaveObjectTreeToServer>c__AnonStorey2BA.password = password;
-		<SaveObjectTreeToServer>c__AnonStorey2BA.uri = uri;
-		<SaveObjectTreeToServer>c__AnonStorey2BA.onComplete = onComplete;
-		LevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2BA arg_55_0 = <SaveObjectTreeToServer>c__AnonStorey2BA;
+		LevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2C1 <SaveObjectTreeToServer>c__AnonStorey2C = new LevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2C1();
+		<SaveObjectTreeToServer>c__AnonStorey2C.rootOfTree = rootOfTree;
+		<SaveObjectTreeToServer>c__AnonStorey2C.userName = userName;
+		<SaveObjectTreeToServer>c__AnonStorey2C.password = password;
+		<SaveObjectTreeToServer>c__AnonStorey2C.uri = uri;
+		<SaveObjectTreeToServer>c__AnonStorey2C.onComplete = onComplete;
+		LevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2C1 arg_55_0 = <SaveObjectTreeToServer>c__AnonStorey2C;
 		Action<Exception> arg_55_1;
-		if ((arg_55_1 = <SaveObjectTreeToServer>c__AnonStorey2BA.onComplete) == null)
+		if ((arg_55_1 = <SaveObjectTreeToServer>c__AnonStorey2C.onComplete) == null)
 		{
 			arg_55_1 = delegate
 			{
@@ -527,12 +527,12 @@ public static class LevelSerializer
 		arg_55_0.onComplete = arg_55_1;
 		Action action = delegate
 		{
-			byte[] data = <SaveObjectTreeToServer>c__AnonStorey2BA.rootOfTree.SaveObjectTree();
+			byte[] data = <SaveObjectTreeToServer>c__AnonStorey2C.rootOfTree.SaveObjectTree();
 			Action upload = delegate
 			{
 				LevelSerializer.uploadCount++;
-				LevelSerializer.webClient.Credentials = new NetworkCredential(<SaveObjectTreeToServer>c__AnonStorey2BA.userName, <SaveObjectTreeToServer>c__AnonStorey2BA.password);
-				LevelSerializer.webClient.UploadDataAsync(new Uri(<SaveObjectTreeToServer>c__AnonStorey2BA.uri), null, data, <SaveObjectTreeToServer>c__AnonStorey2BA.onComplete);
+				LevelSerializer.webClient.Credentials = new NetworkCredential(<SaveObjectTreeToServer>c__AnonStorey2C.userName, <SaveObjectTreeToServer>c__AnonStorey2C.password);
+				LevelSerializer.webClient.UploadDataAsync(new Uri(<SaveObjectTreeToServer>c__AnonStorey2C.uri), null, data, <SaveObjectTreeToServer>c__AnonStorey2C.onComplete);
 			};
 			LevelSerializer.DoWhenReady(upload);
 		};
@@ -573,11 +573,11 @@ public static class LevelSerializer
 
 	public static void SerializeLevelToServer(string uri, string userName = "", string password = "", Action<Exception> onComplete = null)
 	{
-		LevelSerializer.<SerializeLevelToServer>c__AnonStorey2BD <SerializeLevelToServer>c__AnonStorey2BD = new LevelSerializer.<SerializeLevelToServer>c__AnonStorey2BD();
-		<SerializeLevelToServer>c__AnonStorey2BD.uri = uri;
-		<SerializeLevelToServer>c__AnonStorey2BD.userName = userName;
-		<SerializeLevelToServer>c__AnonStorey2BD.password = password;
-		<SerializeLevelToServer>c__AnonStorey2BD.onComplete = onComplete;
+		LevelSerializer.<SerializeLevelToServer>c__AnonStorey2C4 <SerializeLevelToServer>c__AnonStorey2C = new LevelSerializer.<SerializeLevelToServer>c__AnonStorey2C4();
+		<SerializeLevelToServer>c__AnonStorey2C.uri = uri;
+		<SerializeLevelToServer>c__AnonStorey2C.userName = userName;
+		<SerializeLevelToServer>c__AnonStorey2C.password = password;
+		<SerializeLevelToServer>c__AnonStorey2C.onComplete = onComplete;
 		object guard = LevelSerializer.Guard;
 		lock (guard)
 		{
@@ -585,15 +585,15 @@ public static class LevelSerializer
 			{
 				Loom.QueueOnMainThread(delegate
 				{
-					LevelSerializer.SerializeLevelToServer(<SerializeLevelToServer>c__AnonStorey2BD.uri, <SerializeLevelToServer>c__AnonStorey2BD.userName, <SerializeLevelToServer>c__AnonStorey2BD.password, <SerializeLevelToServer>c__AnonStorey2BD.onComplete);
+					LevelSerializer.SerializeLevelToServer(<SerializeLevelToServer>c__AnonStorey2C.uri, <SerializeLevelToServer>c__AnonStorey2C.userName, <SerializeLevelToServer>c__AnonStorey2C.password, <SerializeLevelToServer>c__AnonStorey2C.onComplete);
 				}, 0.5f);
 			}
 			else
 			{
 				LevelSerializer.uploadCount++;
-				LevelSerializer.<SerializeLevelToServer>c__AnonStorey2BD arg_8B_0 = <SerializeLevelToServer>c__AnonStorey2BD;
+				LevelSerializer.<SerializeLevelToServer>c__AnonStorey2C4 arg_8B_0 = <SerializeLevelToServer>c__AnonStorey2C;
 				Action<Exception> arg_8B_1;
-				if ((arg_8B_1 = <SerializeLevelToServer>c__AnonStorey2BD.onComplete) == null)
+				if ((arg_8B_1 = <SerializeLevelToServer>c__AnonStorey2C.onComplete) == null)
 				{
 					arg_8B_1 = delegate
 					{
@@ -601,8 +601,8 @@ public static class LevelSerializer
 				}
 				arg_8B_0.onComplete = arg_8B_1;
 				string data = LevelSerializer.SerializeLevel();
-				LevelSerializer.webClient.Credentials = new NetworkCredential(<SerializeLevelToServer>c__AnonStorey2BD.userName, <SerializeLevelToServer>c__AnonStorey2BD.password);
-				LevelSerializer.webClient.UploadStringAsync(new Uri(<SerializeLevelToServer>c__AnonStorey2BD.uri), null, data, <SerializeLevelToServer>c__AnonStorey2BD.onComplete);
+				LevelSerializer.webClient.Credentials = new NetworkCredential(<SerializeLevelToServer>c__AnonStorey2C.userName, <SerializeLevelToServer>c__AnonStorey2C.password);
+				LevelSerializer.webClient.UploadStringAsync(new Uri(<SerializeLevelToServer>c__AnonStorey2C.uri), null, data, <SerializeLevelToServer>c__AnonStorey2C.onComplete);
 			}
 		}
 	}
@@ -615,21 +615,21 @@ public static class LevelSerializer
 	[DebuggerHidden]
 	private static IEnumerator DownloadFromServer(string uri, Action<LevelLoader> onComplete)
 	{
-		LevelSerializer.<DownloadFromServer>c__Iterator1CD <DownloadFromServer>c__Iterator1CD = new LevelSerializer.<DownloadFromServer>c__Iterator1CD();
-		<DownloadFromServer>c__Iterator1CD.uri = uri;
-		<DownloadFromServer>c__Iterator1CD.onComplete = onComplete;
-		<DownloadFromServer>c__Iterator1CD.<$>uri = uri;
-		<DownloadFromServer>c__Iterator1CD.<$>onComplete = onComplete;
-		return <DownloadFromServer>c__Iterator1CD;
+		LevelSerializer.<DownloadFromServer>c__Iterator1D5 <DownloadFromServer>c__Iterator1D = new LevelSerializer.<DownloadFromServer>c__Iterator1D5();
+		<DownloadFromServer>c__Iterator1D.uri = uri;
+		<DownloadFromServer>c__Iterator1D.onComplete = onComplete;
+		<DownloadFromServer>c__Iterator1D.<$>uri = uri;
+		<DownloadFromServer>c__Iterator1D.<$>onComplete = onComplete;
+		return <DownloadFromServer>c__Iterator1D;
 	}
 
 	[DebuggerHidden]
 	private static IEnumerator DownloadLevelFromServer(string uri)
 	{
-		LevelSerializer.<DownloadLevelFromServer>c__Iterator1CE <DownloadLevelFromServer>c__Iterator1CE = new LevelSerializer.<DownloadLevelFromServer>c__Iterator1CE();
-		<DownloadLevelFromServer>c__Iterator1CE.uri = uri;
-		<DownloadLevelFromServer>c__Iterator1CE.<$>uri = uri;
-		return <DownloadLevelFromServer>c__Iterator1CE;
+		LevelSerializer.<DownloadLevelFromServer>c__Iterator1D6 <DownloadLevelFromServer>c__Iterator1D = new LevelSerializer.<DownloadLevelFromServer>c__Iterator1D6();
+		<DownloadLevelFromServer>c__Iterator1D.uri = uri;
+		<DownloadLevelFromServer>c__Iterator1D.<$>uri = uri;
+		return <DownloadLevelFromServer>c__Iterator1D;
 	}
 
 	internal static void InvokeDeserialized()
@@ -1133,12 +1133,12 @@ public static class LevelSerializer
 	[DebuggerHidden]
 	private static IEnumerator PerformLoad(LevelLoader loader, Action<LevelLoader> complete)
 	{
-		LevelSerializer.<PerformLoad>c__Iterator1CF <PerformLoad>c__Iterator1CF = new LevelSerializer.<PerformLoad>c__Iterator1CF();
-		<PerformLoad>c__Iterator1CF.loader = loader;
-		<PerformLoad>c__Iterator1CF.complete = complete;
-		<PerformLoad>c__Iterator1CF.<$>loader = loader;
-		<PerformLoad>c__Iterator1CF.<$>complete = complete;
-		return <PerformLoad>c__Iterator1CF;
+		LevelSerializer.<PerformLoad>c__Iterator1D7 <PerformLoad>c__Iterator1D = new LevelSerializer.<PerformLoad>c__Iterator1D7();
+		<PerformLoad>c__Iterator1D.loader = loader;
+		<PerformLoad>c__Iterator1D.complete = complete;
+		<PerformLoad>c__Iterator1D.<$>loader = loader;
+		<PerformLoad>c__Iterator1D.<$>complete = complete;
+		return <PerformLoad>c__Iterator1D;
 	}
 
 	public static LevelLoader LoadSavedLevel(string data)

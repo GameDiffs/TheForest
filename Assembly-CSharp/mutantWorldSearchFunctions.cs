@@ -47,17 +47,17 @@ public class mutantWorldSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findClosestEntrance()
 	{
-		mutantWorldSearchFunctions.<findClosestEntrance>c__IteratorBC <findClosestEntrance>c__IteratorBC = new mutantWorldSearchFunctions.<findClosestEntrance>c__IteratorBC();
-		<findClosestEntrance>c__IteratorBC.<>f__this = this;
-		return <findClosestEntrance>c__IteratorBC;
+		mutantWorldSearchFunctions.<findClosestEntrance>c__IteratorBF <findClosestEntrance>c__IteratorBF = new mutantWorldSearchFunctions.<findClosestEntrance>c__IteratorBF();
+		<findClosestEntrance>c__IteratorBF.<>f__this = this;
+		return <findClosestEntrance>c__IteratorBF;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findClosestFeederToPlayer()
 	{
-		mutantWorldSearchFunctions.<findClosestFeederToPlayer>c__IteratorBD <findClosestFeederToPlayer>c__IteratorBD = new mutantWorldSearchFunctions.<findClosestFeederToPlayer>c__IteratorBD();
-		<findClosestFeederToPlayer>c__IteratorBD.<>f__this = this;
-		return <findClosestFeederToPlayer>c__IteratorBD;
+		mutantWorldSearchFunctions.<findClosestFeederToPlayer>c__IteratorC0 <findClosestFeederToPlayer>c__IteratorC = new mutantWorldSearchFunctions.<findClosestFeederToPlayer>c__IteratorC0();
+		<findClosestFeederToPlayer>c__IteratorC.<>f__this = this;
+		return <findClosestFeederToPlayer>c__IteratorC;
 	}
 
 	private void findCloseGroupEncounter()
@@ -94,11 +94,11 @@ public class mutantWorldSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findPointAroundEncounter(float dist)
 	{
-		mutantWorldSearchFunctions.<findPointAroundEncounter>c__IteratorBE <findPointAroundEncounter>c__IteratorBE = new mutantWorldSearchFunctions.<findPointAroundEncounter>c__IteratorBE();
-		<findPointAroundEncounter>c__IteratorBE.dist = dist;
-		<findPointAroundEncounter>c__IteratorBE.<$>dist = dist;
-		<findPointAroundEncounter>c__IteratorBE.<>f__this = this;
-		return <findPointAroundEncounter>c__IteratorBE;
+		mutantWorldSearchFunctions.<findPointAroundEncounter>c__IteratorC1 <findPointAroundEncounter>c__IteratorC = new mutantWorldSearchFunctions.<findPointAroundEncounter>c__IteratorC1();
+		<findPointAroundEncounter>c__IteratorC.dist = dist;
+		<findPointAroundEncounter>c__IteratorC.<$>dist = dist;
+		<findPointAroundEncounter>c__IteratorC.<>f__this = this;
+		return <findPointAroundEncounter>c__IteratorC;
 	}
 
 	public void getEncounterComponent(GameObject go)
@@ -152,15 +152,15 @@ public class mutantWorldSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator getLeaderPos()
 	{
-		mutantWorldSearchFunctions.<getLeaderPos>c__IteratorBF <getLeaderPos>c__IteratorBF = new mutantWorldSearchFunctions.<getLeaderPos>c__IteratorBF();
-		<getLeaderPos>c__IteratorBF.<>f__this = this;
-		return <getLeaderPos>c__IteratorBF;
+		mutantWorldSearchFunctions.<getLeaderPos>c__IteratorC2 <getLeaderPos>c__IteratorC = new mutantWorldSearchFunctions.<getLeaderPos>c__IteratorC2();
+		<getLeaderPos>c__IteratorC.<>f__this = this;
+		return <getLeaderPos>c__IteratorC;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator getFollowerPos()
 	{
-		mutantWorldSearchFunctions.<getFollowerPos>c__IteratorC0 <getFollowerPos>c__IteratorC = new mutantWorldSearchFunctions.<getFollowerPos>c__IteratorC0();
+		mutantWorldSearchFunctions.<getFollowerPos>c__IteratorC3 <getFollowerPos>c__IteratorC = new mutantWorldSearchFunctions.<getFollowerPos>c__IteratorC3();
 		<getFollowerPos>c__IteratorC.<>f__this = this;
 		return <getFollowerPos>c__IteratorC;
 	}
@@ -181,7 +181,7 @@ public class mutantWorldSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator gibCurrentFeeder(GameObject go)
 	{
-		mutantWorldSearchFunctions.<gibCurrentFeeder>c__IteratorC1 <gibCurrentFeeder>c__IteratorC = new mutantWorldSearchFunctions.<gibCurrentFeeder>c__IteratorC1();
+		mutantWorldSearchFunctions.<gibCurrentFeeder>c__IteratorC4 <gibCurrentFeeder>c__IteratorC = new mutantWorldSearchFunctions.<gibCurrentFeeder>c__IteratorC4();
 		<gibCurrentFeeder>c__IteratorC.go = go;
 		<gibCurrentFeeder>c__IteratorC.<$>go = go;
 		return <gibCurrentFeeder>c__IteratorC;
@@ -190,7 +190,7 @@ public class mutantWorldSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator gibCurrentMutant(GameObject go)
 	{
-		mutantWorldSearchFunctions.<gibCurrentMutant>c__IteratorC2 <gibCurrentMutant>c__IteratorC = new mutantWorldSearchFunctions.<gibCurrentMutant>c__IteratorC2();
+		mutantWorldSearchFunctions.<gibCurrentMutant>c__IteratorC5 <gibCurrentMutant>c__IteratorC = new mutantWorldSearchFunctions.<gibCurrentMutant>c__IteratorC5();
 		<gibCurrentMutant>c__IteratorC.go = go;
 		<gibCurrentMutant>c__IteratorC.<$>go = go;
 		return <gibCurrentMutant>c__IteratorC;
@@ -199,7 +199,7 @@ public class mutantWorldSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator sendFeedingEffect(GameObject go)
 	{
-		mutantWorldSearchFunctions.<sendFeedingEffect>c__IteratorC3 <sendFeedingEffect>c__IteratorC = new mutantWorldSearchFunctions.<sendFeedingEffect>c__IteratorC3();
+		mutantWorldSearchFunctions.<sendFeedingEffect>c__IteratorC6 <sendFeedingEffect>c__IteratorC = new mutantWorldSearchFunctions.<sendFeedingEffect>c__IteratorC6();
 		<sendFeedingEffect>c__IteratorC.go = go;
 		<sendFeedingEffect>c__IteratorC.<$>go = go;
 		return <sendFeedingEffect>c__IteratorC;
@@ -208,7 +208,7 @@ public class mutantWorldSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator stopFeedingEffect(GameObject go)
 	{
-		mutantWorldSearchFunctions.<stopFeedingEffect>c__IteratorC4 <stopFeedingEffect>c__IteratorC = new mutantWorldSearchFunctions.<stopFeedingEffect>c__IteratorC4();
+		mutantWorldSearchFunctions.<stopFeedingEffect>c__IteratorC7 <stopFeedingEffect>c__IteratorC = new mutantWorldSearchFunctions.<stopFeedingEffect>c__IteratorC7();
 		<stopFeedingEffect>c__IteratorC.go = go;
 		<stopFeedingEffect>c__IteratorC.<$>go = go;
 		return <stopFeedingEffect>c__IteratorC;
@@ -224,7 +224,7 @@ public class mutantWorldSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator moveToEncounter()
 	{
-		mutantWorldSearchFunctions.<moveToEncounter>c__IteratorC5 <moveToEncounter>c__IteratorC = new mutantWorldSearchFunctions.<moveToEncounter>c__IteratorC5();
+		mutantWorldSearchFunctions.<moveToEncounter>c__IteratorC8 <moveToEncounter>c__IteratorC = new mutantWorldSearchFunctions.<moveToEncounter>c__IteratorC8();
 		<moveToEncounter>c__IteratorC.<>f__this = this;
 		return <moveToEncounter>c__IteratorC;
 	}
@@ -232,7 +232,7 @@ public class mutantWorldSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator resetMoveToEncounter()
 	{
-		mutantWorldSearchFunctions.<resetMoveToEncounter>c__IteratorC6 <resetMoveToEncounter>c__IteratorC = new mutantWorldSearchFunctions.<resetMoveToEncounter>c__IteratorC6();
+		mutantWorldSearchFunctions.<resetMoveToEncounter>c__IteratorC9 <resetMoveToEncounter>c__IteratorC = new mutantWorldSearchFunctions.<resetMoveToEncounter>c__IteratorC9();
 		<resetMoveToEncounter>c__IteratorC.<>f__this = this;
 		return <resetMoveToEncounter>c__IteratorC;
 	}

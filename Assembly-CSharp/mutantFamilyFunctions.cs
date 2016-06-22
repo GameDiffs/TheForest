@@ -118,25 +118,25 @@ public class mutantFamilyFunctions : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator sendAmbushEvent()
 	{
-		mutantFamilyFunctions.<sendAmbushEvent>c__Iterator7B <sendAmbushEvent>c__Iterator7B = new mutantFamilyFunctions.<sendAmbushEvent>c__Iterator7B();
-		<sendAmbushEvent>c__Iterator7B.<>f__this = this;
-		return <sendAmbushEvent>c__Iterator7B;
+		mutantFamilyFunctions.<sendAmbushEvent>c__Iterator7C <sendAmbushEvent>c__Iterator7C = new mutantFamilyFunctions.<sendAmbushEvent>c__Iterator7C();
+		<sendAmbushEvent>c__Iterator7C.<>f__this = this;
+		return <sendAmbushEvent>c__Iterator7C;
 	}
 
 	[DebuggerHidden]
 	public IEnumerator sendRescueEvent()
 	{
-		mutantFamilyFunctions.<sendRescueEvent>c__Iterator7C <sendRescueEvent>c__Iterator7C = new mutantFamilyFunctions.<sendRescueEvent>c__Iterator7C();
-		<sendRescueEvent>c__Iterator7C.<>f__this = this;
-		return <sendRescueEvent>c__Iterator7C;
+		mutantFamilyFunctions.<sendRescueEvent>c__Iterator7D <sendRescueEvent>c__Iterator7D = new mutantFamilyFunctions.<sendRescueEvent>c__Iterator7D();
+		<sendRescueEvent>c__Iterator7D.<>f__this = this;
+		return <sendRescueEvent>c__Iterator7D;
 	}
 
 	[DebuggerHidden]
 	public IEnumerator sendEatMeEvent()
 	{
-		mutantFamilyFunctions.<sendEatMeEvent>c__Iterator7D <sendEatMeEvent>c__Iterator7D = new mutantFamilyFunctions.<sendEatMeEvent>c__Iterator7D();
-		<sendEatMeEvent>c__Iterator7D.<>f__this = this;
-		return <sendEatMeEvent>c__Iterator7D;
+		mutantFamilyFunctions.<sendEatMeEvent>c__Iterator7E <sendEatMeEvent>c__Iterator7E = new mutantFamilyFunctions.<sendEatMeEvent>c__Iterator7E();
+		<sendEatMeEvent>c__Iterator7E.<>f__this = this;
+		return <sendEatMeEvent>c__Iterator7E;
 	}
 
 	public void sendTargetSpotted()
@@ -271,11 +271,11 @@ public class mutantFamilyFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator switchToRescueFriend(GameObject go)
 	{
-		mutantFamilyFunctions.<switchToRescueFriend>c__Iterator7E <switchToRescueFriend>c__Iterator7E = new mutantFamilyFunctions.<switchToRescueFriend>c__Iterator7E();
-		<switchToRescueFriend>c__Iterator7E.go = go;
-		<switchToRescueFriend>c__Iterator7E.<$>go = go;
-		<switchToRescueFriend>c__Iterator7E.<>f__this = this;
-		return <switchToRescueFriend>c__Iterator7E;
+		mutantFamilyFunctions.<switchToRescueFriend>c__Iterator7F <switchToRescueFriend>c__Iterator7F = new mutantFamilyFunctions.<switchToRescueFriend>c__Iterator7F();
+		<switchToRescueFriend>c__Iterator7F.go = go;
+		<switchToRescueFriend>c__Iterator7F.<$>go = go;
+		<switchToRescueFriend>c__Iterator7F.<>f__this = this;
+		return <switchToRescueFriend>c__Iterator7F;
 	}
 
 	private void switchToGuardFriend(GameObject go)

@@ -27,7 +27,7 @@ public class ObjectResetter : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator ResetCoroutine(float delay)
 	{
-		ObjectResetter.<ResetCoroutine>c__Iterator120 <ResetCoroutine>c__Iterator = new ObjectResetter.<ResetCoroutine>c__Iterator120();
+		ObjectResetter.<ResetCoroutine>c__Iterator123 <ResetCoroutine>c__Iterator = new ObjectResetter.<ResetCoroutine>c__Iterator123();
 		<ResetCoroutine>c__Iterator.delay = delay;
 		<ResetCoroutine>c__Iterator.<$>delay = delay;
 		<ResetCoroutine>c__Iterator.<>f__this = this;

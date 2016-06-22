@@ -10,7 +10,7 @@ namespace TheForest.Tools
 		[DebuggerHidden]
 		private IEnumerator Start()
 		{
-			return new PreloadSerializerPrefabs.<Start>c__Iterator1AC();
+			return new PreloadSerializerPrefabs.<Start>c__Iterator1B4();
 		}
 	}
 }

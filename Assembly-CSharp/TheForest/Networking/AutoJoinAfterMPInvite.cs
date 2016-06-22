@@ -47,9 +47,9 @@ namespace TheForest.Networking
 		[DebuggerHidden]
 		private IEnumerator Start()
 		{
-			AutoJoinAfterMPInvite.<Start>c__Iterator177 <Start>c__Iterator = new AutoJoinAfterMPInvite.<Start>c__Iterator177();
-			<Start>c__Iterator.<>f__this = this;
-			return <Start>c__Iterator;
+			AutoJoinAfterMPInvite.<Start>c__Iterator17F <Start>c__Iterator17F = new AutoJoinAfterMPInvite.<Start>c__Iterator17F();
+			<Start>c__Iterator17F.<>f__this = this;
+			return <Start>c__Iterator17F;
 		}
 
 		public void SetInvitedToGameId(ulong gameId)
@@ -64,7 +64,7 @@ namespace TheForest.Networking
 		[DebuggerHidden]
 		private IEnumerator DelayedInviteReceived(CoopLobbyInfo lobby)
 		{
-			AutoJoinAfterMPInvite.<DelayedInviteReceived>c__Iterator178 <DelayedInviteReceived>c__Iterator = new AutoJoinAfterMPInvite.<DelayedInviteReceived>c__Iterator178();
+			AutoJoinAfterMPInvite.<DelayedInviteReceived>c__Iterator180 <DelayedInviteReceived>c__Iterator = new AutoJoinAfterMPInvite.<DelayedInviteReceived>c__Iterator180();
 			<DelayedInviteReceived>c__Iterator.lobby = lobby;
 			<DelayedInviteReceived>c__Iterator.<$>lobby = lobby;
 			<DelayedInviteReceived>c__Iterator.<>f__this = this;

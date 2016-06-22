@@ -22,9 +22,9 @@ public class CoopDedicatedClientStarter : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		CoopDedicatedClientStarter.<Start>c__Iterator2B <Start>c__Iterator2B = new CoopDedicatedClientStarter.<Start>c__Iterator2B();
-		<Start>c__Iterator2B.<>f__this = this;
-		return <Start>c__Iterator2B;
+		CoopDedicatedClientStarter.<Start>c__Iterator2C <Start>c__Iterator2C = new CoopDedicatedClientStarter.<Start>c__Iterator2C();
+		<Start>c__Iterator2C.<>f__this = this;
+		return <Start>c__Iterator2C;
 	}
 
 	private void Connect()

@@ -68,14 +68,14 @@ namespace TheForest.Buildings.World
 			}
 		}
 
-		public void OnExplode(Explode explode)
+		public void OnExplode(Explode.Data explodeData)
 		{
 			if (this._owner)
 			{
 				BuildingExplosion component = this._owner.GetComponent<BuildingExplosion>();
 				if (component)
 				{
-					component.OnExplodeFoundationTier(explode, this);
+					component.OnExplodeFoundationTier(explodeData, this);
 				}
 			}
 		}

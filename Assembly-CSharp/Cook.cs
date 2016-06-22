@@ -103,9 +103,9 @@ public class Cook : EntityBehaviour<ICookingState>
 	[DebuggerHidden]
 	private IEnumerator OnDeserialized()
 	{
-		Cook.<OnDeserialized>c__Iterator173 <OnDeserialized>c__Iterator = new Cook.<OnDeserialized>c__Iterator173();
-		<OnDeserialized>c__Iterator.<>f__this = this;
-		return <OnDeserialized>c__Iterator;
+		Cook.<OnDeserialized>c__Iterator17B <OnDeserialized>c__Iterator17B = new Cook.<OnDeserialized>c__Iterator17B();
+		<OnDeserialized>c__Iterator17B.<>f__this = this;
+		return <OnDeserialized>c__Iterator17B;
 	}
 
 	private void CookMe()

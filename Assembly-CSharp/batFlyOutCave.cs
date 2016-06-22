@@ -47,8 +47,8 @@ public class batFlyOutCave : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doBats()
 	{
-		batFlyOutCave.<doBats>c__Iterator20B <doBats>c__Iterator20B = new batFlyOutCave.<doBats>c__Iterator20B();
-		<doBats>c__Iterator20B.<>f__this = this;
-		return <doBats>c__Iterator20B;
+		batFlyOutCave.<doBats>c__Iterator213 <doBats>c__Iterator = new batFlyOutCave.<doBats>c__Iterator213();
+		<doBats>c__Iterator.<>f__this = this;
+		return <doBats>c__Iterator;
 	}
 }

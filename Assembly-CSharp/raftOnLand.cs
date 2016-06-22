@@ -54,9 +54,9 @@ public class raftOnLand : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator WaitAttachMP()
 	{
-		raftOnLand.<WaitAttachMP>c__IteratorE9 <WaitAttachMP>c__IteratorE = new raftOnLand.<WaitAttachMP>c__IteratorE9();
-		<WaitAttachMP>c__IteratorE.<>f__this = this;
-		return <WaitAttachMP>c__IteratorE;
+		raftOnLand.<WaitAttachMP>c__IteratorEC <WaitAttachMP>c__IteratorEC = new raftOnLand.<WaitAttachMP>c__IteratorEC();
+		<WaitAttachMP>c__IteratorEC.<>f__this = this;
+		return <WaitAttachMP>c__IteratorEC;
 	}
 
 	private void Update()

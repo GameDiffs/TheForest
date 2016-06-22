@@ -83,9 +83,9 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator Start()
 		{
-			BuildMission.<Start>c__Iterator12C <Start>c__Iterator12C = new BuildMission.<Start>c__Iterator12C();
-			<Start>c__Iterator12C.<>f__this = this;
-			return <Start>c__Iterator12C;
+			BuildMission.<Start>c__Iterator12F <Start>c__Iterator12F = new BuildMission.<Start>c__Iterator12F();
+			<Start>c__Iterator12F.<>f__this = this;
+			return <Start>c__Iterator12F;
 		}
 
 		private void Init(int itemId)

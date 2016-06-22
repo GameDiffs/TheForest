@@ -745,17 +745,17 @@ namespace TheForest.Player
 		[DebuggerHidden]
 		private IEnumerator EnableCrouch()
 		{
-			FirstPersonCharacter.<EnableCrouch>c__Iterator17B <EnableCrouch>c__Iterator17B = new FirstPersonCharacter.<EnableCrouch>c__Iterator17B();
-			<EnableCrouch>c__Iterator17B.<>f__this = this;
-			return <EnableCrouch>c__Iterator17B;
+			FirstPersonCharacter.<EnableCrouch>c__Iterator183 <EnableCrouch>c__Iterator = new FirstPersonCharacter.<EnableCrouch>c__Iterator183();
+			<EnableCrouch>c__Iterator.<>f__this = this;
+			return <EnableCrouch>c__Iterator;
 		}
 
 		[DebuggerHidden]
 		private IEnumerator DisableCrouch()
 		{
-			FirstPersonCharacter.<DisableCrouch>c__Iterator17C <DisableCrouch>c__Iterator17C = new FirstPersonCharacter.<DisableCrouch>c__Iterator17C();
-			<DisableCrouch>c__Iterator17C.<>f__this = this;
-			return <DisableCrouch>c__Iterator17C;
+			FirstPersonCharacter.<DisableCrouch>c__Iterator184 <DisableCrouch>c__Iterator = new FirstPersonCharacter.<DisableCrouch>c__Iterator184();
+			<DisableCrouch>c__Iterator.<>f__this = this;
+			return <DisableCrouch>c__Iterator;
 		}
 	}
 }

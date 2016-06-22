@@ -11,6 +11,8 @@ public class KeepAboveTerrain : MonoBehaviour
 
 	public LayerMask DynFloorLayers;
 
+	public LayerMask WaterLayers;
+
 	public Material RedMat;
 
 	public Material ClearMat;
@@ -26,6 +28,10 @@ public class KeepAboveTerrain : MonoBehaviour
 	public bool AllowFoundation;
 
 	public bool Airborne;
+
+	public bool Waterborne;
+
+	public bool WaterborneExclusive;
 
 	public float FoundationMinSlope = 0.02f;
 
@@ -106,6 +112,8 @@ public class KeepAboveTerrain : MonoBehaviour
 	{
 		this.turn = 0f;
 		this.Clear = true;
+		this.Waterborne = false;
+		this.WaterborneExclusive = false;
 		this.FloorLayersFinal = ((!LocalPlayer.Create.CurrentBlueprint._allowParentingToDynamic) ? this.FloorLayers : this.DynFloorLayers);
 	}
 
@@ -195,9 +203,14 @@ public class KeepAboveTerrain : MonoBehaviour
 					}
 				}
 			}
+			int num2 = 0;
 			if (Physics.Raycast(vector2, Vector3.down, out this.hit, maxDistance, this.GetValidLayers(this.FloorLayersFinal.value)))
 			{
 				vector2.y = this.hit.point.y;
+				if ((1 << this.hit.collider.gameObject.layer & this.WaterLayers) != 0)
+				{
+					num2++;
+				}
 			}
 			else
 			{
@@ -206,6 +219,10 @@ public class KeepAboveTerrain : MonoBehaviour
 			if (Physics.Raycast(vector3, Vector3.down, out this.hit, maxDistance, this.GetValidLayers(this.FloorLayersFinal.value)))
 			{
 				vector3.y = this.hit.point.y;
+				if ((1 << this.hit.collider.gameObject.layer & this.WaterLayers) != 0)
+				{
+					num2++;
+				}
 			}
 			else
 			{
@@ -214,6 +231,10 @@ public class KeepAboveTerrain : MonoBehaviour
 			if (Physics.Raycast(vector4, Vector3.down, out this.hit, maxDistance, this.GetValidLayers(this.FloorLayersFinal.value)))
 			{
 				vector4.y = this.hit.point.y;
+				if ((1 << this.hit.collider.gameObject.layer & this.WaterLayers) != 0)
+				{
+					num2++;
+				}
 			}
 			else
 			{
@@ -222,6 +243,10 @@ public class KeepAboveTerrain : MonoBehaviour
 			if (Physics.Raycast(vector5, Vector3.down, out this.hit, maxDistance, this.GetValidLayers(this.FloorLayersFinal.value)))
 			{
 				vector5.y = this.hit.point.y;
+				if ((1 << this.hit.collider.gameObject.layer & this.WaterLayers) != 0)
+				{
+					num2++;
+				}
 			}
 			else
 			{
@@ -230,10 +255,10 @@ public class KeepAboveTerrain : MonoBehaviour
 			bool flag2 = false;
 			Vector3 position3 = base.transform.position;
 			position3.y = point.y;
-			float num2;
+			float num3;
 			if (Physics.Raycast(position3, Vector3.down, out this.hit, maxDistance, this.GetValidLayers(this.FloorLayersFinal.value)))
 			{
-				num2 = this.hit.point.y;
+				num3 = this.hit.point.y;
 				if (!this.LastHit.HasValue)
 				{
 					this.LastHit = new RaycastHit?(this.hit);
@@ -242,53 +267,68 @@ public class KeepAboveTerrain : MonoBehaviour
 				{
 					flag2 = true;
 				}
+				if ((1 << this.hit.collider.gameObject.layer & this.WaterLayers) != 0)
+				{
+					num2++;
+				}
 			}
 			else
 			{
-				num2 = this.activeTerrain.SampleHeight(base.transform.position) + this.activeTerrain.transform.position.y;
+				num3 = this.activeTerrain.SampleHeight(base.transform.position) + this.activeTerrain.transform.position.y;
 			}
 			if (flag)
 			{
-				point.y = num2;
+				point.y = num3;
 			}
-			float num3 = (vector2.y + vector3.y + vector4.y + vector5.y + num2) / 5f;
+			float num4 = (vector2.y + vector3.y + vector4.y + vector5.y + num3) / 5f;
 			if (!flag2)
 			{
-				float num4 = 1f;
-				if (Mathf.Abs((vector3.y + vector4.y + vector5.y + num2) / 4f - vector2.y) > num4)
+				float num5 = 1f;
+				if (Mathf.Abs((vector3.y + vector4.y + vector5.y + num3) / 4f - vector2.y) > num5)
 				{
-					num3 = (vector3.y + vector4.y + vector5.y + num2) / 4f;
-					vector2.y = num3;
+					num4 = (vector3.y + vector4.y + vector5.y + num3) / 4f;
+					vector2.y = num4;
 				}
-				if (Mathf.Abs((vector2.y + vector4.y + vector5.y + num2) / 4f - vector3.y) > num4)
+				if (Mathf.Abs((vector2.y + vector4.y + vector5.y + num3) / 4f - vector3.y) > num5)
 				{
-					num3 = (vector2.y + vector4.y + vector5.y + num2) / 4f;
-					vector3.y = num3;
+					num4 = (vector2.y + vector4.y + vector5.y + num3) / 4f;
+					vector3.y = num4;
 				}
-				if (Mathf.Abs((vector2.y + vector3.y + vector5.y + num2) / 4f - vector4.y) > num4)
+				if (Mathf.Abs((vector2.y + vector3.y + vector5.y + num3) / 4f - vector4.y) > num5)
 				{
-					num3 = (vector2.y + vector3.y + vector5.y + num2) / 4f;
-					vector4.y = num3;
+					num4 = (vector2.y + vector3.y + vector5.y + num3) / 4f;
+					vector4.y = num4;
 				}
-				if (Mathf.Abs((vector2.y + vector3.y + vector4.y + num2) / 4f - vector5.y) > num4)
+				if (Mathf.Abs((vector2.y + vector3.y + vector4.y + num3) / 4f - vector5.y) > num5)
 				{
-					num3 = (vector2.y + vector3.y + vector4.y + num2) / 4f;
-					vector5.y = num3;
+					num4 = (vector2.y + vector3.y + vector4.y + num3) / 4f;
+					vector5.y = num4;
 				}
 			}
 			if (this.Airborne)
 			{
 				if (this.IsInSinkHole)
 				{
-					float num5 = LocalPlayer.Transform.position.y + this.maxAirBorneHeight;
-					if (point.y > num5)
+					float num6 = LocalPlayer.Transform.position.y + this.maxAirBorneHeight;
+					if (point.y > num6)
 					{
-						point.y = num5;
+						point.y = num6;
 					}
 				}
-				else if (point.y - num3 > this.maxAirBorneHeight)
+				else if (point.y - num4 > this.maxAirBorneHeight)
 				{
-					point.y = num3 + this.maxAirBorneHeight;
+					point.y = num4 + this.maxAirBorneHeight;
+				}
+			}
+			if (this.WaterborneExclusive)
+			{
+				if (num2 == 5)
+				{
+					this.SetClear();
+				}
+				else
+				{
+					this.SetNotclear();
 				}
 			}
 			Vector3 a = Vector3.Cross(vector3 - vector2, vector4 - vector2);
@@ -296,8 +336,8 @@ public class KeepAboveTerrain : MonoBehaviour
 			this.curNormal = Vector3.Normalize((a + b2) / 2f);
 			if (!this.AllowFoundation || Vector3.Angle(Vector3.up, this.curNormal) < this.FoundationMinSlope)
 			{
-				this.AirBorneHeight = Mathf.Max(point.y, Mathf.Min(num2, num3));
-				this.RegularHeight = Mathf.Min(num2, num3);
+				this.AirBorneHeight = Mathf.Max(point.y, Mathf.Min(num3, num4));
+				this.RegularHeight = Mathf.Min(num3, num4);
 				if (this.curNormal.y < 0.5f)
 				{
 					this.curNormal = Vector3.up;
@@ -317,7 +357,7 @@ public class KeepAboveTerrain : MonoBehaviour
 					vector3.y,
 					vector4.y,
 					vector5.y,
-					num2,
+					num3,
 					point.y
 				});
 				this.RegularHeight = Mathf.Max(new float[]
@@ -326,7 +366,7 @@ public class KeepAboveTerrain : MonoBehaviour
 					vector3.y,
 					vector4.y,
 					vector5.y,
-					num2
+					num3
 				});
 				base.transform.position = new Vector3(base.transform.position.x, (!this.Airborne) ? this.RegularHeight : this.AirBorneHeight, base.transform.position.z);
 				base.transform.rotation = this.CurrentRotation;
@@ -377,6 +417,13 @@ public class KeepAboveTerrain : MonoBehaviour
 	{
 		t.position = new Vector3(t.position.x, (!airborne) ? this.RegularHeight : this.AirBorneHeight, t.position.z);
 		t.rotation = ((!airborne && !treeStructure) ? (this.curGroundTilt * this.CurrentRotation) : this.CurrentRotation);
+	}
+
+	public void SetWaterborne(bool exclusive)
+	{
+		this.Waterborne = true;
+		this.WaterborneExclusive = exclusive;
+		this.FloorLayersFinal |= this.WaterLayers;
 	}
 
 	public void SetClear()

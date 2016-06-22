@@ -40,8 +40,8 @@ public class CoopMutantPredictor : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator PredictionRoutine()
 	{
-		CoopMutantPredictor.<PredictionRoutine>c__Iterator1E <PredictionRoutine>c__Iterator1E = new CoopMutantPredictor.<PredictionRoutine>c__Iterator1E();
-		<PredictionRoutine>c__Iterator1E.<>f__this = this;
-		return <PredictionRoutine>c__Iterator1E;
+		CoopMutantPredictor.<PredictionRoutine>c__Iterator1F <PredictionRoutine>c__Iterator1F = new CoopMutantPredictor.<PredictionRoutine>c__Iterator1F();
+		<PredictionRoutine>c__Iterator1F.<>f__this = this;
+		return <PredictionRoutine>c__Iterator1F;
 	}
 }

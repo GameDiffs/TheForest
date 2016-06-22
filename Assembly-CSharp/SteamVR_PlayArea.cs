@@ -233,8 +233,8 @@ public class SteamVR_PlayArea : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator UpdateBounds()
 	{
-		SteamVR_PlayArea.<UpdateBounds>c__Iterator1D6 <UpdateBounds>c__Iterator1D = new SteamVR_PlayArea.<UpdateBounds>c__Iterator1D6();
-		<UpdateBounds>c__Iterator1D.<>f__this = this;
-		return <UpdateBounds>c__Iterator1D;
+		SteamVR_PlayArea.<UpdateBounds>c__Iterator1DE <UpdateBounds>c__Iterator1DE = new SteamVR_PlayArea.<UpdateBounds>c__Iterator1DE();
+		<UpdateBounds>c__Iterator1DE.<>f__this = this;
+		return <UpdateBounds>c__Iterator1DE;
 	}
 }

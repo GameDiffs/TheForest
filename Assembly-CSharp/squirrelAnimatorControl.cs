@@ -151,9 +151,9 @@ public class squirrelAnimatorControl : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator changeIdleValue()
 	{
-		squirrelAnimatorControl.<changeIdleValue>c__IteratorFB <changeIdleValue>c__IteratorFB = new squirrelAnimatorControl.<changeIdleValue>c__IteratorFB();
-		<changeIdleValue>c__IteratorFB.<>f__this = this;
-		return <changeIdleValue>c__IteratorFB;
+		squirrelAnimatorControl.<changeIdleValue>c__IteratorFE <changeIdleValue>c__IteratorFE = new squirrelAnimatorControl.<changeIdleValue>c__IteratorFE();
+		<changeIdleValue>c__IteratorFE.<>f__this = this;
+		return <changeIdleValue>c__IteratorFE;
 	}
 
 	private void OnDisable()
@@ -165,11 +165,11 @@ public class squirrelAnimatorControl : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator moveToTreeTarget(Vector3 pos)
 	{
-		squirrelAnimatorControl.<moveToTreeTarget>c__IteratorFC <moveToTreeTarget>c__IteratorFC = new squirrelAnimatorControl.<moveToTreeTarget>c__IteratorFC();
-		<moveToTreeTarget>c__IteratorFC.pos = pos;
-		<moveToTreeTarget>c__IteratorFC.<$>pos = pos;
-		<moveToTreeTarget>c__IteratorFC.<>f__this = this;
-		return <moveToTreeTarget>c__IteratorFC;
+		squirrelAnimatorControl.<moveToTreeTarget>c__IteratorFF <moveToTreeTarget>c__IteratorFF = new squirrelAnimatorControl.<moveToTreeTarget>c__IteratorFF();
+		<moveToTreeTarget>c__IteratorFF.pos = pos;
+		<moveToTreeTarget>c__IteratorFF.<$>pos = pos;
+		<moveToTreeTarget>c__IteratorFF.<>f__this = this;
+		return <moveToTreeTarget>c__IteratorFF;
 	}
 
 	private void enableBlocked()

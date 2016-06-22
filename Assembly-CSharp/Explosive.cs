@@ -24,11 +24,11 @@ public class Explosive : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator OnCollisionEnter(Collision col)
 	{
-		Explosive.<OnCollisionEnter>c__Iterator11F <OnCollisionEnter>c__Iterator11F = new Explosive.<OnCollisionEnter>c__Iterator11F();
-		<OnCollisionEnter>c__Iterator11F.col = col;
-		<OnCollisionEnter>c__Iterator11F.<$>col = col;
-		<OnCollisionEnter>c__Iterator11F.<>f__this = this;
-		return <OnCollisionEnter>c__Iterator11F;
+		Explosive.<OnCollisionEnter>c__Iterator122 <OnCollisionEnter>c__Iterator = new Explosive.<OnCollisionEnter>c__Iterator122();
+		<OnCollisionEnter>c__Iterator.col = col;
+		<OnCollisionEnter>c__Iterator.<$>col = col;
+		<OnCollisionEnter>c__Iterator.<>f__this = this;
+		return <OnCollisionEnter>c__Iterator;
 	}
 
 	public void Reset()

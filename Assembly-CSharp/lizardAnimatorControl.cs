@@ -142,7 +142,7 @@ public class lizardAnimatorControl : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator moveToTreeTarget(Vector3 pos)
 	{
-		lizardAnimatorControl.<moveToTreeTarget>c__Iterator61 <moveToTreeTarget>c__Iterator = new lizardAnimatorControl.<moveToTreeTarget>c__Iterator61();
+		lizardAnimatorControl.<moveToTreeTarget>c__Iterator62 <moveToTreeTarget>c__Iterator = new lizardAnimatorControl.<moveToTreeTarget>c__Iterator62();
 		<moveToTreeTarget>c__Iterator.pos = pos;
 		<moveToTreeTarget>c__Iterator.<$>pos = pos;
 		<moveToTreeTarget>c__Iterator.<>f__this = this;

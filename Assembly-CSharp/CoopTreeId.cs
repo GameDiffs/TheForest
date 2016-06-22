@@ -354,7 +354,7 @@ public class CoopTreeId : EntityBehaviour<ITreeCutState>, IPriorityCalculator
 	[DebuggerHidden]
 	private IEnumerator AssignFallTransformDelayed()
 	{
-		CoopTreeId.<AssignFallTransformDelayed>c__Iterator21 <AssignFallTransformDelayed>c__Iterator = new CoopTreeId.<AssignFallTransformDelayed>c__Iterator21();
+		CoopTreeId.<AssignFallTransformDelayed>c__Iterator22 <AssignFallTransformDelayed>c__Iterator = new CoopTreeId.<AssignFallTransformDelayed>c__Iterator22();
 		<AssignFallTransformDelayed>c__Iterator.<>f__this = this;
 		return <AssignFallTransformDelayed>c__Iterator;
 	}

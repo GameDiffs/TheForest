@@ -86,9 +86,9 @@ namespace TheForest.Player
 		[DebuggerHidden]
 		private IEnumerator InitFromSave()
 		{
-			StoryCluesFolder.<InitFromSave>c__Iterator183 <InitFromSave>c__Iterator = new StoryCluesFolder.<InitFromSave>c__Iterator183();
-			<InitFromSave>c__Iterator.<>f__this = this;
-			return <InitFromSave>c__Iterator;
+			StoryCluesFolder.<InitFromSave>c__Iterator18B <InitFromSave>c__Iterator18B = new StoryCluesFolder.<InitFromSave>c__Iterator18B();
+			<InitFromSave>c__Iterator18B.<>f__this = this;
+			return <InitFromSave>c__Iterator18B;
 		}
 	}
 }

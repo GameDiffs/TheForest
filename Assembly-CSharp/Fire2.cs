@@ -155,9 +155,9 @@ public class Fire2 : EntityBehaviour<IFireState>, IWetable
 	[DebuggerHidden]
 	private IEnumerator OnDeserialized()
 	{
-		Fire2.<OnDeserialized>c__Iterator146 <OnDeserialized>c__Iterator = new Fire2.<OnDeserialized>c__Iterator146();
-		<OnDeserialized>c__Iterator.<>f__this = this;
-		return <OnDeserialized>c__Iterator;
+		Fire2.<OnDeserialized>c__Iterator14E <OnDeserialized>c__Iterator14E = new Fire2.<OnDeserialized>c__Iterator14E();
+		<OnDeserialized>c__Iterator14E.<>f__this = this;
+		return <OnDeserialized>c__Iterator14E;
 	}
 
 	public override void Detached()

@@ -242,7 +242,7 @@ namespace TheForest.Buildings.World
 		[DebuggerHidden]
 		private IEnumerator WaitForGarden()
 		{
-			GardenDirtPile.<WaitForGarden>c__Iterator149 <WaitForGarden>c__Iterator = new GardenDirtPile.<WaitForGarden>c__Iterator149();
+			GardenDirtPile.<WaitForGarden>c__Iterator151 <WaitForGarden>c__Iterator = new GardenDirtPile.<WaitForGarden>c__Iterator151();
 			<WaitForGarden>c__Iterator.<>f__this = this;
 			return <WaitForGarden>c__Iterator;
 		}
@@ -250,9 +250,9 @@ namespace TheForest.Buildings.World
 		[DebuggerHidden]
 		private IEnumerator WaitForGardenEntity()
 		{
-			GardenDirtPile.<WaitForGardenEntity>c__Iterator14A <WaitForGardenEntity>c__Iterator14A = new GardenDirtPile.<WaitForGardenEntity>c__Iterator14A();
-			<WaitForGardenEntity>c__Iterator14A.<>f__this = this;
-			return <WaitForGardenEntity>c__Iterator14A;
+			GardenDirtPile.<WaitForGardenEntity>c__Iterator152 <WaitForGardenEntity>c__Iterator = new GardenDirtPile.<WaitForGardenEntity>c__Iterator152();
+			<WaitForGardenEntity>c__Iterator.<>f__this = this;
+			return <WaitForGardenEntity>c__Iterator;
 		}
 	}
 }

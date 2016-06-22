@@ -51,9 +51,9 @@ public class BurnDummy : EntityBehaviour
 	[DebuggerHidden]
 	private IEnumerator BurnRoutine()
 	{
-		BurnDummy.<BurnRoutine>c__Iterator2D <BurnRoutine>c__Iterator2D = new BurnDummy.<BurnRoutine>c__Iterator2D();
-		<BurnRoutine>c__Iterator2D.<>f__this = this;
-		return <BurnRoutine>c__Iterator2D;
+		BurnDummy.<BurnRoutine>c__Iterator2E <BurnRoutine>c__Iterator2E = new BurnDummy.<BurnRoutine>c__Iterator2E();
+		<BurnRoutine>c__Iterator2E.<>f__this = this;
+		return <BurnRoutine>c__Iterator2E;
 	}
 
 	private void BurnSFX()

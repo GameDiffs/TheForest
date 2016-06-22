@@ -307,6 +307,18 @@ public class CoopPlayerCallbacks : GlobalEventListener
 		}
 	}
 
+	private void OnApplicationQuit()
+	{
+		if (BoltNetwork.isRunning)
+		{
+			if (BoltNetwork.isClient)
+			{
+				BoltNetwork.server.Disconnect();
+			}
+			BoltLauncher.Shutdown();
+		}
+	}
+
 	public override void OnEvent(HitTree evnt)
 	{
 		CoopTreeId coopTreeId = CoopPlayerCallbacks.AllTrees.FirstOrDefault((CoopTreeId x) => x.Id == evnt.TreeId);

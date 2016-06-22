@@ -168,20 +168,20 @@ public class LevelLoader : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator Load()
 	{
-		LevelLoader.<Load>c__Iterator1CB <Load>c__Iterator1CB = new LevelLoader.<Load>c__Iterator1CB();
-		<Load>c__Iterator1CB.<>f__this = this;
-		return <Load>c__Iterator1CB;
+		LevelLoader.<Load>c__Iterator1D3 <Load>c__Iterator1D = new LevelLoader.<Load>c__Iterator1D3();
+		<Load>c__Iterator1D.<>f__this = this;
+		return <Load>c__Iterator1D;
 	}
 
 	[DebuggerHidden]
 	public IEnumerator Load(int numberOfFrames, float timeScale = 0f)
 	{
-		LevelLoader.<Load>c__Iterator1CC <Load>c__Iterator1CC = new LevelLoader.<Load>c__Iterator1CC();
-		<Load>c__Iterator1CC.numberOfFrames = numberOfFrames;
-		<Load>c__Iterator1CC.timeScale = timeScale;
-		<Load>c__Iterator1CC.<$>numberOfFrames = numberOfFrames;
-		<Load>c__Iterator1CC.<$>timeScale = timeScale;
-		<Load>c__Iterator1CC.<>f__this = this;
-		return <Load>c__Iterator1CC;
+		LevelLoader.<Load>c__Iterator1D4 <Load>c__Iterator1D = new LevelLoader.<Load>c__Iterator1D4();
+		<Load>c__Iterator1D.numberOfFrames = numberOfFrames;
+		<Load>c__Iterator1D.timeScale = timeScale;
+		<Load>c__Iterator1D.<$>numberOfFrames = numberOfFrames;
+		<Load>c__Iterator1D.<$>timeScale = timeScale;
+		<Load>c__Iterator1D.<>f__this = this;
+		return <Load>c__Iterator1D;
 	}
 }

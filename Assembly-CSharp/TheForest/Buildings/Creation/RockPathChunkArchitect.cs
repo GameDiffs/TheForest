@@ -86,7 +86,7 @@ namespace TheForest.Buildings.Creation
 
 		protected override Quaternion RandomizeLogRotation(Quaternion logRot)
 		{
-			return logRot * Quaternion.Euler(UnityEngine.Random.Range(-3f, 3f), UnityEngine.Random.Range(25f, 25f), UnityEngine.Random.Range(-3f, 3f));
+			return logRot * Quaternion.Euler(UnityEngine.Random.Range(-8f, 8f), UnityEngine.Random.Range(-35f, 35f), UnityEngine.Random.Range(-8f, 8f));
 		}
 
 		protected override void InitAdditionTrigger()

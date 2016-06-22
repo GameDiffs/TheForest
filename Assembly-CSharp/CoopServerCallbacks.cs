@@ -384,14 +384,12 @@ public class CoopServerCallbacks : GlobalEventListener
 
 	public override void OnEvent(CutTriggerActivated evnt)
 	{
-		Debug.Log("starting cutTriggerActivated");
 		if (evnt.Trap)
 		{
 			Component[] componentsInChildren = evnt.Trap.GetComponentsInChildren(typeof(trapTrigger), true);
 			if (componentsInChildren.Length > 0)
 			{
 				(componentsInChildren[0] as trapTrigger).releaseNooseTrap();
-				Debug.Log("sending cutTriggerActivated");
 			}
 		}
 	}
@@ -415,6 +413,7 @@ public class CoopServerCallbacks : GlobalEventListener
 			evnt.Corpse.Freeze(false);
 			if (evnt.Pickup)
 			{
+				evnt.Corpse.SendMessage("sendResetRagDoll", SendMessageOptions.DontRequireReceiver);
 				evnt.Corpse.transform.position = new Vector3(4096f, 4096f, 4096f);
 			}
 			else if (evnt.Destroy)
@@ -424,11 +423,17 @@ public class CoopServerCallbacks : GlobalEventListener
 			else
 			{
 				evnt.Corpse.SendMessage("dropFromCarry", SendMessageOptions.DontRequireReceiver);
+				evnt.Corpse.SendMessage("setRagDollDrop", SendMessageOptions.DontRequireReceiver);
 				evnt.Corpse.transform.position = evnt.Position;
 				evnt.Corpse.transform.rotation = ((!(evnt.Rotation == default(Quaternion))) ? evnt.Rotation : Quaternion.identity);
 				MultiHolder.GetTriggerChild(evnt.Corpse.transform).gameObject.SetActive(true);
 			}
 		}
+	}
+
+	public override void OnEvent(storeRagDollName evnt)
+	{
+		evnt.Target.SendMessage("getRagDollName", evnt.name, SendMessageOptions.DontRequireReceiver);
 	}
 
 	public override void OnEvent(SpawnCutTree evnt)
@@ -558,6 +563,18 @@ public class CoopServerCallbacks : GlobalEventListener
 		{
 			evnt.Suitcase.GetComponentInChildren<Rigidbody>().velocity = evnt.Direction;
 			evnt.Suitcase.GetComponent<CoopSuitcase>().enabled = true;
+		}
+	}
+
+	public override void OnEvent(ToggleDockingState evnt)
+	{
+		if (evnt.Entity.IsAttached())
+		{
+			Component[] componentsInChildren = evnt.Entity.GetComponentsInChildren(typeof(Dockable), true);
+			if (componentsInChildren.Length > 0)
+			{
+				(componentsInChildren[0] as Dockable).MpSendDock(evnt.DockPosition);
+			}
 		}
 	}
 
@@ -719,7 +736,7 @@ public class CoopServerCallbacks : GlobalEventListener
 			LogHolder componentInChildren3 = evnt.Target.GetComponentInChildren<LogHolder>();
 			if (componentInChildren3)
 			{
-				componentInChildren3.AddItemMP();
+				componentInChildren3.AddItemMP(evnt.RaisedBy);
 			}
 			else
 			{
@@ -733,7 +750,7 @@ public class CoopServerCallbacks : GlobalEventListener
 					MultiHolder[] componentsInChildren = evnt.Target.GetComponentsInChildren<MultiHolder>(true);
 					if (componentsInChildren.Length > 0)
 					{
-						componentsInChildren[0].AddItemMP((MultiHolder.ContentTypes)evnt.ContentType);
+						componentsInChildren[0].AddItemMP((MultiHolder.ContentTypes)evnt.ContentType, evnt.RaisedBy);
 					}
 				}
 			}
@@ -955,6 +972,29 @@ public class CoopServerCallbacks : GlobalEventListener
 					Scene.SceneTracker.visibleEnemies[i].SendMessage("setPlayerAttacking", SendMessageOptions.DontRequireReceiver);
 				}
 			}
+		}
+	}
+
+	public override void OnEvent(deadSharkDestroy evnt)
+	{
+		if (evnt.target)
+		{
+			if (evnt.switchToRagdoll)
+			{
+				evnt.target.SendMessage("switchToRagdoll", SendMessageOptions.DontRequireReceiver);
+			}
+			else
+			{
+				evnt.target.SendMessage("destroyShark", SendMessageOptions.DontRequireReceiver);
+			}
+		}
+	}
+
+	public override void OnEvent(deadSharkCutHead evnt)
+	{
+		if (evnt.target)
+		{
+			evnt.target.SendMessage("switchToCutHead", SendMessageOptions.DontRequireReceiver);
 		}
 	}
 

@@ -17,12 +17,12 @@ namespace TheForest.Buildings.World
 			}
 		}
 
-		public void OnExplode(Explode explode)
+		public void OnExplode(Explode.Data explodeData)
 		{
 			BuildingExplosion componentInParent = base.transform.GetComponentInParent<BuildingExplosion>();
 			if (componentInParent)
 			{
-				Scene.ActiveMB.StartCoroutine(componentInParent.OnExplode(explode));
+				Scene.ActiveMB.StartCoroutine(componentInParent.OnExplode(explodeData));
 			}
 		}
 	}

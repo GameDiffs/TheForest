@@ -316,17 +316,17 @@ public class spawnMutants : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator despawnAll()
 	{
-		spawnMutants.<despawnAll>c__IteratorF8 <despawnAll>c__IteratorF = new spawnMutants.<despawnAll>c__IteratorF8();
-		<despawnAll>c__IteratorF.<>f__this = this;
-		return <despawnAll>c__IteratorF;
+		spawnMutants.<despawnAll>c__IteratorFB <despawnAll>c__IteratorFB = new spawnMutants.<despawnAll>c__IteratorFB();
+		<despawnAll>c__IteratorFB.<>f__this = this;
+		return <despawnAll>c__IteratorFB;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator doSpawn()
 	{
-		spawnMutants.<doSpawn>c__IteratorF9 <doSpawn>c__IteratorF = new spawnMutants.<doSpawn>c__IteratorF9();
-		<doSpawn>c__IteratorF.<>f__this = this;
-		return <doSpawn>c__IteratorF;
+		spawnMutants.<doSpawn>c__IteratorFC <doSpawn>c__IteratorFC = new spawnMutants.<doSpawn>c__IteratorFC();
+		<doSpawn>c__IteratorFC.<>f__this = this;
+		return <doSpawn>c__IteratorFC;
 	}
 
 	public Vector2 Circle2(float radius)

@@ -35,9 +35,18 @@ public class TreeWindSfx : MonoBehaviour
 		EventDescription eventDescription = FMOD_StudioSystem.instance.GetEventDescription(this.EventPath);
 		if (eventDescription != null)
 		{
-			this.WindParameterIndex = FMODCommon.FindParameterIndex(eventDescription, "wind");
-			this.SizeParameterIndex = FMODCommon.FindParameterIndex(eventDescription, "size");
-			this.TimeParameterIndex = FMODCommon.FindParameterIndex(eventDescription, "time");
+			if (this.WindParameterIndex == -1)
+			{
+				this.WindParameterIndex = FMODCommon.FindParameterIndex(eventDescription, "wind");
+			}
+			if (this.SizeParameterIndex == -1)
+			{
+				this.SizeParameterIndex = FMODCommon.FindParameterIndex(eventDescription, "size");
+			}
+			if (this.TimeParameterIndex == -1)
+			{
+				this.TimeParameterIndex = FMODCommon.FindParameterIndex(eventDescription, "time");
+			}
 		}
 	}
 

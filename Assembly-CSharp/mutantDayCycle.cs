@@ -136,11 +136,11 @@ public class mutantDayCycle : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator sendWakeUp(float delay)
 	{
-		mutantDayCycle.<sendWakeUp>c__Iterator7A <sendWakeUp>c__Iterator7A = new mutantDayCycle.<sendWakeUp>c__Iterator7A();
-		<sendWakeUp>c__Iterator7A.delay = delay;
-		<sendWakeUp>c__Iterator7A.<$>delay = delay;
-		<sendWakeUp>c__Iterator7A.<>f__this = this;
-		return <sendWakeUp>c__Iterator7A;
+		mutantDayCycle.<sendWakeUp>c__Iterator7B <sendWakeUp>c__Iterator7B = new mutantDayCycle.<sendWakeUp>c__Iterator7B();
+		<sendWakeUp>c__Iterator7B.delay = delay;
+		<sendWakeUp>c__Iterator7B.<$>delay = delay;
+		<sendWakeUp>c__Iterator7B.<>f__this = this;
+		return <sendWakeUp>c__Iterator7B;
 	}
 
 	private void setRandomWakeUp()

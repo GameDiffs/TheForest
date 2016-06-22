@@ -64,9 +64,9 @@ namespace TheForest.Items.Special
 		[DebuggerHidden]
 		private IEnumerator DelayedToggleSpecialCraft()
 		{
-			MetalTinTrayControler.<DelayedToggleSpecialCraft>c__Iterator167 <DelayedToggleSpecialCraft>c__Iterator = new MetalTinTrayControler.<DelayedToggleSpecialCraft>c__Iterator167();
-			<DelayedToggleSpecialCraft>c__Iterator.<>f__this = this;
-			return <DelayedToggleSpecialCraft>c__Iterator;
+			MetalTinTrayControler.<DelayedToggleSpecialCraft>c__Iterator16F <DelayedToggleSpecialCraft>c__Iterator16F = new MetalTinTrayControler.<DelayedToggleSpecialCraft>c__Iterator16F();
+			<DelayedToggleSpecialCraft>c__Iterator16F.<>f__this = this;
+			return <DelayedToggleSpecialCraft>c__Iterator16F;
 		}
 
 		protected override void OnActivating()

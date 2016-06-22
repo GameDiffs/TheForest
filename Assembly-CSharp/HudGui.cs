@@ -548,9 +548,9 @@ public class HudGui : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		HudGui.<Start>c__Iterator15C <Start>c__Iterator15C = new HudGui.<Start>c__Iterator15C();
-		<Start>c__Iterator15C.<>f__this = this;
-		return <Start>c__Iterator15C;
+		HudGui.<Start>c__Iterator164 <Start>c__Iterator = new HudGui.<Start>c__Iterator164();
+		<Start>c__Iterator.<>f__this = this;
+		return <Start>c__Iterator;
 	}
 
 	private void Update()
@@ -608,7 +608,7 @@ public class HudGui : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator RefreshHud()
 	{
-		return new HudGui.<RefreshHud>c__Iterator15D();
+		return new HudGui.<RefreshHud>c__Iterator165();
 	}
 
 	private int GetScreenResolutionHash()
@@ -771,12 +771,12 @@ public class HudGui : MonoBehaviour
 						}
 						else
 						{
-							newValue = "clean water";
+							newValue = "clean water (" + string.Format("{0:P0}", itemView._activeBonusValue / 2f) + ")";
 						}
 					}
 					else
 					{
-						newValue = "polluted water";
+						newValue = "polluted water (" + string.Format("{0:P0}", itemView._activeBonusValue / 2f) + ")";
 					}
 					this._inventoryItemInfoView._description.text = inventoryItemInfo._descriptionText.Replace("%", newValue);
 					break;

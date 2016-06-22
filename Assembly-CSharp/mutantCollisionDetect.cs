@@ -125,17 +125,17 @@ public class mutantCollisionDetect : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator terrainHeightCheck()
 	{
-		mutantCollisionDetect.<terrainHeightCheck>c__Iterator6B <terrainHeightCheck>c__Iterator6B = new mutantCollisionDetect.<terrainHeightCheck>c__Iterator6B();
-		<terrainHeightCheck>c__Iterator6B.<>f__this = this;
-		return <terrainHeightCheck>c__Iterator6B;
+		mutantCollisionDetect.<terrainHeightCheck>c__Iterator6C <terrainHeightCheck>c__Iterator6C = new mutantCollisionDetect.<terrainHeightCheck>c__Iterator6C();
+		<terrainHeightCheck>c__Iterator6C.<>f__this = this;
+		return <terrainHeightCheck>c__Iterator6C;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator pollCollider()
 	{
-		mutantCollisionDetect.<pollCollider>c__Iterator6C <pollCollider>c__Iterator6C = new mutantCollisionDetect.<pollCollider>c__Iterator6C();
-		<pollCollider>c__Iterator6C.<>f__this = this;
-		return <pollCollider>c__Iterator6C;
+		mutantCollisionDetect.<pollCollider>c__Iterator6D <pollCollider>c__Iterator6D = new mutantCollisionDetect.<pollCollider>c__Iterator6D();
+		<pollCollider>c__Iterator6D.<>f__this = this;
+		return <pollCollider>c__Iterator6D;
 	}
 
 	private void forceExit()
@@ -256,11 +256,11 @@ public class mutantCollisionDetect : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator resetJumpCollision(Collider other)
 	{
-		mutantCollisionDetect.<resetJumpCollision>c__Iterator6D <resetJumpCollision>c__Iterator6D = new mutantCollisionDetect.<resetJumpCollision>c__Iterator6D();
-		<resetJumpCollision>c__Iterator6D.other = other;
-		<resetJumpCollision>c__Iterator6D.<$>other = other;
-		<resetJumpCollision>c__Iterator6D.<>f__this = this;
-		return <resetJumpCollision>c__Iterator6D;
+		mutantCollisionDetect.<resetJumpCollision>c__Iterator6E <resetJumpCollision>c__Iterator6E = new mutantCollisionDetect.<resetJumpCollision>c__Iterator6E();
+		<resetJumpCollision>c__Iterator6E.other = other;
+		<resetJumpCollision>c__Iterator6E.<$>other = other;
+		<resetJumpCollision>c__Iterator6E.<>f__this = this;
+		return <resetJumpCollision>c__Iterator6E;
 	}
 
 	private void resetTriggerCoolDown()
@@ -309,10 +309,10 @@ public class mutantCollisionDetect : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator returnObjectAngle(GameObject go)
 	{
-		mutantCollisionDetect.<returnObjectAngle>c__Iterator6E <returnObjectAngle>c__Iterator6E = new mutantCollisionDetect.<returnObjectAngle>c__Iterator6E();
-		<returnObjectAngle>c__Iterator6E.go = go;
-		<returnObjectAngle>c__Iterator6E.<$>go = go;
-		<returnObjectAngle>c__Iterator6E.<>f__this = this;
-		return <returnObjectAngle>c__Iterator6E;
+		mutantCollisionDetect.<returnObjectAngle>c__Iterator6F <returnObjectAngle>c__Iterator6F = new mutantCollisionDetect.<returnObjectAngle>c__Iterator6F();
+		<returnObjectAngle>c__Iterator6F.go = go;
+		<returnObjectAngle>c__Iterator6F.<$>go = go;
+		<returnObjectAngle>c__Iterator6F.<>f__this = this;
+		return <returnObjectAngle>c__Iterator6F;
 	}
 }

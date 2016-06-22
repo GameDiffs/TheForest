@@ -7,6 +7,8 @@ public class wallTriggerSetup : MonoBehaviour
 
 	private bool atWall;
 
+	public bool atWallCheck;
+
 	private float val;
 
 	private float smoothVal;
@@ -32,10 +34,12 @@ public class wallTriggerSetup : MonoBehaviour
 		if (this.atWall)
 		{
 			this.val = 1f;
+			this.atWallCheck = true;
 		}
 		else
 		{
 			this.val = 0f;
+			this.atWallCheck = false;
 		}
 		float num = 0f;
 		this.smoothVal = Mathf.SmoothDamp(this.smoothVal, this.val, ref num, this.speedVal);

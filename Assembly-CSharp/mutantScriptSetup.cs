@@ -110,6 +110,8 @@ public class mutantScriptSetup : MonoBehaviour
 
 	public GameObject charLeftWeaponGo;
 
+	public GameObject clubPickup;
+
 	public GameObject spawnGo;
 
 	public GameObject homeGo;
@@ -400,7 +402,7 @@ public class mutantScriptSetup : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator disableNonActiveFSM(string name)
 	{
-		mutantScriptSetup.<disableNonActiveFSM>c__Iterator80 <disableNonActiveFSM>c__Iterator = new mutantScriptSetup.<disableNonActiveFSM>c__Iterator80();
+		mutantScriptSetup.<disableNonActiveFSM>c__Iterator83 <disableNonActiveFSM>c__Iterator = new mutantScriptSetup.<disableNonActiveFSM>c__Iterator83();
 		<disableNonActiveFSM>c__Iterator.name = name;
 		<disableNonActiveFSM>c__Iterator.<$>name = name;
 		<disableNonActiveFSM>c__Iterator.<>f__this = this;
@@ -410,7 +412,7 @@ public class mutantScriptSetup : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator disableAllFSM()
 	{
-		mutantScriptSetup.<disableAllFSM>c__Iterator81 <disableAllFSM>c__Iterator = new mutantScriptSetup.<disableAllFSM>c__Iterator81();
+		mutantScriptSetup.<disableAllFSM>c__Iterator84 <disableAllFSM>c__Iterator = new mutantScriptSetup.<disableAllFSM>c__Iterator84();
 		<disableAllFSM>c__Iterator.<>f__this = this;
 		return <disableAllFSM>c__Iterator;
 	}

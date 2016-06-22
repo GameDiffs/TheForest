@@ -34,13 +34,13 @@ public class playerEnterCaveAction : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator doCave(GameObject posGo, bool enter)
 	{
-		playerEnterCaveAction.<doCave>c__Iterator18D <doCave>c__Iterator18D = new playerEnterCaveAction.<doCave>c__Iterator18D();
-		<doCave>c__Iterator18D.posGo = posGo;
-		<doCave>c__Iterator18D.enter = enter;
-		<doCave>c__Iterator18D.<$>posGo = posGo;
-		<doCave>c__Iterator18D.<$>enter = enter;
-		<doCave>c__Iterator18D.<>f__this = this;
-		return <doCave>c__Iterator18D;
+		playerEnterCaveAction.<doCave>c__Iterator195 <doCave>c__Iterator = new playerEnterCaveAction.<doCave>c__Iterator195();
+		<doCave>c__Iterator.posGo = posGo;
+		<doCave>c__Iterator.enter = enter;
+		<doCave>c__Iterator.<$>posGo = posGo;
+		<doCave>c__Iterator.<$>enter = enter;
+		<doCave>c__Iterator.<>f__this = this;
+		return <doCave>c__Iterator;
 	}
 
 	private void resetCaveParams()

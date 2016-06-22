@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(ThirdPersonCharacter)), RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(NavMeshAgent)), RequireComponent(typeof(ThirdPersonCharacter))]
 public class AICharacterControl : MonoBehaviour
 {
 	public Transform target;

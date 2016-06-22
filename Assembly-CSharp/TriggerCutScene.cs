@@ -151,9 +151,9 @@ public class TriggerCutScene : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator beginPlaneCrash()
 	{
-		TriggerCutScene.<beginPlaneCrash>c__Iterator1AD <beginPlaneCrash>c__Iterator1AD = new TriggerCutScene.<beginPlaneCrash>c__Iterator1AD();
-		<beginPlaneCrash>c__Iterator1AD.<>f__this = this;
-		return <beginPlaneCrash>c__Iterator1AD;
+		TriggerCutScene.<beginPlaneCrash>c__Iterator1B5 <beginPlaneCrash>c__Iterator1B = new TriggerCutScene.<beginPlaneCrash>c__Iterator1B5();
+		<beginPlaneCrash>c__Iterator1B.<>f__this = this;
+		return <beginPlaneCrash>c__Iterator1B;
 	}
 
 	private void resetBook()
@@ -197,9 +197,9 @@ public class TriggerCutScene : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator moveClouds()
 	{
-		TriggerCutScene.<moveClouds>c__Iterator1AE <moveClouds>c__Iterator1AE = new TriggerCutScene.<moveClouds>c__Iterator1AE();
-		<moveClouds>c__Iterator1AE.<>f__this = this;
-		return <moveClouds>c__Iterator1AE;
+		TriggerCutScene.<moveClouds>c__Iterator1B6 <moveClouds>c__Iterator1B = new TriggerCutScene.<moveClouds>c__Iterator1B6();
+		<moveClouds>c__Iterator1B.<>f__this = this;
+		return <moveClouds>c__Iterator1B;
 	}
 
 	private void enableMoBlur()
@@ -300,9 +300,9 @@ public class TriggerCutScene : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator startTimmyCutscene()
 	{
-		TriggerCutScene.<startTimmyCutscene>c__Iterator1AF <startTimmyCutscene>c__Iterator1AF = new TriggerCutScene.<startTimmyCutscene>c__Iterator1AF();
-		<startTimmyCutscene>c__Iterator1AF.<>f__this = this;
-		return <startTimmyCutscene>c__Iterator1AF;
+		TriggerCutScene.<startTimmyCutscene>c__Iterator1B7 <startTimmyCutscene>c__Iterator1B = new TriggerCutScene.<startTimmyCutscene>c__Iterator1B7();
+		<startTimmyCutscene>c__Iterator1B.<>f__this = this;
+		return <startTimmyCutscene>c__Iterator1B;
 	}
 
 	private void startPlayerCrawl()
@@ -388,7 +388,7 @@ public class TriggerCutScene : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator CleanUp()
 	{
-		TriggerCutScene.<CleanUp>c__Iterator1B0 <CleanUp>c__Iterator1B = new TriggerCutScene.<CleanUp>c__Iterator1B0();
+		TriggerCutScene.<CleanUp>c__Iterator1B8 <CleanUp>c__Iterator1B = new TriggerCutScene.<CleanUp>c__Iterator1B8();
 		<CleanUp>c__Iterator1B.<>f__this = this;
 		return <CleanUp>c__Iterator1B;
 	}
@@ -396,7 +396,7 @@ public class TriggerCutScene : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator startPlayerInPlane()
 	{
-		TriggerCutScene.<startPlayerInPlane>c__Iterator1B1 <startPlayerInPlane>c__Iterator1B = new TriggerCutScene.<startPlayerInPlane>c__Iterator1B1();
+		TriggerCutScene.<startPlayerInPlane>c__Iterator1B9 <startPlayerInPlane>c__Iterator1B = new TriggerCutScene.<startPlayerInPlane>c__Iterator1B9();
 		<startPlayerInPlane>c__Iterator1B.<>f__this = this;
 		return <startPlayerInPlane>c__Iterator1B;
 	}
@@ -404,10 +404,10 @@ public class TriggerCutScene : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator resetFov(float set)
 	{
-		TriggerCutScene.<resetFov>c__Iterator1B2 <resetFov>c__Iterator1B = new TriggerCutScene.<resetFov>c__Iterator1B2();
-		<resetFov>c__Iterator1B.set = set;
-		<resetFov>c__Iterator1B.<$>set = set;
-		return <resetFov>c__Iterator1B;
+		TriggerCutScene.<resetFov>c__Iterator1BA <resetFov>c__Iterator1BA = new TriggerCutScene.<resetFov>c__Iterator1BA();
+		<resetFov>c__Iterator1BA.set = set;
+		<resetFov>c__Iterator1BA.<$>set = set;
+		return <resetFov>c__Iterator1BA;
 	}
 
 	private void resetStandBool()

@@ -16,7 +16,7 @@ public class ParticleSystemDestroyer : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		ParticleSystemDestroyer.<Start>c__Iterator121 <Start>c__Iterator = new ParticleSystemDestroyer.<Start>c__Iterator121();
+		ParticleSystemDestroyer.<Start>c__Iterator124 <Start>c__Iterator = new ParticleSystemDestroyer.<Start>c__Iterator124();
 		<Start>c__Iterator.<>f__this = this;
 		return <Start>c__Iterator;
 	}

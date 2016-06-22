@@ -11,6 +11,8 @@ namespace TheForest.UI
 
 		public GameObject _controlSettingsGO;
 
+		private int _screenResolutionHash;
+
 		private void Awake()
 		{
 			Transform transform = UnityEngine.Object.Instantiate<Transform>(this._optionMenuPrefab);
@@ -22,6 +24,25 @@ namespace TheForest.UI
 			component._forwardTweener.tweenTarget = this._mainMenuGO;
 			component._controlSettingsBackwardTweener.tweenTarget = base.gameObject;
 			component._controlSettingsForwardTweener.tweenTarget = this._controlSettingsGO;
+		}
+
+		private void OnEnable()
+		{
+			this._screenResolutionHash = this.GetScreenResolutionHash();
+		}
+
+		private void Update()
+		{
+			if (this._screenResolutionHash != this.GetScreenResolutionHash())
+			{
+				this._screenResolutionHash = this.GetScreenResolutionHash();
+				base.SendMessage("PlayForward");
+			}
+		}
+
+		private int GetScreenResolutionHash()
+		{
+			return Screen.width * 100000 + Screen.height;
 		}
 	}
 }

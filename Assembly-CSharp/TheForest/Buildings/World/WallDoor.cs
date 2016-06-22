@@ -40,9 +40,9 @@ namespace TheForest.Buildings.World
 		[DebuggerHidden]
 		protected virtual IEnumerator Start()
 		{
-			WallDoor.<Start>c__Iterator14E <Start>c__Iterator14E = new WallDoor.<Start>c__Iterator14E();
-			<Start>c__Iterator14E.<>f__this = this;
-			return <Start>c__Iterator14E;
+			WallDoor.<Start>c__Iterator156 <Start>c__Iterator = new WallDoor.<Start>c__Iterator156();
+			<Start>c__Iterator.<>f__this = this;
+			return <Start>c__Iterator;
 		}
 
 		protected virtual void Update()

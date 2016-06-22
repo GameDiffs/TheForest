@@ -20,8 +20,8 @@ public class pulseGo : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doPulse()
 	{
-		pulseGo.<doPulse>c__IteratorE7 <doPulse>c__IteratorE = new pulseGo.<doPulse>c__IteratorE7();
-		<doPulse>c__IteratorE.<>f__this = this;
-		return <doPulse>c__IteratorE;
+		pulseGo.<doPulse>c__IteratorEA <doPulse>c__IteratorEA = new pulseGo.<doPulse>c__IteratorEA();
+		<doPulse>c__IteratorEA.<>f__this = this;
+		return <doPulse>c__IteratorEA;
 	}
 }

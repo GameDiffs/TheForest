@@ -15,9 +15,9 @@ public class DownloadTexture : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		DownloadTexture.<Start>c__Iterator108 <Start>c__Iterator = new DownloadTexture.<Start>c__Iterator108();
-		<Start>c__Iterator.<>f__this = this;
-		return <Start>c__Iterator;
+		DownloadTexture.<Start>c__Iterator10B <Start>c__Iterator10B = new DownloadTexture.<Start>c__Iterator10B();
+		<Start>c__Iterator10B.<>f__this = this;
+		return <Start>c__Iterator10B;
 	}
 
 	private void OnDestroy()

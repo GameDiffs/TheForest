@@ -270,7 +270,7 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake(bool isDeserializing)
 		{
-			FoundationArchitect.<DelayedAwake>c__Iterator135 <DelayedAwake>c__Iterator = new FoundationArchitect.<DelayedAwake>c__Iterator135();
+			FoundationArchitect.<DelayedAwake>c__Iterator138 <DelayedAwake>c__Iterator = new FoundationArchitect.<DelayedAwake>c__Iterator138();
 			<DelayedAwake>c__Iterator.isDeserializing = isDeserializing;
 			<DelayedAwake>c__Iterator.<$>isDeserializing = isDeserializing;
 			<DelayedAwake>c__Iterator.<>f__this = this;
@@ -331,7 +331,10 @@ namespace TheForest.Buildings.Creation
 			bool flag2 = this._multiPointsPositions.Count < this._maxPoints;
 			if (flag2 && this._multiPointsPositions.Count > 0)
 			{
-				Vector3 to = base.transform.position - this._multiPointsPositions[this._multiPointsPositions.Count - 1];
+				Vector3 position = base.transform.position;
+				Vector3 b = this._multiPointsPositions[this._multiPointsPositions.Count - 1];
+				position.y = b.y;
+				Vector3 to = position - b;
 				flag2 = (to.sqrMagnitude > this._minEdgeLength * this._minEdgeLength);
 				if (this._multiPointsPositions.Count > 1)
 				{
@@ -436,11 +439,8 @@ namespace TheForest.Buildings.Creation
 				base.GetComponent<Renderer>().enabled = true;
 				base.transform.localScale = new Vector3(1f, Mathf.Abs(this.GetSegmentPointFloorPosition(base.transform.position).y - base.transform.position.y), 1f);
 			}
-			if (this._mode == FoundationArchitect.Modes.Manual)
-			{
-				Scene.HudGui.LockPositionIcon.SetActive(flag2);
-				Scene.HudGui.UnlockPositionIcon.SetActive(this._multiPointsPositions.Count > 0);
-			}
+			Scene.HudGui.LockPositionIcon.SetActive(flag2);
+			Scene.HudGui.UnlockPositionIcon.SetActive(this._multiPointsPositions.Count > 0);
 		}
 
 		private void OnDestroy()
@@ -493,7 +493,7 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator OnPlaced()
 		{
-			FoundationArchitect.<OnPlaced>c__Iterator136 <OnPlaced>c__Iterator = new FoundationArchitect.<OnPlaced>c__Iterator136();
+			FoundationArchitect.<OnPlaced>c__Iterator139 <OnPlaced>c__Iterator = new FoundationArchitect.<OnPlaced>c__Iterator139();
 			<OnPlaced>c__Iterator.<>f__this = this;
 			return <OnPlaced>c__Iterator;
 		}

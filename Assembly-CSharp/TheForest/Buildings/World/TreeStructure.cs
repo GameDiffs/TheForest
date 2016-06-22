@@ -53,19 +53,19 @@ namespace TheForest.Buildings.World
 		[DebuggerHidden]
 		public IEnumerator OnDeserialized()
 		{
-			TreeStructure.<OnDeserialized>c__Iterator14C <OnDeserialized>c__Iterator14C = new TreeStructure.<OnDeserialized>c__Iterator14C();
-			<OnDeserialized>c__Iterator14C.<>f__this = this;
-			return <OnDeserialized>c__Iterator14C;
+			TreeStructure.<OnDeserialized>c__Iterator154 <OnDeserialized>c__Iterator = new TreeStructure.<OnDeserialized>c__Iterator154();
+			<OnDeserialized>c__Iterator.<>f__this = this;
+			return <OnDeserialized>c__Iterator;
 		}
 
 		[DebuggerHidden]
 		private IEnumerator OnTreeCutDown(GameObject trunk)
 		{
-			TreeStructure.<OnTreeCutDown>c__Iterator14D <OnTreeCutDown>c__Iterator14D = new TreeStructure.<OnTreeCutDown>c__Iterator14D();
-			<OnTreeCutDown>c__Iterator14D.trunk = trunk;
-			<OnTreeCutDown>c__Iterator14D.<$>trunk = trunk;
-			<OnTreeCutDown>c__Iterator14D.<>f__this = this;
-			return <OnTreeCutDown>c__Iterator14D;
+			TreeStructure.<OnTreeCutDown>c__Iterator155 <OnTreeCutDown>c__Iterator = new TreeStructure.<OnTreeCutDown>c__Iterator155();
+			<OnTreeCutDown>c__Iterator.trunk = trunk;
+			<OnTreeCutDown>c__Iterator.<$>trunk = trunk;
+			<OnTreeCutDown>c__Iterator.<>f__this = this;
+			return <OnTreeCutDown>c__Iterator;
 		}
 
 		public override void Attached()

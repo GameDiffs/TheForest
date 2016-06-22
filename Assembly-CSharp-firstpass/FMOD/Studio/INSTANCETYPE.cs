@@ -1,0 +1,18 @@
+using System;
+
+namespace FMOD.Studio
+{
+	public enum INSTANCETYPE
+	{
+		NONE,
+		SYSTEM,
+		EVENTDESCRIPTION,
+		EVENTINSTANCE,
+		PARAMETERINSTANCE,
+		CUEINSTANCE,
+		BUS,
+		VCA,
+		BANK,
+		COMMANDREPLAY
+	}
+}

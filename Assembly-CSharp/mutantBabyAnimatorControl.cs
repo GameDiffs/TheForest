@@ -136,9 +136,9 @@ public class mutantBabyAnimatorControl : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator changeIdleValue()
 	{
-		mutantBabyAnimatorControl.<changeIdleValue>c__Iterator6A <changeIdleValue>c__Iterator6A = new mutantBabyAnimatorControl.<changeIdleValue>c__Iterator6A();
-		<changeIdleValue>c__Iterator6A.<>f__this = this;
-		return <changeIdleValue>c__Iterator6A;
+		mutantBabyAnimatorControl.<changeIdleValue>c__Iterator6B <changeIdleValue>c__Iterator6B = new mutantBabyAnimatorControl.<changeIdleValue>c__Iterator6B();
+		<changeIdleValue>c__Iterator6B.<>f__this = this;
+		return <changeIdleValue>c__Iterator6B;
 	}
 
 	private void OnAnimatorMove()

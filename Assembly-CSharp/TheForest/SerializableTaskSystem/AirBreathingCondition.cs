@@ -31,9 +31,9 @@ namespace TheForest.SerializableTaskSystem
 		[DebuggerHidden]
 		public IEnumerator CheckProximityRoutine()
 		{
-			AirBreathingCondition.<CheckProximityRoutine>c__Iterator182 <CheckProximityRoutine>c__Iterator = new AirBreathingCondition.<CheckProximityRoutine>c__Iterator182();
-			<CheckProximityRoutine>c__Iterator.<>f__this = this;
-			return <CheckProximityRoutine>c__Iterator;
+			AirBreathingCondition.<CheckProximityRoutine>c__Iterator18A <CheckProximityRoutine>c__Iterator18A = new AirBreathingCondition.<CheckProximityRoutine>c__Iterator18A();
+			<CheckProximityRoutine>c__Iterator18A.<>f__this = this;
+			return <CheckProximityRoutine>c__Iterator18A;
 		}
 
 		private bool IsAirBellowThreshold()

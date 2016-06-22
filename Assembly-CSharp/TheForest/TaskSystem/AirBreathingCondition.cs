@@ -32,7 +32,7 @@ namespace TheForest.TaskSystem
 		[DebuggerHidden]
 		public IEnumerator CheckProximityRoutine()
 		{
-			AirBreathingCondition.<CheckProximityRoutine>c__Iterator189 <CheckProximityRoutine>c__Iterator = new AirBreathingCondition.<CheckProximityRoutine>c__Iterator189();
+			AirBreathingCondition.<CheckProximityRoutine>c__Iterator191 <CheckProximityRoutine>c__Iterator = new AirBreathingCondition.<CheckProximityRoutine>c__Iterator191();
 			<CheckProximityRoutine>c__Iterator.<>f__this = this;
 			return <CheckProximityRoutine>c__Iterator;
 		}

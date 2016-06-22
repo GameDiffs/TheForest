@@ -22,7 +22,7 @@ public class effigyRangeDetect : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator pulse()
 	{
-		effigyRangeDetect.<pulse>c__Iterator55 <pulse>c__Iterator = new effigyRangeDetect.<pulse>c__Iterator55();
+		effigyRangeDetect.<pulse>c__Iterator56 <pulse>c__Iterator = new effigyRangeDetect.<pulse>c__Iterator56();
 		<pulse>c__Iterator.<>f__this = this;
 		return <pulse>c__Iterator;
 	}

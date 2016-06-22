@@ -27,6 +27,8 @@ internal class CoopMutantDummyToken : IProtocolToken
 
 	public float skinDamage4;
 
+	public int storedRagDollName;
+
 	void IProtocolToken.Read(UdpPacket packet)
 	{
 		this.Scale = packet.ReadVector3();
@@ -37,6 +39,7 @@ internal class CoopMutantDummyToken : IProtocolToken
 		this.skinDamage2 = packet.ReadFloat();
 		this.skinDamage3 = packet.ReadFloat();
 		this.skinDamage4 = packet.ReadFloat();
+		this.storedRagDollName = packet.ReadInt();
 		if (packet.ReadBool())
 		{
 			this.OriginalMutant = packet.ReadBoltEntity();
@@ -55,6 +58,7 @@ internal class CoopMutantDummyToken : IProtocolToken
 		packet.WriteFloat(this.skinDamage2);
 		packet.WriteFloat(this.skinDamage3);
 		packet.WriteFloat(this.skinDamage4);
+		packet.WriteInt(this.storedRagDollName);
 		if (packet.WriteBool(this.OriginalMutant && this.OriginalMutant.IsAttached()))
 		{
 			packet.WriteBoltEntity(this.OriginalMutant);

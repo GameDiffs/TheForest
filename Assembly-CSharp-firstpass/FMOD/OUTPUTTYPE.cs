@@ -1,0 +1,28 @@
+using System;
+
+namespace FMOD
+{
+	public enum OUTPUTTYPE
+	{
+		AUTODETECT,
+		UNKNOWN,
+		NOSOUND,
+		WAVWRITER,
+		NOSOUND_NRT,
+		WAVWRITER_NRT,
+		DSOUND,
+		WINMM,
+		WASAPI,
+		ASIO,
+		PULSEAUDIO,
+		ALSA,
+		COREAUDIO,
+		XBOX360,
+		PS3,
+		AUDIOTRACK,
+		OPENSL,
+		WIIU,
+		AUDIOOUT,
+		MAX
+	}
+}

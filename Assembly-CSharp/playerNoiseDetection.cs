@@ -34,19 +34,19 @@ public class playerNoiseDetection : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setNoiseRange(float range)
 	{
-		playerNoiseDetection.<setNoiseRange>c__IteratorDE <setNoiseRange>c__IteratorDE = new playerNoiseDetection.<setNoiseRange>c__IteratorDE();
-		<setNoiseRange>c__IteratorDE.range = range;
-		<setNoiseRange>c__IteratorDE.<$>range = range;
-		<setNoiseRange>c__IteratorDE.<>f__this = this;
-		return <setNoiseRange>c__IteratorDE;
+		playerNoiseDetection.<setNoiseRange>c__IteratorE1 <setNoiseRange>c__IteratorE = new playerNoiseDetection.<setNoiseRange>c__IteratorE1();
+		<setNoiseRange>c__IteratorE.range = range;
+		<setNoiseRange>c__IteratorE.<$>range = range;
+		<setNoiseRange>c__IteratorE.<>f__this = this;
+		return <setNoiseRange>c__IteratorE;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator resetNoiseRange()
 	{
-		playerNoiseDetection.<resetNoiseRange>c__IteratorDF <resetNoiseRange>c__IteratorDF = new playerNoiseDetection.<resetNoiseRange>c__IteratorDF();
-		<resetNoiseRange>c__IteratorDF.<>f__this = this;
-		return <resetNoiseRange>c__IteratorDF;
+		playerNoiseDetection.<resetNoiseRange>c__IteratorE2 <resetNoiseRange>c__IteratorE = new playerNoiseDetection.<resetNoiseRange>c__IteratorE2();
+		<resetNoiseRange>c__IteratorE.<>f__this = this;
+		return <resetNoiseRange>c__IteratorE;
 	}
 
 	private void initPulse()
@@ -57,7 +57,7 @@ public class playerNoiseDetection : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doPulse()
 	{
-		playerNoiseDetection.<doPulse>c__IteratorE0 <doPulse>c__IteratorE = new playerNoiseDetection.<doPulse>c__IteratorE0();
+		playerNoiseDetection.<doPulse>c__IteratorE3 <doPulse>c__IteratorE = new playerNoiseDetection.<doPulse>c__IteratorE3();
 		<doPulse>c__IteratorE.<>f__this = this;
 		return <doPulse>c__IteratorE;
 	}

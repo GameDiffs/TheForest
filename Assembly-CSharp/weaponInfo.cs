@@ -283,7 +283,7 @@ public class weaponInfo : EntityEventListener
 	[DebuggerHidden]
 	private IEnumerator DelayedAwake()
 	{
-		weaponInfo.<DelayedAwake>c__Iterator102 <DelayedAwake>c__Iterator = new weaponInfo.<DelayedAwake>c__Iterator102();
+		weaponInfo.<DelayedAwake>c__Iterator105 <DelayedAwake>c__Iterator = new weaponInfo.<DelayedAwake>c__Iterator105();
 		<DelayedAwake>c__Iterator.<>f__this = this;
 		return <DelayedAwake>c__Iterator;
 	}

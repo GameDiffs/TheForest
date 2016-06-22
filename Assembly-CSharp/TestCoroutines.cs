@@ -18,7 +18,7 @@ public class TestCoroutines : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Hello()
 	{
-		TestCoroutines.<Hello>c__Iterator208 <Hello>c__Iterator = new TestCoroutines.<Hello>c__Iterator208();
+		TestCoroutines.<Hello>c__Iterator210 <Hello>c__Iterator = new TestCoroutines.<Hello>c__Iterator210();
 		<Hello>c__Iterator.<>f__this = this;
 		return <Hello>c__Iterator;
 	}
@@ -26,7 +26,7 @@ public class TestCoroutines : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator MyCoroutine()
 	{
-		TestCoroutines.<MyCoroutine>c__Iterator209 <MyCoroutine>c__Iterator = new TestCoroutines.<MyCoroutine>c__Iterator209();
+		TestCoroutines.<MyCoroutine>c__Iterator211 <MyCoroutine>c__Iterator = new TestCoroutines.<MyCoroutine>c__Iterator211();
 		<MyCoroutine>c__Iterator.<>f__this = this;
 		return <MyCoroutine>c__Iterator;
 	}
@@ -34,9 +34,9 @@ public class TestCoroutines : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator WaitSeconds(float time)
 	{
-		TestCoroutines.<WaitSeconds>c__Iterator20A <WaitSeconds>c__Iterator20A = new TestCoroutines.<WaitSeconds>c__Iterator20A();
-		<WaitSeconds>c__Iterator20A.time = time;
-		<WaitSeconds>c__Iterator20A.<$>time = time;
-		return <WaitSeconds>c__Iterator20A;
+		TestCoroutines.<WaitSeconds>c__Iterator212 <WaitSeconds>c__Iterator = new TestCoroutines.<WaitSeconds>c__Iterator212();
+		<WaitSeconds>c__Iterator.time = time;
+		<WaitSeconds>c__Iterator.<$>time = time;
+		return <WaitSeconds>c__Iterator;
 	}
 }

@@ -177,7 +177,7 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake()
 		{
-			WallArchitect.<DelayedAwake>c__Iterator126 <DelayedAwake>c__Iterator = new WallArchitect.<DelayedAwake>c__Iterator126();
+			WallArchitect.<DelayedAwake>c__Iterator129 <DelayedAwake>c__Iterator = new WallArchitect.<DelayedAwake>c__Iterator129();
 			<DelayedAwake>c__Iterator.<>f__this = this;
 			return <DelayedAwake>c__Iterator;
 		}
@@ -308,9 +308,9 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator OnPlaced()
 		{
-			WallArchitect.<OnPlaced>c__Iterator127 <OnPlaced>c__Iterator = new WallArchitect.<OnPlaced>c__Iterator127();
-			<OnPlaced>c__Iterator.<>f__this = this;
-			return <OnPlaced>c__Iterator;
+			WallArchitect.<OnPlaced>c__Iterator12A <OnPlaced>c__Iterator12A = new WallArchitect.<OnPlaced>c__Iterator12A();
+			<OnPlaced>c__Iterator12A.<>f__this = this;
+			return <OnPlaced>c__Iterator12A;
 		}
 
 		public void Clear()
@@ -398,7 +398,7 @@ namespace TheForest.Buildings.Creation
 			}
 			segmentPoint.y += this.SegmentPointTestOffset;
 			RaycastHit raycastHit;
-			if (Physics.Raycast(segmentPoint, Vector3.down, out raycastHit, this._logLength * 2f + this.SegmentPointTestOffset, Scene.ValidateFloorLayers(segmentPoint, this._floorLayers.value)))
+			if (Physics.SphereCast(segmentPoint, this._logWidth * 0.4f, Vector3.down, out raycastHit, this._logLength * 2f + this.SegmentPointTestOffset, Scene.ValidateFloorLayers(segmentPoint, this._floorLayers.value)))
 			{
 				return raycastHit.point;
 			}
@@ -422,7 +422,7 @@ namespace TheForest.Buildings.Creation
 			edge._hlength = Vector3.Scale(p2 - p1, new Vector3(1f, 0f, 1f)).magnitude;
 			edge._segments = new WallArchitect.HorizontalSegment[Mathf.CeilToInt(edge._hlength / this._maxSegmentHorizontalLength)];
 			float d = edge._hlength / (float)edge._segments.Length;
-			float num = this._logWidth / 2f * 0.9f;
+			float num = this._logWidth / 2f * 0.98f;
 			Vector3 b = (p2 - p1).normalized * d;
 			Vector3 vector = p1;
 			for (int i = 0; i < edge._segments.Length; i++)

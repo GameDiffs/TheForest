@@ -191,11 +191,11 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake(bool isDeserializing)
 		{
-			BridgeArchitect.<DelayedAwake>c__Iterator12A <DelayedAwake>c__Iterator12A = new BridgeArchitect.<DelayedAwake>c__Iterator12A();
-			<DelayedAwake>c__Iterator12A.isDeserializing = isDeserializing;
-			<DelayedAwake>c__Iterator12A.<$>isDeserializing = isDeserializing;
-			<DelayedAwake>c__Iterator12A.<>f__this = this;
-			return <DelayedAwake>c__Iterator12A;
+			BridgeArchitect.<DelayedAwake>c__Iterator12D <DelayedAwake>c__Iterator12D = new BridgeArchitect.<DelayedAwake>c__Iterator12D();
+			<DelayedAwake>c__Iterator12D.isDeserializing = isDeserializing;
+			<DelayedAwake>c__Iterator12D.<$>isDeserializing = isDeserializing;
+			<DelayedAwake>c__Iterator12D.<>f__this = this;
+			return <DelayedAwake>c__Iterator12D;
 		}
 
 		private void Update()
@@ -356,9 +356,9 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator OnPlaced(bool readyMp = false)
 		{
-			BridgeArchitect.<OnPlaced>c__Iterator12B <OnPlaced>c__Iterator12B = new BridgeArchitect.<OnPlaced>c__Iterator12B();
-			<OnPlaced>c__Iterator12B.<>f__this = this;
-			return <OnPlaced>c__Iterator12B;
+			BridgeArchitect.<OnPlaced>c__Iterator12E <OnPlaced>c__Iterator12E = new BridgeArchitect.<OnPlaced>c__Iterator12E();
+			<OnPlaced>c__Iterator12E.<>f__this = this;
+			return <OnPlaced>c__Iterator12E;
 		}
 
 		private void OnBuilt(GameObject built)

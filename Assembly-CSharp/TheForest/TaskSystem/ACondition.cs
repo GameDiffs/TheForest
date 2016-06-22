@@ -33,7 +33,10 @@ namespace TheForest.TaskSystem
 			if (!this._done)
 			{
 				this._done = true;
-				this.OnStatusChange();
+				if (this.OnStatusChange != null)
+				{
+					this.OnStatusChange();
+				}
 				this.OnStatusChange = null;
 			}
 		}

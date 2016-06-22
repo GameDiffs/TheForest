@@ -199,9 +199,9 @@ namespace TheForest.Player
 		[DebuggerHidden]
 		private IEnumerator DoCheckArms()
 		{
-			PlayerVariationSelector.<DoCheckArms>c__Iterator17E <DoCheckArms>c__Iterator17E = new PlayerVariationSelector.<DoCheckArms>c__Iterator17E();
-			<DoCheckArms>c__Iterator17E.<>f__this = this;
-			return <DoCheckArms>c__Iterator17E;
+			PlayerVariationSelector.<DoCheckArms>c__Iterator186 <DoCheckArms>c__Iterator = new PlayerVariationSelector.<DoCheckArms>c__Iterator186();
+			<DoCheckArms>c__Iterator.<>f__this = this;
+			return <DoCheckArms>c__Iterator;
 		}
 	}
 }

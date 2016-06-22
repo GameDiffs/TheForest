@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class setupCreepySkin : MonoBehaviour
@@ -7,11 +8,25 @@ public class setupCreepySkin : MonoBehaviour
 
 	public SkinnedMeshRenderer skin;
 
+	public bool explodedPrefab;
+
+	public List<MeshRenderer> skinParts = new List<MeshRenderer>();
+
 	private void setSkin(Material mat)
 	{
 		if (this.skin)
 		{
 			this.skin.sharedMaterial = mat;
+		}
+		if (this.explodedPrefab)
+		{
+			for (int i = 0; i < this.skinParts.Count; i++)
+			{
+				if (this.skinParts[i])
+				{
+					this.skinParts[i].material = mat;
+				}
+			}
 		}
 	}
 

@@ -38,9 +38,9 @@ public class CoopLobby
 	{
 		get
 		{
-			CoopLobby.<>c__Iterator23 <>c__Iterator = new CoopLobby.<>c__Iterator23();
+			CoopLobby.<>c__Iterator24 <>c__Iterator = new CoopLobby.<>c__Iterator24();
 			<>c__Iterator.<>f__this = this;
-			CoopLobby.<>c__Iterator23 expr_0E = <>c__Iterator;
+			CoopLobby.<>c__Iterator24 expr_0E = <>c__Iterator;
 			expr_0E.$PC = -2;
 			return expr_0E;
 		}
@@ -53,11 +53,11 @@ public class CoopLobby
 	[DebuggerHidden]
 	public IEnumerable<string> GetMembersData(string key)
 	{
-		CoopLobby.<GetMembersData>c__Iterator24 <GetMembersData>c__Iterator = new CoopLobby.<GetMembersData>c__Iterator24();
+		CoopLobby.<GetMembersData>c__Iterator25 <GetMembersData>c__Iterator = new CoopLobby.<GetMembersData>c__Iterator25();
 		<GetMembersData>c__Iterator.key = key;
 		<GetMembersData>c__Iterator.<$>key = key;
 		<GetMembersData>c__Iterator.<>f__this = this;
-		CoopLobby.<GetMembersData>c__Iterator24 expr_1C = <GetMembersData>c__Iterator;
+		CoopLobby.<GetMembersData>c__Iterator25 expr_1C = <GetMembersData>c__Iterator;
 		expr_1C.$PC = -2;
 		return expr_1C;
 	}

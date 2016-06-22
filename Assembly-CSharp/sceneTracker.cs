@@ -62,6 +62,8 @@ public class sceneTracker : MonoBehaviour
 
 	public GameObject closeStructureTarget;
 
+	public List<GameObject> storedRagDollPrefabs = new List<GameObject>();
+
 	public List<GameObject> closeTrees = new List<GameObject>();
 
 	public List<GameObject> beachMarkers = new List<GameObject>();
@@ -521,7 +523,7 @@ public class sceneTracker : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator updatePlayerVisDir(Vector3 dir)
 	{
-		sceneTracker.<updatePlayerVisDir>c__IteratorF2 <updatePlayerVisDir>c__IteratorF = new sceneTracker.<updatePlayerVisDir>c__IteratorF2();
+		sceneTracker.<updatePlayerVisDir>c__IteratorF5 <updatePlayerVisDir>c__IteratorF = new sceneTracker.<updatePlayerVisDir>c__IteratorF5();
 		<updatePlayerVisDir>c__IteratorF.dir = dir;
 		<updatePlayerVisDir>c__IteratorF.<$>dir = dir;
 		<updatePlayerVisDir>c__IteratorF.<>f__this = this;

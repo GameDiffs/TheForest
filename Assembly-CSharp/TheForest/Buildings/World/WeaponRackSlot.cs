@@ -107,7 +107,7 @@ namespace TheForest.Buildings.World
 		[DebuggerHidden]
 		private IEnumerator OnDeserialized()
 		{
-			WeaponRackSlot.<OnDeserialized>c__Iterator151 <OnDeserialized>c__Iterator = new WeaponRackSlot.<OnDeserialized>c__Iterator151();
+			WeaponRackSlot.<OnDeserialized>c__Iterator159 <OnDeserialized>c__Iterator = new WeaponRackSlot.<OnDeserialized>c__Iterator159();
 			<OnDeserialized>c__Iterator.<>f__this = this;
 			return <OnDeserialized>c__Iterator;
 		}

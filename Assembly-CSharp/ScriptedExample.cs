@@ -36,16 +36,16 @@ public class ScriptedExample : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator MoveRandom()
 	{
-		ScriptedExample.<MoveRandom>c__Iterator202 <MoveRandom>c__Iterator = new ScriptedExample.<MoveRandom>c__Iterator202();
-		<MoveRandom>c__Iterator.<>f__this = this;
-		return <MoveRandom>c__Iterator;
+		ScriptedExample.<MoveRandom>c__Iterator20A <MoveRandom>c__Iterator20A = new ScriptedExample.<MoveRandom>c__Iterator20A();
+		<MoveRandom>c__Iterator20A.<>f__this = this;
+		return <MoveRandom>c__Iterator20A;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator LookAtRandom()
 	{
-		ScriptedExample.<LookAtRandom>c__Iterator203 <LookAtRandom>c__Iterator = new ScriptedExample.<LookAtRandom>c__Iterator203();
-		<LookAtRandom>c__Iterator.<>f__this = this;
-		return <LookAtRandom>c__Iterator;
+		ScriptedExample.<LookAtRandom>c__Iterator20B <LookAtRandom>c__Iterator20B = new ScriptedExample.<LookAtRandom>c__Iterator20B();
+		<LookAtRandom>c__Iterator20B.<>f__this = this;
+		return <LookAtRandom>c__Iterator20B;
 	}
 }

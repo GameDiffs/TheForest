@@ -16,8 +16,8 @@ public class ScaleObject : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator ScaleMe()
 	{
-		ScaleObject.<ScaleMe>c__Iterator207 <ScaleMe>c__Iterator = new ScaleObject.<ScaleMe>c__Iterator207();
-		<ScaleMe>c__Iterator.<>f__this = this;
-		return <ScaleMe>c__Iterator;
+		ScaleObject.<ScaleMe>c__Iterator20F <ScaleMe>c__Iterator20F = new ScaleObject.<ScaleMe>c__Iterator20F();
+		<ScaleMe>c__Iterator20F.<>f__this = this;
+		return <ScaleMe>c__Iterator20F;
 	}
 }

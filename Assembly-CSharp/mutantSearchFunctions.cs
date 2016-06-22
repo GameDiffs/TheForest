@@ -430,7 +430,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator castPointAroundPlayer(float dist)
 	{
-		mutantSearchFunctions.<castPointAroundPlayer>c__Iterator82 <castPointAroundPlayer>c__Iterator = new mutantSearchFunctions.<castPointAroundPlayer>c__Iterator82();
+		mutantSearchFunctions.<castPointAroundPlayer>c__Iterator85 <castPointAroundPlayer>c__Iterator = new mutantSearchFunctions.<castPointAroundPlayer>c__Iterator85();
 		<castPointAroundPlayer>c__Iterator.dist = dist;
 		<castPointAroundPlayer>c__Iterator.<$>dist = dist;
 		<castPointAroundPlayer>c__Iterator.<>f__this = this;
@@ -440,7 +440,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator castPointAroundSpawn(float dist)
 	{
-		mutantSearchFunctions.<castPointAroundSpawn>c__Iterator83 <castPointAroundSpawn>c__Iterator = new mutantSearchFunctions.<castPointAroundSpawn>c__Iterator83();
+		mutantSearchFunctions.<castPointAroundSpawn>c__Iterator86 <castPointAroundSpawn>c__Iterator = new mutantSearchFunctions.<castPointAroundSpawn>c__Iterator86();
 		<castPointAroundSpawn>c__Iterator.dist = dist;
 		<castPointAroundSpawn>c__Iterator.<$>dist = dist;
 		<castPointAroundSpawn>c__Iterator.<>f__this = this;
@@ -450,7 +450,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator castPointAroundLastSighting(float dist)
 	{
-		mutantSearchFunctions.<castPointAroundLastSighting>c__Iterator84 <castPointAroundLastSighting>c__Iterator = new mutantSearchFunctions.<castPointAroundLastSighting>c__Iterator84();
+		mutantSearchFunctions.<castPointAroundLastSighting>c__Iterator87 <castPointAroundLastSighting>c__Iterator = new mutantSearchFunctions.<castPointAroundLastSighting>c__Iterator87();
 		<castPointAroundLastSighting>c__Iterator.dist = dist;
 		<castPointAroundLastSighting>c__Iterator.<$>dist = dist;
 		<castPointAroundLastSighting>c__Iterator.<>f__this = this;
@@ -460,7 +460,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findRandomPoint(float dist)
 	{
-		mutantSearchFunctions.<findRandomPoint>c__Iterator85 <findRandomPoint>c__Iterator = new mutantSearchFunctions.<findRandomPoint>c__Iterator85();
+		mutantSearchFunctions.<findRandomPoint>c__Iterator88 <findRandomPoint>c__Iterator = new mutantSearchFunctions.<findRandomPoint>c__Iterator88();
 		<findRandomPoint>c__Iterator.dist = dist;
 		<findRandomPoint>c__Iterator.<$>dist = dist;
 		<findRandomPoint>c__Iterator.<>f__this = this;
@@ -470,7 +470,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findCloseWaypoint()
 	{
-		mutantSearchFunctions.<findCloseWaypoint>c__Iterator86 <findCloseWaypoint>c__Iterator = new mutantSearchFunctions.<findCloseWaypoint>c__Iterator86();
+		mutantSearchFunctions.<findCloseWaypoint>c__Iterator89 <findCloseWaypoint>c__Iterator = new mutantSearchFunctions.<findCloseWaypoint>c__Iterator89();
 		<findCloseWaypoint>c__Iterator.<>f__this = this;
 		return <findCloseWaypoint>c__Iterator;
 	}
@@ -478,27 +478,27 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findRandomWaypoint()
 	{
-		mutantSearchFunctions.<findRandomWaypoint>c__Iterator87 <findRandomWaypoint>c__Iterator = new mutantSearchFunctions.<findRandomWaypoint>c__Iterator87();
-		<findRandomWaypoint>c__Iterator.<>f__this = this;
-		return <findRandomWaypoint>c__Iterator;
+		mutantSearchFunctions.<findRandomWaypoint>c__Iterator8A <findRandomWaypoint>c__Iterator8A = new mutantSearchFunctions.<findRandomWaypoint>c__Iterator8A();
+		<findRandomWaypoint>c__Iterator8A.<>f__this = this;
+		return <findRandomWaypoint>c__Iterator8A;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findRandomStructure(float dist)
 	{
-		mutantSearchFunctions.<findRandomStructure>c__Iterator88 <findRandomStructure>c__Iterator = new mutantSearchFunctions.<findRandomStructure>c__Iterator88();
-		<findRandomStructure>c__Iterator.dist = dist;
-		<findRandomStructure>c__Iterator.<$>dist = dist;
-		<findRandomStructure>c__Iterator.<>f__this = this;
-		return <findRandomStructure>c__Iterator;
+		mutantSearchFunctions.<findRandomStructure>c__Iterator8B <findRandomStructure>c__Iterator8B = new mutantSearchFunctions.<findRandomStructure>c__Iterator8B();
+		<findRandomStructure>c__Iterator8B.dist = dist;
+		<findRandomStructure>c__Iterator8B.<$>dist = dist;
+		<findRandomStructure>c__Iterator8B.<>f__this = this;
+		return <findRandomStructure>c__Iterator8B;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findCloseStructure()
 	{
-		mutantSearchFunctions.<findCloseStructure>c__Iterator89 <findCloseStructure>c__Iterator = new mutantSearchFunctions.<findCloseStructure>c__Iterator89();
-		<findCloseStructure>c__Iterator.<>f__this = this;
-		return <findCloseStructure>c__Iterator;
+		mutantSearchFunctions.<findCloseStructure>c__Iterator8C <findCloseStructure>c__Iterator8C = new mutantSearchFunctions.<findCloseStructure>c__Iterator8C();
+		<findCloseStructure>c__Iterator8C.<>f__this = this;
+		return <findCloseStructure>c__Iterator8C;
 	}
 
 	private void setToStructure()
@@ -521,61 +521,61 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findCloseBurnStructure()
 	{
-		mutantSearchFunctions.<findCloseBurnStructure>c__Iterator8A <findCloseBurnStructure>c__Iterator8A = new mutantSearchFunctions.<findCloseBurnStructure>c__Iterator8A();
-		<findCloseBurnStructure>c__Iterator8A.<>f__this = this;
-		return <findCloseBurnStructure>c__Iterator8A;
+		mutantSearchFunctions.<findCloseBurnStructure>c__Iterator8D <findCloseBurnStructure>c__Iterator8D = new mutantSearchFunctions.<findCloseBurnStructure>c__Iterator8D();
+		<findCloseBurnStructure>c__Iterator8D.<>f__this = this;
+		return <findCloseBurnStructure>c__Iterator8D;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findClosePlayerFire()
 	{
-		mutantSearchFunctions.<findClosePlayerFire>c__Iterator8B <findClosePlayerFire>c__Iterator8B = new mutantSearchFunctions.<findClosePlayerFire>c__Iterator8B();
-		<findClosePlayerFire>c__Iterator8B.<>f__this = this;
-		return <findClosePlayerFire>c__Iterator8B;
+		mutantSearchFunctions.<findClosePlayerFire>c__Iterator8E <findClosePlayerFire>c__Iterator8E = new mutantSearchFunctions.<findClosePlayerFire>c__Iterator8E();
+		<findClosePlayerFire>c__Iterator8E.<>f__this = this;
+		return <findClosePlayerFire>c__Iterator8E;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findPointAwayFromPlayer(float dist)
 	{
-		mutantSearchFunctions.<findPointAwayFromPlayer>c__Iterator8C <findPointAwayFromPlayer>c__Iterator8C = new mutantSearchFunctions.<findPointAwayFromPlayer>c__Iterator8C();
-		<findPointAwayFromPlayer>c__Iterator8C.dist = dist;
-		<findPointAwayFromPlayer>c__Iterator8C.<$>dist = dist;
-		<findPointAwayFromPlayer>c__Iterator8C.<>f__this = this;
-		return <findPointAwayFromPlayer>c__Iterator8C;
+		mutantSearchFunctions.<findPointAwayFromPlayer>c__Iterator8F <findPointAwayFromPlayer>c__Iterator8F = new mutantSearchFunctions.<findPointAwayFromPlayer>c__Iterator8F();
+		<findPointAwayFromPlayer>c__Iterator8F.dist = dist;
+		<findPointAwayFromPlayer>c__Iterator8F.<$>dist = dist;
+		<findPointAwayFromPlayer>c__Iterator8F.<>f__this = this;
+		return <findPointAwayFromPlayer>c__Iterator8F;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findPointInFrontOfPlayer(float dist)
 	{
-		mutantSearchFunctions.<findPointInFrontOfPlayer>c__Iterator8D <findPointInFrontOfPlayer>c__Iterator8D = new mutantSearchFunctions.<findPointInFrontOfPlayer>c__Iterator8D();
-		<findPointInFrontOfPlayer>c__Iterator8D.dist = dist;
-		<findPointInFrontOfPlayer>c__Iterator8D.<$>dist = dist;
-		<findPointInFrontOfPlayer>c__Iterator8D.<>f__this = this;
-		return <findPointInFrontOfPlayer>c__Iterator8D;
+		mutantSearchFunctions.<findPointInFrontOfPlayer>c__Iterator90 <findPointInFrontOfPlayer>c__Iterator = new mutantSearchFunctions.<findPointInFrontOfPlayer>c__Iterator90();
+		<findPointInFrontOfPlayer>c__Iterator.dist = dist;
+		<findPointInFrontOfPlayer>c__Iterator.<$>dist = dist;
+		<findPointInFrontOfPlayer>c__Iterator.<>f__this = this;
+		return <findPointInFrontOfPlayer>c__Iterator;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findPointAwayFromExplosion(float dist)
 	{
-		mutantSearchFunctions.<findPointAwayFromExplosion>c__Iterator8E <findPointAwayFromExplosion>c__Iterator8E = new mutantSearchFunctions.<findPointAwayFromExplosion>c__Iterator8E();
-		<findPointAwayFromExplosion>c__Iterator8E.dist = dist;
-		<findPointAwayFromExplosion>c__Iterator8E.<$>dist = dist;
-		<findPointAwayFromExplosion>c__Iterator8E.<>f__this = this;
-		return <findPointAwayFromExplosion>c__Iterator8E;
+		mutantSearchFunctions.<findPointAwayFromExplosion>c__Iterator91 <findPointAwayFromExplosion>c__Iterator = new mutantSearchFunctions.<findPointAwayFromExplosion>c__Iterator91();
+		<findPointAwayFromExplosion>c__Iterator.dist = dist;
+		<findPointAwayFromExplosion>c__Iterator.<$>dist = dist;
+		<findPointAwayFromExplosion>c__Iterator.<>f__this = this;
+		return <findPointAwayFromExplosion>c__Iterator;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findAmbushPoint(float dist)
 	{
-		mutantSearchFunctions.<findAmbushPoint>c__Iterator8F <findAmbushPoint>c__Iterator8F = new mutantSearchFunctions.<findAmbushPoint>c__Iterator8F();
-		<findAmbushPoint>c__Iterator8F.<>f__this = this;
-		return <findAmbushPoint>c__Iterator8F;
+		mutantSearchFunctions.<findAmbushPoint>c__Iterator92 <findAmbushPoint>c__Iterator = new mutantSearchFunctions.<findAmbushPoint>c__Iterator92();
+		<findAmbushPoint>c__Iterator.<>f__this = this;
+		return <findAmbushPoint>c__Iterator;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findFlankPointToPlayer(float dist)
 	{
-		mutantSearchFunctions.<findFlankPointToPlayer>c__Iterator90 <findFlankPointToPlayer>c__Iterator = new mutantSearchFunctions.<findFlankPointToPlayer>c__Iterator90();
+		mutantSearchFunctions.<findFlankPointToPlayer>c__Iterator93 <findFlankPointToPlayer>c__Iterator = new mutantSearchFunctions.<findFlankPointToPlayer>c__Iterator93();
 		<findFlankPointToPlayer>c__Iterator.<>f__this = this;
 		return <findFlankPointToPlayer>c__Iterator;
 	}
@@ -583,7 +583,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findPerpToPlayer(int side)
 	{
-		mutantSearchFunctions.<findPerpToPlayer>c__Iterator91 <findPerpToPlayer>c__Iterator = new mutantSearchFunctions.<findPerpToPlayer>c__Iterator91();
+		mutantSearchFunctions.<findPerpToPlayer>c__Iterator94 <findPerpToPlayer>c__Iterator = new mutantSearchFunctions.<findPerpToPlayer>c__Iterator94();
 		<findPerpToPlayer>c__Iterator.side = side;
 		<findPerpToPlayer>c__Iterator.<$>side = side;
 		<findPerpToPlayer>c__Iterator.<>f__this = this;
@@ -593,7 +593,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findPerpToEnemy(int side)
 	{
-		mutantSearchFunctions.<findPerpToEnemy>c__Iterator92 <findPerpToEnemy>c__Iterator = new mutantSearchFunctions.<findPerpToEnemy>c__Iterator92();
+		mutantSearchFunctions.<findPerpToEnemy>c__Iterator95 <findPerpToEnemy>c__Iterator = new mutantSearchFunctions.<findPerpToEnemy>c__Iterator95();
 		<findPerpToEnemy>c__Iterator.side = side;
 		<findPerpToEnemy>c__Iterator.<$>side = side;
 		<findPerpToEnemy>c__Iterator.<>f__this = this;
@@ -603,7 +603,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findCloseBush(float dist)
 	{
-		mutantSearchFunctions.<findCloseBush>c__Iterator93 <findCloseBush>c__Iterator = new mutantSearchFunctions.<findCloseBush>c__Iterator93();
+		mutantSearchFunctions.<findCloseBush>c__Iterator96 <findCloseBush>c__Iterator = new mutantSearchFunctions.<findCloseBush>c__Iterator96();
 		<findCloseBush>c__Iterator.dist = dist;
 		<findCloseBush>c__Iterator.<$>dist = dist;
 		<findCloseBush>c__Iterator.<>f__this = this;
@@ -613,7 +613,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findCloseTree(float dist)
 	{
-		mutantSearchFunctions.<findCloseTree>c__Iterator94 <findCloseTree>c__Iterator = new mutantSearchFunctions.<findCloseTree>c__Iterator94();
+		mutantSearchFunctions.<findCloseTree>c__Iterator97 <findCloseTree>c__Iterator = new mutantSearchFunctions.<findCloseTree>c__Iterator97();
 		<findCloseTree>c__Iterator.dist = dist;
 		<findCloseTree>c__Iterator.<$>dist = dist;
 		<findCloseTree>c__Iterator.<>f__this = this;
@@ -623,7 +623,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator creepyFindCloseTree(float dist)
 	{
-		mutantSearchFunctions.<creepyFindCloseTree>c__Iterator95 <creepyFindCloseTree>c__Iterator = new mutantSearchFunctions.<creepyFindCloseTree>c__Iterator95();
+		mutantSearchFunctions.<creepyFindCloseTree>c__Iterator98 <creepyFindCloseTree>c__Iterator = new mutantSearchFunctions.<creepyFindCloseTree>c__Iterator98();
 		<creepyFindCloseTree>c__Iterator.dist = dist;
 		<creepyFindCloseTree>c__Iterator.<$>dist = dist;
 		<creepyFindCloseTree>c__Iterator.<>f__this = this;
@@ -633,7 +633,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findJumpTree(bool towards)
 	{
-		mutantSearchFunctions.<findJumpTree>c__Iterator96 <findJumpTree>c__Iterator = new mutantSearchFunctions.<findJumpTree>c__Iterator96();
+		mutantSearchFunctions.<findJumpTree>c__Iterator99 <findJumpTree>c__Iterator = new mutantSearchFunctions.<findJumpTree>c__Iterator99();
 		<findJumpTree>c__Iterator.towards = towards;
 		<findJumpTree>c__Iterator.<$>towards = towards;
 		<findJumpTree>c__Iterator.<>f__this = this;
@@ -643,17 +643,17 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findJumpAttackObj()
 	{
-		mutantSearchFunctions.<findJumpAttackObj>c__Iterator97 <findJumpAttackObj>c__Iterator = new mutantSearchFunctions.<findJumpAttackObj>c__Iterator97();
-		<findJumpAttackObj>c__Iterator.<>f__this = this;
-		return <findJumpAttackObj>c__Iterator;
+		mutantSearchFunctions.<findJumpAttackObj>c__Iterator9A <findJumpAttackObj>c__Iterator9A = new mutantSearchFunctions.<findJumpAttackObj>c__Iterator9A();
+		<findJumpAttackObj>c__Iterator9A.<>f__this = this;
+		return <findJumpAttackObj>c__Iterator9A;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findCloseJumpObj()
 	{
-		mutantSearchFunctions.<findCloseJumpObj>c__Iterator98 <findCloseJumpObj>c__Iterator = new mutantSearchFunctions.<findCloseJumpObj>c__Iterator98();
-		<findCloseJumpObj>c__Iterator.<>f__this = this;
-		return <findCloseJumpObj>c__Iterator;
+		mutantSearchFunctions.<findCloseJumpObj>c__Iterator9B <findCloseJumpObj>c__Iterator9B = new mutantSearchFunctions.<findCloseJumpObj>c__Iterator9B();
+		<findCloseJumpObj>c__Iterator9B.<>f__this = this;
+		return <findCloseJumpObj>c__Iterator9B;
 	}
 
 	private void findPlaneCrash()
@@ -800,6 +800,10 @@ public class mutantSearchFunctions : MonoBehaviour
 		{
 			this.ai.target = this.lastTarget.transform;
 		}
+		else if (this.ai.allPlayers.Count == 0)
+		{
+			this.ai.target = LocalPlayer.Transform;
+		}
 		else
 		{
 			this.ai.target = this.ai.allPlayers[0].transform;
@@ -905,9 +909,9 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator getRandomTargetOffset(float dist)
 	{
-		mutantSearchFunctions.<getRandomTargetOffset>c__Iterator99 <getRandomTargetOffset>c__Iterator = new mutantSearchFunctions.<getRandomTargetOffset>c__Iterator99();
-		<getRandomTargetOffset>c__Iterator.<>f__this = this;
-		return <getRandomTargetOffset>c__Iterator;
+		mutantSearchFunctions.<getRandomTargetOffset>c__Iterator9C <getRandomTargetOffset>c__Iterator9C = new mutantSearchFunctions.<getRandomTargetOffset>c__Iterator9C();
+		<getRandomTargetOffset>c__Iterator9C.<>f__this = this;
+		return <getRandomTargetOffset>c__Iterator9C;
 	}
 
 	private void resetTargetOffset()
@@ -918,63 +922,63 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findAngleToTarget(Vector3 target)
 	{
-		mutantSearchFunctions.<findAngleToTarget>c__Iterator9A <findAngleToTarget>c__Iterator9A = new mutantSearchFunctions.<findAngleToTarget>c__Iterator9A();
-		<findAngleToTarget>c__Iterator9A.target = target;
-		<findAngleToTarget>c__Iterator9A.<$>target = target;
-		<findAngleToTarget>c__Iterator9A.<>f__this = this;
-		return <findAngleToTarget>c__Iterator9A;
+		mutantSearchFunctions.<findAngleToTarget>c__Iterator9D <findAngleToTarget>c__Iterator9D = new mutantSearchFunctions.<findAngleToTarget>c__Iterator9D();
+		<findAngleToTarget>c__Iterator9D.target = target;
+		<findAngleToTarget>c__Iterator9D.<$>target = target;
+		<findAngleToTarget>c__Iterator9D.<>f__this = this;
+		return <findAngleToTarget>c__Iterator9D;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findAngleFromPlayer()
 	{
-		mutantSearchFunctions.<findAngleFromPlayer>c__Iterator9B <findAngleFromPlayer>c__Iterator9B = new mutantSearchFunctions.<findAngleFromPlayer>c__Iterator9B();
-		<findAngleFromPlayer>c__Iterator9B.<>f__this = this;
-		return <findAngleFromPlayer>c__Iterator9B;
+		mutantSearchFunctions.<findAngleFromPlayer>c__Iterator9E <findAngleFromPlayer>c__Iterator9E = new mutantSearchFunctions.<findAngleFromPlayer>c__Iterator9E();
+		<findAngleFromPlayer>c__Iterator9E.<>f__this = this;
+		return <findAngleFromPlayer>c__Iterator9E;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findAngleToPlayer()
 	{
-		mutantSearchFunctions.<findAngleToPlayer>c__Iterator9C <findAngleToPlayer>c__Iterator9C = new mutantSearchFunctions.<findAngleToPlayer>c__Iterator9C();
-		<findAngleToPlayer>c__Iterator9C.<>f__this = this;
-		return <findAngleToPlayer>c__Iterator9C;
+		mutantSearchFunctions.<findAngleToPlayer>c__Iterator9F <findAngleToPlayer>c__Iterator9F = new mutantSearchFunctions.<findAngleToPlayer>c__Iterator9F();
+		<findAngleToPlayer>c__Iterator9F.<>f__this = this;
+		return <findAngleToPlayer>c__Iterator9F;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator setTreeAttatchDist(float dist)
 	{
-		mutantSearchFunctions.<setTreeAttatchDist>c__Iterator9D <setTreeAttatchDist>c__Iterator9D = new mutantSearchFunctions.<setTreeAttatchDist>c__Iterator9D();
-		<setTreeAttatchDist>c__Iterator9D.dist = dist;
-		<setTreeAttatchDist>c__Iterator9D.<$>dist = dist;
-		<setTreeAttatchDist>c__Iterator9D.<>f__this = this;
-		return <setTreeAttatchDist>c__Iterator9D;
+		mutantSearchFunctions.<setTreeAttatchDist>c__IteratorA0 <setTreeAttatchDist>c__IteratorA = new mutantSearchFunctions.<setTreeAttatchDist>c__IteratorA0();
+		<setTreeAttatchDist>c__IteratorA.dist = dist;
+		<setTreeAttatchDist>c__IteratorA.<$>dist = dist;
+		<setTreeAttatchDist>c__IteratorA.<>f__this = this;
+		return <setTreeAttatchDist>c__IteratorA;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findTreeAttachPos(Vector3 pos)
 	{
-		mutantSearchFunctions.<findTreeAttachPos>c__Iterator9E <findTreeAttachPos>c__Iterator9E = new mutantSearchFunctions.<findTreeAttachPos>c__Iterator9E();
-		<findTreeAttachPos>c__Iterator9E.pos = pos;
-		<findTreeAttachPos>c__Iterator9E.<$>pos = pos;
-		<findTreeAttachPos>c__Iterator9E.<>f__this = this;
-		return <findTreeAttachPos>c__Iterator9E;
+		mutantSearchFunctions.<findTreeAttachPos>c__IteratorA1 <findTreeAttachPos>c__IteratorA = new mutantSearchFunctions.<findTreeAttachPos>c__IteratorA1();
+		<findTreeAttachPos>c__IteratorA.pos = pos;
+		<findTreeAttachPos>c__IteratorA.<$>pos = pos;
+		<findTreeAttachPos>c__IteratorA.<>f__this = this;
+		return <findTreeAttachPos>c__IteratorA;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findEatingPos(Vector3 eatPos)
 	{
-		mutantSearchFunctions.<findEatingPos>c__Iterator9F <findEatingPos>c__Iterator9F = new mutantSearchFunctions.<findEatingPos>c__Iterator9F();
-		<findEatingPos>c__Iterator9F.eatPos = eatPos;
-		<findEatingPos>c__Iterator9F.<$>eatPos = eatPos;
-		<findEatingPos>c__Iterator9F.<>f__this = this;
-		return <findEatingPos>c__Iterator9F;
+		mutantSearchFunctions.<findEatingPos>c__IteratorA2 <findEatingPos>c__IteratorA = new mutantSearchFunctions.<findEatingPos>c__IteratorA2();
+		<findEatingPos>c__IteratorA.eatPos = eatPos;
+		<findEatingPos>c__IteratorA.<$>eatPos = eatPos;
+		<findEatingPos>c__IteratorA.<>f__this = this;
+		return <findEatingPos>c__IteratorA;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator setToGuardPosition(GameObject go)
 	{
-		mutantSearchFunctions.<setToGuardPosition>c__IteratorA0 <setToGuardPosition>c__IteratorA = new mutantSearchFunctions.<setToGuardPosition>c__IteratorA0();
+		mutantSearchFunctions.<setToGuardPosition>c__IteratorA3 <setToGuardPosition>c__IteratorA = new mutantSearchFunctions.<setToGuardPosition>c__IteratorA3();
 		<setToGuardPosition>c__IteratorA.go = go;
 		<setToGuardPosition>c__IteratorA.<$>go = go;
 		<setToGuardPosition>c__IteratorA.<>f__this = this;
@@ -991,7 +995,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator enableAwareOfPlayer()
 	{
-		mutantSearchFunctions.<enableAwareOfPlayer>c__IteratorA1 <enableAwareOfPlayer>c__IteratorA = new mutantSearchFunctions.<enableAwareOfPlayer>c__IteratorA1();
+		mutantSearchFunctions.<enableAwareOfPlayer>c__IteratorA4 <enableAwareOfPlayer>c__IteratorA = new mutantSearchFunctions.<enableAwareOfPlayer>c__IteratorA4();
 		<enableAwareOfPlayer>c__IteratorA.<>f__this = this;
 		return <enableAwareOfPlayer>c__IteratorA;
 	}
@@ -1015,7 +1019,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator enableSearchTimeout()
 	{
-		mutantSearchFunctions.<enableSearchTimeout>c__IteratorA2 <enableSearchTimeout>c__IteratorA = new mutantSearchFunctions.<enableSearchTimeout>c__IteratorA2();
+		mutantSearchFunctions.<enableSearchTimeout>c__IteratorA5 <enableSearchTimeout>c__IteratorA = new mutantSearchFunctions.<enableSearchTimeout>c__IteratorA5();
 		<enableSearchTimeout>c__IteratorA.<>f__this = this;
 		return <enableSearchTimeout>c__IteratorA;
 	}
@@ -1167,7 +1171,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator setVisRetry(int set)
 	{
-		mutantSearchFunctions.<setVisRetry>c__IteratorA3 <setVisRetry>c__IteratorA = new mutantSearchFunctions.<setVisRetry>c__IteratorA3();
+		mutantSearchFunctions.<setVisRetry>c__IteratorA6 <setVisRetry>c__IteratorA = new mutantSearchFunctions.<setVisRetry>c__IteratorA6();
 		<setVisRetry>c__IteratorA.set = set;
 		<setVisRetry>c__IteratorA.<$>set = set;
 		<setVisRetry>c__IteratorA.<>f__this = this;
@@ -1177,7 +1181,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator toLook()
 	{
-		mutantSearchFunctions.<toLook>c__IteratorA4 <toLook>c__IteratorA = new mutantSearchFunctions.<toLook>c__IteratorA4();
+		mutantSearchFunctions.<toLook>c__IteratorA7 <toLook>c__IteratorA = new mutantSearchFunctions.<toLook>c__IteratorA7();
 		<toLook>c__IteratorA.<>f__this = this;
 		return <toLook>c__IteratorA;
 	}
@@ -1185,7 +1189,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator toTrack()
 	{
-		mutantSearchFunctions.<toTrack>c__IteratorA5 <toTrack>c__IteratorA = new mutantSearchFunctions.<toTrack>c__IteratorA5();
+		mutantSearchFunctions.<toTrack>c__IteratorA8 <toTrack>c__IteratorA = new mutantSearchFunctions.<toTrack>c__IteratorA8();
 		<toTrack>c__IteratorA.<>f__this = this;
 		return <toTrack>c__IteratorA;
 	}
@@ -1193,7 +1197,7 @@ public class mutantSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator toDisableVis()
 	{
-		mutantSearchFunctions.<toDisableVis>c__IteratorA6 <toDisableVis>c__IteratorA = new mutantSearchFunctions.<toDisableVis>c__IteratorA6();
+		mutantSearchFunctions.<toDisableVis>c__IteratorA9 <toDisableVis>c__IteratorA = new mutantSearchFunctions.<toDisableVis>c__IteratorA9();
 		<toDisableVis>c__IteratorA.<>f__this = this;
 		return <toDisableVis>c__IteratorA;
 	}

@@ -117,7 +117,7 @@ public class animalSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator findCloseWater()
 	{
-		animalSearchFunctions.<findCloseWater>c__Iterator47 <findCloseWater>c__Iterator = new animalSearchFunctions.<findCloseWater>c__Iterator47();
+		animalSearchFunctions.<findCloseWater>c__Iterator48 <findCloseWater>c__Iterator = new animalSearchFunctions.<findCloseWater>c__Iterator48();
 		<findCloseWater>c__Iterator.<>f__this = this;
 		return <findCloseWater>c__Iterator;
 	}
@@ -125,7 +125,7 @@ public class animalSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findCloseBush()
 	{
-		animalSearchFunctions.<findCloseBush>c__Iterator48 <findCloseBush>c__Iterator = new animalSearchFunctions.<findCloseBush>c__Iterator48();
+		animalSearchFunctions.<findCloseBush>c__Iterator49 <findCloseBush>c__Iterator = new animalSearchFunctions.<findCloseBush>c__Iterator49();
 		<findCloseBush>c__Iterator.<>f__this = this;
 		return <findCloseBush>c__Iterator;
 	}
@@ -304,11 +304,11 @@ public class animalSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findCloseTree(float dist)
 	{
-		animalSearchFunctions.<findCloseTree>c__Iterator49 <findCloseTree>c__Iterator = new animalSearchFunctions.<findCloseTree>c__Iterator49();
-		<findCloseTree>c__Iterator.dist = dist;
-		<findCloseTree>c__Iterator.<$>dist = dist;
-		<findCloseTree>c__Iterator.<>f__this = this;
-		return <findCloseTree>c__Iterator;
+		animalSearchFunctions.<findCloseTree>c__Iterator4A <findCloseTree>c__Iterator4A = new animalSearchFunctions.<findCloseTree>c__Iterator4A();
+		<findCloseTree>c__Iterator4A.dist = dist;
+		<findCloseTree>c__Iterator4A.<$>dist = dist;
+		<findCloseTree>c__Iterator4A.<>f__this = this;
+		return <findCloseTree>c__Iterator4A;
 	}
 
 	private void castPointAroundPlayer()
@@ -334,45 +334,45 @@ public class animalSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findClosestBeachMarker()
 	{
-		animalSearchFunctions.<findClosestBeachMarker>c__Iterator4A <findClosestBeachMarker>c__Iterator4A = new animalSearchFunctions.<findClosestBeachMarker>c__Iterator4A();
-		<findClosestBeachMarker>c__Iterator4A.<>f__this = this;
-		return <findClosestBeachMarker>c__Iterator4A;
+		animalSearchFunctions.<findClosestBeachMarker>c__Iterator4B <findClosestBeachMarker>c__Iterator4B = new animalSearchFunctions.<findClosestBeachMarker>c__Iterator4B();
+		<findClosestBeachMarker>c__Iterator4B.<>f__this = this;
+		return <findClosestBeachMarker>c__Iterator4B;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findClosestSwimMarker()
 	{
-		animalSearchFunctions.<findClosestSwimMarker>c__Iterator4B <findClosestSwimMarker>c__Iterator4B = new animalSearchFunctions.<findClosestSwimMarker>c__Iterator4B();
-		<findClosestSwimMarker>c__Iterator4B.<>f__this = this;
-		return <findClosestSwimMarker>c__Iterator4B;
+		animalSearchFunctions.<findClosestSwimMarker>c__Iterator4C <findClosestSwimMarker>c__Iterator4C = new animalSearchFunctions.<findClosestSwimMarker>c__Iterator4C();
+		<findClosestSwimMarker>c__Iterator4C.<>f__this = this;
+		return <findClosestSwimMarker>c__Iterator4C;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findRandomSwimMarker()
 	{
-		animalSearchFunctions.<findRandomSwimMarker>c__Iterator4C <findRandomSwimMarker>c__Iterator4C = new animalSearchFunctions.<findRandomSwimMarker>c__Iterator4C();
-		<findRandomSwimMarker>c__Iterator4C.<>f__this = this;
-		return <findRandomSwimMarker>c__Iterator4C;
+		animalSearchFunctions.<findRandomSwimMarker>c__Iterator4D <findRandomSwimMarker>c__Iterator4D = new animalSearchFunctions.<findRandomSwimMarker>c__Iterator4D();
+		<findRandomSwimMarker>c__Iterator4D.<>f__this = this;
+		return <findRandomSwimMarker>c__Iterator4D;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findRandomPoint(float dist)
 	{
-		animalSearchFunctions.<findRandomPoint>c__Iterator4D <findRandomPoint>c__Iterator4D = new animalSearchFunctions.<findRandomPoint>c__Iterator4D();
-		<findRandomPoint>c__Iterator4D.dist = dist;
-		<findRandomPoint>c__Iterator4D.<$>dist = dist;
-		<findRandomPoint>c__Iterator4D.<>f__this = this;
-		return <findRandomPoint>c__Iterator4D;
+		animalSearchFunctions.<findRandomPoint>c__Iterator4E <findRandomPoint>c__Iterator4E = new animalSearchFunctions.<findRandomPoint>c__Iterator4E();
+		<findRandomPoint>c__Iterator4E.dist = dist;
+		<findRandomPoint>c__Iterator4E.<$>dist = dist;
+		<findRandomPoint>c__Iterator4E.<>f__this = this;
+		return <findRandomPoint>c__Iterator4E;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator findPointAwayFromPlayer(float dist)
 	{
-		animalSearchFunctions.<findPointAwayFromPlayer>c__Iterator4E <findPointAwayFromPlayer>c__Iterator4E = new animalSearchFunctions.<findPointAwayFromPlayer>c__Iterator4E();
-		<findPointAwayFromPlayer>c__Iterator4E.dist = dist;
-		<findPointAwayFromPlayer>c__Iterator4E.<$>dist = dist;
-		<findPointAwayFromPlayer>c__Iterator4E.<>f__this = this;
-		return <findPointAwayFromPlayer>c__Iterator4E;
+		animalSearchFunctions.<findPointAwayFromPlayer>c__Iterator4F <findPointAwayFromPlayer>c__Iterator4F = new animalSearchFunctions.<findPointAwayFromPlayer>c__Iterator4F();
+		<findPointAwayFromPlayer>c__Iterator4F.dist = dist;
+		<findPointAwayFromPlayer>c__Iterator4F.<$>dist = dist;
+		<findPointAwayFromPlayer>c__Iterator4F.<>f__this = this;
+		return <findPointAwayFromPlayer>c__Iterator4F;
 	}
 
 	private void updateCurrentTarget()
@@ -458,17 +458,17 @@ public class animalSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findAngleToTarget(Vector3 target)
 	{
-		animalSearchFunctions.<findAngleToTarget>c__Iterator4F <findAngleToTarget>c__Iterator4F = new animalSearchFunctions.<findAngleToTarget>c__Iterator4F();
-		<findAngleToTarget>c__Iterator4F.target = target;
-		<findAngleToTarget>c__Iterator4F.<$>target = target;
-		<findAngleToTarget>c__Iterator4F.<>f__this = this;
-		return <findAngleToTarget>c__Iterator4F;
+		animalSearchFunctions.<findAngleToTarget>c__Iterator50 <findAngleToTarget>c__Iterator = new animalSearchFunctions.<findAngleToTarget>c__Iterator50();
+		<findAngleToTarget>c__Iterator.target = target;
+		<findAngleToTarget>c__Iterator.<$>target = target;
+		<findAngleToTarget>c__Iterator.<>f__this = this;
+		return <findAngleToTarget>c__Iterator;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator setTreeAttachDist(float dist)
 	{
-		animalSearchFunctions.<setTreeAttachDist>c__Iterator50 <setTreeAttachDist>c__Iterator = new animalSearchFunctions.<setTreeAttachDist>c__Iterator50();
+		animalSearchFunctions.<setTreeAttachDist>c__Iterator51 <setTreeAttachDist>c__Iterator = new animalSearchFunctions.<setTreeAttachDist>c__Iterator51();
 		<setTreeAttachDist>c__Iterator.dist = dist;
 		<setTreeAttachDist>c__Iterator.<$>dist = dist;
 		<setTreeAttachDist>c__Iterator.<>f__this = this;
@@ -478,7 +478,7 @@ public class animalSearchFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator findTreeAttachPos(Vector3 pos)
 	{
-		animalSearchFunctions.<findTreeAttachPos>c__Iterator51 <findTreeAttachPos>c__Iterator = new animalSearchFunctions.<findTreeAttachPos>c__Iterator51();
+		animalSearchFunctions.<findTreeAttachPos>c__Iterator52 <findTreeAttachPos>c__Iterator = new animalSearchFunctions.<findTreeAttachPos>c__Iterator52();
 		<findTreeAttachPos>c__Iterator.pos = pos;
 		<findTreeAttachPos>c__Iterator.<$>pos = pos;
 		<findTreeAttachPos>c__Iterator.<>f__this = this;

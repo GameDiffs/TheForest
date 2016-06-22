@@ -22,7 +22,7 @@ namespace TheForest.Buildings.World
 			{
 				base.GetComponent<Buoyancy>().enabled = false;
 				UnityEngine.Object.Destroy(base.GetComponent<raftOnLand>());
-				UnityEngine.Object.Destroy(base.GetComponent<Rigidbody>());
+				base.GetComponent<Rigidbody>().isKinematic = true;
 				UnityEngine.Object.Destroy(this);
 			}
 		}

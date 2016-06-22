@@ -19,7 +19,7 @@ public class playerStealthMeter : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		playerStealthMeter.<Start>c__IteratorE1 <Start>c__IteratorE = new playerStealthMeter.<Start>c__IteratorE1();
+		playerStealthMeter.<Start>c__IteratorE4 <Start>c__IteratorE = new playerStealthMeter.<Start>c__IteratorE4();
 		<Start>c__IteratorE.<>f__this = this;
 		return <Start>c__IteratorE;
 	}

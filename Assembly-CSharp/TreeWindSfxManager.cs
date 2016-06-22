@@ -17,10 +17,20 @@ public class TreeWindSfxManager : MonoBehaviour
 
 		public TreeInfo(TreeWindSfx tree)
 		{
+			this.Init(tree);
+		}
+
+		public void Init(TreeWindSfx tree)
+		{
 			this.tree = tree;
 			this.position = tree.transform.position;
 			this.sqrDistance = 0f;
 			this.direction = 0f;
+		}
+
+		public void Clear()
+		{
+			this.tree = null;
 		}
 	}
 
@@ -42,18 +52,35 @@ public class TreeWindSfxManager : MonoBehaviour
 
 	private static List<TreeWindSfxManager.TreeInfo> sTreeInfoList = new List<TreeWindSfxManager.TreeInfo>();
 
+	private static Queue<TreeWindSfxManager.TreeInfo> sTreeInfoListPool = new Queue<TreeWindSfxManager.TreeInfo>();
+
 	private static Texture2D activeTexture = null;
 
 	private static Texture2D inactiveTexture = null;
 
 	private static Texture2D playerTexture = null;
 
+	private static TreeWindSfxManager.TreeInfo GetTreeInfo(TreeWindSfx tree)
+	{
+		TreeWindSfxManager.TreeInfo treeInfo;
+		if (TreeWindSfxManager.sTreeInfoListPool.Count > 0)
+		{
+			treeInfo = TreeWindSfxManager.sTreeInfoListPool.Dequeue();
+			treeInfo.Init(tree);
+		}
+		else
+		{
+			treeInfo = new TreeWindSfxManager.TreeInfo(tree);
+		}
+		return treeInfo;
+	}
+
 	public static void Add(TreeWindSfx tree)
 	{
 		if (!TreeWindSfxManager.sTrees.Contains(tree))
 		{
 			TreeWindSfxManager.sTrees.Add(tree);
-			TreeWindSfxManager.sTreeInfoList.Add(new TreeWindSfxManager.TreeInfo(tree));
+			TreeWindSfxManager.sTreeInfoList.Add(TreeWindSfxManager.GetTreeInfo(tree));
 		}
 	}
 
@@ -62,7 +89,17 @@ public class TreeWindSfxManager : MonoBehaviour
 		if (TreeWindSfxManager.sTrees.Contains(tree))
 		{
 			TreeWindSfxManager.sTrees.Remove(tree);
-			TreeWindSfxManager.sTreeInfoList.RemoveAll((TreeWindSfxManager.TreeInfo info) => info.tree == tree);
+			for (int i = 0; i < TreeWindSfxManager.sTreeInfoList.Count; i++)
+			{
+				TreeWindSfxManager.TreeInfo treeInfo = TreeWindSfxManager.sTreeInfoList[i];
+				if (treeInfo.tree == tree)
+				{
+					treeInfo.Clear();
+					TreeWindSfxManager.sTreeInfoListPool.Enqueue(treeInfo);
+					TreeWindSfxManager.sTreeInfoList.RemoveAt(i);
+					break;
+				}
+			}
 		}
 	}
 

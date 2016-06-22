@@ -320,7 +320,7 @@ public class EnemyHealth : EntityBehaviour
 		{
 			if (this.ai.creepy_male || this.ai.creepy || this.ai.creepy_fat || this.ai.creepy_baby)
 			{
-				this.Health -= 40;
+				this.Health -= 65;
 				if (this.Burnt && this.MySkin)
 				{
 					if (this.setup.propManager && this.setup.propManager.lowSkinnyBody)
@@ -1145,7 +1145,8 @@ public class EnemyHealth : EntityBehaviour
 	{
 		GameStats.ExplodedEnemy.Invoke();
 		GameStats.EnemyKilled.Invoke();
-		UnityEngine.Object.Instantiate(this.RagDollExploded, base.transform.position, base.transform.rotation);
+		GameObject gameObject = UnityEngine.Object.Instantiate(this.RagDollExploded, base.transform.position, base.transform.rotation) as GameObject;
+		gameObject.SendMessage("setSkin", this.MySkin.sharedMaterial, SendMessageOptions.DontRequireReceiver);
 		this.typeSetup.removeFromSpawnAndExplode();
 	}
 
@@ -1312,8 +1313,6 @@ public class EnemyHealth : EntityBehaviour
 
 	private void enableFeedingEffect()
 	{
-		this.EatenTorso.SetActive(true);
-		this.TorsoBlood.SetActive(true);
 		this.MyBody.GetComponent<Renderer>().material = this.eatenBody;
 	}
 

@@ -247,17 +247,15 @@ public class ImageEffectOptimizer : MonoBehaviour
 			{
 				this.hbao.enabled = false;
 			}
-			TheForestQualitySettings.SSAOTechnique sSAOTechnique2 = sSAOTechnique;
-			if (sSAOTechnique2 != TheForestQualitySettings.SSAOTechnique.Ultra)
+			switch (sSAOTechnique)
 			{
-				if (sSAOTechnique2 == TheForestQualitySettings.SSAOTechnique.High)
-				{
-					this.sessao.halfSampling = true;
-				}
-			}
-			else
-			{
+			case TheForestQualitySettings.SSAOTechnique.Ultra:
 				this.sessao.halfSampling = false;
+				break;
+			case TheForestQualitySettings.SSAOTechnique.High:
+			case TheForestQualitySettings.SSAOTechnique.Low:
+				this.sessao.halfSampling = true;
+				break;
 			}
 		}
 		else if ((this.hbao && TheForestQualitySettings.UserSettings.SSAOType == TheForestQualitySettings.SSAOTypes.HBAO) || !this.sessao)
@@ -267,19 +265,26 @@ public class ImageEffectOptimizer : MonoBehaviour
 			{
 				this.sessao.enabled = false;
 			}
-			TheForestQualitySettings.SSAOTechnique sSAOTechnique2 = sSAOTechnique;
-			if (sSAOTechnique2 != TheForestQualitySettings.SSAOTechnique.Ultra)
+			switch (sSAOTechnique)
 			{
-				if (sSAOTechnique2 == TheForestQualitySettings.SSAOTechnique.High)
+			case TheForestQualitySettings.SSAOTechnique.Ultra:
+				if (this.hbao.generalSettings.quality != HBAO.Quality.Highest)
 				{
-					this.hbao.quality = HBAO.Quality.Medium;
-					this.hbao.resolution = HBAO.Resolution.Half;
+					this.hbao.ApplyPreset(HBAO.Preset.HighestQuality);
 				}
-			}
-			else
-			{
-				this.hbao.quality = HBAO.Quality.Highest;
-				this.hbao.resolution = HBAO.Resolution.Full;
+				break;
+			case TheForestQualitySettings.SSAOTechnique.High:
+				if (this.hbao.generalSettings.quality != HBAO.Quality.Medium)
+				{
+					this.hbao.ApplyPreset(HBAO.Preset.FastestPerformance);
+				}
+				break;
+			case TheForestQualitySettings.SSAOTechnique.Low:
+				if (this.hbao.generalSettings.quality != HBAO.Quality.Lowest)
+				{
+					this.hbao.ApplyPreset(HBAO.Preset.FastestPerformance);
+				}
+				break;
 			}
 		}
 		if (LocalPlayer.WaterEngine)

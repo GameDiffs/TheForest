@@ -1,0 +1,22 @@
+using System;
+
+namespace FMOD.Studio
+{
+	[Flags]
+	public enum EVENT_CALLBACK_TYPE : uint
+	{
+		STARTED = 1u,
+		RESTARTED = 2u,
+		STOPPED = 4u,
+		CREATE_PROGRAMMER_SOUND = 8u,
+		DESTROY_PROGRAMMER_SOUND = 16u,
+		PLUGIN_CREATED = 32u,
+		PLUGIN_DESTROYED = 64u,
+		CREATED = 128u,
+		DESTROYED = 256u,
+		START_FAILED = 512u,
+		TIMELINE_MARKER = 1024u,
+		TIMELINE_BEAT = 2048u,
+		ALL = 4294967295u
+	}
+}

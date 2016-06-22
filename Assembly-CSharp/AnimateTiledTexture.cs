@@ -144,7 +144,7 @@ public class AnimateTiledTexture : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator updateTiling()
 	{
-		AnimateTiledTexture.<updateTiling>c__Iterator125 <updateTiling>c__Iterator = new AnimateTiledTexture.<updateTiling>c__Iterator125();
+		AnimateTiledTexture.<updateTiling>c__Iterator128 <updateTiling>c__Iterator = new AnimateTiledTexture.<updateTiling>c__Iterator128();
 		<updateTiling>c__Iterator.<>f__this = this;
 		return <updateTiling>c__Iterator;
 	}

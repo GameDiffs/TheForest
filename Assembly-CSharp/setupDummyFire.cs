@@ -35,7 +35,7 @@ public class setupDummyFire : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator burnDown(Transform tr)
 	{
-		setupDummyFire.<burnDown>c__IteratorF4 <burnDown>c__IteratorF = new setupDummyFire.<burnDown>c__IteratorF4();
+		setupDummyFire.<burnDown>c__IteratorF7 <burnDown>c__IteratorF = new setupDummyFire.<burnDown>c__IteratorF7();
 		<burnDown>c__IteratorF.tr = tr;
 		<burnDown>c__IteratorF.<$>tr = tr;
 		<burnDown>c__IteratorF.<>f__this = this;

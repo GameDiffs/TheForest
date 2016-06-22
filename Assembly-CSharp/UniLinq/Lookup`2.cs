@@ -57,11 +57,11 @@ namespace UniLinq
 		[DebuggerHidden]
 		public IEnumerable<TResult> ApplyResultSelector<TResult>(Func<TKey, IEnumerable<TElement>, TResult> resultSelector)
 		{
-			Lookup<TKey, TElement>.<ApplyResultSelector>c__Iterator1FE<TResult> <ApplyResultSelector>c__Iterator1FE = new Lookup<TKey, TElement>.<ApplyResultSelector>c__Iterator1FE<TResult>();
-			<ApplyResultSelector>c__Iterator1FE.resultSelector = resultSelector;
-			<ApplyResultSelector>c__Iterator1FE.<$>resultSelector = resultSelector;
-			<ApplyResultSelector>c__Iterator1FE.<>f__this = this;
-			Lookup<TKey, TElement>.<ApplyResultSelector>c__Iterator1FE<TResult> expr_1C = <ApplyResultSelector>c__Iterator1FE;
+			Lookup<TKey, TElement>.<ApplyResultSelector>c__Iterator206<TResult> <ApplyResultSelector>c__Iterator = new Lookup<TKey, TElement>.<ApplyResultSelector>c__Iterator206<TResult>();
+			<ApplyResultSelector>c__Iterator.resultSelector = resultSelector;
+			<ApplyResultSelector>c__Iterator.<$>resultSelector = resultSelector;
+			<ApplyResultSelector>c__Iterator.<>f__this = this;
+			Lookup<TKey, TElement>.<ApplyResultSelector>c__Iterator206<TResult> expr_1C = <ApplyResultSelector>c__Iterator;
 			expr_1C.$PC = -2;
 			return expr_1C;
 		}
@@ -74,9 +74,9 @@ namespace UniLinq
 		[DebuggerHidden]
 		public IEnumerator<IGrouping<TKey, TElement>> GetEnumerator()
 		{
-			Lookup<TKey, TElement>.<GetEnumerator>c__Iterator1FF <GetEnumerator>c__Iterator1FF = new Lookup<TKey, TElement>.<GetEnumerator>c__Iterator1FF();
-			<GetEnumerator>c__Iterator1FF.<>f__this = this;
-			return <GetEnumerator>c__Iterator1FF;
+			Lookup<TKey, TElement>.<GetEnumerator>c__Iterator207 <GetEnumerator>c__Iterator = new Lookup<TKey, TElement>.<GetEnumerator>c__Iterator207();
+			<GetEnumerator>c__Iterator.<>f__this = this;
+			return <GetEnumerator>c__Iterator;
 		}
 	}
 }

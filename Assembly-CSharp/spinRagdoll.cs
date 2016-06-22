@@ -21,8 +21,8 @@ public class spinRagdoll : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator spinForce()
 	{
-		spinRagdoll.<spinForce>c__IteratorFA <spinForce>c__IteratorFA = new spinRagdoll.<spinForce>c__IteratorFA();
-		<spinForce>c__IteratorFA.<>f__this = this;
-		return <spinForce>c__IteratorFA;
+		spinRagdoll.<spinForce>c__IteratorFD <spinForce>c__IteratorFD = new spinRagdoll.<spinForce>c__IteratorFD();
+		<spinForce>c__IteratorFD.<>f__this = this;
+		return <spinForce>c__IteratorFD;
 	}
 }

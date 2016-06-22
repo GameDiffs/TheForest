@@ -97,7 +97,7 @@ public class CoopClientCallbacks : GlobalEventListener
 			Component[] componentsInChildren = evnt.Target.GetComponentsInChildren(typeof(MultiHolder), true);
 			if (componentsInChildren.Length > 0)
 			{
-				(componentsInChildren[0] as MultiHolder).AddItemMP((MultiHolder.ContentTypes)evnt.ContentType);
+				(componentsInChildren[0] as MultiHolder).AddItemMP((MultiHolder.ContentTypes)evnt.ContentType, evnt.RaisedBy);
 			}
 		}
 	}
@@ -155,6 +155,50 @@ public class CoopClientCallbacks : GlobalEventListener
 		if (evnt.Target)
 		{
 			evnt.Target.SendMessage("clientDrop", evnt.rot, SendMessageOptions.DontRequireReceiver);
+			evnt.Target.SendMessage("setRagDollDrop", SendMessageOptions.DontRequireReceiver);
+		}
+	}
+
+	public override void OnEvent(ragdollActivate evnt)
+	{
+		if (evnt.Target)
+		{
+			evnt.Target.SendMessage("enableNetRagDoll", SendMessageOptions.DontRequireReceiver);
+		}
+	}
+
+	public override void OnEvent(storeRagDollName evnt)
+	{
+		evnt.Target.SendMessage("getRagDollName", evnt.name, SendMessageOptions.DontRequireReceiver);
+	}
+
+	public override void OnEvent(SetCorpsePosition evnt)
+	{
+		if (evnt.Corpse)
+		{
+			if (evnt.Corpse.transform.parent != null)
+			{
+				evnt.Corpse.gameObject.SendMessageUpwards("releaseNooseTrapMP", SendMessageOptions.DontRequireReceiver);
+			}
+			evnt.Corpse.transform.parent = null;
+			evnt.Corpse.Freeze(false);
+			if (evnt.Pickup)
+			{
+				evnt.Corpse.SendMessage("sendResetRagDoll", SendMessageOptions.DontRequireReceiver);
+				evnt.Corpse.transform.position = new Vector3(4096f, 4096f, 4096f);
+			}
+			else if (evnt.Destroy)
+			{
+				BoltNetwork.Destroy(evnt.Corpse);
+			}
+			else
+			{
+				evnt.Corpse.SendMessage("dropFromCarry", SendMessageOptions.DontRequireReceiver);
+				evnt.Corpse.SendMessage("setRagDollDrop", SendMessageOptions.DontRequireReceiver);
+				evnt.Corpse.transform.position = evnt.Position;
+				evnt.Corpse.transform.rotation = ((!(evnt.Rotation == default(Quaternion))) ? evnt.Rotation : Quaternion.identity);
+				MultiHolder.GetTriggerChild(evnt.Corpse.transform).gameObject.SetActive(true);
+			}
 		}
 	}
 

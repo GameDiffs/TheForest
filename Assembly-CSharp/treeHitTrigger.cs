@@ -277,9 +277,9 @@ public class treeHitTrigger : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setAxeHeight()
 	{
-		treeHitTrigger.<setAxeHeight>c__IteratorFF <setAxeHeight>c__IteratorFF = new treeHitTrigger.<setAxeHeight>c__IteratorFF();
-		<setAxeHeight>c__IteratorFF.<>f__this = this;
-		return <setAxeHeight>c__IteratorFF;
+		treeHitTrigger.<setAxeHeight>c__Iterator102 <setAxeHeight>c__Iterator = new treeHitTrigger.<setAxeHeight>c__Iterator102();
+		<setAxeHeight>c__Iterator.<>f__this = this;
+		return <setAxeHeight>c__Iterator;
 	}
 
 	private float map(float s, float a1, float a2, float b1, float b2)

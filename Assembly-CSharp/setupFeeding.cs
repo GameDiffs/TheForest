@@ -39,7 +39,7 @@ public class setupFeeding : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator sendEatMeEvent()
 	{
-		setupFeeding.<sendEatMeEvent>c__IteratorF5 <sendEatMeEvent>c__IteratorF = new setupFeeding.<sendEatMeEvent>c__IteratorF5();
+		setupFeeding.<sendEatMeEvent>c__IteratorF8 <sendEatMeEvent>c__IteratorF = new setupFeeding.<sendEatMeEvent>c__IteratorF8();
 		<sendEatMeEvent>c__IteratorF.<>f__this = this;
 		return <sendEatMeEvent>c__IteratorF;
 	}

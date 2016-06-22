@@ -459,9 +459,9 @@ public class UIPopupList : UIWidgetContainer
 	[DebuggerHidden]
 	private IEnumerator UpdateTweenPosition()
 	{
-		UIPopupList.<UpdateTweenPosition>c__Iterator10A <UpdateTweenPosition>c__Iterator10A = new UIPopupList.<UpdateTweenPosition>c__Iterator10A();
-		<UpdateTweenPosition>c__Iterator10A.<>f__this = this;
-		return <UpdateTweenPosition>c__Iterator10A;
+		UIPopupList.<UpdateTweenPosition>c__Iterator10D <UpdateTweenPosition>c__Iterator10D = new UIPopupList.<UpdateTweenPosition>c__Iterator10D();
+		<UpdateTweenPosition>c__Iterator10D.<>f__this = this;
+		return <UpdateTweenPosition>c__Iterator10D;
 	}
 
 	private void OnItemHover(GameObject go, bool isOver)
@@ -669,9 +669,9 @@ public class UIPopupList : UIWidgetContainer
 	[DebuggerHidden]
 	private IEnumerator CloseIfUnselected()
 	{
-		UIPopupList.<CloseIfUnselected>c__Iterator10B <CloseIfUnselected>c__Iterator10B = new UIPopupList.<CloseIfUnselected>c__Iterator10B();
-		<CloseIfUnselected>c__Iterator10B.<>f__this = this;
-		return <CloseIfUnselected>c__Iterator10B;
+		UIPopupList.<CloseIfUnselected>c__Iterator10E <CloseIfUnselected>c__Iterator10E = new UIPopupList.<CloseIfUnselected>c__Iterator10E();
+		<CloseIfUnselected>c__Iterator10E.<>f__this = this;
+		return <CloseIfUnselected>c__Iterator10E;
 	}
 
 	public void Show()

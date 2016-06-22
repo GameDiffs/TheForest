@@ -279,11 +279,11 @@ public class FirstPersonCharacter : MonoBehaviour
 		{
 			this.clampInputVal = 0f;
 		}
-		else if (!this.doingClampInput && !Scene.HudGui.MpPlayerListCamGo.activeInHierarchy && !Scene.HudGui.PauseMenu.activeInHierarchy && !ChatBox.IsChatOpen)
+		else if (!this.doingClampInput && !Scene.HudGui.MpPlayerListCamGo.activeInHierarchy && !Scene.HudGui.PauseMenu.activeInHierarchy && !ChatBox.IsChatOpen && LocalPlayer.Inventory.CurrentView != PlayerInventory.PlayerViews.Inventory)
 		{
 			this.clampInputVal = 1f;
 		}
-		if (Scene.HudGui.MpPlayerListCamGo.activeInHierarchy || Scene.HudGui.PauseMenu.activeInHierarchy || ChatBox.IsChatOpen)
+		if (Scene.HudGui.MpPlayerListCamGo.activeInHierarchy || Scene.HudGui.PauseMenu.activeInHierarchy || ChatBox.IsChatOpen || LocalPlayer.Inventory.CurrentView == PlayerInventory.PlayerViews.Inventory)
 		{
 			this.clampInputVal = 0f;
 			this.rb.velocity = new Vector3(0f, this.rb.velocity.y, 0f);
@@ -887,7 +887,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator EnableCrouch()
 	{
-		FirstPersonCharacter.<EnableCrouch>c__Iterator114 <EnableCrouch>c__Iterator = new FirstPersonCharacter.<EnableCrouch>c__Iterator114();
+		FirstPersonCharacter.<EnableCrouch>c__Iterator117 <EnableCrouch>c__Iterator = new FirstPersonCharacter.<EnableCrouch>c__Iterator117();
 		<EnableCrouch>c__Iterator.<>f__this = this;
 		return <EnableCrouch>c__Iterator;
 	}
@@ -895,7 +895,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator DisableCrouch()
 	{
-		FirstPersonCharacter.<DisableCrouch>c__Iterator115 <DisableCrouch>c__Iterator = new FirstPersonCharacter.<DisableCrouch>c__Iterator115();
+		FirstPersonCharacter.<DisableCrouch>c__Iterator118 <DisableCrouch>c__Iterator = new FirstPersonCharacter.<DisableCrouch>c__Iterator118();
 		<DisableCrouch>c__Iterator.<>f__this = this;
 		return <DisableCrouch>c__Iterator;
 	}
@@ -1000,7 +1000,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator resetFallDamage()
 	{
-		FirstPersonCharacter.<resetFallDamage>c__Iterator116 <resetFallDamage>c__Iterator = new FirstPersonCharacter.<resetFallDamage>c__Iterator116();
+		FirstPersonCharacter.<resetFallDamage>c__Iterator119 <resetFallDamage>c__Iterator = new FirstPersonCharacter.<resetFallDamage>c__Iterator119();
 		<resetFallDamage>c__Iterator.<>f__this = this;
 		return <resetFallDamage>c__Iterator;
 	}
@@ -1029,9 +1029,9 @@ public class FirstPersonCharacter : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator smoothEnableSpine()
 	{
-		FirstPersonCharacter.<smoothEnableSpine>c__Iterator117 <smoothEnableSpine>c__Iterator = new FirstPersonCharacter.<smoothEnableSpine>c__Iterator117();
-		<smoothEnableSpine>c__Iterator.<>f__this = this;
-		return <smoothEnableSpine>c__Iterator;
+		FirstPersonCharacter.<smoothEnableSpine>c__Iterator11A <smoothEnableSpine>c__Iterator11A = new FirstPersonCharacter.<smoothEnableSpine>c__Iterator11A();
+		<smoothEnableSpine>c__Iterator11A.<>f__this = this;
+		return <smoothEnableSpine>c__Iterator11A;
 	}
 
 	public void resetPhysicMaterial()
@@ -1047,17 +1047,17 @@ public class FirstPersonCharacter : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator enableStamRechargeDelay()
 	{
-		FirstPersonCharacter.<enableStamRechargeDelay>c__Iterator118 <enableStamRechargeDelay>c__Iterator = new FirstPersonCharacter.<enableStamRechargeDelay>c__Iterator118();
-		<enableStamRechargeDelay>c__Iterator.<>f__this = this;
-		return <enableStamRechargeDelay>c__Iterator;
+		FirstPersonCharacter.<enableStamRechargeDelay>c__Iterator11B <enableStamRechargeDelay>c__Iterator11B = new FirstPersonCharacter.<enableStamRechargeDelay>c__Iterator11B();
+		<enableStamRechargeDelay>c__Iterator11B.<>f__this = this;
+		return <enableStamRechargeDelay>c__Iterator11B;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator doForceStopRun()
 	{
-		FirstPersonCharacter.<doForceStopRun>c__Iterator119 <doForceStopRun>c__Iterator = new FirstPersonCharacter.<doForceStopRun>c__Iterator119();
-		<doForceStopRun>c__Iterator.<>f__this = this;
-		return <doForceStopRun>c__Iterator;
+		FirstPersonCharacter.<doForceStopRun>c__Iterator11C <doForceStopRun>c__Iterator11C = new FirstPersonCharacter.<doForceStopRun>c__Iterator11C();
+		<doForceStopRun>c__Iterator11C.<>f__this = this;
+		return <doForceStopRun>c__Iterator11C;
 	}
 
 	public void clampVelocity()
@@ -1067,9 +1067,9 @@ public class FirstPersonCharacter : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doClampVelocity()
 	{
-		FirstPersonCharacter.<doClampVelocity>c__Iterator11A <doClampVelocity>c__Iterator11A = new FirstPersonCharacter.<doClampVelocity>c__Iterator11A();
-		<doClampVelocity>c__Iterator11A.<>f__this = this;
-		return <doClampVelocity>c__Iterator11A;
+		FirstPersonCharacter.<doClampVelocity>c__Iterator11D <doClampVelocity>c__Iterator11D = new FirstPersonCharacter.<doClampVelocity>c__Iterator11D();
+		<doClampVelocity>c__Iterator11D.<>f__this = this;
+		return <doClampVelocity>c__Iterator11D;
 	}
 
 	public void setEnemyContact(bool set)
@@ -1087,17 +1087,17 @@ public class FirstPersonCharacter : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator startJumpTimer()
 	{
-		FirstPersonCharacter.<startJumpTimer>c__Iterator11B <startJumpTimer>c__Iterator11B = new FirstPersonCharacter.<startJumpTimer>c__Iterator11B();
-		<startJumpTimer>c__Iterator11B.<>f__this = this;
-		return <startJumpTimer>c__Iterator11B;
+		FirstPersonCharacter.<startJumpTimer>c__Iterator11E <startJumpTimer>c__Iterator11E = new FirstPersonCharacter.<startJumpTimer>c__Iterator11E();
+		<startJumpTimer>c__Iterator11E.<>f__this = this;
+		return <startJumpTimer>c__Iterator11E;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator clampInput()
 	{
-		FirstPersonCharacter.<clampInput>c__Iterator11C <clampInput>c__Iterator11C = new FirstPersonCharacter.<clampInput>c__Iterator11C();
-		<clampInput>c__Iterator11C.<>f__this = this;
-		return <clampInput>c__Iterator11C;
+		FirstPersonCharacter.<clampInput>c__Iterator11F <clampInput>c__Iterator11F = new FirstPersonCharacter.<clampInput>c__Iterator11F();
+		<clampInput>c__Iterator11F.<>f__this = this;
+		return <clampInput>c__Iterator11F;
 	}
 
 	private void resetBlockWaterJump()

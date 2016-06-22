@@ -409,6 +409,10 @@ namespace TheForest.Items.World
 			else if (this._activeFireArrowGO)
 			{
 				this._activeFireArrowGO.transform.parent = Ammo.transform;
+				if (!this._activeFireArrowGO.GetComponent<destroyAfter>())
+				{
+					this._activeFireArrowGO.gameObject.AddComponent<destroyAfter>().destroyTime = 15f;
+				}
 				this._activeFireArrowGO = null;
 			}
 			this.SetActiveArrowBonus((WeaponStatUpgrade.Types)(-1));

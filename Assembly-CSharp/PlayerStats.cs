@@ -1016,9 +1016,9 @@ public class PlayerStats : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator OnDeserialized()
 	{
-		PlayerStats.<OnDeserialized>c__Iterator192 <OnDeserialized>c__Iterator = new PlayerStats.<OnDeserialized>c__Iterator192();
-		<OnDeserialized>c__Iterator.<>f__this = this;
-		return <OnDeserialized>c__Iterator;
+		PlayerStats.<OnDeserialized>c__Iterator19A <OnDeserialized>c__Iterator19A = new PlayerStats.<OnDeserialized>c__Iterator19A();
+		<OnDeserialized>c__Iterator19A.<>f__this = this;
+		return <OnDeserialized>c__Iterator19A;
 	}
 
 	private void Awake()
@@ -1869,11 +1869,11 @@ public class PlayerStats : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator resetCheckItem(Item.EquipmentSlot equipmentSlot)
 	{
-		PlayerStats.<resetCheckItem>c__Iterator193 <resetCheckItem>c__Iterator = new PlayerStats.<resetCheckItem>c__Iterator193();
-		<resetCheckItem>c__Iterator.equipmentSlot = equipmentSlot;
-		<resetCheckItem>c__Iterator.<$>equipmentSlot = equipmentSlot;
-		<resetCheckItem>c__Iterator.<>f__this = this;
-		return <resetCheckItem>c__Iterator;
+		PlayerStats.<resetCheckItem>c__Iterator19B <resetCheckItem>c__Iterator19B = new PlayerStats.<resetCheckItem>c__Iterator19B();
+		<resetCheckItem>c__Iterator19B.equipmentSlot = equipmentSlot;
+		<resetCheckItem>c__Iterator19B.<$>equipmentSlot = equipmentSlot;
+		<resetCheckItem>c__Iterator19B.<>f__this = this;
+		return <resetCheckItem>c__Iterator19B;
 	}
 
 	private void CheckBlood()
@@ -2005,9 +2005,9 @@ public class PlayerStats : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator OnSaveSlotSelectedRoutine()
 	{
-		PlayerStats.<OnSaveSlotSelectedRoutine>c__Iterator194 <OnSaveSlotSelectedRoutine>c__Iterator = new PlayerStats.<OnSaveSlotSelectedRoutine>c__Iterator194();
-		<OnSaveSlotSelectedRoutine>c__Iterator.<>f__this = this;
-		return <OnSaveSlotSelectedRoutine>c__Iterator;
+		PlayerStats.<OnSaveSlotSelectedRoutine>c__Iterator19C <OnSaveSlotSelectedRoutine>c__Iterator19C = new PlayerStats.<OnSaveSlotSelectedRoutine>c__Iterator19C();
+		<OnSaveSlotSelectedRoutine>c__Iterator19C.<>f__this = this;
+		return <OnSaveSlotSelectedRoutine>c__Iterator19C;
 	}
 
 	public void OnSaveSlotSelectionCanceled()
@@ -2035,11 +2035,11 @@ public class PlayerStats : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setupSleepEncounter(GameObject go)
 	{
-		PlayerStats.<setupSleepEncounter>c__Iterator195 <setupSleepEncounter>c__Iterator = new PlayerStats.<setupSleepEncounter>c__Iterator195();
-		<setupSleepEncounter>c__Iterator.go = go;
-		<setupSleepEncounter>c__Iterator.<$>go = go;
-		<setupSleepEncounter>c__Iterator.<>f__this = this;
-		return <setupSleepEncounter>c__Iterator;
+		PlayerStats.<setupSleepEncounter>c__Iterator19D <setupSleepEncounter>c__Iterator19D = new PlayerStats.<setupSleepEncounter>c__Iterator19D();
+		<setupSleepEncounter>c__Iterator19D.go = go;
+		<setupSleepEncounter>c__Iterator19D.<$>go = go;
+		<setupSleepEncounter>c__Iterator19D.<>f__this = this;
+		return <setupSleepEncounter>c__Iterator19D;
 	}
 
 	public void GoToSleepFake()
@@ -2263,9 +2263,9 @@ public class PlayerStats : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator AdrenalineRush()
 	{
-		PlayerStats.<AdrenalineRush>c__Iterator196 <AdrenalineRush>c__Iterator = new PlayerStats.<AdrenalineRush>c__Iterator196();
-		<AdrenalineRush>c__Iterator.<>f__this = this;
-		return <AdrenalineRush>c__Iterator;
+		PlayerStats.<AdrenalineRush>c__Iterator19E <AdrenalineRush>c__Iterator19E = new PlayerStats.<AdrenalineRush>c__Iterator19E();
+		<AdrenalineRush>c__Iterator19E.<>f__this = this;
+		return <AdrenalineRush>c__Iterator19E;
 	}
 
 	private GameObject GetArmorPiece(PlayerStats.ArmorTypes modelType, int index)
@@ -2657,48 +2657,48 @@ public class PlayerStats : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator dragAwayCutScene()
 	{
-		PlayerStats.<dragAwayCutScene>c__Iterator197 <dragAwayCutScene>c__Iterator = new PlayerStats.<dragAwayCutScene>c__Iterator197();
-		<dragAwayCutScene>c__Iterator.<>f__this = this;
-		return <dragAwayCutScene>c__Iterator;
+		PlayerStats.<dragAwayCutScene>c__Iterator19F <dragAwayCutScene>c__Iterator19F = new PlayerStats.<dragAwayCutScene>c__Iterator19F();
+		<dragAwayCutScene>c__Iterator19F.<>f__this = this;
+		return <dragAwayCutScene>c__Iterator19F;
 	}
 
 	[DebuggerHidden]
 	public IEnumerator hangingInCaveCutScene()
 	{
-		PlayerStats.<hangingInCaveCutScene>c__Iterator198 <hangingInCaveCutScene>c__Iterator = new PlayerStats.<hangingInCaveCutScene>c__Iterator198();
-		<hangingInCaveCutScene>c__Iterator.<>f__this = this;
-		return <hangingInCaveCutScene>c__Iterator;
+		PlayerStats.<hangingInCaveCutScene>c__Iterator1A0 <hangingInCaveCutScene>c__Iterator1A = new PlayerStats.<hangingInCaveCutScene>c__Iterator1A0();
+		<hangingInCaveCutScene>c__Iterator1A.<>f__this = this;
+		return <hangingInCaveCutScene>c__Iterator1A;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator releaseFromHanging()
 	{
-		PlayerStats.<releaseFromHanging>c__Iterator199 <releaseFromHanging>c__Iterator = new PlayerStats.<releaseFromHanging>c__Iterator199();
-		<releaseFromHanging>c__Iterator.<>f__this = this;
-		return <releaseFromHanging>c__Iterator;
+		PlayerStats.<releaseFromHanging>c__Iterator1A1 <releaseFromHanging>c__Iterator1A = new PlayerStats.<releaseFromHanging>c__Iterator1A1();
+		<releaseFromHanging>c__Iterator1A.<>f__this = this;
+		return <releaseFromHanging>c__Iterator1A;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator forcePlayerPosToMarker(Transform m)
 	{
-		PlayerStats.<forcePlayerPosToMarker>c__Iterator19A <forcePlayerPosToMarker>c__Iterator19A = new PlayerStats.<forcePlayerPosToMarker>c__Iterator19A();
-		<forcePlayerPosToMarker>c__Iterator19A.<>f__this = this;
-		return <forcePlayerPosToMarker>c__Iterator19A;
+		PlayerStats.<forcePlayerPosToMarker>c__Iterator1A2 <forcePlayerPosToMarker>c__Iterator1A = new PlayerStats.<forcePlayerPosToMarker>c__Iterator1A2();
+		<forcePlayerPosToMarker>c__Iterator1A.<>f__this = this;
+		return <forcePlayerPosToMarker>c__Iterator1A;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator forcePlayerPosToMutant(Transform m)
 	{
-		PlayerStats.<forcePlayerPosToMutant>c__Iterator19B <forcePlayerPosToMutant>c__Iterator19B = new PlayerStats.<forcePlayerPosToMutant>c__Iterator19B();
-		<forcePlayerPosToMutant>c__Iterator19B.m = m;
-		<forcePlayerPosToMutant>c__Iterator19B.<$>m = m;
-		return <forcePlayerPosToMutant>c__Iterator19B;
+		PlayerStats.<forcePlayerPosToMutant>c__Iterator1A3 <forcePlayerPosToMutant>c__Iterator1A = new PlayerStats.<forcePlayerPosToMutant>c__Iterator1A3();
+		<forcePlayerPosToMutant>c__Iterator1A.m = m;
+		<forcePlayerPosToMutant>c__Iterator1A.<$>m = m;
+		return <forcePlayerPosToMutant>c__Iterator1A;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator lockLayersHanging()
 	{
-		return new PlayerStats.<lockLayersHanging>c__Iterator19C();
+		return new PlayerStats.<lockLayersHanging>c__Iterator1A4();
 	}
 
 	public void setupFirstDayConditions()
@@ -2726,13 +2726,13 @@ public class PlayerStats : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator WakeFromKnockOut(bool wasDead, WaitForSeconds timer)
 	{
-		PlayerStats.<WakeFromKnockOut>c__Iterator19D <WakeFromKnockOut>c__Iterator19D = new PlayerStats.<WakeFromKnockOut>c__Iterator19D();
-		<WakeFromKnockOut>c__Iterator19D.timer = timer;
-		<WakeFromKnockOut>c__Iterator19D.wasDead = wasDead;
-		<WakeFromKnockOut>c__Iterator19D.<$>timer = timer;
-		<WakeFromKnockOut>c__Iterator19D.<$>wasDead = wasDead;
-		<WakeFromKnockOut>c__Iterator19D.<>f__this = this;
-		return <WakeFromKnockOut>c__Iterator19D;
+		PlayerStats.<WakeFromKnockOut>c__Iterator1A5 <WakeFromKnockOut>c__Iterator1A = new PlayerStats.<WakeFromKnockOut>c__Iterator1A5();
+		<WakeFromKnockOut>c__Iterator1A.timer = timer;
+		<WakeFromKnockOut>c__Iterator1A.wasDead = wasDead;
+		<WakeFromKnockOut>c__Iterator1A.<$>timer = timer;
+		<WakeFromKnockOut>c__Iterator1A.<$>wasDead = wasDead;
+		<WakeFromKnockOut>c__Iterator1A.<>f__this = this;
+		return <WakeFromKnockOut>c__Iterator1A;
 	}
 
 	public void CheckArmsStart()
@@ -3038,17 +3038,17 @@ public class PlayerStats : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator resetPlayerFromHeal()
 	{
-		PlayerStats.<resetPlayerFromHeal>c__Iterator19E <resetPlayerFromHeal>c__Iterator19E = new PlayerStats.<resetPlayerFromHeal>c__Iterator19E();
-		<resetPlayerFromHeal>c__Iterator19E.<>f__this = this;
-		return <resetPlayerFromHeal>c__Iterator19E;
+		PlayerStats.<resetPlayerFromHeal>c__Iterator1A6 <resetPlayerFromHeal>c__Iterator1A = new PlayerStats.<resetPlayerFromHeal>c__Iterator1A6();
+		<resetPlayerFromHeal>c__Iterator1A.<>f__this = this;
+		return <resetPlayerFromHeal>c__Iterator1A;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator WakeInCave()
 	{
-		PlayerStats.<WakeInCave>c__Iterator19F <WakeInCave>c__Iterator19F = new PlayerStats.<WakeInCave>c__Iterator19F();
-		<WakeInCave>c__Iterator19F.<>f__this = this;
-		return <WakeInCave>c__Iterator19F;
+		PlayerStats.<WakeInCave>c__Iterator1A7 <WakeInCave>c__Iterator1A = new PlayerStats.<WakeInCave>c__Iterator1A7();
+		<WakeInCave>c__Iterator1A.<>f__this = this;
+		return <WakeInCave>c__Iterator1A;
 	}
 
 	private void GameOver()
@@ -3387,7 +3387,7 @@ public class PlayerStats : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator HitFoodRoutine(int damage)
 	{
-		PlayerStats.<HitFoodRoutine>c__Iterator1A0 <HitFoodRoutine>c__Iterator1A = new PlayerStats.<HitFoodRoutine>c__Iterator1A0();
+		PlayerStats.<HitFoodRoutine>c__Iterator1A8 <HitFoodRoutine>c__Iterator1A = new PlayerStats.<HitFoodRoutine>c__Iterator1A8();
 		<HitFoodRoutine>c__Iterator1A.damage = damage;
 		<HitFoodRoutine>c__Iterator1A.<$>damage = damage;
 		<HitFoodRoutine>c__Iterator1A.<>f__this = this;
@@ -3509,7 +3509,7 @@ public class PlayerStats : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator ResetStamina()
 	{
-		PlayerStats.<ResetStamina>c__Iterator1A1 <ResetStamina>c__Iterator1A = new PlayerStats.<ResetStamina>c__Iterator1A1();
+		PlayerStats.<ResetStamina>c__Iterator1A9 <ResetStamina>c__Iterator1A = new PlayerStats.<ResetStamina>c__Iterator1A9();
 		<ResetStamina>c__Iterator1A.<>f__this = this;
 		return <ResetStamina>c__Iterator1A;
 	}

@@ -443,7 +443,7 @@ public class CoopSteamNGUI : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator DelayedInviteReceived(CoopLobbyInfo lobby)
 	{
-		CoopSteamNGUI.<DelayedInviteReceived>c__Iterator28 <DelayedInviteReceived>c__Iterator = new CoopSteamNGUI.<DelayedInviteReceived>c__Iterator28();
+		CoopSteamNGUI.<DelayedInviteReceived>c__Iterator29 <DelayedInviteReceived>c__Iterator = new CoopSteamNGUI.<DelayedInviteReceived>c__Iterator29();
 		<DelayedInviteReceived>c__Iterator.lobby = lobby;
 		<DelayedInviteReceived>c__Iterator.<$>lobby = lobby;
 		<DelayedInviteReceived>c__Iterator.<>f__this = this;

@@ -9,6 +9,7 @@ public class CoopConstruction : CoopBase<IConstructionState>
 	private void Awake()
 	{
 		this._cs = new CachedLocal<Craft_Structure>(base.gameObject);
+		base.enabled = BoltNetwork.isRunning;
 	}
 
 	public override void Attached()
@@ -17,17 +18,26 @@ public class CoopConstruction : CoopBase<IConstructionState>
 		{
 			base.enabled = false;
 		}
-		else if (this._cs.Component)
+		else
 		{
-			this._cs.Component.UpdateNetworkIngredients();
+			if (this._cs.Component)
+			{
+				this._cs.Component.UpdateNetworkIngredients();
+			}
+			base.enabled = (base.state != null);
 		}
 	}
 
-	private void FixedUpdate()
+	private void Update()
 	{
 		if (this.entity && this.entity.isAttached && this._cs.Component)
 		{
 			bool flag = false;
+			if (base.state == null)
+			{
+				base.enabled = false;
+				return;
+			}
 			for (int i = 0; i < this._cs.Component.GetPresentIngredients().Length; i++)
 			{
 				ReceipeIngredient receipeIngredient = this._cs.Component.GetPresentIngredients()[i];

@@ -135,9 +135,9 @@ public class gooseController : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator resetLeader()
 	{
-		gooseController.<resetLeader>c__Iterator5D <resetLeader>c__Iterator5D = new gooseController.<resetLeader>c__Iterator5D();
-		<resetLeader>c__Iterator5D.<>f__this = this;
-		return <resetLeader>c__Iterator5D;
+		gooseController.<resetLeader>c__Iterator5E <resetLeader>c__Iterator5E = new gooseController.<resetLeader>c__Iterator5E();
+		<resetLeader>c__Iterator5E.<>f__this = this;
+		return <resetLeader>c__Iterator5E;
 	}
 
 	private void resetTakeOff()
@@ -160,17 +160,17 @@ public class gooseController : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator spawnGeese()
 	{
-		gooseController.<spawnGeese>c__Iterator5E <spawnGeese>c__Iterator5E = new gooseController.<spawnGeese>c__Iterator5E();
-		<spawnGeese>c__Iterator5E.<>f__this = this;
-		return <spawnGeese>c__Iterator5E;
+		gooseController.<spawnGeese>c__Iterator5F <spawnGeese>c__Iterator5F = new gooseController.<spawnGeese>c__Iterator5F();
+		<spawnGeese>c__Iterator5F.<>f__this = this;
+		return <spawnGeese>c__Iterator5F;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator spawnSingleGoose()
 	{
-		gooseController.<spawnSingleGoose>c__Iterator5F <spawnSingleGoose>c__Iterator5F = new gooseController.<spawnSingleGoose>c__Iterator5F();
-		<spawnSingleGoose>c__Iterator5F.<>f__this = this;
-		return <spawnSingleGoose>c__Iterator5F;
+		gooseController.<spawnSingleGoose>c__Iterator60 <spawnSingleGoose>c__Iterator = new gooseController.<spawnSingleGoose>c__Iterator60();
+		<spawnSingleGoose>c__Iterator.<>f__this = this;
+		return <spawnSingleGoose>c__Iterator;
 	}
 
 	private bool pointOffCamera(Vector3 pos)

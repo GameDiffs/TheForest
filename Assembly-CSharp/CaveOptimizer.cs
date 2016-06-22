@@ -12,9 +12,9 @@ public class CaveOptimizer : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator LoadIn()
 	{
-		CaveOptimizer.<LoadIn>c__Iterator153 <LoadIn>c__Iterator = new CaveOptimizer.<LoadIn>c__Iterator153();
-		<LoadIn>c__Iterator.<>f__this = this;
-		return <LoadIn>c__Iterator;
+		CaveOptimizer.<LoadIn>c__Iterator15B <LoadIn>c__Iterator15B = new CaveOptimizer.<LoadIn>c__Iterator15B();
+		<LoadIn>c__Iterator15B.<>f__this = this;
+		return <LoadIn>c__Iterator15B;
 	}
 
 	private void LoadOut()

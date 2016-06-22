@@ -87,9 +87,9 @@ public class playerHitReactions : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator enableExplodeCamera()
 	{
-		playerHitReactions.<enableExplodeCamera>c__IteratorD8 <enableExplodeCamera>c__IteratorD = new playerHitReactions.<enableExplodeCamera>c__IteratorD8();
-		<enableExplodeCamera>c__IteratorD.<>f__this = this;
-		return <enableExplodeCamera>c__IteratorD;
+		playerHitReactions.<enableExplodeCamera>c__IteratorDB <enableExplodeCamera>c__IteratorDB = new playerHitReactions.<enableExplodeCamera>c__IteratorDB();
+		<enableExplodeCamera>c__IteratorDB.<>f__this = this;
+		return <enableExplodeCamera>c__IteratorDB;
 	}
 
 	public void disableExplodeCamera()
@@ -168,11 +168,11 @@ public class playerHitReactions : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator setControllerSpeed(float speed)
 	{
-		playerHitReactions.<setControllerSpeed>c__IteratorD9 <setControllerSpeed>c__IteratorD = new playerHitReactions.<setControllerSpeed>c__IteratorD9();
-		<setControllerSpeed>c__IteratorD.speed = speed;
-		<setControllerSpeed>c__IteratorD.<$>speed = speed;
-		<setControllerSpeed>c__IteratorD.<>f__this = this;
-		return <setControllerSpeed>c__IteratorD;
+		playerHitReactions.<setControllerSpeed>c__IteratorDC <setControllerSpeed>c__IteratorDC = new playerHitReactions.<setControllerSpeed>c__IteratorDC();
+		<setControllerSpeed>c__IteratorDC.speed = speed;
+		<setControllerSpeed>c__IteratorDC.<$>speed = speed;
+		<setControllerSpeed>c__IteratorDC.<>f__this = this;
+		return <setControllerSpeed>c__IteratorDC;
 	}
 
 	public void disableControllerFreeze()
@@ -187,27 +187,27 @@ public class playerHitReactions : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator enablePushBack(float strength)
 	{
-		playerHitReactions.<enablePushBack>c__IteratorDA <enablePushBack>c__IteratorDA = new playerHitReactions.<enablePushBack>c__IteratorDA();
-		<enablePushBack>c__IteratorDA.<>f__this = this;
-		return <enablePushBack>c__IteratorDA;
+		playerHitReactions.<enablePushBack>c__IteratorDD <enablePushBack>c__IteratorDD = new playerHitReactions.<enablePushBack>c__IteratorDD();
+		<enablePushBack>c__IteratorDD.<>f__this = this;
+		return <enablePushBack>c__IteratorDD;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator enableWeaponImpactState()
 	{
-		return new playerHitReactions.<enableWeaponImpactState>c__IteratorDB();
+		return new playerHitReactions.<enableWeaponImpactState>c__IteratorDE();
 	}
 
 	[DebuggerHidden]
 	private IEnumerator enableTreeImpactState()
 	{
-		return new playerHitReactions.<enableTreeImpactState>c__IteratorDC();
+		return new playerHitReactions.<enableTreeImpactState>c__IteratorDF();
 	}
 
 	[DebuggerHidden]
 	private IEnumerator enableWeaponBreakState()
 	{
-		return new playerHitReactions.<enableWeaponBreakState>c__IteratorDD();
+		return new playerHitReactions.<enableWeaponBreakState>c__IteratorE0();
 	}
 
 	private void setSeatedCam()

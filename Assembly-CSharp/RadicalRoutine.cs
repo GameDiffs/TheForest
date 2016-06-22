@@ -155,13 +155,13 @@ public class RadicalRoutine : IDeserialized
 	[DebuggerHidden]
 	private IEnumerator Execute(IEnumerator extendedCoRoutine, Action complete)
 	{
-		RadicalRoutine.<Execute>c__Iterator1C5 <Execute>c__Iterator1C = new RadicalRoutine.<Execute>c__Iterator1C5();
-		<Execute>c__Iterator1C.extendedCoRoutine = extendedCoRoutine;
-		<Execute>c__Iterator1C.complete = complete;
-		<Execute>c__Iterator1C.<$>extendedCoRoutine = extendedCoRoutine;
-		<Execute>c__Iterator1C.<$>complete = complete;
-		<Execute>c__Iterator1C.<>f__this = this;
-		return <Execute>c__Iterator1C;
+		RadicalRoutine.<Execute>c__Iterator1CD <Execute>c__Iterator1CD = new RadicalRoutine.<Execute>c__Iterator1CD();
+		<Execute>c__Iterator1CD.extendedCoRoutine = extendedCoRoutine;
+		<Execute>c__Iterator1CD.complete = complete;
+		<Execute>c__Iterator1CD.<$>extendedCoRoutine = extendedCoRoutine;
+		<Execute>c__Iterator1CD.<$>complete = complete;
+		<Execute>c__Iterator1CD.<>f__this = this;
+		return <Execute>c__Iterator1CD;
 	}
 
 	public void Deserialized()

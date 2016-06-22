@@ -696,7 +696,7 @@ public class mutantAnimatorControl : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator smoothChangeIdle(float i)
 	{
-		mutantAnimatorControl.<smoothChangeIdle>c__Iterator68 <smoothChangeIdle>c__Iterator = new mutantAnimatorControl.<smoothChangeIdle>c__Iterator68();
+		mutantAnimatorControl.<smoothChangeIdle>c__Iterator69 <smoothChangeIdle>c__Iterator = new mutantAnimatorControl.<smoothChangeIdle>c__Iterator69();
 		<smoothChangeIdle>c__Iterator.i = i;
 		<smoothChangeIdle>c__Iterator.<$>i = i;
 		<smoothChangeIdle>c__Iterator.<>f__this = this;
@@ -706,9 +706,9 @@ public class mutantAnimatorControl : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator fixFootPosition()
 	{
-		mutantAnimatorControl.<fixFootPosition>c__Iterator69 <fixFootPosition>c__Iterator = new mutantAnimatorControl.<fixFootPosition>c__Iterator69();
-		<fixFootPosition>c__Iterator.<>f__this = this;
-		return <fixFootPosition>c__Iterator;
+		mutantAnimatorControl.<fixFootPosition>c__Iterator6A <fixFootPosition>c__Iterator6A = new mutantAnimatorControl.<fixFootPosition>c__Iterator6A();
+		<fixFootPosition>c__Iterator6A.<>f__this = this;
+		return <fixFootPosition>c__Iterator6A;
 	}
 
 	private void disableFixFootPosition()
@@ -804,10 +804,7 @@ public class mutantAnimatorControl : MonoBehaviour
 		this.ai.forceTreeDown();
 		this.setup.familyFunctions.resetFamilyParams();
 		this.setup.familyFunctions.sendAggressive();
-		if (this.setup.pmCombat.FsmVariables.GetFsmGameObject("currentMemberGo").Value)
-		{
-			this.setup.worldSearch.StartCoroutine(this.setup.worldSearch.stopFeedingEffect(this.setup.pmCombat.FsmVariables.GetFsmGameObject("currentMemberGo").Value));
-		}
+		GameObject value = this.setup.pmCombat.FsmVariables.GetFsmGameObject("currentMemberGo").Value;
 		this.setup.health.getCurrentHealth();
 	}
 }

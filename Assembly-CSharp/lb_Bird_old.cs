@@ -161,11 +161,11 @@ public class lb_Bird_old : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator FlyToTarget(Vector3 target)
 	{
-		lb_Bird_old.<FlyToTarget>c__Iterator214 <FlyToTarget>c__Iterator = new lb_Bird_old.<FlyToTarget>c__Iterator214();
-		<FlyToTarget>c__Iterator.target = target;
-		<FlyToTarget>c__Iterator.<$>target = target;
-		<FlyToTarget>c__Iterator.<>f__this = this;
-		return <FlyToTarget>c__Iterator;
+		lb_Bird_old.<FlyToTarget>c__Iterator21C <FlyToTarget>c__Iterator21C = new lb_Bird_old.<FlyToTarget>c__Iterator21C();
+		<FlyToTarget>c__Iterator21C.target = target;
+		<FlyToTarget>c__Iterator21C.<$>target = target;
+		<FlyToTarget>c__Iterator21C.<>f__this = this;
+		return <FlyToTarget>c__Iterator21C;
 	}
 
 	private float FindBankingAngle(Vector3 birdForward, Vector3 dirToTarget)

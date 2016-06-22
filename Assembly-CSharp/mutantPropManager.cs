@@ -618,11 +618,11 @@ public class mutantPropManager : EntityBehaviour
 	[DebuggerHidden]
 	public IEnumerator setupFeedingProps(int n)
 	{
-		mutantPropManager.<setupFeedingProps>c__Iterator7F <setupFeedingProps>c__Iterator7F = new mutantPropManager.<setupFeedingProps>c__Iterator7F();
-		<setupFeedingProps>c__Iterator7F.n = n;
-		<setupFeedingProps>c__Iterator7F.<$>n = n;
-		<setupFeedingProps>c__Iterator7F.<>f__this = this;
-		return <setupFeedingProps>c__Iterator7F;
+		mutantPropManager.<setupFeedingProps>c__Iterator80 <setupFeedingProps>c__Iterator = new mutantPropManager.<setupFeedingProps>c__Iterator80();
+		<setupFeedingProps>c__Iterator.n = n;
+		<setupFeedingProps>c__Iterator.<$>n = n;
+		<setupFeedingProps>c__Iterator.<>f__this = this;
+		return <setupFeedingProps>c__Iterator;
 	}
 
 	private void dropHeldMeat()

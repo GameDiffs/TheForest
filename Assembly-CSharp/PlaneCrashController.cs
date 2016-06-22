@@ -30,9 +30,9 @@ public class PlaneCrashController : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator InitPlaneCrashSequence()
 	{
-		PlaneCrashController.<InitPlaneCrashSequence>c__Iterator17A <InitPlaneCrashSequence>c__Iterator17A = new PlaneCrashController.<InitPlaneCrashSequence>c__Iterator17A();
-		<InitPlaneCrashSequence>c__Iterator17A.<>f__this = this;
-		return <InitPlaneCrashSequence>c__Iterator17A;
+		PlaneCrashController.<InitPlaneCrashSequence>c__Iterator182 <InitPlaneCrashSequence>c__Iterator = new PlaneCrashController.<InitPlaneCrashSequence>c__Iterator182();
+		<InitPlaneCrashSequence>c__Iterator.<>f__this = this;
+		return <InitPlaneCrashSequence>c__Iterator;
 	}
 
 	private void OnDeserialized()

@@ -359,8 +359,8 @@ public class UIDragDropItem : MonoBehaviour
 	[DebuggerHidden]
 	protected IEnumerator EnableDragScrollView()
 	{
-		UIDragDropItem.<EnableDragScrollView>c__Iterator109 <EnableDragScrollView>c__Iterator = new UIDragDropItem.<EnableDragScrollView>c__Iterator109();
-		<EnableDragScrollView>c__Iterator.<>f__this = this;
-		return <EnableDragScrollView>c__Iterator;
+		UIDragDropItem.<EnableDragScrollView>c__Iterator10C <EnableDragScrollView>c__Iterator10C = new UIDragDropItem.<EnableDragScrollView>c__Iterator10C();
+		<EnableDragScrollView>c__Iterator10C.<>f__this = this;
+		return <EnableDragScrollView>c__Iterator10C;
 	}
 }

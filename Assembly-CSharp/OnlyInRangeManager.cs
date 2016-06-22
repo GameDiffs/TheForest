@@ -157,7 +157,7 @@ public class OnlyInRangeManager : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator HideItem(OnlyInRangeManager.InRange item)
 	{
-		OnlyInRangeManager.<HideItem>c__Iterator1D0 <HideItem>c__Iterator1D = new OnlyInRangeManager.<HideItem>c__Iterator1D0();
+		OnlyInRangeManager.<HideItem>c__Iterator1D8 <HideItem>c__Iterator1D = new OnlyInRangeManager.<HideItem>c__Iterator1D8();
 		<HideItem>c__Iterator1D.item = item;
 		<HideItem>c__Iterator1D.<$>item = item;
 		return <HideItem>c__Iterator1D;
@@ -166,7 +166,7 @@ public class OnlyInRangeManager : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator ViewItem(OnlyInRangeManager.InRange item)
 	{
-		OnlyInRangeManager.<ViewItem>c__Iterator1D1 <ViewItem>c__Iterator1D = new OnlyInRangeManager.<ViewItem>c__Iterator1D1();
+		OnlyInRangeManager.<ViewItem>c__Iterator1D9 <ViewItem>c__Iterator1D = new OnlyInRangeManager.<ViewItem>c__Iterator1D9();
 		<ViewItem>c__Iterator1D.item = item;
 		<ViewItem>c__Iterator1D.<$>item = item;
 		return <ViewItem>c__Iterator1D;

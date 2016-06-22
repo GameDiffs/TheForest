@@ -196,9 +196,9 @@ public class SteamVR_LoadLevel : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator LoadLevel()
 	{
-		SteamVR_LoadLevel.<LoadLevel>c__Iterator1D5 <LoadLevel>c__Iterator1D = new SteamVR_LoadLevel.<LoadLevel>c__Iterator1D5();
-		<LoadLevel>c__Iterator1D.<>f__this = this;
-		return <LoadLevel>c__Iterator1D;
+		SteamVR_LoadLevel.<LoadLevel>c__Iterator1DD <LoadLevel>c__Iterator1DD = new SteamVR_LoadLevel.<LoadLevel>c__Iterator1DD();
+		<LoadLevel>c__Iterator1DD.<>f__this = this;
+		return <LoadLevel>c__Iterator1DD;
 	}
 
 	private ulong GetOverlayHandle(string overlayName, Transform transform, float widthInMeters = 1f)

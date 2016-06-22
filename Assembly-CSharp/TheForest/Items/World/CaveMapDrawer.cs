@@ -136,7 +136,7 @@ namespace TheForest.Items.World
 		[DebuggerHidden]
 		private IEnumerator OnDeserialized()
 		{
-			CaveMapDrawer.<OnDeserialized>c__Iterator170 <OnDeserialized>c__Iterator = new CaveMapDrawer.<OnDeserialized>c__Iterator170();
+			CaveMapDrawer.<OnDeserialized>c__Iterator178 <OnDeserialized>c__Iterator = new CaveMapDrawer.<OnDeserialized>c__Iterator178();
 			<OnDeserialized>c__Iterator.<>f__this = this;
 			return <OnDeserialized>c__Iterator;
 		}
@@ -256,7 +256,7 @@ namespace TheForest.Items.World
 		[DebuggerHidden]
 		private IEnumerator RevealMapRoutine(int index)
 		{
-			CaveMapDrawer.<RevealMapRoutine>c__Iterator171 <RevealMapRoutine>c__Iterator = new CaveMapDrawer.<RevealMapRoutine>c__Iterator171();
+			CaveMapDrawer.<RevealMapRoutine>c__Iterator179 <RevealMapRoutine>c__Iterator = new CaveMapDrawer.<RevealMapRoutine>c__Iterator179();
 			<RevealMapRoutine>c__Iterator.index = index;
 			<RevealMapRoutine>c__Iterator.<$>index = index;
 			<RevealMapRoutine>c__Iterator.<>f__this = this;
@@ -303,11 +303,11 @@ namespace TheForest.Items.World
 		[DebuggerHidden]
 		private IEnumerator PlayerPositionPinAnim(Vector3 targetPos)
 		{
-			CaveMapDrawer.<PlayerPositionPinAnim>c__Iterator172 <PlayerPositionPinAnim>c__Iterator = new CaveMapDrawer.<PlayerPositionPinAnim>c__Iterator172();
-			<PlayerPositionPinAnim>c__Iterator.targetPos = targetPos;
-			<PlayerPositionPinAnim>c__Iterator.<$>targetPos = targetPos;
-			<PlayerPositionPinAnim>c__Iterator.<>f__this = this;
-			return <PlayerPositionPinAnim>c__Iterator;
+			CaveMapDrawer.<PlayerPositionPinAnim>c__Iterator17A <PlayerPositionPinAnim>c__Iterator17A = new CaveMapDrawer.<PlayerPositionPinAnim>c__Iterator17A();
+			<PlayerPositionPinAnim>c__Iterator17A.targetPos = targetPos;
+			<PlayerPositionPinAnim>c__Iterator17A.<$>targetPos = targetPos;
+			<PlayerPositionPinAnim>c__Iterator17A.<>f__this = this;
+			return <PlayerPositionPinAnim>c__Iterator17A;
 		}
 	}
 }

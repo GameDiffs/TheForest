@@ -12,8 +12,8 @@ public class SetSaveGame : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		SetSaveGame.<Start>c__Iterator1A9 <Start>c__Iterator1A = new SetSaveGame.<Start>c__Iterator1A9();
-		<Start>c__Iterator1A.<>f__this = this;
-		return <Start>c__Iterator1A;
+		SetSaveGame.<Start>c__Iterator1B1 <Start>c__Iterator1B = new SetSaveGame.<Start>c__Iterator1B1();
+		<Start>c__Iterator1B.<>f__this = this;
+		return <Start>c__Iterator1B;
 	}
 }

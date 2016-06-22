@@ -352,9 +352,9 @@ public class lb_BirdController : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator UpdateTargets()
 	{
-		lb_BirdController.<UpdateTargets>c__Iterator213 <UpdateTargets>c__Iterator = new lb_BirdController.<UpdateTargets>c__Iterator213();
-		<UpdateTargets>c__Iterator.<>f__this = this;
-		return <UpdateTargets>c__Iterator;
+		lb_BirdController.<UpdateTargets>c__Iterator21B <UpdateTargets>c__Iterator21B = new lb_BirdController.<UpdateTargets>c__Iterator21B();
+		<UpdateTargets>c__Iterator21B.<>f__this = this;
+		return <UpdateTargets>c__Iterator21B;
 	}
 
 	private bool BirdOffCamera(Vector3 birdPos)

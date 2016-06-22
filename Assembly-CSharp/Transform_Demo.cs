@@ -35,16 +35,16 @@ public class Transform_Demo : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator RotateTarget()
 	{
-		Transform_Demo.<RotateTarget>c__Iterator204 <RotateTarget>c__Iterator = new Transform_Demo.<RotateTarget>c__Iterator204();
-		<RotateTarget>c__Iterator.<>f__this = this;
-		return <RotateTarget>c__Iterator;
+		Transform_Demo.<RotateTarget>c__Iterator20C <RotateTarget>c__Iterator20C = new Transform_Demo.<RotateTarget>c__Iterator20C();
+		<RotateTarget>c__Iterator20C.<>f__this = this;
+		return <RotateTarget>c__Iterator20C;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator MoveTarget()
 	{
-		Transform_Demo.<MoveTarget>c__Iterator205 <MoveTarget>c__Iterator = new Transform_Demo.<MoveTarget>c__Iterator205();
-		<MoveTarget>c__Iterator.<>f__this = this;
-		return <MoveTarget>c__Iterator;
+		Transform_Demo.<MoveTarget>c__Iterator20D <MoveTarget>c__Iterator20D = new Transform_Demo.<MoveTarget>c__Iterator20D();
+		<MoveTarget>c__Iterator20D.<>f__this = this;
+		return <MoveTarget>c__Iterator20D;
 	}
 }

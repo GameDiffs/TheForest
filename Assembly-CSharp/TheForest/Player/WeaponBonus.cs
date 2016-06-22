@@ -66,7 +66,7 @@ namespace TheForest.Player
 
 		private void OnTriggerEnter(Collider otherObject)
 		{
-			if (this._owner && this._owner != otherObject.transform.root)
+			if (this._owner && this._owner != otherObject.transform.root && base.transform.root != otherObject.transform.root)
 			{
 				if (BoltNetwork.isRunning)
 				{

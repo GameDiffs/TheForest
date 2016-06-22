@@ -32,30 +32,26 @@ namespace TheForest.Buildings.World
 		}
 
 		[DebuggerHidden]
-		public IEnumerator OnExplode(Explode explode)
+		public IEnumerator OnExplode(Explode.Data explodeData)
 		{
-			BuildingExplosion.<OnExplode>c__Iterator143 <OnExplode>c__Iterator = new BuildingExplosion.<OnExplode>c__Iterator143();
-			<OnExplode>c__Iterator.explode = explode;
-			<OnExplode>c__Iterator.<$>explode = explode;
-			<OnExplode>c__Iterator.<>f__this = this;
-			return <OnExplode>c__Iterator;
+			BuildingExplosion.<OnExplode>c__Iterator14A <OnExplode>c__Iterator14A = new BuildingExplosion.<OnExplode>c__Iterator14A();
+			<OnExplode>c__Iterator14A.explodeData = explodeData;
+			<OnExplode>c__Iterator14A.<$>explodeData = explodeData;
+			<OnExplode>c__Iterator14A.<>f__this = this;
+			return <OnExplode>c__Iterator14A;
 		}
 
-		public void OnExplodeFoundationTier(Explode explode, FoundationChunkTier tier)
+		public void OnExplodeFoundationTier(Explode.Data explodeData, FoundationChunkTier tier)
 		{
 			FoundationHealth component = base.GetComponent<FoundationHealth>();
 			if (component)
 			{
-				float num = Vector3.Distance(tier.transform.position, explode.transform.position);
-				if (num < explode.radius)
+				component.LocalizedTierHit(new LocalizedHitData
 				{
-					component.LocalizedTierHit(new LocalizedHitData
-					{
-						_damage = explode.damage * this.GetDamageRatio(num, explode.radius),
-						_position = explode.transform.position,
-						_distortRatio = 2.5f
-					}, tier);
-				}
+					_damage = explodeData.explode.damage * this.GetDamageRatio(explodeData.distance, explodeData.explode.radius),
+					_position = explodeData.explode.transform.position,
+					_distortRatio = 2.5f
+				}, tier);
 			}
 		}
 

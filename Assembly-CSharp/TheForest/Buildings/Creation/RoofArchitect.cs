@@ -205,11 +205,11 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake(bool isDeserializing)
 		{
-			RoofArchitect.<DelayedAwake>c__Iterator138 <DelayedAwake>c__Iterator = new RoofArchitect.<DelayedAwake>c__Iterator138();
-			<DelayedAwake>c__Iterator.isDeserializing = isDeserializing;
-			<DelayedAwake>c__Iterator.<$>isDeserializing = isDeserializing;
-			<DelayedAwake>c__Iterator.<>f__this = this;
-			return <DelayedAwake>c__Iterator;
+			RoofArchitect.<DelayedAwake>c__Iterator13F <DelayedAwake>c__Iterator13F = new RoofArchitect.<DelayedAwake>c__Iterator13F();
+			<DelayedAwake>c__Iterator13F.isDeserializing = isDeserializing;
+			<DelayedAwake>c__Iterator13F.<$>isDeserializing = isDeserializing;
+			<DelayedAwake>c__Iterator13F.<>f__this = this;
+			return <DelayedAwake>c__Iterator13F;
 		}
 
 		private void Update()
@@ -382,15 +382,16 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator OnPlaced()
 		{
-			RoofArchitect.<OnPlaced>c__Iterator139 <OnPlaced>c__Iterator = new RoofArchitect.<OnPlaced>c__Iterator139();
+			RoofArchitect.<OnPlaced>c__Iterator140 <OnPlaced>c__Iterator = new RoofArchitect.<OnPlaced>c__Iterator140();
 			<OnPlaced>c__Iterator.<>f__this = this;
 			return <OnPlaced>c__Iterator;
 		}
 
-		private void OnBuilt(GameObject built)
+		public void OnBuilt(GameObject built)
 		{
 			RoofArchitect component = built.GetComponent<RoofArchitect>();
 			component._multiPointsPositions = this._multiPointsPositions;
+			component._holes = this._holes;
 			component._roofHeight = this._roofHeight;
 			component._wasBuilt = true;
 			component.OnSerializing();

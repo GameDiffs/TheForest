@@ -55,9 +55,9 @@ namespace Rewired.Demos
 		[DebuggerHidden]
 		private IEnumerator SelectDefaultDeferred()
 		{
-			ControlMapperDemoMessage.<SelectDefaultDeferred>c__Iterator10D <SelectDefaultDeferred>c__Iterator10D = new ControlMapperDemoMessage.<SelectDefaultDeferred>c__Iterator10D();
-			<SelectDefaultDeferred>c__Iterator10D.<>f__this = this;
-			return <SelectDefaultDeferred>c__Iterator10D;
+			ControlMapperDemoMessage.<SelectDefaultDeferred>c__Iterator110 <SelectDefaultDeferred>c__Iterator = new ControlMapperDemoMessage.<SelectDefaultDeferred>c__Iterator110();
+			<SelectDefaultDeferred>c__Iterator.<>f__this = this;
+			return <SelectDefaultDeferred>c__Iterator;
 		}
 	}
 }

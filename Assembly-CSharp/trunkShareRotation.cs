@@ -44,7 +44,7 @@ public class trunkShareRotation : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doFollowJ1()
 	{
-		trunkShareRotation.<doFollowJ1>c__Iterator100 <doFollowJ1>c__Iterator = new trunkShareRotation.<doFollowJ1>c__Iterator100();
+		trunkShareRotation.<doFollowJ1>c__Iterator103 <doFollowJ1>c__Iterator = new trunkShareRotation.<doFollowJ1>c__Iterator103();
 		<doFollowJ1>c__Iterator.<>f__this = this;
 		return <doFollowJ1>c__Iterator;
 	}
@@ -52,7 +52,7 @@ public class trunkShareRotation : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doFollowJ2()
 	{
-		trunkShareRotation.<doFollowJ2>c__Iterator101 <doFollowJ2>c__Iterator = new trunkShareRotation.<doFollowJ2>c__Iterator101();
+		trunkShareRotation.<doFollowJ2>c__Iterator104 <doFollowJ2>c__Iterator = new trunkShareRotation.<doFollowJ2>c__Iterator104();
 		<doFollowJ2>c__Iterator.<>f__this = this;
 		return <doFollowJ2>c__Iterator;
 	}

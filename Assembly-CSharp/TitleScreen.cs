@@ -92,6 +92,17 @@ public class TitleScreen : MonoBehaviour
 		TheForest.Utils.Input.UnLockMouse();
 	}
 
+	private void Update()
+	{
+		Application.targetFrameRate = 60;
+	}
+
+	private void OnDestroy()
+	{
+		Application.targetFrameRate = PlayerPreferences.MaxFrameRate;
+		base.enabled = false;
+	}
+
 	public void BreadCrumbLevel0()
 	{
 		this.BreadcumbLabel.enabled = false;

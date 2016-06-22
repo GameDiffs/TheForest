@@ -611,9 +611,9 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator DelayedDestroy()
 		{
-			Craft_Structure.<DelayedDestroy>c__Iterator12E <DelayedDestroy>c__Iterator12E = new Craft_Structure.<DelayedDestroy>c__Iterator12E();
-			<DelayedDestroy>c__Iterator12E.<>f__this = this;
-			return <DelayedDestroy>c__Iterator12E;
+			Craft_Structure.<DelayedDestroy>c__Iterator131 <DelayedDestroy>c__Iterator = new Craft_Structure.<DelayedDestroy>c__Iterator131();
+			<DelayedDestroy>c__Iterator.<>f__this = this;
+			return <DelayedDestroy>c__Iterator;
 		}
 	}
 }

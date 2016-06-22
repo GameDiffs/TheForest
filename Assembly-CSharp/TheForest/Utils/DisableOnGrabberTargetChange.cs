@@ -14,7 +14,7 @@ namespace TheForest.Utils
 
 		private void Update()
 		{
-			if (this._target != Grabber.FocusedItemGO || !Grabber.FocusedItemGO)
+			if (this._target != Grabber.FocusedItemGO || !this._target || !Grabber.FocusedItemGO)
 			{
 				base.gameObject.SetActive(false);
 			}

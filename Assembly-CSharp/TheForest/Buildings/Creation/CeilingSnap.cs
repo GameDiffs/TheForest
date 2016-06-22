@@ -17,9 +17,9 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator Start()
 		{
-			CeilingSnap.<Start>c__Iterator12D <Start>c__Iterator12D = new CeilingSnap.<Start>c__Iterator12D();
-			<Start>c__Iterator12D.<>f__this = this;
-			return <Start>c__Iterator12D;
+			CeilingSnap.<Start>c__Iterator130 <Start>c__Iterator = new CeilingSnap.<Start>c__Iterator130();
+			<Start>c__Iterator.<>f__this = this;
+			return <Start>c__Iterator;
 		}
 
 		private void Update()

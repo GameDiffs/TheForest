@@ -1,4 +1,5 @@
 using System;
+using TheForest.Utils;
 using UnityEngine;
 
 public class LOD_SimpleToggle : MonoBehaviour
@@ -10,17 +11,14 @@ public class LOD_SimpleToggle : MonoBehaviour
 	[Range(1f, 1000f)]
 	public float VisibleDistance = 75f;
 
-	private int wsToken;
+	public bool MpCheckAllPlayers;
+
+	private int wsToken = -1;
 
 	private bool currentVisibility = true;
 
-	private void Awake()
-	{
-	}
-
 	private void Start()
 	{
-		this.wsToken = WorkScheduler.Register(new WorkScheduler.Task(this.RefreshVisibilityWork), base.transform.position, false);
 		this.RefreshVisibility(true);
 	}
 
@@ -37,7 +35,19 @@ public class LOD_SimpleToggle : MonoBehaviour
 
 	private void OnEnable()
 	{
-		this.RefreshVisibility(true);
+		if (this.wsToken == -1)
+		{
+			this.wsToken = WorkScheduler.Register(new WorkScheduler.Task(this.RefreshVisibilityWork), base.transform.position, false);
+		}
+	}
+
+	private void OnDisable()
+	{
+		if (this.wsToken > -1)
+		{
+			WorkScheduler.Unregister(new WorkScheduler.Task(this.RefreshVisibilityWork), this.wsToken);
+			this.wsToken = -1;
+		}
 	}
 
 	private void RefreshVisibilityWork()
@@ -50,10 +60,18 @@ public class LOD_SimpleToggle : MonoBehaviour
 
 	private void RefreshVisibility(bool force)
 	{
-		Vector3 position = base.transform.position;
-		position.y = PlayerCamLocation.PlayerLoc.y;
-		float sqrMagnitude = (position - PlayerCamLocation.PlayerLoc).sqrMagnitude;
-		bool flag = sqrMagnitude < this.VisibleDistance * this.VisibleDistance;
+		bool flag;
+		if (this.MpCheckAllPlayers)
+		{
+			flag = (Scene.SceneTracker.GetClosestPlayerDistanceFromPos(base.transform.position) < this.VisibleDistance);
+		}
+		else
+		{
+			Vector3 position = base.transform.position;
+			position.y = PlayerCamLocation.PlayerLoc.y;
+			float sqrMagnitude = (position - PlayerCamLocation.PlayerLoc).sqrMagnitude;
+			flag = (sqrMagnitude < this.VisibleDistance * this.VisibleDistance);
+		}
 		if (flag != this.currentVisibility || force)
 		{
 			for (int i = 0; i < this.Renderers.Length; i++)
@@ -113,6 +131,14 @@ public class LOD_SimpleToggle : MonoBehaviour
 										if (light)
 										{
 											light.enabled = flag;
+										}
+										else
+										{
+											Rigidbody rigidbody = component as Rigidbody;
+											if (rigidbody)
+											{
+												rigidbody.isKinematic = !flag;
+											}
 										}
 									}
 								}

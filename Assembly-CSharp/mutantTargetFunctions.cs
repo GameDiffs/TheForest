@@ -137,36 +137,36 @@ public class mutantTargetFunctions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator sendPlayerNoise()
 	{
-		mutantTargetFunctions.<sendPlayerNoise>c__IteratorA7 <sendPlayerNoise>c__IteratorA = new mutantTargetFunctions.<sendPlayerNoise>c__IteratorA7();
-		<sendPlayerNoise>c__IteratorA.<>f__this = this;
-		return <sendPlayerNoise>c__IteratorA;
+		mutantTargetFunctions.<sendPlayerNoise>c__IteratorAA <sendPlayerNoise>c__IteratorAA = new mutantTargetFunctions.<sendPlayerNoise>c__IteratorAA();
+		<sendPlayerNoise>c__IteratorAA.<>f__this = this;
+		return <sendPlayerNoise>c__IteratorAA;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator returnObjectAngle(Vector3 pos)
 	{
-		mutantTargetFunctions.<returnObjectAngle>c__IteratorA8 <returnObjectAngle>c__IteratorA = new mutantTargetFunctions.<returnObjectAngle>c__IteratorA8();
-		<returnObjectAngle>c__IteratorA.pos = pos;
-		<returnObjectAngle>c__IteratorA.<$>pos = pos;
-		<returnObjectAngle>c__IteratorA.<>f__this = this;
-		return <returnObjectAngle>c__IteratorA;
+		mutantTargetFunctions.<returnObjectAngle>c__IteratorAB <returnObjectAngle>c__IteratorAB = new mutantTargetFunctions.<returnObjectAngle>c__IteratorAB();
+		<returnObjectAngle>c__IteratorAB.pos = pos;
+		<returnObjectAngle>c__IteratorAB.<$>pos = pos;
+		<returnObjectAngle>c__IteratorAB.<>f__this = this;
+		return <returnObjectAngle>c__IteratorAB;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator returnTargetObjectAngle(GameObject go)
 	{
-		mutantTargetFunctions.<returnTargetObjectAngle>c__IteratorA9 <returnTargetObjectAngle>c__IteratorA = new mutantTargetFunctions.<returnTargetObjectAngle>c__IteratorA9();
-		<returnTargetObjectAngle>c__IteratorA.go = go;
-		<returnTargetObjectAngle>c__IteratorA.<$>go = go;
-		<returnTargetObjectAngle>c__IteratorA.<>f__this = this;
-		return <returnTargetObjectAngle>c__IteratorA;
+		mutantTargetFunctions.<returnTargetObjectAngle>c__IteratorAC <returnTargetObjectAngle>c__IteratorAC = new mutantTargetFunctions.<returnTargetObjectAngle>c__IteratorAC();
+		<returnTargetObjectAngle>c__IteratorAC.go = go;
+		<returnTargetObjectAngle>c__IteratorAC.<$>go = go;
+		<returnTargetObjectAngle>c__IteratorAC.<>f__this = this;
+		return <returnTargetObjectAngle>c__IteratorAC;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator getTargetRunningAway()
 	{
-		mutantTargetFunctions.<getTargetRunningAway>c__IteratorAA <getTargetRunningAway>c__IteratorAA = new mutantTargetFunctions.<getTargetRunningAway>c__IteratorAA();
-		<getTargetRunningAway>c__IteratorAA.<>f__this = this;
-		return <getTargetRunningAway>c__IteratorAA;
+		mutantTargetFunctions.<getTargetRunningAway>c__IteratorAD <getTargetRunningAway>c__IteratorAD = new mutantTargetFunctions.<getTargetRunningAway>c__IteratorAD();
+		<getTargetRunningAway>c__IteratorAD.<>f__this = this;
+		return <getTargetRunningAway>c__IteratorAD;
 	}
 }

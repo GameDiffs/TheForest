@@ -278,9 +278,9 @@ namespace TheForest.Utils
 		[DebuggerHidden]
 		private IEnumerator OldSaveCompat()
 		{
-			LocalPlayer.<OldSaveCompat>c__Iterator1B7 <OldSaveCompat>c__Iterator1B = new LocalPlayer.<OldSaveCompat>c__Iterator1B7();
-			<OldSaveCompat>c__Iterator1B.<>f__this = this;
-			return <OldSaveCompat>c__Iterator1B;
+			LocalPlayer.<OldSaveCompat>c__Iterator1BF <OldSaveCompat>c__Iterator1BF = new LocalPlayer.<OldSaveCompat>c__Iterator1BF();
+			<OldSaveCompat>c__Iterator1BF.<>f__this = this;
+			return <OldSaveCompat>c__Iterator1BF;
 		}
 	}
 }

@@ -64,9 +64,9 @@ namespace TheForest.Player
 		[DebuggerHidden]
 		private IEnumerator ToggleManifest()
 		{
-			PassengerManifest.<ToggleManifest>c__Iterator17D <ToggleManifest>c__Iterator17D = new PassengerManifest.<ToggleManifest>c__Iterator17D();
-			<ToggleManifest>c__Iterator17D.<>f__this = this;
-			return <ToggleManifest>c__Iterator17D;
+			PassengerManifest.<ToggleManifest>c__Iterator185 <ToggleManifest>c__Iterator = new PassengerManifest.<ToggleManifest>c__Iterator185();
+			<ToggleManifest>c__Iterator.<>f__this = this;
+			return <ToggleManifest>c__Iterator;
 		}
 	}
 }

@@ -41,7 +41,7 @@ public class soundDetect : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setupSoundEvent()
 	{
-		soundDetect.<setupSoundEvent>c__IteratorF6 <setupSoundEvent>c__IteratorF = new soundDetect.<setupSoundEvent>c__IteratorF6();
+		soundDetect.<setupSoundEvent>c__IteratorF9 <setupSoundEvent>c__IteratorF = new soundDetect.<setupSoundEvent>c__IteratorF9();
 		<setupSoundEvent>c__IteratorF.<>f__this = this;
 		return <setupSoundEvent>c__IteratorF;
 	}

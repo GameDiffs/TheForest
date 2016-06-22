@@ -16,9 +16,9 @@ public class ExplosionFireAndDebris : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		ExplosionFireAndDebris.<Start>c__Iterator11D <Start>c__Iterator11D = new ExplosionFireAndDebris.<Start>c__Iterator11D();
-		<Start>c__Iterator11D.<>f__this = this;
-		return <Start>c__Iterator11D;
+		ExplosionFireAndDebris.<Start>c__Iterator120 <Start>c__Iterator = new ExplosionFireAndDebris.<Start>c__Iterator120();
+		<Start>c__Iterator.<>f__this = this;
+		return <Start>c__Iterator;
 	}
 
 	private void AddFire(Transform t, Vector3 pos, Vector3 normal)

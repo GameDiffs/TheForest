@@ -65,11 +65,11 @@ namespace TheForest.World
 		[DebuggerHidden]
 		private IEnumerator Goto(Vector3 targetPos)
 		{
-			ElevatorSystem.<Goto>c__Iterator1BE <Goto>c__Iterator1BE = new ElevatorSystem.<Goto>c__Iterator1BE();
-			<Goto>c__Iterator1BE.targetPos = targetPos;
-			<Goto>c__Iterator1BE.<$>targetPos = targetPos;
-			<Goto>c__Iterator1BE.<>f__this = this;
-			return <Goto>c__Iterator1BE;
+			ElevatorSystem.<Goto>c__Iterator1C6 <Goto>c__Iterator1C = new ElevatorSystem.<Goto>c__Iterator1C6();
+			<Goto>c__Iterator1C.targetPos = targetPos;
+			<Goto>c__Iterator1C.<$>targetPos = targetPos;
+			<Goto>c__Iterator1C.<>f__this = this;
+			return <Goto>c__Iterator1C;
 		}
 	}
 }

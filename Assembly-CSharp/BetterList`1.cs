@@ -27,9 +27,9 @@ public class BetterList<T>
 	[DebuggerHidden, DebuggerHidden, DebuggerStepThrough]
 	public IEnumerator<T> GetEnumerator()
 	{
-		BetterList<T>.<GetEnumerator>c__Iterator10C <GetEnumerator>c__Iterator10C = new BetterList<T>.<GetEnumerator>c__Iterator10C();
-		<GetEnumerator>c__Iterator10C.<>f__this = this;
-		return <GetEnumerator>c__Iterator10C;
+		BetterList<T>.<GetEnumerator>c__Iterator10F <GetEnumerator>c__Iterator10F = new BetterList<T>.<GetEnumerator>c__Iterator10F();
+		<GetEnumerator>c__Iterator10F.<>f__this = this;
+		return <GetEnumerator>c__Iterator10F;
 	}
 
 	private void AllocateMore()

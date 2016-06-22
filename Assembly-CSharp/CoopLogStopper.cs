@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Diagnostics;
+using TheForest.World;
 using UnityEngine;
 
 public class CoopLogStopper : MonoBehaviour
@@ -9,7 +10,7 @@ public class CoopLogStopper : MonoBehaviour
 	private Rigidbody rb;
 
 	[SerializeField]
-	private Collider rbCollider;
+	private CapsuleCollider rbCollider;
 
 	private bool stopping;
 
@@ -17,8 +18,12 @@ public class CoopLogStopper : MonoBehaviour
 	{
 		if (BoltNetwork.isClient)
 		{
-			UnityEngine.Object.Destroy(this.rb);
-			UnityEngine.Object.Destroy(this.rbCollider);
+			this.rb.isKinematic = true;
+			this.rb.useGravity = false;
+			this.rbCollider.radius = 0.35f;
+			this.rbCollider.height = 4.5f;
+			UnityEngine.Object.Destroy(base.GetComponent<Buoyancy>());
+			UnityEngine.Object.Destroy(base.GetComponent<EnableInWaterProxy>());
 		}
 		else
 		{

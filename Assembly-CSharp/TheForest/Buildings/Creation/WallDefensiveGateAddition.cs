@@ -132,7 +132,7 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator DelayedCancelGhost()
 		{
-			WallDefensiveGateAddition.<DelayedCancelGhost>c__Iterator142 <DelayedCancelGhost>c__Iterator = new WallDefensiveGateAddition.<DelayedCancelGhost>c__Iterator142();
+			WallDefensiveGateAddition.<DelayedCancelGhost>c__Iterator149 <DelayedCancelGhost>c__Iterator = new WallDefensiveGateAddition.<DelayedCancelGhost>c__Iterator149();
 			<DelayedCancelGhost>c__Iterator.<>f__this = this;
 			return <DelayedCancelGhost>c__Iterator;
 		}

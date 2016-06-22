@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-[AddComponentMenu("Storage/Rooms/Examples/Player Spawn Point"), RequireComponent(typeof(StoreInformation)), RequireComponent(typeof(SphereCollider))]
+[AddComponentMenu("Storage/Rooms/Examples/Player Spawn Point"), RequireComponent(typeof(SphereCollider)), RequireComponent(typeof(StoreInformation))]
 public class PlayerSpawnPoint : MonoBehaviour
 {
 	public static PlayerSpawnPoint currentSpawnPoint;

@@ -118,10 +118,10 @@ public class treeDealDamage : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator calculateDamage(GameObject target)
 	{
-		treeDealDamage.<calculateDamage>c__IteratorFE <calculateDamage>c__IteratorFE = new treeDealDamage.<calculateDamage>c__IteratorFE();
-		<calculateDamage>c__IteratorFE.target = target;
-		<calculateDamage>c__IteratorFE.<$>target = target;
-		<calculateDamage>c__IteratorFE.<>f__this = this;
-		return <calculateDamage>c__IteratorFE;
+		treeDealDamage.<calculateDamage>c__Iterator101 <calculateDamage>c__Iterator = new treeDealDamage.<calculateDamage>c__Iterator101();
+		<calculateDamage>c__Iterator.target = target;
+		<calculateDamage>c__Iterator.<$>target = target;
+		<calculateDamage>c__Iterator.<>f__this = this;
+		return <calculateDamage>c__Iterator;
 	}
 }

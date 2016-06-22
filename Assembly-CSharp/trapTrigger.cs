@@ -45,6 +45,8 @@ public class trapTrigger : EntityBehaviour
 
 	private GameObject trappedGo;
 
+	public bool local;
+
 	public bool largeSpike;
 
 	public bool largeDeadfall;
@@ -55,6 +57,8 @@ public class trapTrigger : EntityBehaviour
 
 	public bool rabbitTrap;
 
+	public bool fishTrap;
+
 	[Header("FMOD")]
 	public Transform sfxPosition;
 
@@ -63,6 +67,22 @@ public class trapTrigger : EntityBehaviour
 	private trapHit hit;
 
 	public bool sprung;
+
+	private bool MpClientCheck
+	{
+		get
+		{
+			return !this.local && BoltNetwork.isClient;
+		}
+	}
+
+	private bool MpHostCheck
+	{
+		get
+		{
+			return !this.local || BoltNetwork.isServer;
+		}
+	}
 
 	public override void Attached()
 	{
@@ -272,14 +292,17 @@ public class trapTrigger : EntityBehaviour
 	private void TriggerRabbitTrap()
 	{
 		this.CheckAnimReference();
-		this.anim.GetComponent<Animation>().Play("trapFall");
+		if (this.anim && this.anim.GetComponent<Animation>())
+		{
+			this.anim.GetComponent<Animation>().Play("trapFall");
+		}
 		this.PlayTriggerSFX();
 		base.Invoke("enableTrapReset", 2f);
 	}
 
 	public void TriggerLargeTrap(Collider other)
 	{
-		if (BoltNetwork.isClient && other == null && this.largeNoose)
+		if (this.MpClientCheck && other == null && this.largeNoose)
 		{
 			base.Invoke("switchNooseRope", 0.5f);
 			this.cutTrigger.SetActive(true);
@@ -292,7 +315,7 @@ public class trapTrigger : EntityBehaviour
 			return;
 		}
 		this.CheckAnimReference();
-		bool flag = !BoltNetwork.isRunning || BoltNetwork.isServer;
+		bool flag = !BoltNetwork.isRunning || this.MpHostCheck;
 		if (this.hitbox)
 		{
 			this.hitbox.SetActive(true);
@@ -386,7 +409,8 @@ public class trapTrigger : EntityBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if ((other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("enemyCollide")) && !this.rabbitTrap && !this.sprung)
+		bool flag = this.rabbitTrap || this.fishTrap;
+		if ((other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("enemyCollide")) && !flag && !this.sprung)
 		{
 			if (other.gameObject.CompareTag("enemyCollide"))
 			{
@@ -417,7 +441,7 @@ public class trapTrigger : EntityBehaviour
 					}
 				}
 			}
-			if (BoltNetwork.isClient)
+			if (this.MpClientCheck)
 			{
 				if (other.gameObject.CompareTag("Player"))
 				{
@@ -430,27 +454,27 @@ public class trapTrigger : EntityBehaviour
 			}
 			else
 			{
-				if (BoltNetwork.isServer && this.entity && this.entity.isAttached && this.entity.StateIs<ITrapLargeState>())
+				if (this.MpHostCheck && this.entity && this.entity.isAttached && this.entity.StateIs<ITrapLargeState>())
 				{
 					this.entity.GetState<ITrapLargeState>().Sprung = true;
 				}
 				this.TriggerLargeTrap(other);
 			}
 		}
-		if (BoltNetwork.isClient)
+		if (this.MpClientCheck)
 		{
 			return;
 		}
-		if ((other.gameObject.CompareTag("animalCollide") || other.gameObject.CompareTag("enemyCollide")) && this.rabbitTrap)
+		if ((this.rabbitTrap && (other.gameObject.CompareTag("animalCollide") || other.gameObject.CompareTag("enemyCollide"))) || (this.fishTrap && other.gameObject.CompareTag("Fish")))
 		{
-			bool flag = false;
-			if (this.rabbitTrap && !base.transform.parent.gameObject.CompareTag("trapSprung"))
+			bool flag2 = false;
+			if (flag && !base.transform.parent.gameObject.CompareTag("trapSprung"))
 			{
 				this.trappedGo = other.gameObject;
 				other.gameObject.SendMessageUpwards("setTrapped", base.gameObject, SendMessageOptions.DontRequireReceiver);
 				base.transform.parent.gameObject.tag = "trapSprung";
 				this.TriggerRabbitTrap();
-				if (BoltNetwork.isServer && this.entity && this.entity.isAttached && this.entity.StateIs<ITrapRabbitState>())
+				if (this.MpHostCheck && this.entity && this.entity.isAttached && this.entity.StateIs<ITrapRabbitState>())
 				{
 					this.entity.GetState<ITrapRabbitState>().Sprung = true;
 				}
@@ -464,10 +488,10 @@ public class trapTrigger : EntityBehaviour
 				}
 				this.CheckAnimReference();
 				this.anim.GetComponent<Animation>().Play("trapFall");
-				flag = true;
+				flag2 = true;
 				base.Invoke("enableTrapReset", 3f);
 			}
-			if (flag)
+			if (flag2)
 			{
 				this.PlayTriggerSFX();
 			}
@@ -520,7 +544,7 @@ public class trapTrigger : EntityBehaviour
 			{
 				this.nooseParent.transform.localPosition = new Vector3(0f, -0.834f, 0f);
 				this.nooseParent.transform.localEulerAngles = new Vector3(-90f, 90f, 0f);
-				if (BoltNetwork.isServer)
+				if (this.MpHostCheck)
 				{
 					base.Invoke("enableTrapReset", 3f);
 				}
@@ -530,7 +554,7 @@ public class trapTrigger : EntityBehaviour
 		{
 			this.nooseParent.transform.localPosition = new Vector3(0f, -0.834f, 0f);
 			this.nooseParent.transform.localEulerAngles = new Vector3(-90f, 90f, 0f);
-			if (BoltNetwork.isServer)
+			if (this.MpHostCheck)
 			{
 				base.Invoke("enableTrapReset", 3f);
 			}
@@ -575,7 +599,6 @@ public class trapTrigger : EntityBehaviour
 		CutTriggerActivated cutTriggerActivated = CutTriggerActivated.Create(GlobalTargets.Everyone);
 		cutTriggerActivated.Trap = this.entity;
 		cutTriggerActivated.Send();
-		Debug.Log("doing release noose trap MP in trap trigger");
 	}
 
 	public void enableTrapReset()

@@ -116,9 +116,9 @@ namespace TheForest.Items.World
 		[DebuggerHidden]
 		private IEnumerator forceFireOff()
 		{
-			LightableItemController.<forceFireOff>c__Iterator2E <forceFireOff>c__Iterator2E = new LightableItemController.<forceFireOff>c__Iterator2E();
-			<forceFireOff>c__Iterator2E.<>f__this = this;
-			return <forceFireOff>c__Iterator2E;
+			LightableItemController.<forceFireOff>c__Iterator2F <forceFireOff>c__Iterator2F = new LightableItemController.<forceFireOff>c__Iterator2F();
+			<forceFireOff>c__Iterator2F.<>f__this = this;
+			return <forceFireOff>c__Iterator2F;
 		}
 
 		private void enableFire()

@@ -48,9 +48,9 @@ public class activateCliffClimb : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator scanForCliff()
 	{
-		activateCliffClimb.<scanForCliff>c__Iterator2F <scanForCliff>c__Iterator2F = new activateCliffClimb.<scanForCliff>c__Iterator2F();
-		<scanForCliff>c__Iterator2F.<>f__this = this;
-		return <scanForCliff>c__Iterator2F;
+		activateCliffClimb.<scanForCliff>c__Iterator30 <scanForCliff>c__Iterator = new activateCliffClimb.<scanForCliff>c__Iterator30();
+		<scanForCliff>c__Iterator.<>f__this = this;
+		return <scanForCliff>c__Iterator;
 	}
 
 	private void resetCoolDown()

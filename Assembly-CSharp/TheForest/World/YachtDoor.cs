@@ -54,7 +54,7 @@ namespace TheForest.World
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake()
 		{
-			YachtDoor.<DelayedAwake>c__Iterator1C0 <DelayedAwake>c__Iterator1C = new YachtDoor.<DelayedAwake>c__Iterator1C0();
+			YachtDoor.<DelayedAwake>c__Iterator1C8 <DelayedAwake>c__Iterator1C = new YachtDoor.<DelayedAwake>c__Iterator1C8();
 			<DelayedAwake>c__Iterator1C.<>f__this = this;
 			return <DelayedAwake>c__Iterator1C;
 		}
@@ -62,7 +62,7 @@ namespace TheForest.World
 		[DebuggerHidden]
 		private IEnumerator DelayedAwakeClient()
 		{
-			YachtDoor.<DelayedAwakeClient>c__Iterator1C1 <DelayedAwakeClient>c__Iterator1C = new YachtDoor.<DelayedAwakeClient>c__Iterator1C1();
+			YachtDoor.<DelayedAwakeClient>c__Iterator1C9 <DelayedAwakeClient>c__Iterator1C = new YachtDoor.<DelayedAwakeClient>c__Iterator1C9();
 			<DelayedAwakeClient>c__Iterator1C.<>f__this = this;
 			return <DelayedAwakeClient>c__Iterator1C;
 		}

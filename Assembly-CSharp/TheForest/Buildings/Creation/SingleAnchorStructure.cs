@@ -46,9 +46,9 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake(bool isDeserializing)
 		{
-			SingleAnchorStructure.<DelayedAwake>c__Iterator13A <DelayedAwake>c__Iterator13A = new SingleAnchorStructure.<DelayedAwake>c__Iterator13A();
-			<DelayedAwake>c__Iterator13A.<>f__this = this;
-			return <DelayedAwake>c__Iterator13A;
+			SingleAnchorStructure.<DelayedAwake>c__Iterator141 <DelayedAwake>c__Iterator = new SingleAnchorStructure.<DelayedAwake>c__Iterator141();
+			<DelayedAwake>c__Iterator.<>f__this = this;
+			return <DelayedAwake>c__Iterator;
 		}
 
 		private void Update()

@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayMakerFSM)), RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Animator)), RequireComponent(typeof(PlayMakerFSM))]
 public class PlayMakerAnimatorMoveProxy : MonoBehaviour
 {
 	public event Action OnAnimatorMoveEvent

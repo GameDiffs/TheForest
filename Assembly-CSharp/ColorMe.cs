@@ -15,8 +15,8 @@ public class ColorMe : MonoBehaviourEx
 	[DebuggerHidden]
 	private IEnumerator DoColorMe()
 	{
-		ColorMe.<DoColorMe>c__Iterator206 <DoColorMe>c__Iterator = new ColorMe.<DoColorMe>c__Iterator206();
-		<DoColorMe>c__Iterator.<>f__this = this;
-		return <DoColorMe>c__Iterator;
+		ColorMe.<DoColorMe>c__Iterator20E <DoColorMe>c__Iterator20E = new ColorMe.<DoColorMe>c__Iterator20E();
+		<DoColorMe>c__Iterator20E.<>f__this = this;
+		return <DoColorMe>c__Iterator20E;
 	}
 }

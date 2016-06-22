@@ -291,7 +291,7 @@ namespace DigitalOpus.MB.Core
 
 		private bool _CollectPropertyNames(Material resultMaterial, List<ShaderTextureProperty> texPropertyNames)
 		{
-			MB3_TextureCombiner.<_CollectPropertyNames>c__AnonStorey261 <_CollectPropertyNames>c__AnonStorey = new MB3_TextureCombiner.<_CollectPropertyNames>c__AnonStorey261();
+			MB3_TextureCombiner.<_CollectPropertyNames>c__AnonStorey269 <_CollectPropertyNames>c__AnonStorey = new MB3_TextureCombiner.<_CollectPropertyNames>c__AnonStorey269();
 			<_CollectPropertyNames>c__AnonStorey.texPropertyNames = texPropertyNames;
 			int i;
 			for (i = 0; i < <_CollectPropertyNames>c__AnonStorey.texPropertyNames.Count; i++)

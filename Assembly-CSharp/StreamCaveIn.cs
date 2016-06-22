@@ -10,9 +10,9 @@ public class StreamCaveIn : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator LoadIn()
 	{
-		StreamCaveIn.<LoadIn>c__Iterator1AB <LoadIn>c__Iterator1AB = new StreamCaveIn.<LoadIn>c__Iterator1AB();
-		<LoadIn>c__Iterator1AB.<>f__this = this;
-		return <LoadIn>c__Iterator1AB;
+		StreamCaveIn.<LoadIn>c__Iterator1B3 <LoadIn>c__Iterator1B = new StreamCaveIn.<LoadIn>c__Iterator1B3();
+		<LoadIn>c__Iterator1B.<>f__this = this;
+		return <LoadIn>c__Iterator1B;
 	}
 
 	private void LoadOut()

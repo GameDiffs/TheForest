@@ -19,7 +19,7 @@ namespace TheForest.Buildings.Creation
 		[SerializeThis]
 		public bool _wasBuilt;
 
-		public Transform _logPrefab;
+		public Transform[] _logPrefabs;
 
 		public Transform _stiltPrefab;
 
@@ -138,11 +138,11 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake(bool isDeserializing)
 		{
-			StairsArchitect.<DelayedAwake>c__Iterator13B <DelayedAwake>c__Iterator13B = new StairsArchitect.<DelayedAwake>c__Iterator13B();
-			<DelayedAwake>c__Iterator13B.isDeserializing = isDeserializing;
-			<DelayedAwake>c__Iterator13B.<$>isDeserializing = isDeserializing;
-			<DelayedAwake>c__Iterator13B.<>f__this = this;
-			return <DelayedAwake>c__Iterator13B;
+			StairsArchitect.<DelayedAwake>c__Iterator142 <DelayedAwake>c__Iterator = new StairsArchitect.<DelayedAwake>c__Iterator142();
+			<DelayedAwake>c__Iterator.isDeserializing = isDeserializing;
+			<DelayedAwake>c__Iterator.<$>isDeserializing = isDeserializing;
+			<DelayedAwake>c__Iterator.<>f__this = this;
+			return <DelayedAwake>c__Iterator;
 		}
 
 		private void Update()
@@ -244,9 +244,9 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator OnPlaced()
 		{
-			StairsArchitect.<OnPlaced>c__Iterator13C <OnPlaced>c__Iterator13C = new StairsArchitect.<OnPlaced>c__Iterator13C();
-			<OnPlaced>c__Iterator13C.<>f__this = this;
-			return <OnPlaced>c__Iterator13C;
+			StairsArchitect.<OnPlaced>c__Iterator143 <OnPlaced>c__Iterator = new StairsArchitect.<OnPlaced>c__Iterator143();
+			<OnPlaced>c__Iterator.<>f__this = this;
+			return <OnPlaced>c__Iterator;
 		}
 
 		private void OnBuilt(GameObject built)
@@ -453,7 +453,7 @@ namespace TheForest.Buildings.Creation
 				transform.rotation = rotation;
 				return transform;
 			}
-			Transform transform2 = (Transform)UnityEngine.Object.Instantiate(this._logPrefab, position, rotation);
+			Transform transform2 = (Transform)UnityEngine.Object.Instantiate(this._logPrefabs[UnityEngine.Random.Range(0, this._logPrefabs.Length)], position, rotation);
 			if (!this._wasBuilt && !this._wasPlaced)
 			{
 				transform2.GetComponentInChildren<Renderer>().sharedMaterial = this._logMat;

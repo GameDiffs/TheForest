@@ -68,9 +68,9 @@ public class redmanSetup : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator smoothDisableIk()
 	{
-		redmanSetup.<smoothDisableIk>c__IteratorEA <smoothDisableIk>c__IteratorEA = new redmanSetup.<smoothDisableIk>c__IteratorEA();
-		<smoothDisableIk>c__IteratorEA.<>f__this = this;
-		return <smoothDisableIk>c__IteratorEA;
+		redmanSetup.<smoothDisableIk>c__IteratorED <smoothDisableIk>c__IteratorED = new redmanSetup.<smoothDisableIk>c__IteratorED();
+		<smoothDisableIk>c__IteratorED.<>f__this = this;
+		return <smoothDisableIk>c__IteratorED;
 	}
 
 	private void LateUpdate()

@@ -16,7 +16,7 @@ public class SkidTrail : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		SkidTrail.<Start>c__Iterator113 <Start>c__Iterator = new SkidTrail.<Start>c__Iterator113();
+		SkidTrail.<Start>c__Iterator116 <Start>c__Iterator = new SkidTrail.<Start>c__Iterator116();
 		<Start>c__Iterator.<>f__this = this;
 		return <Start>c__Iterator;
 	}

@@ -5,11 +5,20 @@ using UnityEngine;
 
 public class Explode : EntityBehaviour
 {
+	public struct Data
+	{
+		public float distance;
+
+		public Explode explode;
+	}
+
 	public float radius = 15f;
 
-	public float power = 2500f;
+	public float power = 10000f;
 
 	public float damage = 400f;
+
+	public static float overridePowerFloat;
 
 	private void Start()
 	{
@@ -70,7 +79,14 @@ public class Explode : EntityBehaviour
 						collider.gameObject.SendMessageUpwards("Explosion", num3, SendMessageOptions.DontRequireReceiver);
 					}
 					collider.gameObject.SendMessage("lookAtExplosion", base.transform.position, SendMessageOptions.DontRequireReceiver);
-					collider.gameObject.SendMessage("OnExplode", this, SendMessageOptions.DontRequireReceiver);
+					if (num3 < this.radius)
+					{
+						collider.gameObject.SendMessage("OnExplode", new Explode.Data
+						{
+							distance = num3,
+							explode = this
+						}, SendMessageOptions.DontRequireReceiver);
+					}
 				}
 				else if (collider.CompareTag("TripWireTrigger"))
 				{
@@ -80,15 +96,20 @@ public class Explode : EntityBehaviour
 				{
 					if (!collider.gameObject.CompareTag("Tree"))
 					{
-						collider.GetComponent<Rigidbody>().AddExplosionForce(this.power, position, this.radius, 3f);
+						float num4 = 10000f;
+						if (collider.GetComponent<logChecker>())
+						{
+							num4 *= 5.5f;
+						}
+						collider.GetComponent<Rigidbody>().AddExplosionForce(num4, position, this.radius, 3f, ForceMode.Force);
 					}
 				}
 			}
 		}
 		if (LocalPlayer.GameObject)
 		{
-			float num4 = Vector3.Distance(LocalPlayer.Transform.position, base.transform.position);
-			LocalPlayer.GameObject.SendMessage("enableExplodeShake", num4);
+			float num5 = Vector3.Distance(LocalPlayer.Transform.position, base.transform.position);
+			LocalPlayer.GameObject.SendMessage("enableExplodeShake", num5);
 		}
 	}
 

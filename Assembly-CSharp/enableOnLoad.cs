@@ -27,9 +27,9 @@ public class enableOnLoad : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerable doEnable()
 	{
-		enableOnLoad.<doEnable>c__Iterator57 <doEnable>c__Iterator = new enableOnLoad.<doEnable>c__Iterator57();
+		enableOnLoad.<doEnable>c__Iterator58 <doEnable>c__Iterator = new enableOnLoad.<doEnable>c__Iterator58();
 		<doEnable>c__Iterator.<>f__this = this;
-		enableOnLoad.<doEnable>c__Iterator57 expr_0E = <doEnable>c__Iterator;
+		enableOnLoad.<doEnable>c__Iterator58 expr_0E = <doEnable>c__Iterator;
 		expr_0E.$PC = -2;
 		return expr_0E;
 	}

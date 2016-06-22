@@ -53,8 +53,8 @@ public class exitClimb : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator pulseCollider()
 	{
-		exitClimb.<pulseCollider>c__Iterator5B <pulseCollider>c__Iterator5B = new exitClimb.<pulseCollider>c__Iterator5B();
-		<pulseCollider>c__Iterator5B.<>f__this = this;
-		return <pulseCollider>c__Iterator5B;
+		exitClimb.<pulseCollider>c__Iterator5C <pulseCollider>c__Iterator5C = new exitClimb.<pulseCollider>c__Iterator5C();
+		<pulseCollider>c__Iterator5C.<>f__this = this;
+		return <pulseCollider>c__Iterator5C;
 	}
 }

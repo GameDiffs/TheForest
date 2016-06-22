@@ -86,21 +86,33 @@ public class clsragdollify : MonoBehaviour
 			transform.gameObject.SendMessage("setSkinDamageProperty", this.bloodPropertyBlock, SendMessageOptions.DontRequireReceiver);
 			if (BoltNetwork.isServer)
 			{
-				this.setSkinDamageMP(transform.gameObject);
+				IMutantState state = base.transform.parent.GetComponent<BoltEntity>().GetState<IMutantState>();
+				CoopMutantDummyToken coopMutantDummyToken = new CoopMutantDummyToken();
+				coopMutantDummyToken.Scale = base.transform.localScale;
+				coopMutantDummyToken.skinDamage1 = this.bloodPropertyBlock.GetFloat("_Damage1");
+				coopMutantDummyToken.skinDamage2 = this.bloodPropertyBlock.GetFloat("_Damage2");
+				coopMutantDummyToken.skinDamage3 = this.bloodPropertyBlock.GetFloat("_Damage3");
+				coopMutantDummyToken.skinDamage4 = this.bloodPropertyBlock.GetFloat("_Damage4");
+				mutantTypeSetup component = base.transform.parent.GetComponent<mutantTypeSetup>();
+				if (component)
+				{
+					coopMutantDummyToken.storedRagDollName = component.storedRagDollName;
+				}
+				BoltNetwork.Attach(transform.gameObject, coopMutantDummyToken);
 			}
 		}
 		if (this.animal)
 		{
-			animalSpawnFunctions component = base.transform.root.GetComponent<animalSpawnFunctions>();
-			if (component)
+			animalSpawnFunctions component2 = base.transform.root.GetComponent<animalSpawnFunctions>();
+			if (component2)
 			{
-				transform.gameObject.SendMessage("setSkin", component.meshRenderer.sharedMaterial, SendMessageOptions.DontRequireReceiver);
+				transform.gameObject.SendMessage("setSkin", component2.meshRenderer.sharedMaterial, SendMessageOptions.DontRequireReceiver);
 			}
 		}
 		if (this.bird)
 		{
-			lb_Bird component2 = base.transform.GetComponent<lb_Bird>();
-			transform.gameObject.SendMessage("setSkin", component2.skin.sharedMaterial, SendMessageOptions.DontRequireReceiver);
+			lb_Bird component3 = base.transform.GetComponent<lb_Bird>();
+			transform.gameObject.SendMessage("setSkin", component3.skin.sharedMaterial, SendMessageOptions.DontRequireReceiver);
 		}
 		if (this.fish)
 		{
@@ -123,15 +135,6 @@ public class clsragdollify : MonoBehaviour
 	{
 		if (BoltNetwork.isServer)
 		{
-			IMutantState state = base.transform.parent.GetComponent<BoltEntity>().GetState<IMutantState>();
-			BoltNetwork.Attach(ragdoll, new CoopMutantDummyToken
-			{
-				Scale = base.transform.localScale,
-				skinDamage1 = this.bloodPropertyBlock.GetFloat("_Damage1"),
-				skinDamage2 = this.bloodPropertyBlock.GetFloat("_Damage2"),
-				skinDamage3 = this.bloodPropertyBlock.GetFloat("_Damage3"),
-				skinDamage4 = this.bloodPropertyBlock.GetFloat("_Damage4")
-			});
 		}
 	}
 }

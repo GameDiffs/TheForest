@@ -248,11 +248,11 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		protected IEnumerator DelayedAwake(bool isDeserializing)
 		{
-			WallChunkArchitect.<DelayedAwake>c__Iterator128 <DelayedAwake>c__Iterator = new WallChunkArchitect.<DelayedAwake>c__Iterator128();
-			<DelayedAwake>c__Iterator.isDeserializing = isDeserializing;
-			<DelayedAwake>c__Iterator.<$>isDeserializing = isDeserializing;
-			<DelayedAwake>c__Iterator.<>f__this = this;
-			return <DelayedAwake>c__Iterator;
+			WallChunkArchitect.<DelayedAwake>c__Iterator12B <DelayedAwake>c__Iterator12B = new WallChunkArchitect.<DelayedAwake>c__Iterator12B();
+			<DelayedAwake>c__Iterator12B.isDeserializing = isDeserializing;
+			<DelayedAwake>c__Iterator12B.<$>isDeserializing = isDeserializing;
+			<DelayedAwake>c__Iterator12B.<>f__this = this;
+			return <DelayedAwake>c__Iterator12B;
 		}
 
 		private void OnSerializing()
@@ -316,9 +316,9 @@ namespace TheForest.Buildings.Creation
 		[DebuggerHidden]
 		private IEnumerator OnPlaced()
 		{
-			WallChunkArchitect.<OnPlaced>c__Iterator129 <OnPlaced>c__Iterator = new WallChunkArchitect.<OnPlaced>c__Iterator129();
-			<OnPlaced>c__Iterator.<>f__this = this;
-			return <OnPlaced>c__Iterator;
+			WallChunkArchitect.<OnPlaced>c__Iterator12C <OnPlaced>c__Iterator12C = new WallChunkArchitect.<OnPlaced>c__Iterator12C();
+			<OnPlaced>c__Iterator12C.<>f__this = this;
+			return <OnPlaced>c__Iterator12C;
 		}
 
 		protected virtual void OnBuilt(GameObject built)
@@ -656,7 +656,7 @@ namespace TheForest.Buildings.Creation
 
 		public virtual float GetHeight()
 		{
-			return 4.7f * this._logWidth;
+			return 4.9f * this._logWidth;
 		}
 
 		public virtual List<Vector3> GetMultiPointsPositions()

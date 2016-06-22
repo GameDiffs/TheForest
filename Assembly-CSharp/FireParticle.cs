@@ -39,11 +39,11 @@ public class FireParticle : EntityBehaviour<IFireParticle>
 	[DebuggerHidden]
 	private IEnumerator DelayedEnable(bool delay)
 	{
-		FireParticle.<DelayedEnable>c__Iterator157 <DelayedEnable>c__Iterator = new FireParticle.<DelayedEnable>c__Iterator157();
-		<DelayedEnable>c__Iterator.delay = delay;
-		<DelayedEnable>c__Iterator.<$>delay = delay;
-		<DelayedEnable>c__Iterator.<>f__this = this;
-		return <DelayedEnable>c__Iterator;
+		FireParticle.<DelayedEnable>c__Iterator15F <DelayedEnable>c__Iterator15F = new FireParticle.<DelayedEnable>c__Iterator15F();
+		<DelayedEnable>c__Iterator15F.delay = delay;
+		<DelayedEnable>c__Iterator15F.<$>delay = delay;
+		<DelayedEnable>c__Iterator15F.<>f__this = this;
+		return <DelayedEnable>c__Iterator15F;
 	}
 
 	private void Update()

@@ -98,7 +98,7 @@ namespace Rewired.UI.ControlMapper
 		[DebuggerHidden]
 		private IEnumerator SetActiveCoroutine(GameObject obj, bool value)
 		{
-			ScrollbarVisibilityHelper.<SetActiveCoroutine>c__Iterator112 <SetActiveCoroutine>c__Iterator = new ScrollbarVisibilityHelper.<SetActiveCoroutine>c__Iterator112();
+			ScrollbarVisibilityHelper.<SetActiveCoroutine>c__Iterator115 <SetActiveCoroutine>c__Iterator = new ScrollbarVisibilityHelper.<SetActiveCoroutine>c__Iterator115();
 			<SetActiveCoroutine>c__Iterator.obj = obj;
 			<SetActiveCoroutine>c__Iterator.value = value;
 			<SetActiveCoroutine>c__Iterator.<$>obj = obj;

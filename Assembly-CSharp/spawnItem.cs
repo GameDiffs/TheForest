@@ -17,8 +17,8 @@ public class spawnItem : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator doPickupSpawn()
 	{
-		spawnItem.<doPickupSpawn>c__IteratorF7 <doPickupSpawn>c__IteratorF = new spawnItem.<doPickupSpawn>c__IteratorF7();
-		<doPickupSpawn>c__IteratorF.<>f__this = this;
-		return <doPickupSpawn>c__IteratorF;
+		spawnItem.<doPickupSpawn>c__IteratorFA <doPickupSpawn>c__IteratorFA = new spawnItem.<doPickupSpawn>c__IteratorFA();
+		<doPickupSpawn>c__IteratorFA.<>f__this = this;
+		return <doPickupSpawn>c__IteratorFA;
 	}
 }

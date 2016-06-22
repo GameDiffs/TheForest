@@ -38,7 +38,7 @@ public class CoopWorldCrates : EntityBehaviour<IWorldCrates>
 	[DebuggerHidden]
 	private IEnumerator UpdateRoutine()
 	{
-		CoopWorldCrates.<UpdateRoutine>c__Iterator22 <UpdateRoutine>c__Iterator = new CoopWorldCrates.<UpdateRoutine>c__Iterator22();
+		CoopWorldCrates.<UpdateRoutine>c__Iterator23 <UpdateRoutine>c__Iterator = new CoopWorldCrates.<UpdateRoutine>c__Iterator23();
 		<UpdateRoutine>c__Iterator.<>f__this = this;
 		return <UpdateRoutine>c__Iterator;
 	}

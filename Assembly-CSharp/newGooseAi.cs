@@ -243,11 +243,11 @@ public class newGooseAi : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doFollowTarget(Transform target)
 	{
-		newGooseAi.<doFollowTarget>c__IteratorC7 <doFollowTarget>c__IteratorC = new newGooseAi.<doFollowTarget>c__IteratorC7();
-		<doFollowTarget>c__IteratorC.target = target;
-		<doFollowTarget>c__IteratorC.<$>target = target;
-		<doFollowTarget>c__IteratorC.<>f__this = this;
-		return <doFollowTarget>c__IteratorC;
+		newGooseAi.<doFollowTarget>c__IteratorCA <doFollowTarget>c__IteratorCA = new newGooseAi.<doFollowTarget>c__IteratorCA();
+		<doFollowTarget>c__IteratorCA.target = target;
+		<doFollowTarget>c__IteratorCA.<$>target = target;
+		<doFollowTarget>c__IteratorCA.<>f__this = this;
+		return <doFollowTarget>c__IteratorCA;
 	}
 
 	private void setFollowSpeed()
@@ -458,7 +458,7 @@ public class newGooseAi : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator resetSpeed()
 	{
-		return new newGooseAi.<resetSpeed>c__IteratorC8();
+		return new newGooseAi.<resetSpeed>c__IteratorCB();
 	}
 
 	private void reverseDirection()
@@ -611,25 +611,25 @@ public class newGooseAi : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setDeathSpeed()
 	{
-		newGooseAi.<setDeathSpeed>c__IteratorC9 <setDeathSpeed>c__IteratorC = new newGooseAi.<setDeathSpeed>c__IteratorC9();
-		<setDeathSpeed>c__IteratorC.<>f__this = this;
-		return <setDeathSpeed>c__IteratorC;
+		newGooseAi.<setDeathSpeed>c__IteratorCC <setDeathSpeed>c__IteratorCC = new newGooseAi.<setDeathSpeed>c__IteratorCC();
+		<setDeathSpeed>c__IteratorCC.<>f__this = this;
+		return <setDeathSpeed>c__IteratorCC;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator setFleeSpeed()
 	{
-		newGooseAi.<setFleeSpeed>c__IteratorCA <setFleeSpeed>c__IteratorCA = new newGooseAi.<setFleeSpeed>c__IteratorCA();
-		<setFleeSpeed>c__IteratorCA.<>f__this = this;
-		return <setFleeSpeed>c__IteratorCA;
+		newGooseAi.<setFleeSpeed>c__IteratorCD <setFleeSpeed>c__IteratorCD = new newGooseAi.<setFleeSpeed>c__IteratorCD();
+		<setFleeSpeed>c__IteratorCD.<>f__this = this;
+		return <setFleeSpeed>c__IteratorCD;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator smoothRandomSpeed()
 	{
-		newGooseAi.<smoothRandomSpeed>c__IteratorCB <smoothRandomSpeed>c__IteratorCB = new newGooseAi.<smoothRandomSpeed>c__IteratorCB();
-		<smoothRandomSpeed>c__IteratorCB.<>f__this = this;
-		return <smoothRandomSpeed>c__IteratorCB;
+		newGooseAi.<smoothRandomSpeed>c__IteratorCE <smoothRandomSpeed>c__IteratorCE = new newGooseAi.<smoothRandomSpeed>c__IteratorCE();
+		<smoothRandomSpeed>c__IteratorCE.<>f__this = this;
+		return <smoothRandomSpeed>c__IteratorCE;
 	}
 
 	private void setSmoothSpeed(float getSpeed, float t)
@@ -641,11 +641,11 @@ public class newGooseAi : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doSmoothSpeed(float newSpeed)
 	{
-		newGooseAi.<doSmoothSpeed>c__IteratorCC <doSmoothSpeed>c__IteratorCC = new newGooseAi.<doSmoothSpeed>c__IteratorCC();
-		<doSmoothSpeed>c__IteratorCC.newSpeed = newSpeed;
-		<doSmoothSpeed>c__IteratorCC.<$>newSpeed = newSpeed;
-		<doSmoothSpeed>c__IteratorCC.<>f__this = this;
-		return <doSmoothSpeed>c__IteratorCC;
+		newGooseAi.<doSmoothSpeed>c__IteratorCF <doSmoothSpeed>c__IteratorCF = new newGooseAi.<doSmoothSpeed>c__IteratorCF();
+		<doSmoothSpeed>c__IteratorCF.newSpeed = newSpeed;
+		<doSmoothSpeed>c__IteratorCF.<$>newSpeed = newSpeed;
+		<doSmoothSpeed>c__IteratorCF.<>f__this = this;
+		return <doSmoothSpeed>c__IteratorCF;
 	}
 
 	private void startGoose(GameObject go)
@@ -684,9 +684,9 @@ public class newGooseAi : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator startFlying()
 	{
-		newGooseAi.<startFlying>c__IteratorCD <startFlying>c__IteratorCD = new newGooseAi.<startFlying>c__IteratorCD();
-		<startFlying>c__IteratorCD.<>f__this = this;
-		return <startFlying>c__IteratorCD;
+		newGooseAi.<startFlying>c__IteratorD0 <startFlying>c__IteratorD = new newGooseAi.<startFlying>c__IteratorD0();
+		<startFlying>c__IteratorD.<>f__this = this;
+		return <startFlying>c__IteratorD;
 	}
 
 	public void initLanding()
@@ -700,9 +700,9 @@ public class newGooseAi : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator startLanding()
 	{
-		newGooseAi.<startLanding>c__IteratorCE <startLanding>c__IteratorCE = new newGooseAi.<startLanding>c__IteratorCE();
-		<startLanding>c__IteratorCE.<>f__this = this;
-		return <startLanding>c__IteratorCE;
+		newGooseAi.<startLanding>c__IteratorD1 <startLanding>c__IteratorD = new newGooseAi.<startLanding>c__IteratorD1();
+		<startLanding>c__IteratorD.<>f__this = this;
+		return <startLanding>c__IteratorD;
 	}
 
 	private void setLandingGear()
@@ -715,9 +715,9 @@ public class newGooseAi : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doLandingHeight()
 	{
-		newGooseAi.<doLandingHeight>c__IteratorCF <doLandingHeight>c__IteratorCF = new newGooseAi.<doLandingHeight>c__IteratorCF();
-		<doLandingHeight>c__IteratorCF.<>f__this = this;
-		return <doLandingHeight>c__IteratorCF;
+		newGooseAi.<doLandingHeight>c__IteratorD2 <doLandingHeight>c__IteratorD = new newGooseAi.<doLandingHeight>c__IteratorD2();
+		<doLandingHeight>c__IteratorD.<>f__this = this;
+		return <doLandingHeight>c__IteratorD;
 	}
 
 	private void setDirLandingPoint()
@@ -780,7 +780,7 @@ public class newGooseAi : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doSmoothPitch(float getHeight)
 	{
-		newGooseAi.<doSmoothPitch>c__IteratorD0 <doSmoothPitch>c__IteratorD = new newGooseAi.<doSmoothPitch>c__IteratorD0();
+		newGooseAi.<doSmoothPitch>c__IteratorD3 <doSmoothPitch>c__IteratorD = new newGooseAi.<doSmoothPitch>c__IteratorD3();
 		<doSmoothPitch>c__IteratorD.getHeight = getHeight;
 		<doSmoothPitch>c__IteratorD.<$>getHeight = getHeight;
 		<doSmoothPitch>c__IteratorD.<>f__this = this;

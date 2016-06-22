@@ -105,19 +105,19 @@ public class playerEnterRockThrowerAction : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator doThrower(GameObject posGo)
 	{
-		playerEnterRockThrowerAction.<doThrower>c__Iterator18E <doThrower>c__Iterator18E = new playerEnterRockThrowerAction.<doThrower>c__Iterator18E();
-		<doThrower>c__Iterator18E.posGo = posGo;
-		<doThrower>c__Iterator18E.<$>posGo = posGo;
-		<doThrower>c__Iterator18E.<>f__this = this;
-		return <doThrower>c__Iterator18E;
+		playerEnterRockThrowerAction.<doThrower>c__Iterator196 <doThrower>c__Iterator = new playerEnterRockThrowerAction.<doThrower>c__Iterator196();
+		<doThrower>c__Iterator.posGo = posGo;
+		<doThrower>c__Iterator.<$>posGo = posGo;
+		<doThrower>c__Iterator.<>f__this = this;
+		return <doThrower>c__Iterator;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator offsetLeverRotation()
 	{
-		playerEnterRockThrowerAction.<offsetLeverRotation>c__Iterator18F <offsetLeverRotation>c__Iterator18F = new playerEnterRockThrowerAction.<offsetLeverRotation>c__Iterator18F();
-		<offsetLeverRotation>c__Iterator18F.<>f__this = this;
-		return <offsetLeverRotation>c__Iterator18F;
+		playerEnterRockThrowerAction.<offsetLeverRotation>c__Iterator197 <offsetLeverRotation>c__Iterator = new playerEnterRockThrowerAction.<offsetLeverRotation>c__Iterator197();
+		<offsetLeverRotation>c__Iterator.<>f__this = this;
+		return <offsetLeverRotation>c__Iterator;
 	}
 
 	private void exitThrower()

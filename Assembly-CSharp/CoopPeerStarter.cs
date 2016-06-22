@@ -70,7 +70,7 @@ public class CoopPeerStarter : GlobalEventListener
 	[DebuggerHidden]
 	private IEnumerator LoadingDone()
 	{
-		CoopPeerStarter.<LoadingDone>c__Iterator25 <LoadingDone>c__Iterator = new CoopPeerStarter.<LoadingDone>c__Iterator25();
+		CoopPeerStarter.<LoadingDone>c__Iterator26 <LoadingDone>c__Iterator = new CoopPeerStarter.<LoadingDone>c__Iterator26();
 		<LoadingDone>c__Iterator.<>f__this = this;
 		return <LoadingDone>c__Iterator;
 	}

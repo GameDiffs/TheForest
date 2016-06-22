@@ -67,7 +67,7 @@ public class CoopRaft : EntityBehaviour<IRaftState>
 	[DebuggerHidden]
 	private IEnumerator ClientPushEnabler(float waitTime)
 	{
-		CoopRaft.<ClientPushEnabler>c__Iterator20 <ClientPushEnabler>c__Iterator = new CoopRaft.<ClientPushEnabler>c__Iterator20();
+		CoopRaft.<ClientPushEnabler>c__Iterator21 <ClientPushEnabler>c__Iterator = new CoopRaft.<ClientPushEnabler>c__Iterator21();
 		<ClientPushEnabler>c__Iterator.waitTime = waitTime;
 		<ClientPushEnabler>c__Iterator.<$>waitTime = waitTime;
 		<ClientPushEnabler>c__Iterator.<>f__this = this;

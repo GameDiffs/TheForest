@@ -147,10 +147,19 @@ public class LogHolder : EntityBehaviour<IItemHolderState>
 		}
 	}
 
-	public void AddItemMP()
+	public void AddItemMP(BoltConnection source)
 	{
-		base.state.ItemCount = Mathf.Min(base.state.ItemCount + 1, this.LogRender.Length);
-		this.RefreshMassAndDrag();
+		if (base.state.ItemCount < this.LogRender.Length)
+		{
+			base.state.ItemCount = Mathf.Min(base.state.ItemCount + 1, this.LogRender.Length);
+			this.RefreshMassAndDrag();
+		}
+		else
+		{
+			PlayerAddItem playerAddItem = PlayerAddItem.Create(source);
+			playerAddItem.ItemId = LocalPlayer.Inventory.Logs._logItemId;
+			playerAddItem.Send();
+		}
 	}
 
 	private void ItemCountChangedMP()

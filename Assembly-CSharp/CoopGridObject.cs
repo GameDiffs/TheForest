@@ -18,6 +18,7 @@ public class CoopGridObject : EntityBehaviour
 	private void Awake()
 	{
 		this.CurrentNode = -1;
+		base.enabled = false;
 	}
 
 	private void Update()
@@ -41,6 +42,7 @@ public class CoopGridObject : EntityBehaviour
 		if (BoltNetwork.isServer)
 		{
 			CoopTreeGrid.RegisterObject(this);
+			base.enabled = this.Dynamic;
 		}
 	}
 

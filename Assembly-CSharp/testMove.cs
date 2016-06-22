@@ -22,8 +22,8 @@ public class testMove : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doMove()
 	{
-		testMove.<doMove>c__IteratorFD <doMove>c__IteratorFD = new testMove.<doMove>c__IteratorFD();
-		<doMove>c__IteratorFD.<>f__this = this;
-		return <doMove>c__IteratorFD;
+		testMove.<doMove>c__Iterator100 <doMove>c__Iterator = new testMove.<doMove>c__Iterator100();
+		<doMove>c__Iterator.<>f__this = this;
+		return <doMove>c__Iterator;
 	}
 }

@@ -192,8 +192,8 @@ public class ShelterTrigger : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator DelayedCollapse()
 	{
-		ShelterTrigger.<DelayedCollapse>c__Iterator1AA <DelayedCollapse>c__Iterator1AA = new ShelterTrigger.<DelayedCollapse>c__Iterator1AA();
-		<DelayedCollapse>c__Iterator1AA.<>f__this = this;
-		return <DelayedCollapse>c__Iterator1AA;
+		ShelterTrigger.<DelayedCollapse>c__Iterator1B2 <DelayedCollapse>c__Iterator1B = new ShelterTrigger.<DelayedCollapse>c__Iterator1B2();
+		<DelayedCollapse>c__Iterator1B.<>f__this = this;
+		return <DelayedCollapse>c__Iterator1B;
 	}
 }

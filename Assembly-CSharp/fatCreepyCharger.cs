@@ -1,4 +1,5 @@
 using System;
+using TheForest.Tools;
 using UnityEngine;
 
 public class fatCreepyCharger : MonoBehaviour
@@ -38,6 +39,7 @@ public class fatCreepyCharger : MonoBehaviour
 				}
 			}
 			float num = Vector3.Distance(base.transform.position, gameObject.transform.position);
+			EventRegistry.Enemy.Publish(TfEvent.EnemyContact, base.GetComponentInParent<enemyType>().Type);
 			gameObject.SendMessageUpwards("Explosion", 8, SendMessageOptions.DontRequireReceiver);
 			gameObject.SendMessage("lookAtExplosion", base.transform.position, SendMessageOptions.DontRequireReceiver);
 			this.setup.pmCombat.SendEvent("toWander");

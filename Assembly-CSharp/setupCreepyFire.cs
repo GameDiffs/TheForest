@@ -58,7 +58,7 @@ public class setupCreepyFire : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator disableFire(GameObject go)
 	{
-		setupCreepyFire.<disableFire>c__IteratorF3 <disableFire>c__IteratorF = new setupCreepyFire.<disableFire>c__IteratorF3();
+		setupCreepyFire.<disableFire>c__IteratorF6 <disableFire>c__IteratorF = new setupCreepyFire.<disableFire>c__IteratorF6();
 		<disableFire>c__IteratorF.go = go;
 		<disableFire>c__IteratorF.<$>go = go;
 		return <disableFire>c__IteratorF;

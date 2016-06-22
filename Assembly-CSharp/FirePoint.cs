@@ -155,7 +155,7 @@ public class FirePoint : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator spreadFire()
 	{
-		FirePoint.<spreadFire>c__Iterator103 <spreadFire>c__Iterator = new FirePoint.<spreadFire>c__Iterator103();
+		FirePoint.<spreadFire>c__Iterator106 <spreadFire>c__Iterator = new FirePoint.<spreadFire>c__Iterator106();
 		<spreadFire>c__Iterator.<>f__this = this;
 		return <spreadFire>c__Iterator;
 	}
@@ -167,7 +167,7 @@ public class FirePoint : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator setWind()
 	{
-		FirePoint.<setWind>c__Iterator104 <setWind>c__Iterator = new FirePoint.<setWind>c__Iterator104();
+		FirePoint.<setWind>c__Iterator107 <setWind>c__Iterator = new FirePoint.<setWind>c__Iterator107();
 		<setWind>c__Iterator.<>f__this = this;
 		return <setWind>c__Iterator;
 	}

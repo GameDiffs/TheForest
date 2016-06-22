@@ -45,6 +45,24 @@ namespace TheForest.Player
 				}
 			}
 
+			public void Clear()
+			{
+				TickOffSystem.EntryType type = this._type;
+				if (type != TickOffSystem.EntryType.CollectItem)
+				{
+					if (type == TickOffSystem.EntryType.InspectAnimal)
+					{
+						EventRegistry.Player.Unsubscribe(TfEvent.InspectedAnimal, new EventRegistry.SubscriberCallback(this.OnInspectedAnimal));
+					}
+				}
+				else
+				{
+					EventRegistry.Player.Unsubscribe(TfEvent.AddedItem, new EventRegistry.SubscriberCallback(this.OnCollectedItem));
+					EventRegistry.Player.Unsubscribe(TfEvent.UsedItem, new EventRegistry.SubscriberCallback(this.OnCollectedItem));
+				}
+				this._tickGo = null;
+			}
+
 			private void OnCollectedItem(object o)
 			{
 				int num = (int)o;
@@ -66,8 +84,7 @@ namespace TheForest.Player
 							")"
 						}));
 					}
-					EventRegistry.Player.Unsubscribe(TfEvent.AddedItem, new EventRegistry.SubscriberCallback(this.OnCollectedItem));
-					EventRegistry.Player.Unsubscribe(TfEvent.UsedItem, new EventRegistry.SubscriberCallback(this.OnCollectedItem));
+					this.Clear();
 					EventRegistry.Player.Publish(TfEvent.TickedOffEntry, this);
 				}
 			}
@@ -79,7 +96,7 @@ namespace TheForest.Player
 				{
 					this._ticked = true;
 					this._tickGo.SetActive(true);
-					EventRegistry.Player.Unsubscribe(TfEvent.InspectedAnimal, new EventRegistry.SubscriberCallback(this.OnInspectedAnimal));
+					this.Clear();
 					EventRegistry.Player.Publish(TfEvent.TickedOffEntry, this);
 				}
 			}
@@ -113,22 +130,28 @@ namespace TheForest.Player
 		private void OnDestroy()
 		{
 			EventRegistry.Player.Unsubscribe(TfEvent.TickedOffEntry, new EventRegistry.SubscriberCallback(this.DoneMessage));
+			TickOffSystem.Entry[] entries = this._entries;
+			for (int i = 0; i < entries.Length; i++)
+			{
+				TickOffSystem.Entry entry = entries[i];
+				entry.Clear();
+			}
 		}
 
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake()
 		{
-			TickOffSystem.<DelayedAwake>c__Iterator18A <DelayedAwake>c__Iterator18A = new TickOffSystem.<DelayedAwake>c__Iterator18A();
-			<DelayedAwake>c__Iterator18A.<>f__this = this;
-			return <DelayedAwake>c__Iterator18A;
+			TickOffSystem.<DelayedAwake>c__Iterator192 <DelayedAwake>c__Iterator = new TickOffSystem.<DelayedAwake>c__Iterator192();
+			<DelayedAwake>c__Iterator.<>f__this = this;
+			return <DelayedAwake>c__Iterator;
 		}
 
 		[DebuggerHidden]
 		private IEnumerator OnDeserialized()
 		{
-			TickOffSystem.<OnDeserialized>c__Iterator18B <OnDeserialized>c__Iterator18B = new TickOffSystem.<OnDeserialized>c__Iterator18B();
-			<OnDeserialized>c__Iterator18B.<>f__this = this;
-			return <OnDeserialized>c__Iterator18B;
+			TickOffSystem.<OnDeserialized>c__Iterator193 <OnDeserialized>c__Iterator = new TickOffSystem.<OnDeserialized>c__Iterator193();
+			<OnDeserialized>c__Iterator.<>f__this = this;
+			return <OnDeserialized>c__Iterator;
 		}
 
 		private void OnSerializing()
