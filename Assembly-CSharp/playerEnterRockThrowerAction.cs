@@ -105,7 +105,7 @@ public class playerEnterRockThrowerAction : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator doThrower(GameObject posGo)
 	{
-		playerEnterRockThrowerAction.<doThrower>c__Iterator196 <doThrower>c__Iterator = new playerEnterRockThrowerAction.<doThrower>c__Iterator196();
+		playerEnterRockThrowerAction.<doThrower>c__Iterator197 <doThrower>c__Iterator = new playerEnterRockThrowerAction.<doThrower>c__Iterator197();
 		<doThrower>c__Iterator.posGo = posGo;
 		<doThrower>c__Iterator.<$>posGo = posGo;
 		<doThrower>c__Iterator.<>f__this = this;
@@ -115,7 +115,7 @@ public class playerEnterRockThrowerAction : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator offsetLeverRotation()
 	{
-		playerEnterRockThrowerAction.<offsetLeverRotation>c__Iterator197 <offsetLeverRotation>c__Iterator = new playerEnterRockThrowerAction.<offsetLeverRotation>c__Iterator197();
+		playerEnterRockThrowerAction.<offsetLeverRotation>c__Iterator198 <offsetLeverRotation>c__Iterator = new playerEnterRockThrowerAction.<offsetLeverRotation>c__Iterator198();
 		<offsetLeverRotation>c__Iterator.<>f__this = this;
 		return <offsetLeverRotation>c__Iterator;
 	}

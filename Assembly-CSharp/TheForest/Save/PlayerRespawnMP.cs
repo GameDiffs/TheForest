@@ -328,12 +328,12 @@ namespace TheForest.Save
 		[DebuggerHidden]
 		private IEnumerator DelayedAddItem(int itemId, int amount)
 		{
-			PlayerRespawnMP.<DelayedAddItem>c__Iterator1AF <DelayedAddItem>c__Iterator1AF = new PlayerRespawnMP.<DelayedAddItem>c__Iterator1AF();
-			<DelayedAddItem>c__Iterator1AF.itemId = itemId;
-			<DelayedAddItem>c__Iterator1AF.amount = amount;
-			<DelayedAddItem>c__Iterator1AF.<$>itemId = itemId;
-			<DelayedAddItem>c__Iterator1AF.<$>amount = amount;
-			return <DelayedAddItem>c__Iterator1AF;
+			PlayerRespawnMP.<DelayedAddItem>c__Iterator1B0 <DelayedAddItem>c__Iterator1B = new PlayerRespawnMP.<DelayedAddItem>c__Iterator1B0();
+			<DelayedAddItem>c__Iterator1B.itemId = itemId;
+			<DelayedAddItem>c__Iterator1B.amount = amount;
+			<DelayedAddItem>c__Iterator1B.<$>itemId = itemId;
+			<DelayedAddItem>c__Iterator1B.<$>amount = amount;
+			return <DelayedAddItem>c__Iterator1B;
 		}
 
 		private void SetLayerRecursively(Transform tr, LayerMask layer)

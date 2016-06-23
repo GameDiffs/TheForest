@@ -28,7 +28,7 @@ namespace TheForest.World
 		[DebuggerHidden]
 		private IEnumerator FadeInRoutine()
 		{
-			LightFadeIn.<FadeInRoutine>c__Iterator1C7 <FadeInRoutine>c__Iterator1C = new LightFadeIn.<FadeInRoutine>c__Iterator1C7();
+			LightFadeIn.<FadeInRoutine>c__Iterator1C8 <FadeInRoutine>c__Iterator1C = new LightFadeIn.<FadeInRoutine>c__Iterator1C8();
 			<FadeInRoutine>c__Iterator1C.<>f__this = this;
 			return <FadeInRoutine>c__Iterator1C;
 		}

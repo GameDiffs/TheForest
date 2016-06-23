@@ -214,9 +214,9 @@ namespace TheForest.UI.Multiplayer
 		[DebuggerHidden]
 		public IEnumerator Close()
 		{
-			ChatBox.<Close>c__Iterator1BB <Close>c__Iterator1BB = new ChatBox.<Close>c__Iterator1BB();
-			<Close>c__Iterator1BB.<>f__this = this;
-			return <Close>c__Iterator1BB;
+			ChatBox.<Close>c__Iterator1BC <Close>c__Iterator1BC = new ChatBox.<Close>c__Iterator1BC();
+			<Close>c__Iterator1BC.<>f__this = this;
+			return <Close>c__Iterator1BC;
 		}
 	}
 }

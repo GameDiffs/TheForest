@@ -92,7 +92,7 @@ public class clsshowcasehelper : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator metAsmRoutine()
 	{
-		clsshowcasehelper.<metAsmRoutine>c__Iterator1E3 <metAsmRoutine>c__Iterator1E = new clsshowcasehelper.<metAsmRoutine>c__Iterator1E3();
+		clsshowcasehelper.<metAsmRoutine>c__Iterator1E4 <metAsmRoutine>c__Iterator1E = new clsshowcasehelper.<metAsmRoutine>c__Iterator1E4();
 		<metAsmRoutine>c__Iterator1E.<>f__this = this;
 		return <metAsmRoutine>c__Iterator1E;
 	}
@@ -105,7 +105,7 @@ public class clsshowcasehelper : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator metDriveRagdoll()
 	{
-		clsshowcasehelper.<metDriveRagdoll>c__Iterator1E4 <metDriveRagdoll>c__Iterator1E = new clsshowcasehelper.<metDriveRagdoll>c__Iterator1E4();
+		clsshowcasehelper.<metDriveRagdoll>c__Iterator1E5 <metDriveRagdoll>c__Iterator1E = new clsshowcasehelper.<metDriveRagdoll>c__Iterator1E5();
 		<metDriveRagdoll>c__Iterator1E.<>f__this = this;
 		return <metDriveRagdoll>c__Iterator1E;
 	}

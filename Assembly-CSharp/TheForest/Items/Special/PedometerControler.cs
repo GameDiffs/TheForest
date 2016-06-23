@@ -53,7 +53,7 @@ namespace TheForest.Items.Special
 		[DebuggerHidden]
 		private IEnumerator DelayedStop()
 		{
-			PedometerControler.<DelayedStop>c__Iterator170 <DelayedStop>c__Iterator = new PedometerControler.<DelayedStop>c__Iterator170();
+			PedometerControler.<DelayedStop>c__Iterator171 <DelayedStop>c__Iterator = new PedometerControler.<DelayedStop>c__Iterator171();
 			<DelayedStop>c__Iterator.<>f__this = this;
 			return <DelayedStop>c__Iterator;
 		}

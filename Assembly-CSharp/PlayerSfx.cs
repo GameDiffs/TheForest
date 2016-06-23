@@ -669,7 +669,7 @@ public class PlayerSfx : EntityEventListener<IPlayerState>
 	[DebuggerHidden]
 	public IEnumerator playVisWarning()
 	{
-		PlayerSfx.<playVisWarning>c__Iterator198 <playVisWarning>c__Iterator = new PlayerSfx.<playVisWarning>c__Iterator198();
+		PlayerSfx.<playVisWarning>c__Iterator199 <playVisWarning>c__Iterator = new PlayerSfx.<playVisWarning>c__Iterator199();
 		<playVisWarning>c__Iterator.<>f__this = this;
 		return <playVisWarning>c__Iterator;
 	}
@@ -677,9 +677,9 @@ public class PlayerSfx : EntityEventListener<IPlayerState>
 	[DebuggerHidden]
 	public IEnumerator stopVisWarning()
 	{
-		PlayerSfx.<stopVisWarning>c__Iterator199 <stopVisWarning>c__Iterator = new PlayerSfx.<stopVisWarning>c__Iterator199();
-		<stopVisWarning>c__Iterator.<>f__this = this;
-		return <stopVisWarning>c__Iterator;
+		PlayerSfx.<stopVisWarning>c__Iterator19A <stopVisWarning>c__Iterator19A = new PlayerSfx.<stopVisWarning>c__Iterator19A();
+		<stopVisWarning>c__Iterator19A.<>f__this = this;
+		return <stopVisWarning>c__Iterator19A;
 	}
 
 	public void PlayBowSnap()

@@ -625,20 +625,20 @@ public class PlayerTuts : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator ShowWorldMapTutDelayed(int mapId)
 	{
-		PlayerTuts.<ShowWorldMapTutDelayed>c__Iterator1AA <ShowWorldMapTutDelayed>c__Iterator1AA = new PlayerTuts.<ShowWorldMapTutDelayed>c__Iterator1AA();
-		<ShowWorldMapTutDelayed>c__Iterator1AA.mapId = mapId;
-		<ShowWorldMapTutDelayed>c__Iterator1AA.<$>mapId = mapId;
-		<ShowWorldMapTutDelayed>c__Iterator1AA.<>f__this = this;
-		return <ShowWorldMapTutDelayed>c__Iterator1AA;
+		PlayerTuts.<ShowWorldMapTutDelayed>c__Iterator1AB <ShowWorldMapTutDelayed>c__Iterator1AB = new PlayerTuts.<ShowWorldMapTutDelayed>c__Iterator1AB();
+		<ShowWorldMapTutDelayed>c__Iterator1AB.mapId = mapId;
+		<ShowWorldMapTutDelayed>c__Iterator1AB.<$>mapId = mapId;
+		<ShowWorldMapTutDelayed>c__Iterator1AB.<>f__this = this;
+		return <ShowWorldMapTutDelayed>c__Iterator1AB;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator CloseWorldMapTut(int mapId)
 	{
-		PlayerTuts.<CloseWorldMapTut>c__Iterator1AB <CloseWorldMapTut>c__Iterator1AB = new PlayerTuts.<CloseWorldMapTut>c__Iterator1AB();
-		<CloseWorldMapTut>c__Iterator1AB.mapId = mapId;
-		<CloseWorldMapTut>c__Iterator1AB.<$>mapId = mapId;
-		return <CloseWorldMapTut>c__Iterator1AB;
+		PlayerTuts.<CloseWorldMapTut>c__Iterator1AC <CloseWorldMapTut>c__Iterator1AC = new PlayerTuts.<CloseWorldMapTut>c__Iterator1AC();
+		<CloseWorldMapTut>c__Iterator1AC.mapId = mapId;
+		<CloseWorldMapTut>c__Iterator1AC.<$>mapId = mapId;
+		return <CloseWorldMapTut>c__Iterator1AC;
 	}
 
 	public void CloseBuildToolsTut()

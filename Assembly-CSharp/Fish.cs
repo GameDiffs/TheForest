@@ -526,7 +526,7 @@ public class Fish : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator resetSpeed()
 	{
-		return new Fish.<resetSpeed>c__Iterator160();
+		return new Fish.<resetSpeed>c__Iterator161();
 	}
 
 	private void reverseDirection()
@@ -845,7 +845,7 @@ public class Fish : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setDeathSpeed()
 	{
-		Fish.<setDeathSpeed>c__Iterator161 <setDeathSpeed>c__Iterator = new Fish.<setDeathSpeed>c__Iterator161();
+		Fish.<setDeathSpeed>c__Iterator162 <setDeathSpeed>c__Iterator = new Fish.<setDeathSpeed>c__Iterator162();
 		<setDeathSpeed>c__Iterator.<>f__this = this;
 		return <setDeathSpeed>c__Iterator;
 	}
@@ -853,7 +853,7 @@ public class Fish : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setDeathSpeedShark()
 	{
-		Fish.<setDeathSpeedShark>c__Iterator162 <setDeathSpeedShark>c__Iterator = new Fish.<setDeathSpeedShark>c__Iterator162();
+		Fish.<setDeathSpeedShark>c__Iterator163 <setDeathSpeedShark>c__Iterator = new Fish.<setDeathSpeedShark>c__Iterator163();
 		<setDeathSpeedShark>c__Iterator.<>f__this = this;
 		return <setDeathSpeedShark>c__Iterator;
 	}
@@ -861,7 +861,7 @@ public class Fish : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator setFleeSpeed()
 	{
-		Fish.<setFleeSpeed>c__Iterator163 <setFleeSpeed>c__Iterator = new Fish.<setFleeSpeed>c__Iterator163();
+		Fish.<setFleeSpeed>c__Iterator164 <setFleeSpeed>c__Iterator = new Fish.<setFleeSpeed>c__Iterator164();
 		<setFleeSpeed>c__Iterator.<>f__this = this;
 		return <setFleeSpeed>c__Iterator;
 	}

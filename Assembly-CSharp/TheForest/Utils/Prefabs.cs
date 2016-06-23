@@ -161,7 +161,7 @@ namespace TheForest.Utils
 		[DebuggerHidden]
 		private IEnumerator Start()
 		{
-			Prefabs.<Start>c__Iterator1C0 <Start>c__Iterator1C = new Prefabs.<Start>c__Iterator1C0();
+			Prefabs.<Start>c__Iterator1C1 <Start>c__Iterator1C = new Prefabs.<Start>c__Iterator1C1();
 			<Start>c__Iterator1C.<>f__this = this;
 			return <Start>c__Iterator1C;
 		}
@@ -241,7 +241,7 @@ namespace TheForest.Utils
 		[DebuggerHidden]
 		private IEnumerator DelayedSpawn(Transform prefab, Vector3 pos, Quaternion rot, Transform parent)
 		{
-			Prefabs.<DelayedSpawn>c__Iterator1C1 <DelayedSpawn>c__Iterator1C = new Prefabs.<DelayedSpawn>c__Iterator1C1();
+			Prefabs.<DelayedSpawn>c__Iterator1C2 <DelayedSpawn>c__Iterator1C = new Prefabs.<DelayedSpawn>c__Iterator1C2();
 			<DelayedSpawn>c__Iterator1C.prefab = prefab;
 			<DelayedSpawn>c__Iterator1C.pos = pos;
 			<DelayedSpawn>c__Iterator1C.rot = rot;
@@ -256,7 +256,7 @@ namespace TheForest.Utils
 		[DebuggerHidden]
 		private IEnumerator DelayedSpawnMP(Transform prefab, Vector3 pos, Quaternion rot, Transform parent)
 		{
-			Prefabs.<DelayedSpawnMP>c__Iterator1C2 <DelayedSpawnMP>c__Iterator1C = new Prefabs.<DelayedSpawnMP>c__Iterator1C2();
+			Prefabs.<DelayedSpawnMP>c__Iterator1C3 <DelayedSpawnMP>c__Iterator1C = new Prefabs.<DelayedSpawnMP>c__Iterator1C3();
 			<DelayedSpawnMP>c__Iterator1C.prefab = prefab;
 			<DelayedSpawnMP>c__Iterator1C.pos = pos;
 			<DelayedSpawnMP>c__Iterator1C.rot = rot;
@@ -271,7 +271,7 @@ namespace TheForest.Utils
 		[DebuggerHidden]
 		private IEnumerator DelayedPoolSpawn(string pool, Transform prefab, Vector3 pos, Quaternion rot)
 		{
-			Prefabs.<DelayedPoolSpawn>c__Iterator1C3 <DelayedPoolSpawn>c__Iterator1C = new Prefabs.<DelayedPoolSpawn>c__Iterator1C3();
+			Prefabs.<DelayedPoolSpawn>c__Iterator1C4 <DelayedPoolSpawn>c__Iterator1C = new Prefabs.<DelayedPoolSpawn>c__Iterator1C4();
 			<DelayedPoolSpawn>c__Iterator1C.pool = pool;
 			<DelayedPoolSpawn>c__Iterator1C.prefab = prefab;
 			<DelayedPoolSpawn>c__Iterator1C.pos = pos;
@@ -286,7 +286,7 @@ namespace TheForest.Utils
 		[DebuggerHidden]
 		private IEnumerator DelayedPoolSpawnMP(string pool, Transform prefab, Vector3 pos, Quaternion rot)
 		{
-			Prefabs.<DelayedPoolSpawnMP>c__Iterator1C4 <DelayedPoolSpawnMP>c__Iterator1C = new Prefabs.<DelayedPoolSpawnMP>c__Iterator1C4();
+			Prefabs.<DelayedPoolSpawnMP>c__Iterator1C5 <DelayedPoolSpawnMP>c__Iterator1C = new Prefabs.<DelayedPoolSpawnMP>c__Iterator1C5();
 			<DelayedPoolSpawnMP>c__Iterator1C.pool = pool;
 			<DelayedPoolSpawnMP>c__Iterator1C.prefab = prefab;
 			<DelayedPoolSpawnMP>c__Iterator1C.pos = pos;

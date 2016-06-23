@@ -51,7 +51,7 @@ public class Explode : EntityBehaviour
 						collider.GetComponent<Rigidbody>().AddExplosionForce(this.power, position, this.radius, 3f);
 					}
 				}
-				if (collider.CompareTag("SmallTree") || collider.CompareTag("Tree") || collider.CompareTag("MidTree") || collider.CompareTag("BreakableWood") || collider.CompareTag("BreakableRock") || collider.CompareTag("Fish"))
+				else if (collider.CompareTag("SmallTree") || collider.CompareTag("Tree") || collider.CompareTag("MidTree") || collider.CompareTag("BreakableWood") || collider.CompareTag("BreakableRock") || collider.CompareTag("Fish"))
 				{
 					float num2 = Vector3.Distance(base.transform.position, collider.transform.position);
 					if (collider.CompareTag("lb_bird") || collider.CompareTag("Fish"))
@@ -63,6 +63,15 @@ public class Explode : EntityBehaviour
 						collider.gameObject.SendMessageUpwards("Explosion", num2, SendMessageOptions.DontRequireReceiver);
 					}
 					collider.gameObject.SendMessage("lookAtExplosion", base.transform.position, SendMessageOptions.DontRequireReceiver);
+				}
+				else if (collider.CompareTag("structure"))
+				{
+					float distance = Vector3.Distance(base.transform.position, collider.transform.position);
+					collider.gameObject.SendMessage("OnExplode", new Explode.Data
+					{
+						distance = distance,
+						explode = this
+					}, SendMessageOptions.DontRequireReceiver);
 				}
 			}
 			else

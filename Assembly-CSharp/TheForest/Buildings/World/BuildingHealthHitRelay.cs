@@ -24,7 +24,7 @@ namespace TheForest.Buildings.World
 		public void OnExplode(Explode.Data explodeData)
 		{
 			BuildingExplosion componentInParent = base.transform.GetComponentInParent<BuildingExplosion>();
-			if (componentInParent)
+			if (componentInParent && !componentInParent.Exploding)
 			{
 				Scene.ActiveMB.StartCoroutine(componentInParent.OnExplode(explodeData));
 			}

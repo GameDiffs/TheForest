@@ -6,7 +6,7 @@ namespace HutongGames.PlayMaker.Actions
 	[ActionCategory("Animator"), HelpUrl("https://hutonggames.fogbugz.com/default.asp?W1067"), HutongGames.PlayMaker.Tooltip("Sets the position, rotation and weights of an IK goal. A GameObject can be set to control the position and rotation, or it can be manually expressed.")]
 	public class SetAnimatorIKGoal : FsmStateAction
 	{
-		[CheckForComponent(typeof(Animator)), CheckForComponent(typeof(PlayMakerAnimatorIKProxy)), RequiredField, HutongGames.PlayMaker.Tooltip("The target. An Animator component and a PlayMakerAnimatorIKProxy component are required")]
+		[CheckForComponent(typeof(PlayMakerAnimatorIKProxy)), CheckForComponent(typeof(Animator)), RequiredField, HutongGames.PlayMaker.Tooltip("The target. An Animator component and a PlayMakerAnimatorIKProxy component are required")]
 		public FsmOwnerDefault gameObject;
 
 		[HutongGames.PlayMaker.Tooltip("The IK goal")]

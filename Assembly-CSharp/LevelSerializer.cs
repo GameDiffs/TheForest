@@ -510,13 +510,13 @@ public static class LevelSerializer
 
 	public static void SaveObjectTreeToServer(string uri, GameObject rootOfTree, string userName = "", string password = "", Action<Exception> onComplete = null)
 	{
-		LevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2C1 <SaveObjectTreeToServer>c__AnonStorey2C = new LevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2C1();
+		LevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2C2 <SaveObjectTreeToServer>c__AnonStorey2C = new LevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2C2();
 		<SaveObjectTreeToServer>c__AnonStorey2C.rootOfTree = rootOfTree;
 		<SaveObjectTreeToServer>c__AnonStorey2C.userName = userName;
 		<SaveObjectTreeToServer>c__AnonStorey2C.password = password;
 		<SaveObjectTreeToServer>c__AnonStorey2C.uri = uri;
 		<SaveObjectTreeToServer>c__AnonStorey2C.onComplete = onComplete;
-		LevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2C1 arg_55_0 = <SaveObjectTreeToServer>c__AnonStorey2C;
+		LevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2C2 arg_55_0 = <SaveObjectTreeToServer>c__AnonStorey2C;
 		Action<Exception> arg_55_1;
 		if ((arg_55_1 = <SaveObjectTreeToServer>c__AnonStorey2C.onComplete) == null)
 		{
@@ -573,7 +573,7 @@ public static class LevelSerializer
 
 	public static void SerializeLevelToServer(string uri, string userName = "", string password = "", Action<Exception> onComplete = null)
 	{
-		LevelSerializer.<SerializeLevelToServer>c__AnonStorey2C4 <SerializeLevelToServer>c__AnonStorey2C = new LevelSerializer.<SerializeLevelToServer>c__AnonStorey2C4();
+		LevelSerializer.<SerializeLevelToServer>c__AnonStorey2C5 <SerializeLevelToServer>c__AnonStorey2C = new LevelSerializer.<SerializeLevelToServer>c__AnonStorey2C5();
 		<SerializeLevelToServer>c__AnonStorey2C.uri = uri;
 		<SerializeLevelToServer>c__AnonStorey2C.userName = userName;
 		<SerializeLevelToServer>c__AnonStorey2C.password = password;
@@ -591,7 +591,7 @@ public static class LevelSerializer
 			else
 			{
 				LevelSerializer.uploadCount++;
-				LevelSerializer.<SerializeLevelToServer>c__AnonStorey2C4 arg_8B_0 = <SerializeLevelToServer>c__AnonStorey2C;
+				LevelSerializer.<SerializeLevelToServer>c__AnonStorey2C5 arg_8B_0 = <SerializeLevelToServer>c__AnonStorey2C;
 				Action<Exception> arg_8B_1;
 				if ((arg_8B_1 = <SerializeLevelToServer>c__AnonStorey2C.onComplete) == null)
 				{
@@ -615,7 +615,7 @@ public static class LevelSerializer
 	[DebuggerHidden]
 	private static IEnumerator DownloadFromServer(string uri, Action<LevelLoader> onComplete)
 	{
-		LevelSerializer.<DownloadFromServer>c__Iterator1D5 <DownloadFromServer>c__Iterator1D = new LevelSerializer.<DownloadFromServer>c__Iterator1D5();
+		LevelSerializer.<DownloadFromServer>c__Iterator1D6 <DownloadFromServer>c__Iterator1D = new LevelSerializer.<DownloadFromServer>c__Iterator1D6();
 		<DownloadFromServer>c__Iterator1D.uri = uri;
 		<DownloadFromServer>c__Iterator1D.onComplete = onComplete;
 		<DownloadFromServer>c__Iterator1D.<$>uri = uri;
@@ -626,7 +626,7 @@ public static class LevelSerializer
 	[DebuggerHidden]
 	private static IEnumerator DownloadLevelFromServer(string uri)
 	{
-		LevelSerializer.<DownloadLevelFromServer>c__Iterator1D6 <DownloadLevelFromServer>c__Iterator1D = new LevelSerializer.<DownloadLevelFromServer>c__Iterator1D6();
+		LevelSerializer.<DownloadLevelFromServer>c__Iterator1D7 <DownloadLevelFromServer>c__Iterator1D = new LevelSerializer.<DownloadLevelFromServer>c__Iterator1D7();
 		<DownloadLevelFromServer>c__Iterator1D.uri = uri;
 		<DownloadLevelFromServer>c__Iterator1D.<$>uri = uri;
 		return <DownloadLevelFromServer>c__Iterator1D;
@@ -1133,7 +1133,7 @@ public static class LevelSerializer
 	[DebuggerHidden]
 	private static IEnumerator PerformLoad(LevelLoader loader, Action<LevelLoader> complete)
 	{
-		LevelSerializer.<PerformLoad>c__Iterator1D7 <PerformLoad>c__Iterator1D = new LevelSerializer.<PerformLoad>c__Iterator1D7();
+		LevelSerializer.<PerformLoad>c__Iterator1D8 <PerformLoad>c__Iterator1D = new LevelSerializer.<PerformLoad>c__Iterator1D8();
 		<PerformLoad>c__Iterator1D.loader = loader;
 		<PerformLoad>c__Iterator1D.complete = complete;
 		<PerformLoad>c__Iterator1D.<$>loader = loader;

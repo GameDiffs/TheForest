@@ -14,7 +14,7 @@ namespace TheForest.Utils
 		{
 			if (this._todo)
 			{
-				this._todo.SendMessage("OnDestroy", SendMessageOptions.DontRequireReceiver);
+				this._todo.SendMessage(this._message, SendMessageOptions.DontRequireReceiver);
 			}
 		}
 	}

@@ -54,7 +54,7 @@ namespace TheForest.World
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake()
 		{
-			YachtDoor.<DelayedAwake>c__Iterator1C8 <DelayedAwake>c__Iterator1C = new YachtDoor.<DelayedAwake>c__Iterator1C8();
+			YachtDoor.<DelayedAwake>c__Iterator1C9 <DelayedAwake>c__Iterator1C = new YachtDoor.<DelayedAwake>c__Iterator1C9();
 			<DelayedAwake>c__Iterator1C.<>f__this = this;
 			return <DelayedAwake>c__Iterator1C;
 		}
@@ -62,9 +62,9 @@ namespace TheForest.World
 		[DebuggerHidden]
 		private IEnumerator DelayedAwakeClient()
 		{
-			YachtDoor.<DelayedAwakeClient>c__Iterator1C9 <DelayedAwakeClient>c__Iterator1C = new YachtDoor.<DelayedAwakeClient>c__Iterator1C9();
-			<DelayedAwakeClient>c__Iterator1C.<>f__this = this;
-			return <DelayedAwakeClient>c__Iterator1C;
+			YachtDoor.<DelayedAwakeClient>c__Iterator1CA <DelayedAwakeClient>c__Iterator1CA = new YachtDoor.<DelayedAwakeClient>c__Iterator1CA();
+			<DelayedAwakeClient>c__Iterator1CA.<>f__this = this;
+			return <DelayedAwakeClient>c__Iterator1CA;
 		}
 
 		private void Toggle()

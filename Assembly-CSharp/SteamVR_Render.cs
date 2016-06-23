@@ -167,9 +167,9 @@ public class SteamVR_Render : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator RenderLoop()
 	{
-		SteamVR_Render.<RenderLoop>c__Iterator1DF <RenderLoop>c__Iterator1DF = new SteamVR_Render.<RenderLoop>c__Iterator1DF();
-		<RenderLoop>c__Iterator1DF.<>f__this = this;
-		return <RenderLoop>c__Iterator1DF;
+		SteamVR_Render.<RenderLoop>c__Iterator1E0 <RenderLoop>c__Iterator1E = new SteamVR_Render.<RenderLoop>c__Iterator1E0();
+		<RenderLoop>c__Iterator1E.<>f__this = this;
+		return <RenderLoop>c__Iterator1E;
 	}
 
 	private void RenderEye(SteamVR vr, EVREye eye)

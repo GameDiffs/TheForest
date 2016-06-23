@@ -548,7 +548,7 @@ public class HudGui : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		HudGui.<Start>c__Iterator164 <Start>c__Iterator = new HudGui.<Start>c__Iterator164();
+		HudGui.<Start>c__Iterator165 <Start>c__Iterator = new HudGui.<Start>c__Iterator165();
 		<Start>c__Iterator.<>f__this = this;
 		return <Start>c__Iterator;
 	}
@@ -608,7 +608,7 @@ public class HudGui : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator RefreshHud()
 	{
-		return new HudGui.<RefreshHud>c__Iterator165();
+		return new HudGui.<RefreshHud>c__Iterator166();
 	}
 
 	private int GetScreenResolutionHash()

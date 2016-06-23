@@ -608,7 +608,7 @@ namespace TheForest.Buildings.World
 						float num = (1f - this.Hp / this._maxHP) / (float)base.state.BuildingHits;
 						data._damage = num * this._maxHP;
 						data._position = vector;
-						data._distortRatio = num * 10f;
+						data._distortRatio = num * 100f;
 						this.DistortReal(data);
 					}
 				}

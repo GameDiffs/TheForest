@@ -156,7 +156,7 @@ public class SteamVR_RenderModel : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator SetModelAsync(string renderModelName)
 	{
-		SteamVR_RenderModel.<SetModelAsync>c__Iterator1E0 <SetModelAsync>c__Iterator1E = new SteamVR_RenderModel.<SetModelAsync>c__Iterator1E0();
+		SteamVR_RenderModel.<SetModelAsync>c__Iterator1E1 <SetModelAsync>c__Iterator1E = new SteamVR_RenderModel.<SetModelAsync>c__Iterator1E1();
 		<SetModelAsync>c__Iterator1E.renderModelName = renderModelName;
 		<SetModelAsync>c__Iterator1E.<$>renderModelName = renderModelName;
 		<SetModelAsync>c__Iterator1E.<>f__this = this;
@@ -329,7 +329,7 @@ public class SteamVR_RenderModel : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator FreeRenderModel(IntPtr pRenderModel)
 	{
-		SteamVR_RenderModel.<FreeRenderModel>c__Iterator1E1 <FreeRenderModel>c__Iterator1E = new SteamVR_RenderModel.<FreeRenderModel>c__Iterator1E1();
+		SteamVR_RenderModel.<FreeRenderModel>c__Iterator1E2 <FreeRenderModel>c__Iterator1E = new SteamVR_RenderModel.<FreeRenderModel>c__Iterator1E2();
 		<FreeRenderModel>c__Iterator1E.pRenderModel = pRenderModel;
 		<FreeRenderModel>c__Iterator1E.<$>pRenderModel = pRenderModel;
 		return <FreeRenderModel>c__Iterator1E;

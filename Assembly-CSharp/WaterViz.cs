@@ -221,7 +221,7 @@ public class WaterViz : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator OutOfWaterTurnOffLights()
 	{
-		WaterViz.<OutOfWaterTurnOffLights>c__Iterator1C5 <OutOfWaterTurnOffLights>c__Iterator1C = new WaterViz.<OutOfWaterTurnOffLights>c__Iterator1C5();
+		WaterViz.<OutOfWaterTurnOffLights>c__Iterator1C6 <OutOfWaterTurnOffLights>c__Iterator1C = new WaterViz.<OutOfWaterTurnOffLights>c__Iterator1C6();
 		<OutOfWaterTurnOffLights>c__Iterator1C.<>f__this = this;
 		return <OutOfWaterTurnOffLights>c__Iterator1C;
 	}

@@ -199,10 +199,10 @@ public class MenuMain : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator WaitForBoltShutdown(Action done)
 	{
-		MenuMain.<WaitForBoltShutdown>c__Iterator17D <WaitForBoltShutdown>c__Iterator17D = new MenuMain.<WaitForBoltShutdown>c__Iterator17D();
-		<WaitForBoltShutdown>c__Iterator17D.done = done;
-		<WaitForBoltShutdown>c__Iterator17D.<$>done = done;
-		return <WaitForBoltShutdown>c__Iterator17D;
+		MenuMain.<WaitForBoltShutdown>c__Iterator17E <WaitForBoltShutdown>c__Iterator17E = new MenuMain.<WaitForBoltShutdown>c__Iterator17E();
+		<WaitForBoltShutdown>c__Iterator17E.done = done;
+		<WaitForBoltShutdown>c__Iterator17E.<$>done = done;
+		return <WaitForBoltShutdown>c__Iterator17E;
 	}
 
 	private void OnLevelWasLoaded()

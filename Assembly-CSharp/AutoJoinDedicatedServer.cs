@@ -13,7 +13,7 @@ public class AutoJoinDedicatedServer : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		AutoJoinDedicatedServer.<Start>c__Iterator181 <Start>c__Iterator = new AutoJoinDedicatedServer.<Start>c__Iterator181();
+		AutoJoinDedicatedServer.<Start>c__Iterator182 <Start>c__Iterator = new AutoJoinDedicatedServer.<Start>c__Iterator182();
 		<Start>c__Iterator.<>f__this = this;
 		return <Start>c__Iterator;
 	}

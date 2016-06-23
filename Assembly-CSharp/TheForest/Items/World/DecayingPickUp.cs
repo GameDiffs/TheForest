@@ -20,9 +20,9 @@ namespace TheForest.Items.World
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake()
 		{
-			DecayingPickUp.<DelayedAwake>c__Iterator17C <DelayedAwake>c__Iterator17C = new DecayingPickUp.<DelayedAwake>c__Iterator17C();
-			<DelayedAwake>c__Iterator17C.<>f__this = this;
-			return <DelayedAwake>c__Iterator17C;
+			DecayingPickUp.<DelayedAwake>c__Iterator17D <DelayedAwake>c__Iterator17D = new DecayingPickUp.<DelayedAwake>c__Iterator17D();
+			<DelayedAwake>c__Iterator17D.<>f__this = this;
+			return <DelayedAwake>c__Iterator17D;
 		}
 
 		protected override bool MainEffect()

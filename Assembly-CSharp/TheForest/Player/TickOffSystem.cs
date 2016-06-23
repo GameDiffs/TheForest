@@ -141,7 +141,7 @@ namespace TheForest.Player
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake()
 		{
-			TickOffSystem.<DelayedAwake>c__Iterator192 <DelayedAwake>c__Iterator = new TickOffSystem.<DelayedAwake>c__Iterator192();
+			TickOffSystem.<DelayedAwake>c__Iterator193 <DelayedAwake>c__Iterator = new TickOffSystem.<DelayedAwake>c__Iterator193();
 			<DelayedAwake>c__Iterator.<>f__this = this;
 			return <DelayedAwake>c__Iterator;
 		}
@@ -149,7 +149,7 @@ namespace TheForest.Player
 		[DebuggerHidden]
 		private IEnumerator OnDeserialized()
 		{
-			TickOffSystem.<OnDeserialized>c__Iterator193 <OnDeserialized>c__Iterator = new TickOffSystem.<OnDeserialized>c__Iterator193();
+			TickOffSystem.<OnDeserialized>c__Iterator194 <OnDeserialized>c__Iterator = new TickOffSystem.<OnDeserialized>c__Iterator194();
 			<OnDeserialized>c__Iterator.<>f__this = this;
 			return <OnDeserialized>c__Iterator;
 		}

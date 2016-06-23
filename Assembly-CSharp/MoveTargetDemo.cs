@@ -24,8 +24,8 @@ public class MoveTargetDemo : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator MoveTarget()
 	{
-		MoveTargetDemo.<MoveTarget>c__Iterator209 <MoveTarget>c__Iterator = new MoveTargetDemo.<MoveTarget>c__Iterator209();
-		<MoveTarget>c__Iterator.<>f__this = this;
-		return <MoveTarget>c__Iterator;
+		MoveTargetDemo.<MoveTarget>c__Iterator20A <MoveTarget>c__Iterator20A = new MoveTargetDemo.<MoveTarget>c__Iterator20A();
+		<MoveTarget>c__Iterator20A.<>f__this = this;
+		return <MoveTarget>c__Iterator20A;
 	}
 }

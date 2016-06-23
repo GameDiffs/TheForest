@@ -67,17 +67,17 @@ public class Clock : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		Clock.<Start>c__Iterator15D <Start>c__Iterator15D = new Clock.<Start>c__Iterator15D();
-		<Start>c__Iterator15D.<>f__this = this;
-		return <Start>c__Iterator15D;
+		Clock.<Start>c__Iterator15E <Start>c__Iterator15E = new Clock.<Start>c__Iterator15E();
+		<Start>c__Iterator15E.<>f__this = this;
+		return <Start>c__Iterator15E;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator OnDeserialized()
 	{
-		Clock.<OnDeserialized>c__Iterator15E <OnDeserialized>c__Iterator15E = new Clock.<OnDeserialized>c__Iterator15E();
-		<OnDeserialized>c__Iterator15E.<>f__this = this;
-		return <OnDeserialized>c__Iterator15E;
+		Clock.<OnDeserialized>c__Iterator15F <OnDeserialized>c__Iterator15F = new Clock.<OnDeserialized>c__Iterator15F();
+		<OnDeserialized>c__Iterator15F.<>f__this = this;
+		return <OnDeserialized>c__Iterator15F;
 	}
 
 	private void debugDay()

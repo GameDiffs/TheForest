@@ -45,7 +45,7 @@ namespace TheForest.Items.Special
 		[DebuggerHidden]
 		private IEnumerator DelayedStop(bool equipPrevious)
 		{
-			TalkyWalkyControler.<DelayedStop>c__Iterator171 <DelayedStop>c__Iterator = new TalkyWalkyControler.<DelayedStop>c__Iterator171();
+			TalkyWalkyControler.<DelayedStop>c__Iterator172 <DelayedStop>c__Iterator = new TalkyWalkyControler.<DelayedStop>c__Iterator172();
 			<DelayedStop>c__Iterator.equipPrevious = equipPrevious;
 			<DelayedStop>c__Iterator.<$>equipPrevious = equipPrevious;
 			<DelayedStop>c__Iterator.<>f__this = this;

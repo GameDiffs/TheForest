@@ -6,7 +6,7 @@ namespace HutongGames.PlayMaker.Actions
 	[ActionCategory("Animator"), HutongGames.PlayMaker.Tooltip("Synchronize a NavMesh Agent velocity and rotation with the animator process.")]
 	public class NavMeshAgentAnimatorSynchronizer : FsmStateAction
 	{
-		[CheckForComponent(typeof(NavMeshAgent)), CheckForComponent(typeof(Animator)), CheckForComponent(typeof(PlayMakerAnimatorMoveProxy)), RequiredField, HutongGames.PlayMaker.Tooltip("The Agent target. An Animator component and a PlayMakerAnimatorMoveProxy component are required")]
+		[CheckForComponent(typeof(NavMeshAgent)), CheckForComponent(typeof(PlayMakerAnimatorMoveProxy)), CheckForComponent(typeof(Animator)), RequiredField, HutongGames.PlayMaker.Tooltip("The Agent target. An Animator component and a PlayMakerAnimatorMoveProxy component are required")]
 		public FsmOwnerDefault gameObject;
 
 		private PlayMakerAnimatorMoveProxy _animatorProxy;

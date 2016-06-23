@@ -503,7 +503,7 @@ namespace DigitalOpus.MB.Core
 
 		private bool _addToCombined(GameObject[] goToAdd, int[] goToDelete, bool disableRendererInSource)
 		{
-			MB3_MeshCombinerSingle.<_addToCombined>c__AnonStorey267 <_addToCombined>c__AnonStorey = new MB3_MeshCombinerSingle.<_addToCombined>c__AnonStorey267();
+			MB3_MeshCombinerSingle.<_addToCombined>c__AnonStorey268 <_addToCombined>c__AnonStorey = new MB3_MeshCombinerSingle.<_addToCombined>c__AnonStorey268();
 			if (!this._validateTextureBakeResults())
 			{
 				return false;

@@ -136,7 +136,7 @@ namespace TheForest.Items.World
 		[DebuggerHidden]
 		private IEnumerator OnDeserialized()
 		{
-			CaveMapDrawer.<OnDeserialized>c__Iterator178 <OnDeserialized>c__Iterator = new CaveMapDrawer.<OnDeserialized>c__Iterator178();
+			CaveMapDrawer.<OnDeserialized>c__Iterator179 <OnDeserialized>c__Iterator = new CaveMapDrawer.<OnDeserialized>c__Iterator179();
 			<OnDeserialized>c__Iterator.<>f__this = this;
 			return <OnDeserialized>c__Iterator;
 		}
@@ -256,11 +256,11 @@ namespace TheForest.Items.World
 		[DebuggerHidden]
 		private IEnumerator RevealMapRoutine(int index)
 		{
-			CaveMapDrawer.<RevealMapRoutine>c__Iterator179 <RevealMapRoutine>c__Iterator = new CaveMapDrawer.<RevealMapRoutine>c__Iterator179();
-			<RevealMapRoutine>c__Iterator.index = index;
-			<RevealMapRoutine>c__Iterator.<$>index = index;
-			<RevealMapRoutine>c__Iterator.<>f__this = this;
-			return <RevealMapRoutine>c__Iterator;
+			CaveMapDrawer.<RevealMapRoutine>c__Iterator17A <RevealMapRoutine>c__Iterator17A = new CaveMapDrawer.<RevealMapRoutine>c__Iterator17A();
+			<RevealMapRoutine>c__Iterator17A.index = index;
+			<RevealMapRoutine>c__Iterator17A.<$>index = index;
+			<RevealMapRoutine>c__Iterator17A.<>f__this = this;
+			return <RevealMapRoutine>c__Iterator17A;
 		}
 
 		private void Clear()
@@ -303,11 +303,11 @@ namespace TheForest.Items.World
 		[DebuggerHidden]
 		private IEnumerator PlayerPositionPinAnim(Vector3 targetPos)
 		{
-			CaveMapDrawer.<PlayerPositionPinAnim>c__Iterator17A <PlayerPositionPinAnim>c__Iterator17A = new CaveMapDrawer.<PlayerPositionPinAnim>c__Iterator17A();
-			<PlayerPositionPinAnim>c__Iterator17A.targetPos = targetPos;
-			<PlayerPositionPinAnim>c__Iterator17A.<$>targetPos = targetPos;
-			<PlayerPositionPinAnim>c__Iterator17A.<>f__this = this;
-			return <PlayerPositionPinAnim>c__Iterator17A;
+			CaveMapDrawer.<PlayerPositionPinAnim>c__Iterator17B <PlayerPositionPinAnim>c__Iterator17B = new CaveMapDrawer.<PlayerPositionPinAnim>c__Iterator17B();
+			<PlayerPositionPinAnim>c__Iterator17B.targetPos = targetPos;
+			<PlayerPositionPinAnim>c__Iterator17B.<$>targetPos = targetPos;
+			<PlayerPositionPinAnim>c__Iterator17B.<>f__this = this;
+			return <PlayerPositionPinAnim>c__Iterator17B;
 		}
 	}
 }

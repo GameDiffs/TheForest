@@ -2722,7 +2722,7 @@ public class iTween : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator TweenDelay()
 	{
-		iTween.<TweenDelay>c__Iterator214 <TweenDelay>c__Iterator = new iTween.<TweenDelay>c__Iterator214();
+		iTween.<TweenDelay>c__Iterator215 <TweenDelay>c__Iterator = new iTween.<TweenDelay>c__Iterator215();
 		<TweenDelay>c__Iterator.<>f__this = this;
 		return <TweenDelay>c__Iterator;
 	}
@@ -2749,7 +2749,7 @@ public class iTween : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator TweenRestart()
 	{
-		iTween.<TweenRestart>c__Iterator215 <TweenRestart>c__Iterator = new iTween.<TweenRestart>c__Iterator215();
+		iTween.<TweenRestart>c__Iterator216 <TweenRestart>c__Iterator = new iTween.<TweenRestart>c__Iterator216();
 		<TweenRestart>c__Iterator.<>f__this = this;
 		return <TweenRestart>c__Iterator;
 	}
@@ -4124,7 +4124,7 @@ public class iTween : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		iTween.<Start>c__Iterator216 <Start>c__Iterator = new iTween.<Start>c__Iterator216();
+		iTween.<Start>c__Iterator217 <Start>c__Iterator = new iTween.<Start>c__Iterator217();
 		<Start>c__Iterator.<>f__this = this;
 		return <Start>c__Iterator;
 	}

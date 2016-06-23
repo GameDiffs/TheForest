@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Diagnostics;
 using UnityEngine;
 
 namespace TheForest.Buildings.World
@@ -19,12 +21,12 @@ namespace TheForest.Buildings.World
 			this._vanillaBlock = new MaterialPropertyBlock();
 		}
 
-		private void Start()
+		[DebuggerHidden]
+		private IEnumerator Start()
 		{
-			if (this._lod && this._lod.CurrentLOD >= 0)
-			{
-				this.LodChanged(this._lod.CurrentLOD);
-			}
+			TreeStructureLod.<Start>c__Iterator156 <Start>c__Iterator = new TreeStructureLod.<Start>c__Iterator156();
+			<Start>c__Iterator.<>f__this = this;
+			return <Start>c__Iterator;
 		}
 
 		private void OnDisable()

@@ -164,7 +164,7 @@ namespace TheForest.Player.Actions
 		[DebuggerHidden]
 		private IEnumerator stickToRope(Transform trn)
 		{
-			PlayerClimbRopeAction.<stickToRope>c__Iterator194 <stickToRope>c__Iterator = new PlayerClimbRopeAction.<stickToRope>c__Iterator194();
+			PlayerClimbRopeAction.<stickToRope>c__Iterator195 <stickToRope>c__Iterator = new PlayerClimbRopeAction.<stickToRope>c__Iterator195();
 			<stickToRope>c__Iterator.trn = trn;
 			<stickToRope>c__Iterator.<$>trn = trn;
 			<stickToRope>c__Iterator.<>f__this = this;

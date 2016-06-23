@@ -66,9 +66,9 @@ namespace TheForest.Items.Special
 		[DebuggerHidden]
 		private IEnumerator OnDeserialized()
 		{
-			LogControler.<OnDeserialized>c__Iterator16E <OnDeserialized>c__Iterator16E = new LogControler.<OnDeserialized>c__Iterator16E();
-			<OnDeserialized>c__Iterator16E.<>f__this = this;
-			return <OnDeserialized>c__Iterator16E;
+			LogControler.<OnDeserialized>c__Iterator16F <OnDeserialized>c__Iterator16F = new LogControler.<OnDeserialized>c__Iterator16F();
+			<OnDeserialized>c__Iterator16F.<>f__this = this;
+			return <OnDeserialized>c__Iterator16F;
 		}
 
 		public bool Lift()

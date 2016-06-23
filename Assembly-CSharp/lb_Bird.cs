@@ -333,7 +333,7 @@ public class lb_Bird : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator FlyToTarget(Vector3 getTarget)
 	{
-		lb_Bird.<FlyToTarget>c__Iterator218 <FlyToTarget>c__Iterator = new lb_Bird.<FlyToTarget>c__Iterator218();
+		lb_Bird.<FlyToTarget>c__Iterator219 <FlyToTarget>c__Iterator = new lb_Bird.<FlyToTarget>c__Iterator219();
 		<FlyToTarget>c__Iterator.getTarget = getTarget;
 		<FlyToTarget>c__Iterator.<$>getTarget = getTarget;
 		<FlyToTarget>c__Iterator.<>f__this = this;
@@ -704,9 +704,9 @@ public class lb_Bird : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator FleeHigh()
 	{
-		lb_Bird.<FleeHigh>c__Iterator219 <FleeHigh>c__Iterator = new lb_Bird.<FleeHigh>c__Iterator219();
-		<FleeHigh>c__Iterator.<>f__this = this;
-		return <FleeHigh>c__Iterator;
+		lb_Bird.<FleeHigh>c__Iterator21A <FleeHigh>c__Iterator21A = new lb_Bird.<FleeHigh>c__Iterator21A();
+		<FleeHigh>c__Iterator21A.<>f__this = this;
+		return <FleeHigh>c__Iterator21A;
 	}
 
 	public void FleeBehind()
@@ -883,9 +883,9 @@ public class lb_Bird : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator doMovement()
 	{
-		lb_Bird.<doMovement>c__Iterator21A <doMovement>c__Iterator21A = new lb_Bird.<doMovement>c__Iterator21A();
-		<doMovement>c__Iterator21A.<>f__this = this;
-		return <doMovement>c__Iterator21A;
+		lb_Bird.<doMovement>c__Iterator21B <doMovement>c__Iterator21B = new lb_Bird.<doMovement>c__Iterator21B();
+		<doMovement>c__Iterator21B.<>f__this = this;
+		return <doMovement>c__Iterator21B;
 	}
 
 	protected float XZSqrMagnitude(Vector3 a, Vector3 b)

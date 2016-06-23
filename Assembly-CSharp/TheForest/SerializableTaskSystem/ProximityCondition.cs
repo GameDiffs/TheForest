@@ -50,9 +50,9 @@ namespace TheForest.SerializableTaskSystem
 		[DebuggerHidden]
 		public IEnumerator CheckProximityRoutine()
 		{
-			ProximityCondition.<CheckProximityRoutine>c__Iterator189 <CheckProximityRoutine>c__Iterator = new ProximityCondition.<CheckProximityRoutine>c__Iterator189();
-			<CheckProximityRoutine>c__Iterator.<>f__this = this;
-			return <CheckProximityRoutine>c__Iterator;
+			ProximityCondition.<CheckProximityRoutine>c__Iterator18A <CheckProximityRoutine>c__Iterator18A = new ProximityCondition.<CheckProximityRoutine>c__Iterator18A();
+			<CheckProximityRoutine>c__Iterator18A.<>f__this = this;
+			return <CheckProximityRoutine>c__Iterator18A;
 		}
 
 		private bool IsWithinRangeOfTarget()

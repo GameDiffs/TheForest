@@ -40,7 +40,7 @@ namespace TheForest.Items.World
 		[DebuggerHidden]
 		private IEnumerator DelayedStart()
 		{
-			BatteryBasedTalkyWalky.<DelayedStart>c__Iterator177 <DelayedStart>c__Iterator = new BatteryBasedTalkyWalky.<DelayedStart>c__Iterator177();
+			BatteryBasedTalkyWalky.<DelayedStart>c__Iterator178 <DelayedStart>c__Iterator = new BatteryBasedTalkyWalky.<DelayedStart>c__Iterator178();
 			<DelayedStart>c__Iterator.<>f__this = this;
 			return <DelayedStart>c__Iterator;
 		}

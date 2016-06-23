@@ -125,18 +125,18 @@ namespace OrbCreationExtensions
 		[DebuggerHidden]
 		public static IEnumerator MakeLODMeshInBackground(this Mesh mesh, float maxWeight, bool recalcNormals, float removeSmallParts, Action<Mesh> result)
 		{
-			MeshExtensions.<MakeLODMeshInBackground>c__Iterator1DC <MakeLODMeshInBackground>c__Iterator1DC = new MeshExtensions.<MakeLODMeshInBackground>c__Iterator1DC();
-			<MakeLODMeshInBackground>c__Iterator1DC.maxWeight = maxWeight;
-			<MakeLODMeshInBackground>c__Iterator1DC.removeSmallParts = removeSmallParts;
-			<MakeLODMeshInBackground>c__Iterator1DC.mesh = mesh;
-			<MakeLODMeshInBackground>c__Iterator1DC.result = result;
-			<MakeLODMeshInBackground>c__Iterator1DC.recalcNormals = recalcNormals;
-			<MakeLODMeshInBackground>c__Iterator1DC.<$>maxWeight = maxWeight;
-			<MakeLODMeshInBackground>c__Iterator1DC.<$>removeSmallParts = removeSmallParts;
-			<MakeLODMeshInBackground>c__Iterator1DC.<$>mesh = mesh;
-			<MakeLODMeshInBackground>c__Iterator1DC.<$>result = result;
-			<MakeLODMeshInBackground>c__Iterator1DC.<$>recalcNormals = recalcNormals;
-			return <MakeLODMeshInBackground>c__Iterator1DC;
+			MeshExtensions.<MakeLODMeshInBackground>c__Iterator1DD <MakeLODMeshInBackground>c__Iterator1DD = new MeshExtensions.<MakeLODMeshInBackground>c__Iterator1DD();
+			<MakeLODMeshInBackground>c__Iterator1DD.maxWeight = maxWeight;
+			<MakeLODMeshInBackground>c__Iterator1DD.removeSmallParts = removeSmallParts;
+			<MakeLODMeshInBackground>c__Iterator1DD.mesh = mesh;
+			<MakeLODMeshInBackground>c__Iterator1DD.result = result;
+			<MakeLODMeshInBackground>c__Iterator1DD.recalcNormals = recalcNormals;
+			<MakeLODMeshInBackground>c__Iterator1DD.<$>maxWeight = maxWeight;
+			<MakeLODMeshInBackground>c__Iterator1DD.<$>removeSmallParts = removeSmallParts;
+			<MakeLODMeshInBackground>c__Iterator1DD.<$>mesh = mesh;
+			<MakeLODMeshInBackground>c__Iterator1DD.<$>result = result;
+			<MakeLODMeshInBackground>c__Iterator1DD.<$>recalcNormals = recalcNormals;
+			return <MakeLODMeshInBackground>c__Iterator1DD;
 		}
 
 		public static Mesh[] MakeLODMeshes(this Mesh mesh, float[] maxWeights, bool recalcNormals, float removeSmallParts = 1f, float protectNormals = 1f, float protectUvs = 1f, float protectSubMeshesAndSharpEdges = 1f, float smallTrianglesFirst = 1f, int nrOfSteps = 1)

@@ -48,20 +48,20 @@ public class getAnimatorParams : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator spawnDummy(getAnimatorParams.DummyParams p)
 	{
-		getAnimatorParams.<spawnDummy>c__Iterator1CA <spawnDummy>c__Iterator1CA = new getAnimatorParams.<spawnDummy>c__Iterator1CA();
-		<spawnDummy>c__Iterator1CA.p = p;
-		<spawnDummy>c__Iterator1CA.<$>p = p;
-		<spawnDummy>c__Iterator1CA.<>f__this = this;
-		return <spawnDummy>c__Iterator1CA;
+		getAnimatorParams.<spawnDummy>c__Iterator1CB <spawnDummy>c__Iterator1CB = new getAnimatorParams.<spawnDummy>c__Iterator1CB();
+		<spawnDummy>c__Iterator1CB.p = p;
+		<spawnDummy>c__Iterator1CB.<$>p = p;
+		<spawnDummy>c__Iterator1CB.<>f__this = this;
+		return <spawnDummy>c__Iterator1CB;
 	}
 
 	[DebuggerHidden]
 	private IEnumerator fixHipPosition(Transform d)
 	{
-		getAnimatorParams.<fixHipPosition>c__Iterator1CB <fixHipPosition>c__Iterator1CB = new getAnimatorParams.<fixHipPosition>c__Iterator1CB();
-		<fixHipPosition>c__Iterator1CB.d = d;
-		<fixHipPosition>c__Iterator1CB.<$>d = d;
-		<fixHipPosition>c__Iterator1CB.<>f__this = this;
-		return <fixHipPosition>c__Iterator1CB;
+		getAnimatorParams.<fixHipPosition>c__Iterator1CC <fixHipPosition>c__Iterator1CC = new getAnimatorParams.<fixHipPosition>c__Iterator1CC();
+		<fixHipPosition>c__Iterator1CC.d = d;
+		<fixHipPosition>c__Iterator1CC.<$>d = d;
+		<fixHipPosition>c__Iterator1CC.<>f__this = this;
+		return <fixHipPosition>c__Iterator1CC;
 	}
 }

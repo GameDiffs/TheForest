@@ -9,7 +9,10 @@ public class explodeDummy : MonoBehaviour
 
 	private void Explosion(float dist)
 	{
-		UnityEngine.Object.Instantiate(this.explodedGo, base.transform.position, base.transform.rotation);
-		UnityEngine.Object.Destroy(this.removeGo);
+		if (!BoltNetwork.isClient)
+		{
+			UnityEngine.Object.Instantiate(this.explodedGo, base.transform.position, base.transform.rotation);
+			UnityEngine.Object.Destroy(this.removeGo);
+		}
 	}
 }

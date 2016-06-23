@@ -168,7 +168,7 @@ public class LevelLoader : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator Load()
 	{
-		LevelLoader.<Load>c__Iterator1D3 <Load>c__Iterator1D = new LevelLoader.<Load>c__Iterator1D3();
+		LevelLoader.<Load>c__Iterator1D4 <Load>c__Iterator1D = new LevelLoader.<Load>c__Iterator1D4();
 		<Load>c__Iterator1D.<>f__this = this;
 		return <Load>c__Iterator1D;
 	}
@@ -176,7 +176,7 @@ public class LevelLoader : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator Load(int numberOfFrames, float timeScale = 0f)
 	{
-		LevelLoader.<Load>c__Iterator1D4 <Load>c__Iterator1D = new LevelLoader.<Load>c__Iterator1D4();
+		LevelLoader.<Load>c__Iterator1D5 <Load>c__Iterator1D = new LevelLoader.<Load>c__Iterator1D5();
 		<Load>c__Iterator1D.numberOfFrames = numberOfFrames;
 		<Load>c__Iterator1D.timeScale = timeScale;
 		<Load>c__Iterator1D.<$>numberOfFrames = numberOfFrames;

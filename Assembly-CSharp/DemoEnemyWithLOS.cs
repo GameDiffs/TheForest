@@ -68,7 +68,7 @@ public class DemoEnemyWithLOS : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator UpdateStartWhileDetected(TargetTracker source)
 	{
-		DemoEnemyWithLOS.<UpdateStartWhileDetected>c__Iterator1E2 <UpdateStartWhileDetected>c__Iterator1E = new DemoEnemyWithLOS.<UpdateStartWhileDetected>c__Iterator1E2();
+		DemoEnemyWithLOS.<UpdateStartWhileDetected>c__Iterator1E3 <UpdateStartWhileDetected>c__Iterator1E = new DemoEnemyWithLOS.<UpdateStartWhileDetected>c__Iterator1E3();
 		<UpdateStartWhileDetected>c__Iterator1E.source = source;
 		<UpdateStartWhileDetected>c__Iterator1E.<$>source = source;
 		<UpdateStartWhileDetected>c__Iterator1E.<>f__this = this;

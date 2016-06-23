@@ -390,7 +390,7 @@ namespace TheForest.Items.Inventory
 		[DebuggerHidden]
 		public IEnumerator OnDeserialized()
 		{
-			PlayerInventory.<OnDeserialized>c__Iterator166 <OnDeserialized>c__Iterator = new PlayerInventory.<OnDeserialized>c__Iterator166();
+			PlayerInventory.<OnDeserialized>c__Iterator167 <OnDeserialized>c__Iterator = new PlayerInventory.<OnDeserialized>c__Iterator167();
 			<OnDeserialized>c__Iterator.<>f__this = this;
 			return <OnDeserialized>c__Iterator;
 		}
@@ -625,7 +625,7 @@ namespace TheForest.Items.Inventory
 		[DebuggerHidden]
 		private IEnumerator EquipSequence(Item.EquipmentSlot slot, InventoryItemView itemView)
 		{
-			PlayerInventory.<EquipSequence>c__Iterator167 <EquipSequence>c__Iterator = new PlayerInventory.<EquipSequence>c__Iterator167();
+			PlayerInventory.<EquipSequence>c__Iterator168 <EquipSequence>c__Iterator = new PlayerInventory.<EquipSequence>c__Iterator168();
 			<EquipSequence>c__Iterator.slot = slot;
 			<EquipSequence>c__Iterator.itemView = itemView;
 			<EquipSequence>c__Iterator.<$>slot = slot;
@@ -1484,7 +1484,7 @@ namespace TheForest.Items.Inventory
 		[DebuggerHidden]
 		private IEnumerator OnSerializing()
 		{
-			PlayerInventory.<OnSerializing>c__Iterator168 <OnSerializing>c__Iterator = new PlayerInventory.<OnSerializing>c__Iterator168();
+			PlayerInventory.<OnSerializing>c__Iterator169 <OnSerializing>c__Iterator = new PlayerInventory.<OnSerializing>c__Iterator169();
 			<OnSerializing>c__Iterator.<>f__this = this;
 			return <OnSerializing>c__Iterator;
 		}

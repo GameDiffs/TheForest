@@ -8,7 +8,7 @@ using UnitySampleAssets.Characters.FirstPerson;
 
 namespace TheForest.Player
 {
-	[DoNotSerializePublic, RequireComponent(typeof(CapsuleCollider)), RequireComponent(typeof(Rigidbody))]
+	[DoNotSerializePublic, RequireComponent(typeof(Rigidbody)), RequireComponent(typeof(CapsuleCollider))]
 	public class FirstPersonCharacter : MonoBehaviour
 	{
 		[Serializable]
@@ -745,7 +745,7 @@ namespace TheForest.Player
 		[DebuggerHidden]
 		private IEnumerator EnableCrouch()
 		{
-			FirstPersonCharacter.<EnableCrouch>c__Iterator183 <EnableCrouch>c__Iterator = new FirstPersonCharacter.<EnableCrouch>c__Iterator183();
+			FirstPersonCharacter.<EnableCrouch>c__Iterator184 <EnableCrouch>c__Iterator = new FirstPersonCharacter.<EnableCrouch>c__Iterator184();
 			<EnableCrouch>c__Iterator.<>f__this = this;
 			return <EnableCrouch>c__Iterator;
 		}
@@ -753,7 +753,7 @@ namespace TheForest.Player
 		[DebuggerHidden]
 		private IEnumerator DisableCrouch()
 		{
-			FirstPersonCharacter.<DisableCrouch>c__Iterator184 <DisableCrouch>c__Iterator = new FirstPersonCharacter.<DisableCrouch>c__Iterator184();
+			FirstPersonCharacter.<DisableCrouch>c__Iterator185 <DisableCrouch>c__Iterator = new FirstPersonCharacter.<DisableCrouch>c__Iterator185();
 			<DisableCrouch>c__Iterator.<>f__this = this;
 			return <DisableCrouch>c__Iterator;
 		}

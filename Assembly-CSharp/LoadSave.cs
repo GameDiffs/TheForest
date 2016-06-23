@@ -96,10 +96,10 @@ public class LoadSave : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator Activation(bool activate)
 	{
-		LoadSave.<Activation>c__Iterator1AE <Activation>c__Iterator1AE = new LoadSave.<Activation>c__Iterator1AE();
-		<Activation>c__Iterator1AE.activate = activate;
-		<Activation>c__Iterator1AE.<$>activate = activate;
-		<Activation>c__Iterator1AE.<>f__this = this;
-		return <Activation>c__Iterator1AE;
+		LoadSave.<Activation>c__Iterator1AF <Activation>c__Iterator1AF = new LoadSave.<Activation>c__Iterator1AF();
+		<Activation>c__Iterator1AF.activate = activate;
+		<Activation>c__Iterator1AF.<$>activate = activate;
+		<Activation>c__Iterator1AF.<>f__this = this;
+		return <Activation>c__Iterator1AF;
 	}
 }

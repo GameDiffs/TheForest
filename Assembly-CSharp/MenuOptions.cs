@@ -198,9 +198,9 @@ public class MenuOptions : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		MenuOptions.<Start>c__Iterator17E <Start>c__Iterator17E = new MenuOptions.<Start>c__Iterator17E();
-		<Start>c__Iterator17E.<>f__this = this;
-		return <Start>c__Iterator17E;
+		MenuOptions.<Start>c__Iterator17F <Start>c__Iterator17F = new MenuOptions.<Start>c__Iterator17F();
+		<Start>c__Iterator17F.<>f__this = this;
+		return <Start>c__Iterator17F;
 	}
 
 	private void OnDestroy()

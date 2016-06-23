@@ -29,9 +29,9 @@ namespace TheForest.Utils
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake()
 		{
-			FakeParent.<DelayedAwake>c__Iterator1BD <DelayedAwake>c__Iterator1BD = new FakeParent.<DelayedAwake>c__Iterator1BD();
-			<DelayedAwake>c__Iterator1BD.<>f__this = this;
-			return <DelayedAwake>c__Iterator1BD;
+			FakeParent.<DelayedAwake>c__Iterator1BE <DelayedAwake>c__Iterator1BE = new FakeParent.<DelayedAwake>c__Iterator1BE();
+			<DelayedAwake>c__Iterator1BE.<>f__this = this;
+			return <DelayedAwake>c__Iterator1BE;
 		}
 
 		private void OnEnable()
@@ -53,9 +53,9 @@ namespace TheForest.Utils
 		[DebuggerHidden]
 		private IEnumerator UnParent()
 		{
-			FakeParent.<UnParent>c__Iterator1BE <UnParent>c__Iterator1BE = new FakeParent.<UnParent>c__Iterator1BE();
-			<UnParent>c__Iterator1BE.<>f__this = this;
-			return <UnParent>c__Iterator1BE;
+			FakeParent.<UnParent>c__Iterator1BF <UnParent>c__Iterator1BF = new FakeParent.<UnParent>c__Iterator1BF();
+			<UnParent>c__Iterator1BF.<>f__this = this;
+			return <UnParent>c__Iterator1BF;
 		}
 
 		private void ReParent()

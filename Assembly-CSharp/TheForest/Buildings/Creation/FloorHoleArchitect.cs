@@ -52,14 +52,7 @@ namespace TheForest.Buildings.Creation
 						}
 					}
 				}
-				if (this._previews.Count == 0)
-				{
-					base.GetComponent<Renderer>().sharedMaterial = this._offMaterial;
-					if (LocalPlayer.Create.BuildingPlacer)
-					{
-						LocalPlayer.Create.BuildingPlacer.Clear = false;
-					}
-				}
+				this.CheckCanPlace();
 			}
 		}
 
@@ -96,11 +89,28 @@ namespace TheForest.Buildings.Creation
 					this._targets.Add(holeStructure);
 					this._holes.Add(item);
 					base.enabled = true;
-					base.GetComponent<Renderer>().sharedMaterial = this._onMaterial;
-					if (LocalPlayer.Create.BuildingPlacer)
-					{
-						LocalPlayer.Create.BuildingPlacer.Clear = true;
-					}
+					this.CheckCanPlace();
+				}
+			}
+		}
+
+		private void OnTriggerExit(Collider other)
+		{
+			PrefabIdentifier componentInParent = other.GetComponentInParent<PrefabIdentifier>();
+			if (componentInParent)
+			{
+				IHoleStructure holeStructure = (IHoleStructure)componentInParent.GetComponent(typeof(IHoleStructure));
+				Collider component = base.GetComponent<Collider>();
+				if (holeStructure != null && this._targets.Contains(holeStructure) && (other.bounds.max.y < component.bounds.min.y || other.bounds.min.y > component.bounds.max.y))
+				{
+					int index = this._targets.IndexOf(holeStructure);
+					UnityEngine.Object.Destroy((this._previews[index] as MonoBehaviour).gameObject);
+					this._targets[index].RemoveHole(this._holes[index]);
+					this._holes[index] = null;
+					this._holes.RemoveAt(index);
+					this._previews.RemoveAt(index);
+					this._targets.RemoveAt(index);
+					this.CheckCanPlace();
 				}
 			}
 		}
@@ -150,6 +160,26 @@ namespace TheForest.Buildings.Creation
 				this._previews.Clear();
 			}
 			UnityEngine.Object.Destroy(base.gameObject);
+		}
+
+		private void CheckCanPlace()
+		{
+			if (this._targets.Count == 0)
+			{
+				base.GetComponent<Renderer>().sharedMaterial = this._offMaterial;
+				if (LocalPlayer.Create.BuildingPlacer)
+				{
+					LocalPlayer.Create.BuildingPlacer.Clear = false;
+				}
+			}
+			else
+			{
+				base.GetComponent<Renderer>().sharedMaterial = this._onMaterial;
+				if (LocalPlayer.Create.BuildingPlacer)
+				{
+					LocalPlayer.Create.BuildingPlacer.Clear = true;
+				}
+			}
 		}
 	}
 }

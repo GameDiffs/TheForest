@@ -34,7 +34,7 @@ public class playerEnterCaveAction : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator doCave(GameObject posGo, bool enter)
 	{
-		playerEnterCaveAction.<doCave>c__Iterator195 <doCave>c__Iterator = new playerEnterCaveAction.<doCave>c__Iterator195();
+		playerEnterCaveAction.<doCave>c__Iterator196 <doCave>c__Iterator = new playerEnterCaveAction.<doCave>c__Iterator196();
 		<doCave>c__Iterator.posGo = posGo;
 		<doCave>c__Iterator.enter = enter;
 		<doCave>c__Iterator.<$>posGo = posGo;

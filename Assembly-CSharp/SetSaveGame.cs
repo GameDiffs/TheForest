@@ -12,7 +12,7 @@ public class SetSaveGame : MonoBehaviour
 	[DebuggerHidden]
 	private IEnumerator Start()
 	{
-		SetSaveGame.<Start>c__Iterator1B1 <Start>c__Iterator1B = new SetSaveGame.<Start>c__Iterator1B1();
+		SetSaveGame.<Start>c__Iterator1B2 <Start>c__Iterator1B = new SetSaveGame.<Start>c__Iterator1B2();
 		<Start>c__Iterator1B.<>f__this = this;
 		return <Start>c__Iterator1B;
 	}

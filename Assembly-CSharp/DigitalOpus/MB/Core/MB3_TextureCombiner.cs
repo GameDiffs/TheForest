@@ -291,12 +291,12 @@ namespace DigitalOpus.MB.Core
 
 		private bool _CollectPropertyNames(Material resultMaterial, List<ShaderTextureProperty> texPropertyNames)
 		{
-			MB3_TextureCombiner.<_CollectPropertyNames>c__AnonStorey269 <_CollectPropertyNames>c__AnonStorey = new MB3_TextureCombiner.<_CollectPropertyNames>c__AnonStorey269();
-			<_CollectPropertyNames>c__AnonStorey.texPropertyNames = texPropertyNames;
+			MB3_TextureCombiner.<_CollectPropertyNames>c__AnonStorey26A <_CollectPropertyNames>c__AnonStorey26A = new MB3_TextureCombiner.<_CollectPropertyNames>c__AnonStorey26A();
+			<_CollectPropertyNames>c__AnonStorey26A.texPropertyNames = texPropertyNames;
 			int i;
-			for (i = 0; i < <_CollectPropertyNames>c__AnonStorey.texPropertyNames.Count; i++)
+			for (i = 0; i < <_CollectPropertyNames>c__AnonStorey26A.texPropertyNames.Count; i++)
 			{
-				ShaderTextureProperty shaderTextureProperty = this._customShaderPropNames.Find((ShaderTextureProperty x) => x.name.Equals(<_CollectPropertyNames>c__AnonStorey.texPropertyNames[i].name));
+				ShaderTextureProperty shaderTextureProperty = this._customShaderPropNames.Find((ShaderTextureProperty x) => x.name.Equals(<_CollectPropertyNames>c__AnonStorey26A.texPropertyNames[i].name));
 				if (shaderTextureProperty != null)
 				{
 					this._customShaderPropNames.Remove(shaderTextureProperty);
@@ -313,9 +313,9 @@ namespace DigitalOpus.MB.Core
 				if (resultMaterial.HasProperty(MB3_TextureCombiner.shaderTexPropertyNames[k].name))
 				{
 					str = str + ", " + MB3_TextureCombiner.shaderTexPropertyNames[k].name;
-					if (!<_CollectPropertyNames>c__AnonStorey.texPropertyNames.Contains(MB3_TextureCombiner.shaderTexPropertyNames[k]))
+					if (!<_CollectPropertyNames>c__AnonStorey26A.texPropertyNames.Contains(MB3_TextureCombiner.shaderTexPropertyNames[k]))
 					{
-						<_CollectPropertyNames>c__AnonStorey.texPropertyNames.Add(MB3_TextureCombiner.shaderTexPropertyNames[k]);
+						<_CollectPropertyNames>c__AnonStorey26A.texPropertyNames.Add(MB3_TextureCombiner.shaderTexPropertyNames[k]);
 					}
 					if (resultMaterial.GetTextureOffset(MB3_TextureCombiner.shaderTexPropertyNames[k].name) != new Vector2(0f, 0f) && this.LOG_LEVEL >= MB2_LogLevel.warn)
 					{
@@ -332,7 +332,7 @@ namespace DigitalOpus.MB.Core
 				if (resultMaterial.HasProperty(this._customShaderPropNames[j].name))
 				{
 					str = str + ", " + this._customShaderPropNames[j].name;
-					<_CollectPropertyNames>c__AnonStorey.texPropertyNames.Add(this._customShaderPropNames[j]);
+					<_CollectPropertyNames>c__AnonStorey26A.texPropertyNames.Add(this._customShaderPropNames[j]);
 					if (resultMaterial.GetTextureOffset(this._customShaderPropNames[j].name) != new Vector2(0f, 0f) && this.LOG_LEVEL >= MB2_LogLevel.warn)
 					{
 						UnityEngine.Debug.LogWarning("Result material has non-zero offset. This is probably incorrect.");

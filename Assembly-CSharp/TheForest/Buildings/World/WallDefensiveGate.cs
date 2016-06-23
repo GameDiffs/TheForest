@@ -28,7 +28,7 @@ namespace TheForest.Buildings.World
 		[DebuggerHidden]
 		protected override IEnumerator Start()
 		{
-			WallDefensiveGate.<Start>c__Iterator157 <Start>c__Iterator = new WallDefensiveGate.<Start>c__Iterator157();
+			WallDefensiveGate.<Start>c__Iterator158 <Start>c__Iterator = new WallDefensiveGate.<Start>c__Iterator158();
 			<Start>c__Iterator.<>f__this = this;
 			return <Start>c__Iterator;
 		}

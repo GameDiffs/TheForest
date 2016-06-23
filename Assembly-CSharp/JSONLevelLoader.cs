@@ -163,20 +163,20 @@ public class JSONLevelLoader : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator Load()
 	{
-		JSONLevelLoader.<Load>c__Iterator1CE <Load>c__Iterator1CE = new JSONLevelLoader.<Load>c__Iterator1CE();
-		<Load>c__Iterator1CE.<>f__this = this;
-		return <Load>c__Iterator1CE;
+		JSONLevelLoader.<Load>c__Iterator1CF <Load>c__Iterator1CF = new JSONLevelLoader.<Load>c__Iterator1CF();
+		<Load>c__Iterator1CF.<>f__this = this;
+		return <Load>c__Iterator1CF;
 	}
 
 	[DebuggerHidden]
 	public IEnumerator Load(int numberOfFrames, float timeScale = 0f)
 	{
-		JSONLevelLoader.<Load>c__Iterator1CF <Load>c__Iterator1CF = new JSONLevelLoader.<Load>c__Iterator1CF();
-		<Load>c__Iterator1CF.numberOfFrames = numberOfFrames;
-		<Load>c__Iterator1CF.timeScale = timeScale;
-		<Load>c__Iterator1CF.<$>numberOfFrames = numberOfFrames;
-		<Load>c__Iterator1CF.<$>timeScale = timeScale;
-		<Load>c__Iterator1CF.<>f__this = this;
-		return <Load>c__Iterator1CF;
+		JSONLevelLoader.<Load>c__Iterator1D0 <Load>c__Iterator1D = new JSONLevelLoader.<Load>c__Iterator1D0();
+		<Load>c__Iterator1D.numberOfFrames = numberOfFrames;
+		<Load>c__Iterator1D.timeScale = timeScale;
+		<Load>c__Iterator1D.<$>numberOfFrames = numberOfFrames;
+		<Load>c__Iterator1D.<$>timeScale = timeScale;
+		<Load>c__Iterator1D.<>f__this = this;
+		return <Load>c__Iterator1D;
 	}
 }

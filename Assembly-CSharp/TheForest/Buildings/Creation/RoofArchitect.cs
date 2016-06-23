@@ -832,62 +832,66 @@ namespace TheForest.Buildings.Creation
 				int count3 = this._rowPointsBuffer[num8].Count;
 				for (int num9 = 1; num9 < count3; num9 += 2)
 				{
+					int num10 = 0;
 					while (num9 < count3 && this._rowPointsBuffer[num8][num9].y < 0f)
 					{
+						num10 += 2;
 						num9 += 2;
 					}
 					if (num9 < count3)
 					{
-						float num10 = Mathf.Abs(this._rowPointsBuffer[num8][num9 - 1].x - this._rowPointsBuffer[num8][num9].x);
-						if (num10 > num6)
+						float num11 = Mathf.Abs(this._rowPointsBuffer[num8][num9 - 1 - num10].x - this._rowPointsBuffer[num8][num9].x);
+						if (num11 > num6)
 						{
-							num6 = num10;
+							num6 = num11;
 						}
-						if (num10 < num7)
+						if (num11 < num7)
 						{
-							num7 = num10;
+							num7 = num11;
 						}
 					}
 				}
 			}
-			for (int num11 = 0; num11 < this._rowCount; num11++)
+			float num12 = 1f - num7 / num6;
+			for (int num13 = 0; num13 < this._rowCount; num13++)
 			{
-				int count4 = this._rowPointsBuffer[num11].Count;
-				for (int num12 = 1; num12 < count4; num12 += 2)
+				int count4 = this._rowPointsBuffer[num13].Count;
+				for (int num14 = 1; num14 < count4; num14 += 2)
 				{
-					int num13 = 0;
-					while (num12 < count4 && this._rowPointsBuffer[num11][num12].y < 0f)
+					int num15 = 0;
+					while (num14 < count4 && this._rowPointsBuffer[num13][num14].y < 0f)
 					{
-						num13 += 2;
-						num12 += 2;
+						num15 += 2;
+						num14 += 2;
 					}
-					Vector3 vector3 = this._rowPointsBuffer[num11][num12 - 1 - num13];
-					Vector3 vector4 = this._rowPointsBuffer[num11][num12];
+					Vector3 vector3 = this._rowPointsBuffer[num13][num14 - 1 - num15];
+					Vector3 vector4 = this._rowPointsBuffer[num13][num14];
 					float y2 = vector3.y;
 					float y3 = vector4.y;
-					float num14 = Mathf.Max(y3 * 2f - 1f, (num13 <= 0) ? 0f : (Mathf.Abs(this._rowPointsBuffer[num11][num12 - num13].y) * 2f - 1f));
-					float num15 = Mathf.Max(y2 * 2f - 1f, (num13 <= 0) ? 0f : (Mathf.Abs(this._rowPointsBuffer[num11][num12 - num13 + 1].y) * 2f - 1f));
+					float num16 = Mathf.Max(y3 * 2f - 1f, (num15 <= 0) ? 0f : (Mathf.Abs(this._rowPointsBuffer[num13][num14 - num15].y) * 2f - 1f));
+					float num17 = Mathf.Max(y2 * 2f - 1f, (num15 <= 0) ? 0f : (Mathf.Abs(this._rowPointsBuffer[num13][num14 - num15 + 1].y) * 2f - 1f));
 					vector3.y = y;
 					vector4.y = y;
+					float value4 = Mathf.Abs(vector3.x - vector4.x);
 					vector3 = base.transform.TransformPoint(vector3);
 					vector4 = base.transform.TransformPoint(vector4);
 					Vector3 vector5 = Vector3.Lerp(vector3, vector4, 0.5f);
-					vector5.y += (Mathf.InverseLerp(num7, num6, Mathf.Abs(vector3.x - vector4.x)) / 2f + 0.5f) * this._roofHeight;
-					for (int num16 = 0; num16 < 2; num16++)
+					vector5.y += (1f - Mathf.InverseLerp(num6, num7, value4) * num12) * this._roofHeight;
+					for (int num18 = 0; num18 < 2; num18++)
 					{
-						if (num16 == 0)
+						if (num18 == 0)
 						{
 							if (y2 < 0.5f)
 							{
-								if (y2 * 2f < 1f - num14)
+								if (y2 * 2f < 1f - num16)
 								{
 									Vector3 vector6 = Vector3.Lerp(vector3, vector5, y2 * 2f);
-									Vector3 chunk = Vector3.Lerp(vector5, vector6, Mathf.Clamp01(num14)) - vector6;
+									Vector3 chunk = Vector3.Lerp(vector5, vector6, Mathf.Clamp01(num16)) - vector6;
 									this.SpawnChunk(chunk, vector6, roofRoot, logStackScaleRatio, ref num5);
 								}
-								if (num15 < 0f)
+								if (num17 < 0f)
 								{
-									Vector3 vector6 = Vector3.Lerp(vector5, vector3, Mathf.Abs(num15));
+									Vector3 vector6 = Vector3.Lerp(vector5, vector3, Mathf.Abs(num17));
 									Vector3 chunk = vector5 - vector6;
 									this.SpawnChunk(chunk, vector6, roofRoot, logStackScaleRatio, ref num5);
 								}
@@ -895,15 +899,15 @@ namespace TheForest.Buildings.Creation
 						}
 						else if (y3 < 0.5f)
 						{
-							if (y3 * 2f < 1f - num15)
+							if (y3 * 2f < 1f - num17)
 							{
 								Vector3 vector6 = Vector3.Lerp(vector4, vector5, y3 * 2f);
-								Vector3 chunk = Vector3.Lerp(vector5, vector6, Mathf.Clamp01(num15)) - vector6;
+								Vector3 chunk = Vector3.Lerp(vector5, vector6, Mathf.Clamp01(num17)) - vector6;
 								this.SpawnChunk(chunk, vector6, roofRoot, logStackScaleRatio, ref num5);
 							}
-							if (num14 < 0f)
+							if (num16 < 0f)
 							{
-								Vector3 vector6 = Vector3.Lerp(vector5, vector4, Mathf.Abs(num14));
+								Vector3 vector6 = Vector3.Lerp(vector5, vector4, Mathf.Abs(num16));
 								Vector3 chunk = vector5 - vector6;
 								this.SpawnChunk(chunk, vector6, roofRoot, logStackScaleRatio, ref num5);
 							}

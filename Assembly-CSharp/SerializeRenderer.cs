@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UniLinq;
 using UnityEngine;
 
-[ComponentSerializerFor(typeof(ParticleRenderer)), ComponentSerializerFor(typeof(TrailRenderer)), ComponentSerializerFor(typeof(MeshRenderer)), ComponentSerializerFor(typeof(SkinnedMeshRenderer)), ComponentSerializerFor(typeof(Cloth)), ComponentSerializerFor(typeof(Renderer)), ComponentSerializerFor(typeof(LineRenderer))]
+[ComponentSerializerFor(typeof(SkinnedMeshRenderer)), ComponentSerializerFor(typeof(Renderer)), ComponentSerializerFor(typeof(ParticleRenderer)), ComponentSerializerFor(typeof(TrailRenderer)), ComponentSerializerFor(typeof(MeshRenderer)), ComponentSerializerFor(typeof(LineRenderer)), ComponentSerializerFor(typeof(Cloth))]
 public class SerializeRenderer : IComponentSerializer
 {
 	public class StoredInformation

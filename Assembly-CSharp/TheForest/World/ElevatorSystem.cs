@@ -65,7 +65,7 @@ namespace TheForest.World
 		[DebuggerHidden]
 		private IEnumerator Goto(Vector3 targetPos)
 		{
-			ElevatorSystem.<Goto>c__Iterator1C6 <Goto>c__Iterator1C = new ElevatorSystem.<Goto>c__Iterator1C6();
+			ElevatorSystem.<Goto>c__Iterator1C7 <Goto>c__Iterator1C = new ElevatorSystem.<Goto>c__Iterator1C7();
 			<Goto>c__Iterator1C.targetPos = targetPos;
 			<Goto>c__Iterator1C.<$>targetPos = targetPos;
 			<Goto>c__Iterator1C.<>f__this = this;

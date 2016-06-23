@@ -145,17 +145,17 @@ namespace TheForest.Items.Special
 		[DebuggerHidden]
 		private IEnumerator LightingFireRoutine()
 		{
-			LighterControler.<LightingFireRoutine>c__Iterator16A <LightingFireRoutine>c__Iterator16A = new LighterControler.<LightingFireRoutine>c__Iterator16A();
-			<LightingFireRoutine>c__Iterator16A.<>f__this = this;
-			return <LightingFireRoutine>c__Iterator16A;
+			LighterControler.<LightingFireRoutine>c__Iterator16B <LightingFireRoutine>c__Iterator16B = new LighterControler.<LightingFireRoutine>c__Iterator16B();
+			<LightingFireRoutine>c__Iterator16B.<>f__this = this;
+			return <LightingFireRoutine>c__Iterator16B;
 		}
 
 		[DebuggerHidden]
 		private IEnumerator LightingHeldFireRoutine()
 		{
-			LighterControler.<LightingHeldFireRoutine>c__Iterator16B <LightingHeldFireRoutine>c__Iterator16B = new LighterControler.<LightingHeldFireRoutine>c__Iterator16B();
-			<LightingHeldFireRoutine>c__Iterator16B.<>f__this = this;
-			return <LightingHeldFireRoutine>c__Iterator16B;
+			LighterControler.<LightingHeldFireRoutine>c__Iterator16C <LightingHeldFireRoutine>c__Iterator16C = new LighterControler.<LightingHeldFireRoutine>c__Iterator16C();
+			<LightingHeldFireRoutine>c__Iterator16C.<>f__this = this;
+			return <LightingHeldFireRoutine>c__Iterator16C;
 		}
 
 		private void SparkLighter()
@@ -196,17 +196,17 @@ namespace TheForest.Items.Special
 		[DebuggerHidden]
 		private IEnumerator StashLighterRoutine()
 		{
-			LighterControler.<StashLighterRoutine>c__Iterator16C <StashLighterRoutine>c__Iterator16C = new LighterControler.<StashLighterRoutine>c__Iterator16C();
-			<StashLighterRoutine>c__Iterator16C.<>f__this = this;
-			return <StashLighterRoutine>c__Iterator16C;
+			LighterControler.<StashLighterRoutine>c__Iterator16D <StashLighterRoutine>c__Iterator16D = new LighterControler.<StashLighterRoutine>c__Iterator16D();
+			<StashLighterRoutine>c__Iterator16D.<>f__this = this;
+			return <StashLighterRoutine>c__Iterator16D;
 		}
 
 		[DebuggerHidden]
 		private IEnumerator equipLighterRoutine()
 		{
-			LighterControler.<equipLighterRoutine>c__Iterator16D <equipLighterRoutine>c__Iterator16D = new LighterControler.<equipLighterRoutine>c__Iterator16D();
-			<equipLighterRoutine>c__Iterator16D.<>f__this = this;
-			return <equipLighterRoutine>c__Iterator16D;
+			LighterControler.<equipLighterRoutine>c__Iterator16E <equipLighterRoutine>c__Iterator16E = new LighterControler.<equipLighterRoutine>c__Iterator16E();
+			<equipLighterRoutine>c__Iterator16E.<>f__this = this;
+			return <equipLighterRoutine>c__Iterator16E;
 		}
 
 		protected override void OnActivating()

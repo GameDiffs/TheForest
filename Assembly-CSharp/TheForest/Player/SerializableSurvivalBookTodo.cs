@@ -666,7 +666,7 @@ namespace TheForest.Player
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake()
 		{
-			SerializableSurvivalBookTodo.<DelayedAwake>c__Iterator187 <DelayedAwake>c__Iterator = new SerializableSurvivalBookTodo.<DelayedAwake>c__Iterator187();
+			SerializableSurvivalBookTodo.<DelayedAwake>c__Iterator188 <DelayedAwake>c__Iterator = new SerializableSurvivalBookTodo.<DelayedAwake>c__Iterator188();
 			<DelayedAwake>c__Iterator.<>f__this = this;
 			return <DelayedAwake>c__Iterator;
 		}
@@ -715,7 +715,7 @@ namespace TheForest.Player
 		[DebuggerHidden]
 		private IEnumerator OnDeserialized()
 		{
-			SerializableSurvivalBookTodo.<OnDeserialized>c__Iterator188 <OnDeserialized>c__Iterator = new SerializableSurvivalBookTodo.<OnDeserialized>c__Iterator188();
+			SerializableSurvivalBookTodo.<OnDeserialized>c__Iterator189 <OnDeserialized>c__Iterator = new SerializableSurvivalBookTodo.<OnDeserialized>c__Iterator189();
 			<OnDeserialized>c__Iterator.<>f__this = this;
 			return <OnDeserialized>c__Iterator;
 		}

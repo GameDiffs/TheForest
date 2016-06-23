@@ -370,9 +370,9 @@ public class Buoyancy : MonoBehaviour
 	[DebuggerHidden]
 	public IEnumerator ResetRigidbody()
 	{
-		Buoyancy.<ResetRigidbody>c__Iterator15A <ResetRigidbody>c__Iterator15A = new Buoyancy.<ResetRigidbody>c__Iterator15A();
-		<ResetRigidbody>c__Iterator15A.<>f__this = this;
-		return <ResetRigidbody>c__Iterator15A;
+		Buoyancy.<ResetRigidbody>c__Iterator15B <ResetRigidbody>c__Iterator15B = new Buoyancy.<ResetRigidbody>c__Iterator15B();
+		<ResetRigidbody>c__Iterator15B.<>f__this = this;
+		return <ResetRigidbody>c__Iterator15B;
 	}
 
 	private void ValidateTriggers()

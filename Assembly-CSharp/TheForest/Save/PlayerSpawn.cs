@@ -92,7 +92,7 @@ namespace TheForest.Save
 		[DebuggerHidden]
 		private static IEnumerator LoadMpCharacterDelayed()
 		{
-			return new PlayerSpawn.<LoadMpCharacterDelayed>c__Iterator1B0();
+			return new PlayerSpawn.<LoadMpCharacterDelayed>c__Iterator1B1();
 		}
 	}
 }

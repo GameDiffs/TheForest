@@ -101,7 +101,7 @@ namespace TheForest.Items.Special
 		[DebuggerHidden]
 		private IEnumerator PlayMusicTrack()
 		{
-			WalkmanControler.<PlayMusicTrack>c__Iterator172 <PlayMusicTrack>c__Iterator = new WalkmanControler.<PlayMusicTrack>c__Iterator172();
+			WalkmanControler.<PlayMusicTrack>c__Iterator173 <PlayMusicTrack>c__Iterator = new WalkmanControler.<PlayMusicTrack>c__Iterator173();
 			<PlayMusicTrack>c__Iterator.<>f__this = this;
 			return <PlayMusicTrack>c__Iterator;
 		}
@@ -109,7 +109,7 @@ namespace TheForest.Items.Special
 		[DebuggerHidden]
 		private IEnumerator RegenerationRoutine()
 		{
-			WalkmanControler.<RegenerationRoutine>c__Iterator173 <RegenerationRoutine>c__Iterator = new WalkmanControler.<RegenerationRoutine>c__Iterator173();
+			WalkmanControler.<RegenerationRoutine>c__Iterator174 <RegenerationRoutine>c__Iterator = new WalkmanControler.<RegenerationRoutine>c__Iterator174();
 			<RegenerationRoutine>c__Iterator.<>f__this = this;
 			return <RegenerationRoutine>c__Iterator;
 		}
@@ -117,7 +117,7 @@ namespace TheForest.Items.Special
 		[DebuggerHidden]
 		private IEnumerator enableSoundDetect()
 		{
-			return new WalkmanControler.<enableSoundDetect>c__Iterator174();
+			return new WalkmanControler.<enableSoundDetect>c__Iterator175();
 		}
 
 		protected override void OnActivating()
@@ -139,7 +139,7 @@ namespace TheForest.Items.Special
 		[DebuggerHidden]
 		private IEnumerator DelayedStop(bool equipPrevious)
 		{
-			WalkmanControler.<DelayedStop>c__Iterator175 <DelayedStop>c__Iterator = new WalkmanControler.<DelayedStop>c__Iterator175();
+			WalkmanControler.<DelayedStop>c__Iterator176 <DelayedStop>c__Iterator = new WalkmanControler.<DelayedStop>c__Iterator176();
 			<DelayedStop>c__Iterator.equipPrevious = equipPrevious;
 			<DelayedStop>c__Iterator.<$>equipPrevious = equipPrevious;
 			<DelayedStop>c__Iterator.<>f__this = this;

@@ -119,7 +119,14 @@ namespace TheForest.Buildings.World
 
 		private void OnDockStiltDestroyed()
 		{
-			this.UnDock();
+			if (BoltNetwork.isRunning)
+			{
+				this.MpSendDock(Vector3.zero);
+			}
+			else
+			{
+				this.UnDock();
+			}
 		}
 
 		private bool IsDock(Collider c)

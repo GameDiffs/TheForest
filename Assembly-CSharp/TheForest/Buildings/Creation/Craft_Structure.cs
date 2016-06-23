@@ -162,6 +162,10 @@ namespace TheForest.Buildings.Creation
 						this.UpdateNetworkIngredients();
 					}
 				}
+				if (!BoltNetwork.isClient)
+				{
+					this.CheckNeeded();
+				}
 			}
 		}
 
@@ -323,7 +327,7 @@ namespace TheForest.Buildings.Creation
 		{
 			for (int i = 0; i < this._requiredIngredients.Count; i++)
 			{
-				if (this._requiredIngredients[i]._amount != this._presentIngredients[i]._amount)
+				if (this._presentIngredients[i]._amount < this._requiredIngredients[i]._amount)
 				{
 					return;
 				}

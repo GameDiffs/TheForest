@@ -26,6 +26,14 @@ namespace TheForest.Buildings.World
 
 		private bool _exploding;
 
+		public bool Exploding
+		{
+			get
+			{
+				return this._exploding;
+			}
+		}
+
 		public void UnlocalizedExplode()
 		{
 			base.SendMessage("lookAtExplosion", base.transform.position + Vector3.down);

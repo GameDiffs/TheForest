@@ -1328,9 +1328,9 @@ namespace TheForest.Player
 		[DebuggerHidden]
 		private IEnumerator DelayedAwake()
 		{
-			SurvivalBookTodo.<DelayedAwake>c__Iterator18E <DelayedAwake>c__Iterator18E = new SurvivalBookTodo.<DelayedAwake>c__Iterator18E();
-			<DelayedAwake>c__Iterator18E.<>f__this = this;
-			return <DelayedAwake>c__Iterator18E;
+			SurvivalBookTodo.<DelayedAwake>c__Iterator18F <DelayedAwake>c__Iterator18F = new SurvivalBookTodo.<DelayedAwake>c__Iterator18F();
+			<DelayedAwake>c__Iterator18F.<>f__this = this;
+			return <DelayedAwake>c__Iterator18F;
 		}
 
 		public void OnEnable()
@@ -1377,9 +1377,9 @@ namespace TheForest.Player
 		[DebuggerHidden]
 		private IEnumerator OnDeserialized()
 		{
-			SurvivalBookTodo.<OnDeserialized>c__Iterator18F <OnDeserialized>c__Iterator18F = new SurvivalBookTodo.<OnDeserialized>c__Iterator18F();
-			<OnDeserialized>c__Iterator18F.<>f__this = this;
-			return <OnDeserialized>c__Iterator18F;
+			SurvivalBookTodo.<OnDeserialized>c__Iterator190 <OnDeserialized>c__Iterator = new SurvivalBookTodo.<OnDeserialized>c__Iterator190();
+			<OnDeserialized>c__Iterator.<>f__this = this;
+			return <OnDeserialized>c__Iterator;
 		}
 
 		private int ToggleDisplay(SurvivalBookTodo.TodoTask elem, int displayedElemenntNum)

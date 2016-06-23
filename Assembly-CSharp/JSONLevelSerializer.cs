@@ -506,13 +506,13 @@ public static class JSONLevelSerializer
 
 	public static void SaveObjectTreeToServer(string uri, GameObject rootOfTree, string userName = "", string password = "", Action<Exception> onComplete = null)
 	{
-		JSONLevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2B6 <SaveObjectTreeToServer>c__AnonStorey2B = new JSONLevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2B6();
+		JSONLevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2B7 <SaveObjectTreeToServer>c__AnonStorey2B = new JSONLevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2B7();
 		<SaveObjectTreeToServer>c__AnonStorey2B.rootOfTree = rootOfTree;
 		<SaveObjectTreeToServer>c__AnonStorey2B.userName = userName;
 		<SaveObjectTreeToServer>c__AnonStorey2B.password = password;
 		<SaveObjectTreeToServer>c__AnonStorey2B.uri = uri;
 		<SaveObjectTreeToServer>c__AnonStorey2B.onComplete = onComplete;
-		JSONLevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2B6 arg_55_0 = <SaveObjectTreeToServer>c__AnonStorey2B;
+		JSONLevelSerializer.<SaveObjectTreeToServer>c__AnonStorey2B7 arg_55_0 = <SaveObjectTreeToServer>c__AnonStorey2B;
 		Action<Exception> arg_55_1;
 		if ((arg_55_1 = <SaveObjectTreeToServer>c__AnonStorey2B.onComplete) == null)
 		{
@@ -577,11 +577,11 @@ public static class JSONLevelSerializer
 
 	public static void SerializeLevelToServer(string uri, string userName = "", string password = "", Action<Exception> onComplete = null)
 	{
-		JSONLevelSerializer.<SerializeLevelToServer>c__AnonStorey2B9 <SerializeLevelToServer>c__AnonStorey2B = new JSONLevelSerializer.<SerializeLevelToServer>c__AnonStorey2B9();
-		<SerializeLevelToServer>c__AnonStorey2B.uri = uri;
-		<SerializeLevelToServer>c__AnonStorey2B.userName = userName;
-		<SerializeLevelToServer>c__AnonStorey2B.password = password;
-		<SerializeLevelToServer>c__AnonStorey2B.onComplete = onComplete;
+		JSONLevelSerializer.<SerializeLevelToServer>c__AnonStorey2BA <SerializeLevelToServer>c__AnonStorey2BA = new JSONLevelSerializer.<SerializeLevelToServer>c__AnonStorey2BA();
+		<SerializeLevelToServer>c__AnonStorey2BA.uri = uri;
+		<SerializeLevelToServer>c__AnonStorey2BA.userName = userName;
+		<SerializeLevelToServer>c__AnonStorey2BA.password = password;
+		<SerializeLevelToServer>c__AnonStorey2BA.onComplete = onComplete;
 		object guard = JSONLevelSerializer.Guard;
 		lock (guard)
 		{
@@ -589,15 +589,15 @@ public static class JSONLevelSerializer
 			{
 				Loom.QueueOnMainThread(delegate
 				{
-					JSONLevelSerializer.SerializeLevelToServer(<SerializeLevelToServer>c__AnonStorey2B.uri, <SerializeLevelToServer>c__AnonStorey2B.userName, <SerializeLevelToServer>c__AnonStorey2B.password, <SerializeLevelToServer>c__AnonStorey2B.onComplete);
+					JSONLevelSerializer.SerializeLevelToServer(<SerializeLevelToServer>c__AnonStorey2BA.uri, <SerializeLevelToServer>c__AnonStorey2BA.userName, <SerializeLevelToServer>c__AnonStorey2BA.password, <SerializeLevelToServer>c__AnonStorey2BA.onComplete);
 				}, 0.5f);
 			}
 			else
 			{
 				JSONLevelSerializer.uploadCount++;
-				JSONLevelSerializer.<SerializeLevelToServer>c__AnonStorey2B9 arg_8B_0 = <SerializeLevelToServer>c__AnonStorey2B;
+				JSONLevelSerializer.<SerializeLevelToServer>c__AnonStorey2BA arg_8B_0 = <SerializeLevelToServer>c__AnonStorey2BA;
 				Action<Exception> arg_8B_1;
-				if ((arg_8B_1 = <SerializeLevelToServer>c__AnonStorey2B.onComplete) == null)
+				if ((arg_8B_1 = <SerializeLevelToServer>c__AnonStorey2BA.onComplete) == null)
 				{
 					arg_8B_1 = delegate
 					{
@@ -605,8 +605,8 @@ public static class JSONLevelSerializer
 				}
 				arg_8B_0.onComplete = arg_8B_1;
 				string data = JSONLevelSerializer.SerializeLevel();
-				JSONLevelSerializer.webClient.Credentials = new NetworkCredential(<SerializeLevelToServer>c__AnonStorey2B.userName, <SerializeLevelToServer>c__AnonStorey2B.password);
-				JSONLevelSerializer.webClient.UploadStringAsync(new Uri(<SerializeLevelToServer>c__AnonStorey2B.uri), null, data, <SerializeLevelToServer>c__AnonStorey2B.onComplete);
+				JSONLevelSerializer.webClient.Credentials = new NetworkCredential(<SerializeLevelToServer>c__AnonStorey2BA.userName, <SerializeLevelToServer>c__AnonStorey2BA.password);
+				JSONLevelSerializer.webClient.UploadStringAsync(new Uri(<SerializeLevelToServer>c__AnonStorey2BA.uri), null, data, <SerializeLevelToServer>c__AnonStorey2BA.onComplete);
 			}
 		}
 	}
@@ -627,7 +627,7 @@ public static class JSONLevelSerializer
 	[DebuggerHidden]
 	private static IEnumerator DownloadFromServer(string uri, Action<JSONLevelLoader> onComplete, Action<string> onError)
 	{
-		JSONLevelSerializer.<DownloadFromServer>c__Iterator1D0 <DownloadFromServer>c__Iterator1D = new JSONLevelSerializer.<DownloadFromServer>c__Iterator1D0();
+		JSONLevelSerializer.<DownloadFromServer>c__Iterator1D1 <DownloadFromServer>c__Iterator1D = new JSONLevelSerializer.<DownloadFromServer>c__Iterator1D1();
 		<DownloadFromServer>c__Iterator1D.uri = uri;
 		<DownloadFromServer>c__Iterator1D.onError = onError;
 		<DownloadFromServer>c__Iterator1D.onComplete = onComplete;
@@ -640,7 +640,7 @@ public static class JSONLevelSerializer
 	[DebuggerHidden]
 	private static IEnumerator DownloadLevelFromServer(string uri, Action<string> onError)
 	{
-		JSONLevelSerializer.<DownloadLevelFromServer>c__Iterator1D1 <DownloadLevelFromServer>c__Iterator1D = new JSONLevelSerializer.<DownloadLevelFromServer>c__Iterator1D1();
+		JSONLevelSerializer.<DownloadLevelFromServer>c__Iterator1D2 <DownloadLevelFromServer>c__Iterator1D = new JSONLevelSerializer.<DownloadLevelFromServer>c__Iterator1D2();
 		<DownloadLevelFromServer>c__Iterator1D.uri = uri;
 		<DownloadLevelFromServer>c__Iterator1D.onError = onError;
 		<DownloadLevelFromServer>c__Iterator1D.<$>uri = uri;
@@ -1120,7 +1120,7 @@ public static class JSONLevelSerializer
 	[DebuggerHidden]
 	private static IEnumerator PerformLoad(JSONLevelLoader loader, Action<JSONLevelLoader> complete)
 	{
-		JSONLevelSerializer.<PerformLoad>c__Iterator1D2 <PerformLoad>c__Iterator1D = new JSONLevelSerializer.<PerformLoad>c__Iterator1D2();
+		JSONLevelSerializer.<PerformLoad>c__Iterator1D3 <PerformLoad>c__Iterator1D = new JSONLevelSerializer.<PerformLoad>c__Iterator1D3();
 		<PerformLoad>c__Iterator1D.loader = loader;
 		<PerformLoad>c__Iterator1D.complete = complete;
 		<PerformLoad>c__Iterator1D.<$>loader = loader;

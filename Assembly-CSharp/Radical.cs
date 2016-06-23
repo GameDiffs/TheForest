@@ -205,16 +205,16 @@ public static class Radical
 	[DebuggerHidden]
 	private static IEnumerator VolumeFader(AudioSource source, float level, float time, float? fromLevel)
 	{
-		Radical.<VolumeFader>c__Iterator1CC <VolumeFader>c__Iterator1CC = new Radical.<VolumeFader>c__Iterator1CC();
-		<VolumeFader>c__Iterator1CC.fromLevel = fromLevel;
-		<VolumeFader>c__Iterator1CC.source = source;
-		<VolumeFader>c__Iterator1CC.time = time;
-		<VolumeFader>c__Iterator1CC.level = level;
-		<VolumeFader>c__Iterator1CC.<$>fromLevel = fromLevel;
-		<VolumeFader>c__Iterator1CC.<$>source = source;
-		<VolumeFader>c__Iterator1CC.<$>time = time;
-		<VolumeFader>c__Iterator1CC.<$>level = level;
-		return <VolumeFader>c__Iterator1CC;
+		Radical.<VolumeFader>c__Iterator1CD <VolumeFader>c__Iterator1CD = new Radical.<VolumeFader>c__Iterator1CD();
+		<VolumeFader>c__Iterator1CD.fromLevel = fromLevel;
+		<VolumeFader>c__Iterator1CD.source = source;
+		<VolumeFader>c__Iterator1CD.time = time;
+		<VolumeFader>c__Iterator1CD.level = level;
+		<VolumeFader>c__Iterator1CD.<$>fromLevel = fromLevel;
+		<VolumeFader>c__Iterator1CD.<$>source = source;
+		<VolumeFader>c__Iterator1CD.<$>time = time;
+		<VolumeFader>c__Iterator1CD.<$>level = level;
+		return <VolumeFader>c__Iterator1CD;
 	}
 
 	public static void DeactivateChildren(this Component co)

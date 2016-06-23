@@ -2,7 +2,7 @@ using PathologicalGames;
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Projectile)), RequireComponent(typeof(SmoothLookAtConstraint))]
+[RequireComponent(typeof(SmoothLookAtConstraint)), RequireComponent(typeof(Projectile))]
 public class DemoSeeker : MonoBehaviour
 {
 	public float maxVelocity = 500f;
